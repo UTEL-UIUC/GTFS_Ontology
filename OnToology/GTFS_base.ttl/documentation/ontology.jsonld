@@ -1,0 +1,854 @@
+[ {
+  "@id" : "http://gtfs.org/ConditionallyForbidden",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The field or file must not be included under conditions outlined in the field or file description."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ConditionallyForbidden"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/PresenceCondition"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/ConditionallyRequired",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The field or file must be included under conditions outlined in the field or file description."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ConditionallyRequired"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/PresenceCondition"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/CurrencyAmount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A decimal value indicating a currency amount. The number of decimal places is specified by ISO 4217 for the accompanying Currency code. All financial calculations should be processed as decimal, currency, or another equivalent type suitable for financial calculations depending on the programming language used to consume data. Processing currency amounts as float is discouraged due to gains or losses of money during calculations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CurrencyAmount"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Service day in the YYYYMMDD format. Since time within a service day may be above 24:00:00, a service day may contain information for the subsequent day(s)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An email address."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Email"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Enum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An option from a set of predefined constants defined in the \"Description\" column."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Enum"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/FareProdcut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Purchasable fare products that can be used to pay for or validate travel."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "FareProdcut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Intangible"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Field",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A field refers to a single item of data or a column header within a GTFS file"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Intangible"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/FieldType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "FieldType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Intangible"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/File",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A File refers to a single file within the GTFS feed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "File"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Intangible"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Float",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A floating point number."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Float"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/ID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An ID field value is an internal ID, not intended to be shown to riders, and is a sequence of any UTF-8 characters. Using only printable ASCII characters is recommended. An ID is labeled \"unique ID\" when it must be unique within a file. IDs defined in one .txt file are often referenced in another .txt file. IDs that reference an ID in another table are labeled \"foreign ID\"."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Integer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An integer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Integer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Journey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Overall travel from origin to destination, including all legs and transfers in-between"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Journey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Intangible"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/LanguageCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An IETF BCP 47 language code. For an introduction to IETF BCP 47, refer to http://www.rfc-editor.org/rfc/bcp/bcp47.txt and"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "LanguageCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Latitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "WGS84 latitude in decimal degrees. The value must be greater than or equal to -90.0 and less than or equal to 90.0."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Latitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Leg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Travel in which a rider boards and alights between a pair of subsequent locations along a trip."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Leg"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Intangible"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Longitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "WGS84 longitude in decimal degrees. The value must be greater than or equal to -90.0 and less than or equal to 90.0."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Longitude"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Optional",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The field or file may be omitted from the dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Optional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/PresenceCondition"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/PhoneNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A phone number"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PhoneNumber"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/PresenceCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The presence conditions applicable to  Files and Fields"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PresenceCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Enumeration"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Recommended",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The field or file may be omitted from the dataset, but it is a best practice to include it. Before omitting this field or file, the best practice should be carefully evaluated and the full implications of omission should be understood."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Recommended"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/PresenceCondition"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Required",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The field or file must be included in the dataset and contain a valid value for each record."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Required"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/PresenceCondition"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/ServiceDay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A service day is a time period used to indicate route scheduling. The exact definition of service day varies from agency to agency but service days often do not correspond with calendar days. A service day may exceed 24:00:00 if service begins on one day and ends on a following day. For example, service that runs from 08:00:00 on Friday to 02:00:00 on Saturday, could be denoted as running from 08:00:00 to 26:00:00 on a single service day."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ServiceDay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Intangible"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/SubJourney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Two or more legs that comprise a subset of a journey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SubJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/Journey"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Text",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/Time",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Time in the HH:MM:SS format (H:MM:SS is also accepted). The time is measured from \"noon minus 12h\" of the service day (effectively midnight except for days on which daylight savings time changes occur). For times occurring after midnight on the service day, enter the time as a value greater than 24:00:00 in HH:MM:SS."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/TimeZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "TZ timezone from the https://www.iana.org/time-zones. Timezone names never contain the space character but may contain an underscore. Refer to http://en.wikipedia.org/wiki/List_of_tz_zones for a list of valid values."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TimeZone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/URL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A fully qualified URL that includes http:// or https://, and any special characters in the URL must be correctly escaped. See the following http://www.w3.org/Addressing/URL/4_URI_Recommentations.html for a description of how to create fully qualified URL values."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/additionalInfo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Any additional information about the object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "additionalInfo"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/agency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/hasField" : [ {
+    "@id" : "http://gtfs.org/agency_email"
+  }, {
+    "@id" : "http://gtfs.org/agency_fare_url"
+  }, {
+    "@id" : "http://gtfs.org/agency_id"
+  }, {
+    "@id" : "http://gtfs.org/agency_lang"
+  }, {
+    "@id" : "http://gtfs.org/agency_name"
+  }, {
+    "@id" : "http://gtfs.org/agency_phone"
+  }, {
+    "@id" : "http://gtfs.org/agency_timezone"
+  }, {
+    "@id" : "http://gtfs.org/agency_url"
+  } ],
+  "http://gtfs.org/isPresence" : [ {
+    "@id" : "http://gtfs.org/Required"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://gtfs.org/File"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Contains all information about transit agencies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "agency"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/agency_email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/example" : [ {
+    "@value" : "info@citytransit.com"
+  } ],
+  "http://gtfs.org/isPresence" : [ {
+    "@id" : "http://gtfs.org/Optional"
+  } ],
+  "http://gtfs.org/isType" : [ {
+    "@id" : "http://gtfs.org/Email"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://gtfs.org/Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Email address actively monitored by the agency’s customer service department. This email address should be a direct contact point where transit riders can reach a customer service representative at the agency."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "agency_email"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/agency_fare_url",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/example" : [ {
+    "@value" : "http://www.citytransit.com/fares"
+  } ],
+  "http://gtfs.org/isPresence" : [ {
+    "@id" : "http://gtfs.org/Optional"
+  } ],
+  "http://gtfs.org/isType" : [ {
+    "@id" : "http://gtfs.org/URL"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://gtfs.org/Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "URL of a web page that allows a rider to purchase tickets or other fare instruments for that agency online."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "agency_fare_url"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/agency_id",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/additionalInfo" : [ {
+    "@value" : "Required when the dataset contains data for multiple transit agencies. Recommended otherwise."
+  } ],
+  "http://gtfs.org/example" : [ {
+    "@value" : "123"
+  } ],
+  "http://gtfs.org/isPresence" : [ {
+    "@id" : "http://gtfs.org/ConditionallyRequired"
+  } ],
+  "http://gtfs.org/isType" : [ {
+    "@id" : "http://gtfs.org/ID"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://gtfs.org/Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Identifies a transit brand which is often synonymous with a transit agency. Note that in some cases, such as when a single agency operates multiple separate services, agencies and brands are distinct. This document uses the term \"agency\" in place of \"brand\". A dataset may contain data from multiple agencies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "agency_id"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/agency_lang",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/example" : [ {
+    "@value" : "en"
+  } ],
+  "http://gtfs.org/isPresence" : [ {
+    "@id" : "http://gtfs.org/Optional"
+  } ],
+  "http://gtfs.org/isType" : [ {
+    "@id" : "http://gtfs.org/LanguageCode"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://gtfs.org/Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Primary language used by this transit agency. Should be provided to help GTFS consumers choose capitalization rules and other language-specific settings for the dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "agency_lang"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/agency_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/example" : [ {
+    "@value" : "City Transit"
+  } ],
+  "http://gtfs.org/isPresence" : [ {
+    "@id" : "http://gtfs.org/Required"
+  } ],
+  "http://gtfs.org/isType" : [ {
+    "@id" : "http://gtfs.org/Text"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://gtfs.org/Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Full name of the transit agency."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "agency_name"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/agency_phone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/example" : [ {
+    "@value" : "503-238-RIDE"
+  } ],
+  "http://gtfs.org/isPresence" : [ {
+    "@id" : "http://gtfs.org/Optional"
+  } ],
+  "http://gtfs.org/isType" : [ {
+    "@id" : "http://gtfs.org/PhoneNumber"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://gtfs.org/Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A voice telephone number for the specified agency. This field is a string value that presents the telephone number as typical for the agency's service area. It may contain punctuation marks to group the digits of the number. Dialable text is permitted, but the field must not contain any other descriptive text."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "agency_phone"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/agency_timezone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/example" : [ {
+    "@value" : "America/New_York"
+  } ],
+  "http://gtfs.org/isPresence" : [ {
+    "@id" : "http://gtfs.org/Required"
+  } ],
+  "http://gtfs.org/isType" : [ {
+    "@id" : "http://gtfs.org/TimeZone"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://gtfs.org/Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Timezone where the transit agency is located. If multiple agencies are specified in the dataset, each must have the same agency_timezone."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "agency_timezone"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/agency_url",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/example" : [ {
+    "@value" : "http://www.citytransit.com"
+  } ],
+  "http://gtfs.org/isPresence" : [ {
+    "@id" : "http://gtfs.org/Required"
+  } ],
+  "http://gtfs.org/isType" : [ {
+    "@id" : "http://gtfs.org/URL"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://gtfs.org/Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "URL of the transit agency."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "agency_url"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An example FieldType or use case"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "example"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/hasEnumValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://gtfs.org/hasField",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property links a file to its fields"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://gtfs.org/File"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasField"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://gtfs.org/Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/hasPresence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property links a field to its PresenceCondition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://gtfs.org/Field"
+  }, {
+    "@id" : "http://gtfs.org/File"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasPresence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://gtfs.org/PresenceCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/isPresence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://gtfs.org/Field"
+  }, {
+    "@id" : "http://gtfs.org/FieldType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "isPresence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://gtfs.org/PresenceCondition"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/isType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://gtfs.org/Field"
+  }, {
+    "@id" : "http://www.example.org/gtfs#Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "isType"
+  }, {
+    "@value" : "isType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://gtfs.org/FieldType"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/additionalInfo" : [ {
+    "@value" : "Each route must have a single, non-empty value for this field."
+  } ],
+  "http://gtfs.org/example" : [ {
+    "@value" : "0"
+  } ],
+  "http://gtfs.org/hasEnumValue" : [ {
+    "@id" : "http://gtfs.org/route_type/0"
+  }, {
+    "@id" : "http://gtfs.org/route_type/1"
+  }, {
+    "@id" : "http://gtfs.org/route_type/2"
+  }, {
+    "@id" : "http://gtfs.org/route_type/3"
+  }, {
+    "@id" : "http://gtfs.org/route_type/4"
+  }, {
+    "@id" : "http://gtfs.org/route_type/5"
+  }, {
+    "@id" : "http://gtfs.org/route_type/6"
+  }, {
+    "@id" : "http://gtfs.org/route_type/7"
+  } ],
+  "http://gtfs.org/isPresence" : [ {
+    "@value" : "Required"
+  } ],
+  "http://gtfs.org/isType" : [ {
+    "@value" : "Enum"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://gtfs.org/Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Describes the type of transportation used on a route."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "route_type"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/0",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/1",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Subway, Metro. Any underground rail system within a metropolitan area."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/2",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Rail. Used for intercity or long-distance travel."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/3",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Bus. Used for short- and long-distance bus routes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/4",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ferry. Used for short- and long-distance boat service."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "4"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/5",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cable car. Used for street-level cable cars where the cable runs beneath the car."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "5"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/6",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Gondola, Suspended cable car. Typically used for aerial cable cars where the car is suspended from the cable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "6"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/7",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Funicular. Any rail system designed for steep inclines."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "7"
+  } ]
+}, {
+  "@id" : "http://schema.org/Enumeration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Enumeration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://schema.org/Intangible"
+  } ]
+}, {
+  "@id" : "http://schema.org/Intangible",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intangible"
+  } ]
+}, {
+  "@id" : "http://schema.org/Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Property"
+  } ]
+}, {
+  "@id" : "http://schema.org/QuantitativeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "QuantitativeValue"
+  } ]
+}, {
+  "@id" : "http://schema.org/StructuredValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "StructuredValue"
+  } ]
+}, {
+  "@id" : "http://schema.org/Vehicle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vehicle"
+  } ]
+}, {
+  "@id" : "http://www.example.org/gtfs#Field",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.example.org/gtfs#hasEnumValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property links a field to its possible enumeration values."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.example.org/gtfs#Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasEnumValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "urn:webprotege:ontology:a20e8f42-14c4-441d-8ba5-724fed2311a8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+} ]

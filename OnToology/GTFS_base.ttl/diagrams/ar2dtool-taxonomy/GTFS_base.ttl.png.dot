@@ -1,0 +1,36 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "gtfs:CurrencyAmount" "schema1:Enumeration" "gtfs:ConditionallyRequired" "gtfs:Field" "gtfs:SubJourney" "gtfs:Recommended" "gtfs:Optional" "gtfs:URL" "gtfs:Journey" "schema1:Intangible" "gtfs:Enum" "gtfs:FareProdcut" "gtfs:ConditionallyForbidden" "gtfs:ID" "gtfs:TimeZone" "gtfs:Text" "gtfs:FieldType" "gtfs:Float" "gtfs:File" "gtfs:Email" "gtfs:PhoneNumber" "gtfs:LanguageCode" "gtfs:Time" "gtfs:Leg" "gtfs:Date" "gtfs:PresenceCondition" "gtfs:Integer" "gtfs:ServiceDay" "gtfs:Required" "gtfs:Longitude" "gtfs:Latitude" ; /*classes style*/
+	"gtfs:PresenceCondition" -> "schema1:Enumeration" [ label = "rdfs:subClassOf" ];
+	"gtfs:Email" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:LanguageCode" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:CurrencyAmount" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:ConditionallyForbidden" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"gtfs:ID" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Leg" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:ConditionallyRequired" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"gtfs:Optional" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"gtfs:Date" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Integer" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:File" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:SubJourney" -> "gtfs:Journey" [ label = "rdfs:subClassOf" ];
+	"gtfs:Journey" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:URL" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Recommended" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"gtfs:Text" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:FareProdcut" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:Time" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:TimeZone" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Latitude" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:FieldType" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:Field" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:ServiceDay" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:Required" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"schema1:Enumeration" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:Longitude" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Float" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Enum" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:PhoneNumber" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+
+}
