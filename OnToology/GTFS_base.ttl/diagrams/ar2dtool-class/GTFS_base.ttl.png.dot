@@ -1,0 +1,47 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "gtfs:ConditionallyRequired" "gtfs:Field" "gtfs:Optional" "gtfs:URL" "gtfs:ID" "gtfs:TimeZone" "gtfs:Text" "gtfs:FieldType" "gtfs:File" "gtfs:Email" "gtfs:PhoneNumber" "gtfs:LanguageCode" "gtfs:PresenceCondition" "gtfs:Required" ; /*classes style*/
+	"gtfs:agency_lang" -> "gtfs:LanguageCode" [ label = "gtfs:isType" ];
+	"gtfs:agency_lang" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
+	"http://www.example.org/gtfs#hasEnumValue" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"gtfs:agency_timezone" -> "gtfs:TimeZone" [ label = "gtfs:isType" ];
+	"gtfs:agency_timezone" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
+	"gtfs:agency_url" -> "gtfs:URL" [ label = "gtfs:isType" ];
+	"gtfs:agency_url" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
+	"gtfs:route_type" -> "http://gtfs.org/route_type/2" [ label = "gtfs:hasEnumValue" ];
+	"gtfs:route_type" -> "http://gtfs.org/route_type/7" [ label = "gtfs:hasEnumValue" ];
+	"gtfs:route_type" -> "http://gtfs.org/route_type/6" [ label = "gtfs:hasEnumValue" ];
+	"gtfs:route_type" -> "http://gtfs.org/route_type/0" [ label = "gtfs:hasEnumValue" ];
+	"gtfs:route_type" -> "http://gtfs.org/route_type/5" [ label = "gtfs:hasEnumValue" ];
+	"gtfs:route_type" -> "http://gtfs.org/route_type/4" [ label = "gtfs:hasEnumValue" ];
+	"gtfs:route_type" -> "http://gtfs.org/route_type/3" [ label = "gtfs:hasEnumValue" ];
+	"gtfs:route_type" -> "http://gtfs.org/route_type/1" [ label = "gtfs:hasEnumValue" ];
+	"gtfs:agency_id" -> "gtfs:ID" [ label = "gtfs:isType" ];
+	"gtfs:agency_id" -> "gtfs:ConditionallyRequired" [ label = "gtfs:isPresence" ];
+	"gtfs:agency_name" -> "gtfs:Text" [ label = "gtfs:isType" ];
+	"gtfs:agency_name" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
+	"gtfs:agency_fare_url" -> "gtfs:URL" [ label = "gtfs:isType" ];
+	"gtfs:agency_fare_url" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
+	"gtfs:hasPresence" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"gtfs:hasField" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"gtfs:agency" -> "gtfs:agency_timezone" [ label = "gtfs:hasField" ];
+	"gtfs:agency" -> "gtfs:agency_email" [ label = "gtfs:hasField" ];
+	"gtfs:agency" -> "gtfs:agency_lang" [ label = "gtfs:hasField" ];
+	"gtfs:agency" -> "gtfs:agency_id" [ label = "gtfs:hasField" ];
+	"gtfs:agency" -> "gtfs:agency_name" [ label = "gtfs:hasField" ];
+	"gtfs:agency" -> "gtfs:agency_fare_url" [ label = "gtfs:hasField" ];
+	"gtfs:agency" -> "gtfs:agency_url" [ label = "gtfs:hasField" ];
+	"gtfs:agency" -> "gtfs:agency_phone" [ label = "gtfs:hasField" ];
+	"gtfs:agency" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
+	"gtfs:agency_phone" -> "gtfs:PhoneNumber" [ label = "gtfs:isType" ];
+	"gtfs:agency_phone" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
+	"gtfs:agency_email" -> "gtfs:Email" [ label = "gtfs:isType" ];
+	"gtfs:agency_email" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
+	"gtfs:Field" -> "gtfs:FieldType" [ label = "gtfs:isType" ];
+	"http://www.example.org/gtfs#Field" -> "rdfs:Resource" [ label = "http://www.example.org/gtfs#hasEnumValue" ];
+	"gtfs:File" -> "gtfs:Field" [ label = "gtfs:hasField" ];
+	"gtfs:Field" -> "gtfs:PresenceCondition" [ label = "gtfs:isPresence" ];
+	"gtfs:Field" -> "gtfs:PresenceCondition" [ label = "gtfs:hasPresence" ];
+
+}

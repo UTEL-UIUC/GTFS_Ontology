@@ -1,0 +1,146 @@
+{
+  "@context" : {
+    "URL" : {
+      "@id" : "http://gtfs.org/URL"
+    },
+    "ServiceDay" : {
+      "@id" : "http://gtfs.org/ServiceDay"
+    },
+    "isType" : {
+      "@id" : "http://gtfs.org/isType"
+    },
+    "example" : {
+      "@id" : "http://gtfs.org/example"
+    },
+    "Longitude" : {
+      "@id" : "http://gtfs.org/Longitude"
+    },
+    "Email" : {
+      "@id" : "http://gtfs.org/Email"
+    },
+    "Recommended" : {
+      "@id" : "http://gtfs.org/Recommended"
+    },
+    "ConditionallyRequired" : {
+      "@id" : "http://gtfs.org/ConditionallyRequired"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "File" : {
+      "@id" : "http://gtfs.org/File"
+    },
+    "TimeZone" : {
+      "@id" : "http://gtfs.org/TimeZone"
+    },
+    "SubJourney" : {
+      "@id" : "http://gtfs.org/SubJourney"
+    },
+    "hasPresence" : {
+      "@id" : "http://gtfs.org/hasPresence",
+      "@type" : "@id"
+    },
+    "Date" : {
+      "@id" : "http://gtfs.org/Date"
+    },
+    "Leg" : {
+      "@id" : "http://gtfs.org/Leg"
+    },
+    "PresenceCondition" : {
+      "@id" : "http://gtfs.org/PresenceCondition"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "StructuredValue" : {
+      "@id" : "http://schema.org/StructuredValue"
+    },
+    "hasField" : {
+      "@id" : "http://gtfs.org/hasField",
+      "@type" : "@id"
+    },
+    "ID" : {
+      "@id" : "http://gtfs.org/ID"
+    },
+    "CurrencyAmount" : {
+      "@id" : "http://gtfs.org/CurrencyAmount"
+    },
+    "LanguageCode" : {
+      "@id" : "http://gtfs.org/LanguageCode"
+    },
+    "hasEnumValue" : {
+      "@id" : "http://www.example.org/gtfs#hasEnumValue",
+      "@type" : "@id"
+    },
+    "Journey" : {
+      "@id" : "http://gtfs.org/Journey"
+    },
+    "Required" : {
+      "@id" : "http://gtfs.org/Required"
+    },
+    "Integer" : {
+      "@id" : "http://gtfs.org/Integer"
+    },
+    "Latitude" : {
+      "@id" : "http://gtfs.org/Latitude"
+    },
+    "Property" : {
+      "@id" : "http://schema.org/Property"
+    },
+    "QuantitativeValue" : {
+      "@id" : "http://schema.org/QuantitativeValue"
+    },
+    "Enum" : {
+      "@id" : "http://gtfs.org/Enum"
+    },
+    "Text" : {
+      "@id" : "http://gtfs.org/Text"
+    },
+    "FieldType" : {
+      "@id" : "http://gtfs.org/FieldType"
+    },
+    "Resource" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "FareProdcut" : {
+      "@id" : "http://gtfs.org/FareProdcut"
+    },
+    "ConditionallyForbidden" : {
+      "@id" : "http://gtfs.org/ConditionallyForbidden"
+    },
+    "Optional" : {
+      "@id" : "http://gtfs.org/Optional"
+    },
+    "additionalInfo" : {
+      "@id" : "http://gtfs.org/additionalInfo"
+    },
+    "Field" : {
+      "@id" : "http://www.example.org/gtfs#Field"
+    },
+    "Enumeration" : {
+      "@id" : "http://schema.org/Enumeration"
+    },
+    "isPresence" : {
+      "@id" : "http://gtfs.org/isPresence"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Vehicle" : {
+      "@id" : "http://schema.org/Vehicle"
+    },
+    "Float" : {
+      "@id" : "http://gtfs.org/Float"
+    },
+    "Intangible" : {
+      "@id" : "http://schema.org/Intangible"
+    },
+    "Time" : {
+      "@id" : "http://gtfs.org/Time"
+    },
+    "PhoneNumber" : {
+      "@id" : "http://gtfs.org/PhoneNumber"
+    }
+  }
+}
