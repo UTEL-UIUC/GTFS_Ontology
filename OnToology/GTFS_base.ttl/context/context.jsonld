@@ -1,0 +1,172 @@
+{
+  "@context" : {
+    "abstract" : {
+      "@id" : "http://purl.org/dc/elements/1.1/abstract"
+    },
+    "URL" : {
+      "@id" : "http://gtfs.org/URL"
+    },
+    "ServiceDay" : {
+      "@id" : "http://gtfs.org/ServiceDay"
+    },
+    "isType" : {
+      "@id" : "http://gtfs.org/isType",
+      "@type" : "@id"
+    },
+    "example" : {
+      "@id" : "http://gtfs.org/example"
+    },
+    "Longitude" : {
+      "@id" : "http://gtfs.org/Longitude"
+    },
+    "Email" : {
+      "@id" : "http://gtfs.org/Email"
+    },
+    "Recommended" : {
+      "@id" : "http://gtfs.org/Recommended"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "hasCondition" : {
+      "@id" : "http://gtfs.org/hasCondition",
+      "@type" : "@id"
+    },
+    "ConditionallyRequired" : {
+      "@id" : "http://gtfs.org/ConditionallyRequired"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "File" : {
+      "@id" : "http://gtfs.org/File"
+    },
+    "TimeZone" : {
+      "@id" : "http://gtfs.org/TimeZone"
+    },
+    "SubJourney" : {
+      "@id" : "http://gtfs.org/SubJourney"
+    },
+    "Date" : {
+      "@id" : "http://gtfs.org/Date"
+    },
+    "Leg" : {
+      "@id" : "http://gtfs.org/Leg"
+    },
+    "PresenceCondition" : {
+      "@id" : "http://gtfs.org/PresenceCondition"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "StructuredValue" : {
+      "@id" : "http://schema.org/StructuredValue"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
+    },
+    "hasField" : {
+      "@id" : "http://gtfs.org/hasField",
+      "@type" : "@id"
+    },
+    "ID" : {
+      "@id" : "http://gtfs.org/ID"
+    },
+    "CurrencyAmount" : {
+      "@id" : "http://gtfs.org/CurrencyAmount"
+    },
+    "LanguageCode" : {
+      "@id" : "http://gtfs.org/LanguageCode"
+    },
+    "hasEnumValue" : {
+      "@id" : "http://gtfs.org/hasEnumValue",
+      "@type" : "@id"
+    },
+    "Journey" : {
+      "@id" : "http://gtfs.org/Journey"
+    },
+    "Required" : {
+      "@id" : "http://gtfs.org/Required"
+    },
+    "Integer" : {
+      "@id" : "http://gtfs.org/Integer"
+    },
+    "Latitude" : {
+      "@id" : "http://gtfs.org/Latitude"
+    },
+    "Property" : {
+      "@id" : "http://schema.org/Property"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/elements/1.1/source"
+    },
+    "QuantitativeValue" : {
+      "@id" : "http://schema.org/QuantitativeValue"
+    },
+    "Enum" : {
+      "@id" : "http://gtfs.org/Enum"
+    },
+    "Text" : {
+      "@id" : "http://gtfs.org/Text"
+    },
+    "FieldType" : {
+      "@id" : "http://gtfs.org/FieldType"
+    },
+    "Resource" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "FareProdcut" : {
+      "@id" : "http://gtfs.org/FareProdcut"
+    },
+    "ConditionallyForbidden" : {
+      "@id" : "http://gtfs.org/ConditionallyForbidden"
+    },
+    "Optional" : {
+      "@id" : "http://gtfs.org/Optional"
+    },
+    "additionalInfo" : {
+      "@id" : "http://gtfs.org/additionalInfo"
+    },
+    "Field" : {
+      "@id" : "http://gtfs.org/Field"
+    },
+    "Enumeration" : {
+      "@id" : "http://schema.org/Enumeration"
+    },
+    "isPresence" : {
+      "@id" : "http://gtfs.org/isPresence",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/elements/1.1/language"
+    },
+    "Vehicle" : {
+      "@id" : "http://schema.org/Vehicle"
+    },
+    "Float" : {
+      "@id" : "http://gtfs.org/Float"
+    },
+    "Intangible" : {
+      "@id" : "http://schema.org/Intangible"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "Time" : {
+      "@id" : "http://gtfs.org/Time"
+    },
+    "PhoneNumber" : {
+      "@id" : "http://gtfs.org/PhoneNumber"
+    }
+  }
+}

@@ -162,6 +162,8 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
         <rdfs:domain rdf:resource="http://gtfs.org/Field"/>
         <rdfs:domain rdf:resource="http://gtfs.org/File"/>
         <rdfs:range rdf:resource="http://gtfs.org/PresenceCondition"/>
+        <rdfs:comment>This property links a file or field to its PresenceCondition.</rdfs:comment>
+        <rdfs:label xml:lang="en">isPresence</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -173,6 +175,8 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://gtfs.org/Field"/>
         <rdfs:range rdf:resource="http://gtfs.org/FieldType"/>
+        <rdfs:comment>This propert is used to specify the FieldType for a Field</rdfs:comment>
+        <rdfs:label>isType</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -262,8 +266,6 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:Class rdf:about="http://gtfs.org/Enum">
         <rdfs:subClassOf rdf:resource="http://gtfs.org/FieldType"/>
-        <rdfs:comment xml:lang="en">An option from a set of predefined constants defined in the &quot;Description&quot; column.</rdfs:comment>
-        <rdfs:label xml:lang="en">Enum</rdfs:label>
     </owl:Class>
     
 
@@ -612,6 +614,13 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/Email"/>
+    
+
+
+    <!-- http://gtfs.org/Enum -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/Enum"/>
     
 
 
@@ -1012,9 +1021,9 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/bikes_allowed/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/bikes_allowed/1"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/bikes_allowed/2"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum field with options 0, 1, 2</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates whether bikes are allowed. Valid options are: 0 or empty - No bike information for the trip. 1 - Vehicle being used on this particular trip can accommodate at least one bicycle. 2 - No bicycles are allowed on this trip.</rdfs:comment>
         <rdfs:label>bikes_allowed</rdfs:label>
     </owl:NamedIndividual>
@@ -1101,9 +1110,9 @@ c,GRT,...,7</gtfs:example>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/continuous_drop_off/1"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/continuous_drop_off/2"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/continuous_drop_off/3"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Continuous stopping drop off, 1 or empty - No continuous stopping drop off, 2 - Must phone agency to arrange continuous stopping drop off, 3 - Must coordinate with driver to arrange continuous stopping drop off. Values for routes.continuous_drop_off may be overridden by defining values in stop_times.continuous_drop_off for specific stop_times along the route.</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates that the rider can alight from the transit vehicle at any point along the vehicle’s travel path as described by `shapes.txt`, from this `stop_time` to the next `stop_time` in the trip’s `stop_sequence`. Valid options are: `0` - Continuous stopping drop off. `1` or empty - No continuous stopping drop off. `2` - Must phone agency to arrange continuous stopping drop off. `3` - Must coordinate with driver to arrange continuous stopping drop off. If this field is populated, it overrides any continuous drop-off behavior defined in `routes.txt`. If this field is empty, the `stop_time` inherits any continuous drop-off behavior defined in `routes.txt`.</rdfs:comment>
         <rdfs:comment>Indicates that the rider can alight from the transit vehicle at any point along the vehicle’s travel path as described by shapes.txt, on every trip of the route.</rdfs:comment>
         <rdfs:label>continuous_drop_off</rdfs:label>
@@ -1120,10 +1129,10 @@ c,GRT,...,7</gtfs:example>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/continuous_pickup/1"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/continuous_pickup/2"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/continuous_pickup/3"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup.</gtfs:additionalInfo>
         <gtfs:additionalInfo>Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup. Values for `routes.continuous_pickup` may be overridden by defining values in `stop_times.continuous_pickup` for specific `stop_time`s along the route.</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates that the rider can board the transit vehicle at any point along the vehicle’s travel path as described by `shapes.txt`, from this `stop_time` to the next `stop_time` in the trip’s `stop_sequence`. If this field is populated, it overrides any continuous pickup behavior defined in `routes.txt`. If this field is empty, the `stop_time` inherits any continuous pickup behavior defined in `routes.txt`.</rdfs:comment>
         <rdfs:comment>Indicates that the rider can board the transit vehicle at any point along the vehicle’s travel path as described by `shapes.txt`, on every trip of the route.</rdfs:comment>
         <rdfs:label>continuous_pickup</rdfs:label>
@@ -1230,9 +1239,9 @@ For times occurring after midnight on the service day, enter the time as a value
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/direction_id/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/direction_id/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Travel in one direction (e.g. outbound travel). 1 - Travel in the opposite direction (e.g. inbound travel).</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates the direction of travel for a trip. This field should not be used in routing; it provides a way to separate trips by direction when publishing time tables.</rdfs:comment>
         <rdfs:label>direction_id</rdfs:label>
     </owl:NamedIndividual>
@@ -1248,9 +1257,9 @@ For times occurring after midnight on the service day, enter the time as a value
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/drop_off_type/1"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/drop_off_type/2"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/drop_off_type/3"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum field with options 0, 1, 2, 3</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates drop off method. Valid options are: 0 or empty - Regularly scheduled drop off. 1 - No drop off available. 2 - Must phone agency to arrange drop off. 3 - Must coordinate with driver to arrange drop off.</rdfs:comment>
         <rdfs:label>drop_off_type</rdfs:label>
     </owl:NamedIndividual>
@@ -1284,10 +1293,10 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/duration_limit_type/1"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/duration_limit_type/2"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/duration_limit_type/3"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Defines the relative start and end of `fare_transfer_rules.duration_limit`.</gtfs:additionalInfo>
         <gtfs:hasCondition>Required if `fare_transfer_rules.duration_limit` is defined. Forbidden if `fare_transfer_rules.duration_limit` is empty.</gtfs:hasCondition>
-        <gtfs:isPresence>ConditionallyRequired</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Defines the relative start and end of `fare_transfer_rules.duration_limit`. Valid options are: `0` - Between the departure fare validation of the current leg and the arrival fare validation of the next leg. `1` - Between the departure fare validation of the current leg and the departure fare validation of the next leg. `2` - Between the arrival fare validation of the current leg and the departure fare validation of the next leg. `3` - Between the arrival fare validation of the current leg and the arrival fare validation of the next leg.</rdfs:comment>
         <rdfs:label>duration_limit_type</rdfs:label>
     </owl:NamedIndividual>
@@ -1333,9 +1342,9 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/exact_times/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/exact_times/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum field with options 0 or 1</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates the type of service for a trip. See the file description for more information. Valid options are: 0 or empty - Frequency-based trips. 1 - Schedule-based trips with the exact same headway throughout the day. In this case the end_time value must be greater than the last desired trip start_time but less than the last desired trip start_time + headway_secs.</rdfs:comment>
         <rdfs:label>exact_times</rdfs:label>
     </owl:NamedIndividual>
@@ -1349,9 +1358,9 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/exception_type/1"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/exception_type/2"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Suppose a route has one set of trips available on holidays and another set of trips available on all other days. One service_id could correspond to the regular service schedule and another service_id could correspond to the holiday schedule. For a particular holiday, the calendar_dates.txt file could be used to add the holiday to the holiday service_id and to remove the holiday from the regular service_id schedule.</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates whether service is available on the date specified in the date field. Valid options are: 1 - Service has been added for the specified date. 2 - Service has been removed for the specified date.</rdfs:comment>
         <rdfs:label>exception_type</rdfs:label>
     </owl:NamedIndividual>
@@ -1471,9 +1480,9 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/fare_media_type/2"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/fare_media_type/3"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/fare_media_type/4"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum field with options: 0 - None, 1 - Physical paper ticket, 2 - Physical transit card, 3 - cEMV, 4 - Mobile app</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>The type of fare media. Valid options are: 0 - None. Used when there is no fare media involved in purchasing or validating a fare product, such as paying cash to a driver or conductor with no physical ticket provided. 1 - Physical paper ticket that allows a passenger to take either a certain number of pre-purchased trips or unlimited trips within a fixed period of time. 2 - Physical transit card that has stored tickets, passes or monetary value. 3 - cEMV (contactless Europay, Mastercard and Visa) as an open-loop token container for account-based ticketing. 4 - Mobile app that have stored virtual transit cards, tickets, passes, or monetary value.</rdfs:comment>
         <rdfs:label>fare_media_type</rdfs:label>
     </owl:NamedIndividual>
@@ -1575,9 +1584,9 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/fare_transfer_type/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/fare_transfer_type/1"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/fare_transfer_type/2"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 0 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB. 1 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B. 2 - fare_transfer_rules.fare_product_id; AB. Cost processing interactions between multiple transfers in a journey: Where S indicates the total processed cost of the preceding leg(s) and transfer(s.</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates the cost processing method of transferring between legs in a journey</rdfs:comment>
         <rdfs:label>fare_transfer_type</rdfs:label>
     </owl:NamedIndividual>
@@ -1780,9 +1789,9 @@ If two translation rules match the same record (one with `field_value`, and the 
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/friday/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/friday/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum field representing the behavior on Fridays</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Functions in the same way as `monday` except applies to Fridays</rdfs:comment>
         <rdfs:label>friday</rdfs:label>
     </owl:NamedIndividual>
@@ -1902,9 +1911,9 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/is_authority/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/is_authority/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum field representing the role of the organization as an authority.</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Functions in the same way as `is_producer` except the role of the organization is authority.</rdfs:comment>
         <rdfs:label>is_authority</rdfs:label>
     </owl:NamedIndividual>
@@ -1918,9 +1927,9 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/is_bidirectional/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/is_bidirectional/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Exit gates (pathway_mode=7) must not be bidirectional.</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates the direction that the pathway can be taken</rdfs:comment>
         <rdfs:label>is_bidirectional</rdfs:label>
     </owl:NamedIndividual>
@@ -1934,9 +1943,9 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/is_operator/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/is_operator/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Functions in the same way as `is_producer` except the role of the organization is operator.</rdfs:comment>
         <rdfs:label>is_operator</rdfs:label>
     </owl:NamedIndividual>
@@ -1950,9 +1959,9 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/is_producer/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/is_producer/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 0 or empty - Organization doesn’t have this role. 1 - Organization does have this role.</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>The role of the organization is producer. At least one of the fields is_producer, is_operator, or is_authority should be set at 1.</rdfs:comment>
         <rdfs:label>is_producer</rdfs:label>
     </owl:NamedIndividual>
@@ -2077,9 +2086,9 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/location_type/2"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/location_type/3"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/location_type/4"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 0 (or blank) - Stop (or Platform), 1 - Station, 2 - Entrance/Exit, 3 - Generic Node, 4 - Boarding Area</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Location type. Valid options are: 0 (or blank) - Stop (or Platform). A location where passengers board or disembark from a transit vehicle. Is called a platform when defined within a parent_station. 1 - Station. A physical structure or area that contains one or more platform. 2 - Entrance/Exit. A location where passengers can enter or exit a station from the street. If an entrance/exit belongs to multiple stations, it may be linked by pathways to both, but the data provider must pick one of them as parent. 3 - Generic Node. A location within a station, not matching any other location_type, that may be used to link together pathways define in pathways.txt. 4 - Boarding Area. A specific location on a platform, where passengers can board and/or alight vehicles.</rdfs:comment>
         <rdfs:label>location_type</rdfs:label>
     </owl:NamedIndividual>
@@ -2135,9 +2144,9 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/monday/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/monday/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 1 - Service is available for all Mondays in the date range. 0 - Service is not available for Mondays in the date range.</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates whether the service operates on all Mondays in the date range specified by the `start_date` and `end_date` fields. Note that exceptions for particular dates may be listed in [calendar_dates.txt](#calendar_datestxt). Valid options are: 1 - Service is available for all Mondays in the date range. 0 - Service is not available for Mondays in the date range.</rdfs:comment>
         <rdfs:label>monday</rdfs:label>
     </owl:NamedIndividual>
@@ -2229,9 +2238,9 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/pathway_mode/5"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/pathway_mode/6"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/pathway_mode/7"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 1 - Walkway, 2 - Stairs, 3 - Moving sidewalk/travelator, 4 - Escalator, 5 - Elevator, 6 - Fare gate, 7 - Exit gate</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Type of pathway between the specified (from_stop_id, to_stop_id) pair. Valid options are: 1 - Walkway. 2 - Stairs. 3 - Moving sidewalk/travelator. 4 - Escalator. 5 - Elevator. 6 - Fare gate (or payment gate): A pathway that crosses into an area of the station where proof of payment is required to cross. Fare gates may separate paid areas of the station from unpaid ones, or separate different payment areas within the same station from each other. This information can be used to avoid routing passengers through stations using shortcuts that would require passengers to make unnecessary payments, like directing a passenger to walk through a subway platform to reach a busway. 7- Exit gate: A pathway exiting a paid area into an unpaid area where proof of payment is not required to cross.</rdfs:comment>
         <rdfs:label>pathway_mode</rdfs:label>
     </owl:NamedIndividual>
@@ -2269,9 +2278,9 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/payment_method/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/payment_method/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Fare is paid on board. 1 - Fare must be paid before boarding.</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates when the fare must be paid. Valid options are: 0 - Fare is paid on board. 1 - Fare must be paid before boarding.</rdfs:comment>
         <rdfs:label>payment_method</rdfs:label>
     </owl:NamedIndividual>
@@ -2287,9 +2296,9 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/pickup_type/1"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/pickup_type/2"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/pickup_type/3"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum field with options 0, 1, 2, 3</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates pickup method. Valid options are: 0 or empty - Regularly scheduled pickup. 1 - No pickup available. 2 - Must phone agency to arrange pickup. 3 - Must coordinate with driver to arrange pickup.</rdfs:comment>
         <rdfs:label>pickup_type</rdfs:label>
     </owl:NamedIndividual>
@@ -2532,9 +2541,9 @@ Conditionally Required:
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/route_type/5"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/route_type/6"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/route_type/7"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area. 1 - Subway, Metro. Any underground rail system within a metropolitan area. 2 - Rail. Used for intercity or long-distance travel. 3 - Bus. Used for short- and long-distance bus routes. 4 - Ferry. Used for short- and long-distance boat service. 5 - Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle (e.g., cable car in San Francisco). 6 - Aerial lift, suspended cable car (e.g., gondola lift, aerial tramway). Cable transport where cabins, cars, gondolas or open chairs are suspended by means of one or more cables. 7 - Funicular. Any rail system designed for steep inclines. 11 - Trolleybus. Electric buses that draw power from overhead wires using poles. 12 - Monorail. Railway in which the track consists of a single rail or a beam.</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates the type of transportation used on a route.</rdfs:comment>
         <rdfs:label>route_type</rdfs:label>
     </owl:NamedIndividual>
@@ -2586,9 +2595,9 @@ Conditionally Required:
     <owl:NamedIndividual rdf:about="http://gtfs.org/saturday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/saturday/example_key"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Functions in the same way as `monday` except applies to Saturdays.</rdfs:comment>
         <rdfs:label>saturday</rdfs:label>
     </owl:NamedIndividual>
@@ -3009,9 +3018,9 @@ Conditionally Required:
     <owl:NamedIndividual rdf:about="http://gtfs.org/sunday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/sunday/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum type field that applies to Sundays.</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Functions in the same way as `monday` except applies to Sundays.</rdfs:comment>
         <rdfs:label>sunday</rdfs:label>
     </owl:NamedIndividual>
@@ -3032,9 +3041,9 @@ Conditionally Required:
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/table_name/stop_times"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/table_name/stops"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/table_name/trips"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Allowed values: agency, stops, routes, trips, stop_times, pathways, levels, feed_info, attributions</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Defines the table that contains the field to be translated. Allowed values are: - `agency` - `stops` - `routes` - `trips` - `stop_times` - `pathways` - `levels` - `feed_info` - `attributions`. Any file added to GTFS will have a `table_name` value equivalent to the file name, as listed above (i.e., not including the `.txt` file extension).</rdfs:comment>
         <rdfs:label>table_name</rdfs:label>
     </owl:NamedIndividual>
@@ -3047,9 +3056,9 @@ Conditionally Required:
     <owl:NamedIndividual rdf:about="http://gtfs.org/thursday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/thursday/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Functions in the same way as `monday` except applies to Thursdays</rdfs:comment>
         <rdfs:label>thursday</rdfs:label>
     </owl:NamedIndividual>
@@ -3093,9 +3102,9 @@ Conditionally Required:
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/timepoint/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/timepoint/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Recommended"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Times are considered approximate. 1 or empty - Times are considered exact.</gtfs:additionalInfo>
-        <gtfs:isPresence>Recommended</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates if arrival and departure times for a stop are strictly adhered to by the vehicle or if they are instead approximate and/or interpolated times. This field allows a GTFS producer to provide interpolated stop-times, while indicating that the times are approximate. Valid options are: 0 - Times are considered approximate. 1 or empty - Times are considered exact.</rdfs:comment>
         <rdfs:label>timepoint</rdfs:label>
     </owl:NamedIndividual>
@@ -3252,9 +3261,9 @@ If a sub-journey matches multiple records with different transfer_counts, then t
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/transfer_type/3"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/transfer_type/4"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/transfer_type/5"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Valid options are: 0 or empty - Recommended transfer point between routes. 1 - Timed transfer point between two routes. The departing vehicle is expected to wait for the arriving one and leave sufficient time for a rider to transfer between routes. 2 - Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time. 3 - Transfers are not possible between routes at the location. 4 - Passengers can transfer from one trip to another by staying onboard the same vehicle (an &apos;in-seat transfer&apos;). 5 - In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board.</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates the type of connection for the specified (from_stop_id, to_stop_id) pair.</rdfs:comment>
         <rdfs:label>transfer_type</rdfs:label>
     </owl:NamedIndividual>
@@ -3270,9 +3279,9 @@ If a sub-journey matches multiple records with different transfer_counts, then t
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/transfers/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/transfers/1"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/transfers/2"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum field with options: 0 - No transfers permitted, 1 - Riders may transfer once, 2 - Riders may transfer twice, empty - Unlimited transfers permitted.</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates the number of transfers permitted on this fare. Valid options are: 0 - No transfers permitted on this fare. 1 - Riders may transfer once. 2 - Riders may transfer twice. empty - Unlimited transfers are permitted.</rdfs:comment>
         <rdfs:label>transfers</rdfs:label>
     </owl:NamedIndividual>
@@ -3435,9 +3444,9 @@ If a sub-journey matches multiple records with different transfer_counts, then t
     <owl:NamedIndividual rdf:about="http://gtfs.org/tuesday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/tuesday/0"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Functions in the same way as `monday` except applies to Tuesdays</rdfs:comment>
         <rdfs:label>tuesday</rdfs:label>
     </owl:NamedIndividual>
@@ -3450,9 +3459,9 @@ If a sub-journey matches multiple records with different transfer_counts, then t
     <owl:NamedIndividual rdf:about="http://gtfs.org/wednesday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/wednesday/1"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
-        <gtfs:isPresence>Required</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Functions in the same way as `monday` except applies to Wednesdays</rdfs:comment>
         <rdfs:label>wednesday</rdfs:label>
     </owl:NamedIndividual>
@@ -3467,9 +3476,9 @@ If a sub-journey matches multiple records with different transfer_counts, then t
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/wheelchair_accessible/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/wheelchair_accessible/1"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/wheelchair_accessible/2"/>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <gtfs:additionalInfo>Enum field with options 0, 1, 2</gtfs:additionalInfo>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
         <rdfs:comment>Indicates wheelchair accessibility. Valid options are: 0 or empty - No accessibility information for the trip. 1 - Vehicle being used on this particular trip can accommodate at least one rider in a wheelchair. 2 - No riders in wheelchairs can be accommodated on this trip.</rdfs:comment>
         <rdfs:label>wheelchair_accessible</rdfs:label>
     </owl:NamedIndividual>
@@ -3484,8 +3493,8 @@ If a sub-journey matches multiple records with different transfer_counts, then t
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/wheelchair_boarding/0"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/wheelchair_boarding/1"/>
         <gtfs:hasEnumValue rdf:resource="http://gtfs.org/wheelchair_boarding/2"/>
-        <gtfs:isPresence>Optional</gtfs:isPresence>
-        <gtfs:isType>Enum</gtfs:isType>
+        <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
+        <gtfs:isType rdf:resource="http://gtfs.org/Enum"/>
         <rdfs:comment>Indicates whether wheelchair boardings are possible from the location. Valid options are: For parentless stops: 0 or empty - No accessibility information for the stop. 1 - Some vehicles at this stop can be boarded by a rider in a wheelchair. 2 - Wheelchair boarding is not possible at this stop. For child stops: 0 or empty - Stop will inherit its wheelchair_boarding behavior from the parent station, if specified in the parent. 1 - There exists some accessible path from outside the station to the specific stop/platform. 2 - There exists no accessible path from outside the station to the specific stop/platform. For station entrances/exits: 0 or empty - Station entrance will inherit its wheelchair_boarding behavior from the parent station, if specified for the parent. 1 - Station entrance is wheelchair accessible. 2 - No accessible path from station entrance to stops/platforms.</rdfs:comment>
         <rdfs:label>wheelchair_boarding</rdfs:label>
     </owl:NamedIndividual>
@@ -3512,7 +3521,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/bikes_allowed/0">
         <rdfs:comment>No bike information for the trip</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>bikes_allowed:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3522,7 +3531,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/bikes_allowed/1">
         <rdfs:comment>Vehicle being used on this particular trip can accommodate at least one bicycle</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>bikes_allowed:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3532,7 +3541,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/bikes_allowed/2">
         <rdfs:comment>No bicycles are allowed on this trip</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>bikes_allowed:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3542,7 +3551,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_drop_off/0">
         <rdfs:comment>Continuous stopping drop off</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>continuous_drop_off:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3552,7 +3561,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_drop_off/1">
         <rdfs:comment>No continuous stopping drop off</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>continuous_drop_off:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3562,7 +3571,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_drop_off/2">
         <rdfs:comment>Must phone agency to arrange continuous stopping drop off</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>continuous_drop_off:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3572,7 +3581,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_drop_off/3">
         <rdfs:comment>Must coordinate with driver to arrange continuous stopping drop off</rdfs:comment>
-        <rdfs:label>3</rdfs:label>
+        <rdfs:label>continuous_drop_off:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3582,7 +3591,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_pickup/0">
         <rdfs:comment>Continuous stopping pickup</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>continuous_pickup:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3592,7 +3601,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_pickup/1">
         <rdfs:comment>No continuous stopping pickup</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>continuous_pickup:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3602,7 +3611,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_pickup/2">
         <rdfs:comment>Must phone agency to arrange continuous stopping pickup</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>continuous_pickup:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3612,7 +3621,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_pickup/3">
         <rdfs:comment>Must coordinate with driver to arrange continuous stopping pickup</rdfs:comment>
-        <rdfs:label>3</rdfs:label>
+        <rdfs:label>continuous_pickup:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3622,7 +3631,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/direction_id/0">
         <rdfs:comment>Travel in one direction (e.g. outbound travel)</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>direction_id:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3632,7 +3641,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/direction_id/1">
         <rdfs:comment>Travel in the opposite direction (e.g. inbound travel)</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>direction_id:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3642,7 +3651,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/drop_off_type/0">
         <rdfs:comment>Regularly scheduled drop off</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>drop_off_type:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3652,7 +3661,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/drop_off_type/1">
         <rdfs:comment>No drop off available</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>drop_off_type:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3662,7 +3671,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/drop_off_type/2">
         <rdfs:comment>Must phone agency to arrange drop off</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>drop_off_type:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3672,7 +3681,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/drop_off_type/3">
         <rdfs:comment>Must coordinate with driver to arrange drop off</rdfs:comment>
-        <rdfs:label>3</rdfs:label>
+        <rdfs:label>drop_off_type:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3682,7 +3691,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/duration_limit_type/0">
         <rdfs:comment>Between the departure fare validation of the current leg and the arrival fare validation of the next leg</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>duration_limit_type:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3692,7 +3701,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/duration_limit_type/1">
         <rdfs:comment>Between the departure fare validation of the current leg and the departure fare validation of the next leg</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>duration_limit_type:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3702,7 +3711,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/duration_limit_type/2">
         <rdfs:comment>Between the arrival fare validation of the current leg and the departure fare validation of the next leg</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>duration_limit_type:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3712,7 +3721,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/duration_limit_type/3">
         <rdfs:comment>Between the arrival fare validation of the current leg and the arrival fare validation of the next leg</rdfs:comment>
-        <rdfs:label>3</rdfs:label>
+        <rdfs:label>duration_limit_type:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3722,7 +3731,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/exact_times/0">
         <rdfs:comment>Frequency-based trips</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>exact_times:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3732,7 +3741,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/exact_times/1">
         <rdfs:comment>Schedule-based trips with exact same headway throughout the day</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>exact_times:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3742,7 +3751,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/exception_type/1">
         <rdfs:comment>Service has been added for the specified date</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>exception_type:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3752,7 +3761,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/exception_type/2">
         <rdfs:comment>Service has been removed for the specified date</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>exception_type:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3762,7 +3771,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_type/0">
         <rdfs:comment>None</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>fare_media_type:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3772,7 +3781,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_type/1">
         <rdfs:comment>Physical paper ticket</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>fare_media_type:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3782,7 +3791,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_type/2">
         <rdfs:comment>Physical transit card</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>fare_media_type:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3792,7 +3801,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_type/3">
         <rdfs:comment>cEMV</rdfs:comment>
-        <rdfs:label>3</rdfs:label>
+        <rdfs:label>fare_media_type:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3802,7 +3811,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_type/4">
         <rdfs:comment>Mobile app</rdfs:comment>
-        <rdfs:label>4</rdfs:label>
+        <rdfs:label>fare_media_type:4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3812,7 +3821,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_transfer_type/0">
         <rdfs:comment>From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>fare_transfer_type:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3822,7 +3831,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_transfer_type/1">
         <rdfs:comment>From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>fare_transfer_type:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3832,7 +3841,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_transfer_type/2">
         <rdfs:comment>fare_transfer_rules.fare_product_id; AB</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>fare_transfer_type:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3842,7 +3851,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/friday/0">
         <rdfs:comment>No</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>friday:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3852,7 +3861,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/friday/1">
         <rdfs:comment>Yes</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>friday:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3862,7 +3871,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_authority/0">
         <rdfs:comment>False</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>is_authority:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3872,7 +3881,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_authority/1">
         <rdfs:comment>True</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>is_authority:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3882,7 +3891,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_bidirectional/0">
         <rdfs:comment>Unidirectional pathway that can only be used from from_stop_id to to_stop_id.</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>is_bidirectional:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3892,7 +3901,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_bidirectional/1">
         <rdfs:comment>Bidirectional pathway that can be used in both directions.</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>is_bidirectional:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3902,7 +3911,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_operator/0">
         <rdfs:comment>False</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>is_operator:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3912,7 +3921,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_operator/1">
         <rdfs:comment>True</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>is_operator:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3922,7 +3931,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_producer/0">
         <rdfs:comment>Organization doesn’t have this role</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>is_producer:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3932,7 +3941,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_producer/1">
         <rdfs:comment>Organization does have this role</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>is_producer:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3942,7 +3951,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/location_type/0">
         <rdfs:comment>Stop (or Platform)</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>location_type:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3952,7 +3961,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/location_type/1">
         <rdfs:comment>Station</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>location_type:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3962,7 +3971,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/location_type/2">
         <rdfs:comment>Entrance/Exit</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>location_type:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3972,7 +3981,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/location_type/3">
         <rdfs:comment>Generic Node</rdfs:comment>
-        <rdfs:label>3</rdfs:label>
+        <rdfs:label>location_type:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3982,7 +3991,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/location_type/4">
         <rdfs:comment>Boarding Area</rdfs:comment>
-        <rdfs:label>4</rdfs:label>
+        <rdfs:label>location_type:4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3992,7 +4001,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/monday/0">
         <rdfs:comment>Service is not available for Mondays in the date range</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>monday:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4002,7 +4011,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/monday/1">
         <rdfs:comment>Service is available for all Mondays in the date range</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>monday:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4012,7 +4021,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode/1">
         <rdfs:comment>Walkway</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>pathway_mode:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4022,7 +4031,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode/2">
         <rdfs:comment>Stairs</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>pathway_mode:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4032,7 +4041,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode/3">
         <rdfs:comment>Moving sidewalk/travelator</rdfs:comment>
-        <rdfs:label>3</rdfs:label>
+        <rdfs:label>pathway_mode:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4042,7 +4051,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode/4">
         <rdfs:comment>Escalator</rdfs:comment>
-        <rdfs:label>4</rdfs:label>
+        <rdfs:label>pathway_mode:4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4052,7 +4061,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode/5">
         <rdfs:comment>Elevator</rdfs:comment>
-        <rdfs:label>5</rdfs:label>
+        <rdfs:label>pathway_mode:5</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4062,7 +4071,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode/6">
         <rdfs:comment>Fare gate</rdfs:comment>
-        <rdfs:label>6</rdfs:label>
+        <rdfs:label>pathway_mode:6</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4072,7 +4081,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode/7">
         <rdfs:comment>Exit gate</rdfs:comment>
-        <rdfs:label>7</rdfs:label>
+        <rdfs:label>pathway_mode:7</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4082,7 +4091,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/payment_method/0">
         <rdfs:comment>Fare is paid on board</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>payment_method:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4092,7 +4101,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/payment_method/1">
         <rdfs:comment>Fare must be paid before boarding</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>payment_method:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4102,7 +4111,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pickup_type/0">
         <rdfs:comment>Regularly scheduled pickup</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>pickup_type:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4112,7 +4121,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pickup_type/1">
         <rdfs:comment>No pickup available</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>pickup_type:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4122,7 +4131,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pickup_type/2">
         <rdfs:comment>Must phone agency to arrange pickup</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>pickup_type:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4132,7 +4141,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pickup_type/3">
         <rdfs:comment>Must coordinate with driver to arrange pickup</rdfs:comment>
-        <rdfs:label>3</rdfs:label>
+        <rdfs:label>pickup_type:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4142,7 +4151,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_type/0">
         <rdfs:comment>Tram, Streetcar, Light rail</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>route_type:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4152,7 +4161,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_type/1">
         <rdfs:comment>Subway, Metro</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>route_type:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4162,7 +4171,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_type/11">
         <rdfs:comment>Trolleybus</rdfs:comment>
-        <rdfs:label>11</rdfs:label>
+        <rdfs:label>route_type:11</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4172,7 +4181,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_type/12">
         <rdfs:comment>Monorail</rdfs:comment>
-        <rdfs:label>12</rdfs:label>
+        <rdfs:label>route_type:12</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4182,7 +4191,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_type/2">
         <rdfs:comment>Rail</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>route_type:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4192,7 +4201,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_type/3">
         <rdfs:comment>Bus</rdfs:comment>
-        <rdfs:label>3</rdfs:label>
+        <rdfs:label>route_type:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4202,7 +4211,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_type/4">
         <rdfs:comment>Ferry</rdfs:comment>
-        <rdfs:label>4</rdfs:label>
+        <rdfs:label>route_type:4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4212,7 +4221,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_type/5">
         <rdfs:comment>Cable tram</rdfs:comment>
-        <rdfs:label>5</rdfs:label>
+        <rdfs:label>route_type:5</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4222,7 +4231,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_type/6">
         <rdfs:comment>Aerial lift, suspended cable car</rdfs:comment>
-        <rdfs:label>6</rdfs:label>
+        <rdfs:label>route_type:6</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4232,7 +4241,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_type/7">
         <rdfs:comment>Funicular</rdfs:comment>
-        <rdfs:label>7</rdfs:label>
+        <rdfs:label>route_type:7</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4242,7 +4251,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/saturday/example_key">
         <rdfs:comment>example_value</rdfs:comment>
-        <rdfs:label>example_key</rdfs:label>
+        <rdfs:label>saturday:example_key</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4252,7 +4261,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/sunday/1">
         <rdfs:comment>Applies to Sundays</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>sunday:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4262,7 +4271,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/table_name/agency">
         <rdfs:comment>Agency</rdfs:comment>
-        <rdfs:label>agency</rdfs:label>
+        <rdfs:label>table_name:agency</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4272,7 +4281,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/table_name/attributions">
         <rdfs:comment>Attributions</rdfs:comment>
-        <rdfs:label>attributions</rdfs:label>
+        <rdfs:label>table_name:attributions</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4282,7 +4291,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/table_name/feed_info">
         <rdfs:comment>Feed Info</rdfs:comment>
-        <rdfs:label>feed_info</rdfs:label>
+        <rdfs:label>table_name:feed_info</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4292,7 +4301,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/table_name/levels">
         <rdfs:comment>Levels</rdfs:comment>
-        <rdfs:label>levels</rdfs:label>
+        <rdfs:label>table_name:levels</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4302,7 +4311,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/table_name/pathways">
         <rdfs:comment>Pathways</rdfs:comment>
-        <rdfs:label>pathways</rdfs:label>
+        <rdfs:label>table_name:pathways</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4312,7 +4321,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/table_name/routes">
         <rdfs:comment>Routes</rdfs:comment>
-        <rdfs:label>routes</rdfs:label>
+        <rdfs:label>table_name:routes</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4322,7 +4331,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/table_name/stop_times">
         <rdfs:comment>Stop Times</rdfs:comment>
-        <rdfs:label>stop_times</rdfs:label>
+        <rdfs:label>table_name:stop_times</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4332,7 +4341,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/table_name/stops">
         <rdfs:comment>Stops</rdfs:comment>
-        <rdfs:label>stops</rdfs:label>
+        <rdfs:label>table_name:stops</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4342,7 +4351,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/table_name/trips">
         <rdfs:comment>Trips</rdfs:comment>
-        <rdfs:label>trips</rdfs:label>
+        <rdfs:label>table_name:trips</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4352,7 +4361,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/thursday/1">
         <rdfs:comment>Functions in the same way as `monday` except applies to Thursdays</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>thursday:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4362,7 +4371,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/timepoint/0">
         <rdfs:comment>Times are considered approximate</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>timepoint:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4372,7 +4381,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/timepoint/1">
         <rdfs:comment>Times are considered exact</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>timepoint:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4382,7 +4391,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type/0">
         <rdfs:comment>Recommended transfer point between routes</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>transfer_type:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4392,7 +4401,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type/1">
         <rdfs:comment>Timed transfer point between two routes</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>transfer_type:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4402,7 +4411,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type/2">
         <rdfs:comment>Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>transfer_type:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4412,7 +4421,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type/3">
         <rdfs:comment>Transfers are not possible between routes at the location</rdfs:comment>
-        <rdfs:label>3</rdfs:label>
+        <rdfs:label>transfer_type:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4422,7 +4431,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type/4">
         <rdfs:comment>Passengers can transfer from one trip to another by staying onboard the same vehicle (an &apos;in-seat transfer&apos;)</rdfs:comment>
-        <rdfs:label>4</rdfs:label>
+        <rdfs:label>transfer_type:4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4432,7 +4441,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type/5">
         <rdfs:comment>In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board</rdfs:comment>
-        <rdfs:label>5</rdfs:label>
+        <rdfs:label>transfer_type:5</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4442,7 +4451,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfers/empty">
         <rdfs:comment>Unlimited transfers permitted</rdfs:comment>
-        <rdfs:label>empty</rdfs:label>
+        <rdfs:label>transfers:empty</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4452,7 +4461,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfers/0">
         <rdfs:comment>No transfers permitted on this fare</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>transfers:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4462,7 +4471,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfers/1">
         <rdfs:comment>Riders may transfer once</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>transfers:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4472,7 +4481,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfers/2">
         <rdfs:comment>Riders may transfer twice</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>transfers:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4482,7 +4491,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/tuesday/0">
         <rdfs:comment>Functions in the same way as &apos;monday&apos; except applies to Tuesdays</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>tuesday:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4492,7 +4501,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/wednesday/1">
         <rdfs:comment>Functions in the same way as `monday` except applies to Wednesdays</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>wednesday:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4502,7 +4511,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_accessible/0">
         <rdfs:comment>No accessibility information for the trip</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>wheelchair_accessible:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4512,7 +4521,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_accessible/1">
         <rdfs:comment>Vehicle can accommodate at least one rider in a wheelchair</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>wheelchair_accessible:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4522,7 +4531,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_accessible/2">
         <rdfs:comment>No riders in wheelchairs can be accommodated on this trip</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>wheelchair_accessible:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4532,7 +4541,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_boarding/0">
         <rdfs:comment>No accessibility information for the stop</rdfs:comment>
-        <rdfs:label>0</rdfs:label>
+        <rdfs:label>wheelchair_boarding:0</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4542,7 +4551,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_boarding/1">
         <rdfs:comment>Some vehicles at this stop can be boarded by a rider in a wheelchair</rdfs:comment>
-        <rdfs:label>1</rdfs:label>
+        <rdfs:label>wheelchair_boarding:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4552,7 +4561,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_boarding/2">
         <rdfs:comment>Wheelchair boarding is not possible at this stop</rdfs:comment>
-        <rdfs:label>2</rdfs:label>
+        <rdfs:label>wheelchair_boarding:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4585,6 +4594,10 @@ If a sub-journey matches multiple records with different transfer_counts, then t
     <rdf:Description rdf:about="http://gtfs.org/Email">
         <rdfs:comment xml:lang="en">An email address.</rdfs:comment>
         <rdfs:label xml:lang="en">Email</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://gtfs.org/Enum">
+        <rdfs:comment xml:lang="en">An option from a set of predefined constants defined in the &quot;Description&quot; column.</rdfs:comment>
+        <rdfs:label xml:lang="en">Enum</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://gtfs.org/Float">
         <rdfs:comment xml:lang="en">A floating point number.</rdfs:comment>
@@ -4644,14 +4657,6 @@ If a sub-journey matches multiple records with different transfer_counts, then t
     <rdf:Description rdf:about="http://gtfs.org/hasCondition">
         <rdfs:comment>This property links a file to its fields</rdfs:comment>
         <rdfs:label xml:lang="en">hasCondition</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://gtfs.org/isPresence">
-        <rdfs:comment>This property links a file or field to its PresenceCondition.</rdfs:comment>
-        <rdfs:label xml:lang="en">isPresence</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://gtfs.org/isType">
-        <rdfs:comment>This propert is used to specify the FieldType for a Field</rdfs:comment>
-        <rdfs:label>isType</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 

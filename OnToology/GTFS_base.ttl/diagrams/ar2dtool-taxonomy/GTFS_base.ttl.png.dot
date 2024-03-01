@@ -1,0 +1,36 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "gtfs:CurrencyAmount" "http://schema.org/Enumeration" "gtfs:ConditionallyRequired" "gtfs:Field" "gtfs:Recommended" "gtfs:SubJourney" "gtfs:Optional" "gtfs:URL" "gtfs:Journey" "gtfs:Enum" "http://schema.org/Intangible" "gtfs:FareProdcut" "gtfs:ConditionallyForbidden" "gtfs:ID" "gtfs:TimeZone" "gtfs:Text" "gtfs:File" "gtfs:Float" "gtfs:FieldType" "gtfs:Email" "gtfs:PhoneNumber" "gtfs:Time" "gtfs:LanguageCode" "gtfs:Leg" "gtfs:Date" "gtfs:Integer" "gtfs:PresenceCondition" "gtfs:ServiceDay" "gtfs:Required" "gtfs:Longitude" "gtfs:Latitude" ; /*classes style*/
+	"gtfs:PresenceCondition" -> "http://schema.org/Enumeration" [ label = "rdfs:subClassOf" ];
+	"gtfs:Email" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:LanguageCode" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:CurrencyAmount" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:ConditionallyForbidden" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"gtfs:ID" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Leg" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:ConditionallyRequired" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"gtfs:Optional" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"gtfs:Date" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Integer" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:File" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:SubJourney" -> "gtfs:Journey" [ label = "rdfs:subClassOf" ];
+	"gtfs:Journey" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:URL" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Recommended" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"gtfs:Text" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:FareProdcut" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:Time" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Latitude" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:TimeZone" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:FieldType" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:Field" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:ServiceDay" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:Required" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"http://schema.org/Enumeration" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:Longitude" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Float" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:Enum" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+	"gtfs:PhoneNumber" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
+
+}
