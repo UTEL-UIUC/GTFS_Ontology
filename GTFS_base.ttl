@@ -3,11 +3,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-gtfs:Enum a owl:Class ;
-    rdfs:label "Enum"@en ;
-    rdfs:comment "An option from a set of predefined constants defined in the \"Description\" column."@en ;
-    rdfs:subClassOf gtfs:FieldType .
-
 gtfs:FareProdcut a owl:Class ;
     rdfs:label "FareProdcut"@en ;
     rdfs:comment "Purchasable fare products that can be used to pay for or validate travel." ;
@@ -531,21 +526,12 @@ gtfs:attribution_url a gtfs:Field ;
 gtfs:bikes_allowed a gtfs:Field ;
     rdfs:label "bikes_allowed" ;
     gtfs:additionalInfo "Enum field with options 0, 1, 2" ;
-    gtfs:hasEnumValue <http://gtfs.org/bikes_allowed/0>,
-        <http://gtfs.org/bikes_allowed/1>,
-        <http://gtfs.org/bikes_allowed/2> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/bikes_allowed/0",
+        "http://gtfs.org/bikes_allowed/1",
+        "http://gtfs.org/bikes_allowed/2" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates whether bikes are allowed. Valid options are: 0 or empty - No bike information for the trip. 1 - Vehicle being used on this particular trip can accommodate at least one bicycle. 2 - No bicycles are allowed on this trip." .
-
-<http://gtfs.org/bikes_allowed/0> rdfs:label "0" ;
-    rdfs:comment "No bike information for the trip" .
-
-<http://gtfs.org/bikes_allowed/1> rdfs:label "1" ;
-    rdfs:comment "Vehicle being used on this particular trip can accommodate at least one bicycle" .
-
-<http://gtfs.org/bikes_allowed/2> rdfs:label "2" ;
-    rdfs:comment "No bicycles are allowed on this trip" .
 
 gtfs:block_id a gtfs:Field ;
     rdfs:label "block_id" ;
@@ -564,30 +550,6 @@ c,GRT,...,7""" ;
     gtfs:isPresence gtfs:Optional ;
     gtfs:isType gtfs:ID ;
     rdfs:comment "Identifies the zones that a rider will enter while using a given fare class. Used in some systems to calculate correct fare class." .
-
-<http://gtfs.org/continuous_drop_off/0> rdfs:label "0" ;
-    rdfs:comment "Continuous stopping drop off" .
-
-<http://gtfs.org/continuous_drop_off/1> rdfs:label "1" ;
-    rdfs:comment "No continuous stopping drop off" .
-
-<http://gtfs.org/continuous_drop_off/2> rdfs:label "2" ;
-    rdfs:comment "Must phone agency to arrange continuous stopping drop off" .
-
-<http://gtfs.org/continuous_drop_off/3> rdfs:label "3" ;
-    rdfs:comment "Must coordinate with driver to arrange continuous stopping drop off" .
-
-<http://gtfs.org/continuous_pickup/0> rdfs:label "0" ;
-    rdfs:comment "Continuous stopping pickup" .
-
-<http://gtfs.org/continuous_pickup/1> rdfs:label "1" ;
-    rdfs:comment "No continuous stopping pickup" .
-
-<http://gtfs.org/continuous_pickup/2> rdfs:label "2" ;
-    rdfs:comment "Must phone agency to arrange continuous stopping pickup" .
-
-<http://gtfs.org/continuous_pickup/3> rdfs:label "3" ;
-    rdfs:comment "Must coordinate with driver to arrange continuous stopping pickup" .
 
 gtfs:currency a gtfs:Field ;
     rdfs:label "currency" ;
@@ -642,40 +604,22 @@ gtfs:destination_id a gtfs:Field ;
 gtfs:direction_id a gtfs:Field ;
     rdfs:label "direction_id" ;
     gtfs:additionalInfo "Valid options are: 0 - Travel in one direction (e.g. outbound travel). 1 - Travel in the opposite direction (e.g. inbound travel)." ;
-    gtfs:hasEnumValue <http://gtfs.org/direction_id/0>,
-        <http://gtfs.org/direction_id/1> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/direction_id/0",
+        "http://gtfs.org/direction_id/1" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates the direction of travel for a trip. This field should not be used in routing; it provides a way to separate trips by direction when publishing time tables." .
-
-<http://gtfs.org/direction_id/0> rdfs:label "0" ;
-    rdfs:comment "Travel in one direction (e.g. outbound travel)" .
-
-<http://gtfs.org/direction_id/1> rdfs:label "1" ;
-    rdfs:comment "Travel in the opposite direction (e.g. inbound travel)" .
 
 gtfs:drop_off_type a gtfs:Field ;
     rdfs:label "drop_off_type" ;
     gtfs:additionalInfo "Enum field with options 0, 1, 2, 3" ;
-    gtfs:hasEnumValue <http://gtfs.org/drop_off_type/0>,
-        <http://gtfs.org/drop_off_type/1>,
-        <http://gtfs.org/drop_off_type/2>,
-        <http://gtfs.org/drop_off_type/3> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/drop_off_type/0",
+        "http://gtfs.org/drop_off_type/1",
+        "http://gtfs.org/drop_off_type/2",
+        "http://gtfs.org/drop_off_type/3" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates drop off method. Valid options are: 0 or empty - Regularly scheduled drop off. 1 - No drop off available. 2 - Must phone agency to arrange drop off. 3 - Must coordinate with driver to arrange drop off." .
-
-<http://gtfs.org/drop_off_type/0> rdfs:label "0" ;
-    rdfs:comment "Regularly scheduled drop off" .
-
-<http://gtfs.org/drop_off_type/1> rdfs:label "1" ;
-    rdfs:comment "No drop off available" .
-
-<http://gtfs.org/drop_off_type/2> rdfs:label "2" ;
-    rdfs:comment "Must phone agency to arrange drop off" .
-
-<http://gtfs.org/drop_off_type/3> rdfs:label "3" ;
-    rdfs:comment "Must coordinate with driver to arrange drop off" .
 
 gtfs:duration_limit a gtfs:Field ;
     rdfs:label "duration_limit" ;
@@ -692,25 +636,13 @@ gtfs:duration_limit_type a gtfs:Field ;
     rdfs:label "duration_limit_type" ;
     gtfs:additionalInfo "Defines the relative start and end of `fare_transfer_rules.duration_limit`." ;
     gtfs:hasCondition "Required if `fare_transfer_rules.duration_limit` is defined. Forbidden if `fare_transfer_rules.duration_limit` is empty." ;
-    gtfs:hasEnumValue <http://gtfs.org/duration_limit_type/0>,
-        <http://gtfs.org/duration_limit_type/1>,
-        <http://gtfs.org/duration_limit_type/2>,
-        <http://gtfs.org/duration_limit_type/3> ;
-    gtfs:isPresence "ConditionallyRequired" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/duration_limit_type/0",
+        "http://gtfs.org/duration_limit_type/1",
+        "http://gtfs.org/duration_limit_type/2",
+        "http://gtfs.org/duration_limit_type/3" ;
+    gtfs:isPresence gtfs:ConditionallyRequired ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Defines the relative start and end of `fare_transfer_rules.duration_limit`. Valid options are: `0` - Between the departure fare validation of the current leg and the arrival fare validation of the next leg. `1` - Between the departure fare validation of the current leg and the departure fare validation of the next leg. `2` - Between the arrival fare validation of the current leg and the departure fare validation of the next leg. `3` - Between the arrival fare validation of the current leg and the arrival fare validation of the next leg." .
-
-<http://gtfs.org/duration_limit_type/0> rdfs:label "0" ;
-    rdfs:comment "Between the departure fare validation of the current leg and the arrival fare validation of the next leg" .
-
-<http://gtfs.org/duration_limit_type/1> rdfs:label "1" ;
-    rdfs:comment "Between the departure fare validation of the current leg and the departure fare validation of the next leg" .
-
-<http://gtfs.org/duration_limit_type/2> rdfs:label "2" ;
-    rdfs:comment "Between the arrival fare validation of the current leg and the departure fare validation of the next leg" .
-
-<http://gtfs.org/duration_limit_type/3> rdfs:label "3" ;
-    rdfs:comment "Between the arrival fare validation of the current leg and the arrival fare validation of the next leg" .
 
 gtfs:end_date a gtfs:Field ;
     rdfs:label "end_date" ;
@@ -722,32 +654,20 @@ gtfs:end_date a gtfs:Field ;
 gtfs:exact_times a gtfs:Field ;
     rdfs:label "exact_times" ;
     gtfs:additionalInfo "Enum field with options 0 or 1" ;
-    gtfs:hasEnumValue <http://gtfs.org/exact_times/0>,
-        <http://gtfs.org/exact_times/1> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/exact_times/0",
+        "http://gtfs.org/exact_times/1" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates the type of service for a trip. See the file description for more information. Valid options are: 0 or empty - Frequency-based trips. 1 - Schedule-based trips with the exact same headway throughout the day. In this case the end_time value must be greater than the last desired trip start_time but less than the last desired trip start_time + headway_secs." .
-
-<http://gtfs.org/exact_times/0> rdfs:label "0" ;
-    rdfs:comment "Frequency-based trips" .
-
-<http://gtfs.org/exact_times/1> rdfs:label "1" ;
-    rdfs:comment "Schedule-based trips with exact same headway throughout the day" .
 
 gtfs:exception_type a gtfs:Field ;
     rdfs:label "exception_type" ;
     gtfs:additionalInfo "Suppose a route has one set of trips available on holidays and another set of trips available on all other days. One service_id could correspond to the regular service schedule and another service_id could correspond to the holiday schedule. For a particular holiday, the calendar_dates.txt file could be used to add the holiday to the holiday service_id and to remove the holiday from the regular service_id schedule." ;
-    gtfs:hasEnumValue <http://gtfs.org/exception_type/1>,
-        <http://gtfs.org/exception_type/2> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/exception_type/1",
+        "http://gtfs.org/exception_type/2" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates whether service is available on the date specified in the date field. Valid options are: 1 - Service has been added for the specified date. 2 - Service has been removed for the specified date." .
-
-<http://gtfs.org/exception_type/1> rdfs:label "1" ;
-    rdfs:comment "Service has been added for the specified date" .
-
-<http://gtfs.org/exception_type/2> rdfs:label "2" ;
-    rdfs:comment "Service has been removed for the specified date" .
 
 gtfs:fare_media_name a gtfs:Field ;
     rdfs:label "fare_media_name" ;
@@ -761,29 +681,14 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 gtfs:fare_media_type a gtfs:Field ;
     rdfs:label "fare_media_type" ;
     gtfs:additionalInfo "Enum field with options: 0 - None, 1 - Physical paper ticket, 2 - Physical transit card, 3 - cEMV, 4 - Mobile app" ;
-    gtfs:hasEnumValue <http://gtfs.org/fare_media_type/0>,
-        <http://gtfs.org/fare_media_type/1>,
-        <http://gtfs.org/fare_media_type/2>,
-        <http://gtfs.org/fare_media_type/3>,
-        <http://gtfs.org/fare_media_type/4> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/fare_media_type/0",
+        "http://gtfs.org/fare_media_type/1",
+        "http://gtfs.org/fare_media_type/2",
+        "http://gtfs.org/fare_media_type/3",
+        "http://gtfs.org/fare_media_type/4" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "The type of fare media. Valid options are: 0 - None. Used when there is no fare media involved in purchasing or validating a fare product, such as paying cash to a driver or conductor with no physical ticket provided. 1 - Physical paper ticket that allows a passenger to take either a certain number of pre-purchased trips or unlimited trips within a fixed period of time. 2 - Physical transit card that has stored tickets, passes or monetary value. 3 - cEMV (contactless Europay, Mastercard and Visa) as an open-loop token container for account-based ticketing. 4 - Mobile app that have stored virtual transit cards, tickets, passes, or monetary value." .
-
-<http://gtfs.org/fare_media_type/0> rdfs:label "0" ;
-    rdfs:comment "None" .
-
-<http://gtfs.org/fare_media_type/1> rdfs:label "1" ;
-    rdfs:comment "Physical paper ticket" .
-
-<http://gtfs.org/fare_media_type/2> rdfs:label "2" ;
-    rdfs:comment "Physical transit card" .
-
-<http://gtfs.org/fare_media_type/3> rdfs:label "3" ;
-    rdfs:comment "cEMV" .
-
-<http://gtfs.org/fare_media_type/4> rdfs:label "4" ;
-    rdfs:comment "Mobile app" .
 
 gtfs:fare_product_name a gtfs:Field ;
     rdfs:label "fare_product_name" ;
@@ -795,21 +700,12 @@ gtfs:fare_product_name a gtfs:Field ;
 gtfs:fare_transfer_type a gtfs:Field ;
     rdfs:label "fare_transfer_type" ;
     gtfs:additionalInfo "Valid options are: 0 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB. 1 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B. 2 - fare_transfer_rules.fare_product_id; AB. Cost processing interactions between multiple transfers in a journey: Where S indicates the total processed cost of the preceding leg(s) and transfer(s." ;
-    gtfs:hasEnumValue <http://gtfs.org/fare_transfer_type/0>,
-        <http://gtfs.org/fare_transfer_type/1>,
-        <http://gtfs.org/fare_transfer_type/2> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/fare_transfer_type/0",
+        "http://gtfs.org/fare_transfer_type/1",
+        "http://gtfs.org/fare_transfer_type/2" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates the cost processing method of transferring between legs in a journey" .
-
-<http://gtfs.org/fare_transfer_type/0> rdfs:label "0" ;
-    rdfs:comment "From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB" .
-
-<http://gtfs.org/fare_transfer_type/1> rdfs:label "1" ;
-    rdfs:comment "From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B" .
-
-<http://gtfs.org/fare_transfer_type/2> rdfs:label "2" ;
-    rdfs:comment "fare_transfer_rules.fare_product_id; AB" .
 
 gtfs:feed_contact_email a gtfs:Field ;
     rdfs:label "feed_contact_email" ;
@@ -895,17 +791,11 @@ If two translation rules match the same record (one with `field_value`, and the 
 gtfs:friday a gtfs:Field ;
     rdfs:label "friday" ;
     gtfs:additionalInfo "Enum field representing the behavior on Fridays" ;
-    gtfs:hasEnumValue <http://gtfs.org/friday/0>,
-        <http://gtfs.org/friday/1> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/friday/0",
+        "http://gtfs.org/friday/1" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Functions in the same way as `monday` except applies to Fridays" .
-
-<http://gtfs.org/friday/0> rdfs:label "0" ;
-    rdfs:comment "No" .
-
-<http://gtfs.org/friday/1> rdfs:label "1" ;
-    rdfs:comment "Yes" .
 
 gtfs:from_area_id a gtfs:Field ;
     rdfs:label "from_area_id" ;
@@ -957,62 +847,38 @@ gtfs:headway_secs a gtfs:Field ;
 gtfs:is_authority a gtfs:Field ;
     rdfs:label "is_authority" ;
     gtfs:additionalInfo "Enum field representing the role of the organization as an authority." ;
-    gtfs:hasEnumValue <http://gtfs.org/is_authority/0>,
-        <http://gtfs.org/is_authority/1> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/is_authority/0",
+        "http://gtfs.org/is_authority/1" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Functions in the same way as `is_producer` except the role of the organization is authority." .
-
-<http://gtfs.org/is_authority/0> rdfs:label "0" ;
-    rdfs:comment "False" .
-
-<http://gtfs.org/is_authority/1> rdfs:label "1" ;
-    rdfs:comment "True" .
 
 gtfs:is_bidirectional a gtfs:Field ;
     rdfs:label "is_bidirectional" ;
     gtfs:additionalInfo "Exit gates (pathway_mode=7) must not be bidirectional." ;
-    gtfs:hasEnumValue <http://gtfs.org/is_bidirectional/0>,
-        <http://gtfs.org/is_bidirectional/1> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/is_bidirectional/0",
+        "http://gtfs.org/is_bidirectional/1" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates the direction that the pathway can be taken" .
-
-<http://gtfs.org/is_bidirectional/0> rdfs:label "0" ;
-    rdfs:comment "Unidirectional pathway that can only be used from from_stop_id to to_stop_id." .
-
-<http://gtfs.org/is_bidirectional/1> rdfs:label "1" ;
-    rdfs:comment "Bidirectional pathway that can be used in both directions." .
 
 gtfs:is_operator a gtfs:Field ;
     rdfs:label "is_operator" ;
     gtfs:additionalInfo "Enum type field" ;
-    gtfs:hasEnumValue <http://gtfs.org/is_operator/0>,
-        <http://gtfs.org/is_operator/1> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/is_operator/0",
+        "http://gtfs.org/is_operator/1" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Functions in the same way as `is_producer` except the role of the organization is operator." .
-
-<http://gtfs.org/is_operator/0> rdfs:label "0" ;
-    rdfs:comment "False" .
-
-<http://gtfs.org/is_operator/1> rdfs:label "1" ;
-    rdfs:comment "True" .
 
 gtfs:is_producer a gtfs:Field ;
     rdfs:label "is_producer" ;
     gtfs:additionalInfo "Valid options are: 0 or empty - Organization doesn’t have this role. 1 - Organization does have this role." ;
-    gtfs:hasEnumValue <http://gtfs.org/is_producer/0>,
-        <http://gtfs.org/is_producer/1> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/is_producer/0",
+        "http://gtfs.org/is_producer/1" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "The role of the organization is producer. At least one of the fields is_producer, is_operator, or is_authority should be set at 1." .
-
-<http://gtfs.org/is_producer/0> rdfs:label "0" ;
-    rdfs:comment "Organization doesn’t have this role" .
-
-<http://gtfs.org/is_producer/1> rdfs:label "1" ;
-    rdfs:comment "Organization does have this role" .
 
 gtfs:language a gtfs:Field ;
     rdfs:label "language" ;
@@ -1057,29 +923,14 @@ gtfs:level_name a gtfs:Field ;
 gtfs:location_type a gtfs:Field ;
     rdfs:label "location_type" ;
     gtfs:additionalInfo "Valid options are: 0 (or blank) - Stop (or Platform), 1 - Station, 2 - Entrance/Exit, 3 - Generic Node, 4 - Boarding Area" ;
-    gtfs:hasEnumValue <http://gtfs.org/location_type/0>,
-        <http://gtfs.org/location_type/1>,
-        <http://gtfs.org/location_type/2>,
-        <http://gtfs.org/location_type/3>,
-        <http://gtfs.org/location_type/4> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/location_type/0",
+        "http://gtfs.org/location_type/1",
+        "http://gtfs.org/location_type/2",
+        "http://gtfs.org/location_type/3",
+        "http://gtfs.org/location_type/4" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Location type. Valid options are: 0 (or blank) - Stop (or Platform). A location where passengers board or disembark from a transit vehicle. Is called a platform when defined within a parent_station. 1 - Station. A physical structure or area that contains one or more platform. 2 - Entrance/Exit. A location where passengers can enter or exit a station from the street. If an entrance/exit belongs to multiple stations, it may be linked by pathways to both, but the data provider must pick one of them as parent. 3 - Generic Node. A location within a station, not matching any other location_type, that may be used to link together pathways define in pathways.txt. 4 - Boarding Area. A specific location on a platform, where passengers can board and/or alight vehicles." .
-
-<http://gtfs.org/location_type/0> rdfs:label "0" ;
-    rdfs:comment "Stop (or Platform)" .
-
-<http://gtfs.org/location_type/1> rdfs:label "1" ;
-    rdfs:comment "Station" .
-
-<http://gtfs.org/location_type/2> rdfs:label "2" ;
-    rdfs:comment "Entrance/Exit" .
-
-<http://gtfs.org/location_type/3> rdfs:label "3" ;
-    rdfs:comment "Generic Node" .
-
-<http://gtfs.org/location_type/4> rdfs:label "4" ;
-    rdfs:comment "Boarding Area" .
 
 gtfs:max_slope a gtfs:Field ;
     rdfs:label "max_slope" ;
@@ -1105,17 +956,11 @@ gtfs:min_width a gtfs:Field ;
 gtfs:monday a gtfs:Field ;
     rdfs:label "monday" ;
     gtfs:additionalInfo "Valid options are: 1 - Service is available for all Mondays in the date range. 0 - Service is not available for Mondays in the date range." ;
-    gtfs:hasEnumValue <http://gtfs.org/monday/0>,
-        <http://gtfs.org/monday/1> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/monday/0",
+        "http://gtfs.org/monday/1" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates whether the service operates on all Mondays in the date range specified by the `start_date` and `end_date` fields. Note that exceptions for particular dates may be listed in [calendar_dates.txt](#calendar_datestxt). Valid options are: 1 - Service is available for all Mondays in the date range. 0 - Service is not available for Mondays in the date range." .
-
-<http://gtfs.org/monday/0> rdfs:label "0" ;
-    rdfs:comment "Service is not available for Mondays in the date range" .
-
-<http://gtfs.org/monday/1> rdfs:label "1" ;
-    rdfs:comment "Service is available for all Mondays in the date range" .
 
 gtfs:organization_name a gtfs:Field ;
     rdfs:label "organization_name" ;
@@ -1149,75 +994,36 @@ gtfs:pathway_id a gtfs:Field ;
 gtfs:pathway_mode a gtfs:Field ;
     rdfs:label "pathway_mode" ;
     gtfs:additionalInfo "Valid options are: 1 - Walkway, 2 - Stairs, 3 - Moving sidewalk/travelator, 4 - Escalator, 5 - Elevator, 6 - Fare gate, 7 - Exit gate" ;
-    gtfs:hasEnumValue <http://gtfs.org/pathway_mode/1>,
-        <http://gtfs.org/pathway_mode/2>,
-        <http://gtfs.org/pathway_mode/3>,
-        <http://gtfs.org/pathway_mode/4>,
-        <http://gtfs.org/pathway_mode/5>,
-        <http://gtfs.org/pathway_mode/6>,
-        <http://gtfs.org/pathway_mode/7> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/pathway_mode/1",
+        "http://gtfs.org/pathway_mode/2",
+        "http://gtfs.org/pathway_mode/3",
+        "http://gtfs.org/pathway_mode/4",
+        "http://gtfs.org/pathway_mode/5",
+        "http://gtfs.org/pathway_mode/6",
+        "http://gtfs.org/pathway_mode/7" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Type of pathway between the specified (from_stop_id, to_stop_id) pair. Valid options are: 1 - Walkway. 2 - Stairs. 3 - Moving sidewalk/travelator. 4 - Escalator. 5 - Elevator. 6 - Fare gate (or payment gate): A pathway that crosses into an area of the station where proof of payment is required to cross. Fare gates may separate paid areas of the station from unpaid ones, or separate different payment areas within the same station from each other. This information can be used to avoid routing passengers through stations using shortcuts that would require passengers to make unnecessary payments, like directing a passenger to walk through a subway platform to reach a busway. 7- Exit gate: A pathway exiting a paid area into an unpaid area where proof of payment is not required to cross." .
-
-<http://gtfs.org/pathway_mode/1> rdfs:label "1" ;
-    rdfs:comment "Walkway" .
-
-<http://gtfs.org/pathway_mode/2> rdfs:label "2" ;
-    rdfs:comment "Stairs" .
-
-<http://gtfs.org/pathway_mode/3> rdfs:label "3" ;
-    rdfs:comment "Moving sidewalk/travelator" .
-
-<http://gtfs.org/pathway_mode/4> rdfs:label "4" ;
-    rdfs:comment "Escalator" .
-
-<http://gtfs.org/pathway_mode/5> rdfs:label "5" ;
-    rdfs:comment "Elevator" .
-
-<http://gtfs.org/pathway_mode/6> rdfs:label "6" ;
-    rdfs:comment "Fare gate" .
-
-<http://gtfs.org/pathway_mode/7> rdfs:label "7" ;
-    rdfs:comment "Exit gate" .
 
 gtfs:payment_method a gtfs:Field ;
     rdfs:label "payment_method" ;
     gtfs:additionalInfo "Valid options are: 0 - Fare is paid on board. 1 - Fare must be paid before boarding." ;
-    gtfs:hasEnumValue <http://gtfs.org/payment_method/0>,
-        <http://gtfs.org/payment_method/1> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/payment_method/0",
+        "http://gtfs.org/payment_method/1" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates when the fare must be paid. Valid options are: 0 - Fare is paid on board. 1 - Fare must be paid before boarding." .
-
-<http://gtfs.org/payment_method/0> rdfs:label "0" ;
-    rdfs:comment "Fare is paid on board" .
-
-<http://gtfs.org/payment_method/1> rdfs:label "1" ;
-    rdfs:comment "Fare must be paid before boarding" .
 
 gtfs:pickup_type a gtfs:Field ;
     rdfs:label "pickup_type" ;
     gtfs:additionalInfo "Enum field with options 0, 1, 2, 3" ;
-    gtfs:hasEnumValue <http://gtfs.org/pickup_type/0>,
-        <http://gtfs.org/pickup_type/1>,
-        <http://gtfs.org/pickup_type/2>,
-        <http://gtfs.org/pickup_type/3> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/pickup_type/0",
+        "http://gtfs.org/pickup_type/1",
+        "http://gtfs.org/pickup_type/2",
+        "http://gtfs.org/pickup_type/3" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates pickup method. Valid options are: 0 or empty - Regularly scheduled pickup. 1 - No pickup available. 2 - Must phone agency to arrange pickup. 3 - Must coordinate with driver to arrange pickup." .
-
-<http://gtfs.org/pickup_type/0> rdfs:label "0" ;
-    rdfs:comment "Regularly scheduled pickup" .
-
-<http://gtfs.org/pickup_type/1> rdfs:label "1" ;
-    rdfs:comment "No pickup available" .
-
-<http://gtfs.org/pickup_type/2> rdfs:label "2" ;
-    rdfs:comment "Must phone agency to arrange pickup" .
-
-<http://gtfs.org/pickup_type/3> rdfs:label "3" ;
-    rdfs:comment "Must coordinate with driver to arrange pickup" .
 
 gtfs:platform_code a gtfs:Field ;
     rdfs:label "platform_code" ;
@@ -1346,49 +1152,19 @@ gtfs:route_text_color a gtfs:Field ;
 gtfs:route_type a gtfs:Field ;
     rdfs:label "route_type" ;
     gtfs:additionalInfo "Valid options are: 0 - Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area. 1 - Subway, Metro. Any underground rail system within a metropolitan area. 2 - Rail. Used for intercity or long-distance travel. 3 - Bus. Used for short- and long-distance bus routes. 4 - Ferry. Used for short- and long-distance boat service. 5 - Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle (e.g., cable car in San Francisco). 6 - Aerial lift, suspended cable car (e.g., gondola lift, aerial tramway). Cable transport where cabins, cars, gondolas or open chairs are suspended by means of one or more cables. 7 - Funicular. Any rail system designed for steep inclines. 11 - Trolleybus. Electric buses that draw power from overhead wires using poles. 12 - Monorail. Railway in which the track consists of a single rail or a beam." ;
-    gtfs:hasEnumValue <http://gtfs.org/route_type/0>,
-        <http://gtfs.org/route_type/1>,
-        <http://gtfs.org/route_type/11>,
-        <http://gtfs.org/route_type/12>,
-        <http://gtfs.org/route_type/2>,
-        <http://gtfs.org/route_type/3>,
-        <http://gtfs.org/route_type/4>,
-        <http://gtfs.org/route_type/5>,
-        <http://gtfs.org/route_type/6>,
-        <http://gtfs.org/route_type/7> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/route_type/0",
+        "http://gtfs.org/route_type/1",
+        "http://gtfs.org/route_type/11",
+        "http://gtfs.org/route_type/12",
+        "http://gtfs.org/route_type/2",
+        "http://gtfs.org/route_type/3",
+        "http://gtfs.org/route_type/4",
+        "http://gtfs.org/route_type/5",
+        "http://gtfs.org/route_type/6",
+        "http://gtfs.org/route_type/7" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates the type of transportation used on a route." .
-
-<http://gtfs.org/route_type/0> rdfs:label "0" ;
-    rdfs:comment "Tram, Streetcar, Light rail" .
-
-<http://gtfs.org/route_type/1> rdfs:label "1" ;
-    rdfs:comment "Subway, Metro" .
-
-<http://gtfs.org/route_type/11> rdfs:label "11" ;
-    rdfs:comment "Trolleybus" .
-
-<http://gtfs.org/route_type/12> rdfs:label "12" ;
-    rdfs:comment "Monorail" .
-
-<http://gtfs.org/route_type/2> rdfs:label "2" ;
-    rdfs:comment "Rail" .
-
-<http://gtfs.org/route_type/3> rdfs:label "3" ;
-    rdfs:comment "Bus" .
-
-<http://gtfs.org/route_type/4> rdfs:label "4" ;
-    rdfs:comment "Ferry" .
-
-<http://gtfs.org/route_type/5> rdfs:label "5" ;
-    rdfs:comment "Cable tram" .
-
-<http://gtfs.org/route_type/6> rdfs:label "6" ;
-    rdfs:comment "Aerial lift, suspended cable car" .
-
-<http://gtfs.org/route_type/7> rdfs:label "7" ;
-    rdfs:comment "Funicular" .
 
 gtfs:route_url a gtfs:Field ;
     rdfs:label "route_url" ;
@@ -1400,13 +1176,10 @@ gtfs:route_url a gtfs:Field ;
 gtfs:saturday a gtfs:Field ;
     rdfs:label "saturday" ;
     gtfs:additionalInfo "Enum type field" ;
-    gtfs:hasEnumValue <http://gtfs.org/saturday/example_key> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/saturday/example_key" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Functions in the same way as `monday` except applies to Saturdays." .
-
-<http://gtfs.org/saturday/example_key> rdfs:label "example_key" ;
-    rdfs:comment "example_value" .
 
 gtfs:shape_pt_lat a gtfs:Field ;
     rdfs:label "shape_pt_lat" ;
@@ -1544,66 +1317,33 @@ gtfs:stop_url a gtfs:Field ;
 gtfs:sunday a gtfs:Field ;
     rdfs:label "sunday" ;
     gtfs:additionalInfo "Enum type field that applies to Sundays." ;
-    gtfs:hasEnumValue <http://gtfs.org/sunday/1> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/sunday/1" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Functions in the same way as `monday` except applies to Sundays." .
-
-<http://gtfs.org/sunday/1> rdfs:label "1" ;
-    rdfs:comment "Applies to Sundays" .
 
 gtfs:table_name a gtfs:Field ;
     rdfs:label "table_name" ;
     gtfs:additionalInfo "Allowed values: agency, stops, routes, trips, stop_times, pathways, levels, feed_info, attributions" ;
-    gtfs:hasEnumValue <http://gtfs.org/table_name/agency>,
-        <http://gtfs.org/table_name/attributions>,
-        <http://gtfs.org/table_name/feed_info>,
-        <http://gtfs.org/table_name/levels>,
-        <http://gtfs.org/table_name/pathways>,
-        <http://gtfs.org/table_name/routes>,
-        <http://gtfs.org/table_name/stop_times>,
-        <http://gtfs.org/table_name/stops>,
-        <http://gtfs.org/table_name/trips> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/table_name/agency",
+        "http://gtfs.org/table_name/attributions",
+        "http://gtfs.org/table_name/feed_info",
+        "http://gtfs.org/table_name/levels",
+        "http://gtfs.org/table_name/pathways",
+        "http://gtfs.org/table_name/routes",
+        "http://gtfs.org/table_name/stop_times",
+        "http://gtfs.org/table_name/stops",
+        "http://gtfs.org/table_name/trips" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Defines the table that contains the field to be translated. Allowed values are: - `agency` - `stops` - `routes` - `trips` - `stop_times` - `pathways` - `levels` - `feed_info` - `attributions`. Any file added to GTFS will have a `table_name` value equivalent to the file name, as listed above (i.e., not including the `.txt` file extension)." .
-
-<http://gtfs.org/table_name/agency> rdfs:label "agency" ;
-    rdfs:comment "Agency" .
-
-<http://gtfs.org/table_name/attributions> rdfs:label "attributions" ;
-    rdfs:comment "Attributions" .
-
-<http://gtfs.org/table_name/feed_info> rdfs:label "feed_info" ;
-    rdfs:comment "Feed Info" .
-
-<http://gtfs.org/table_name/levels> rdfs:label "levels" ;
-    rdfs:comment "Levels" .
-
-<http://gtfs.org/table_name/pathways> rdfs:label "pathways" ;
-    rdfs:comment "Pathways" .
-
-<http://gtfs.org/table_name/routes> rdfs:label "routes" ;
-    rdfs:comment "Routes" .
-
-<http://gtfs.org/table_name/stop_times> rdfs:label "stop_times" ;
-    rdfs:comment "Stop Times" .
-
-<http://gtfs.org/table_name/stops> rdfs:label "stops" ;
-    rdfs:comment "Stops" .
-
-<http://gtfs.org/table_name/trips> rdfs:label "trips" ;
-    rdfs:comment "Trips" .
 
 gtfs:thursday a gtfs:Field ;
     rdfs:label "thursday" ;
     gtfs:additionalInfo "Enum type field" ;
-    gtfs:hasEnumValue <http://gtfs.org/thursday/1> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
-    rdfs:comment "Functions in the same way as `monday` except applies to Thursdays" .
-
-<http://gtfs.org/thursday/1> rdfs:label "1" ;
+    gtfs:hasEnumValue "http://gtfs.org/thursday/1" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Functions in the same way as `monday` except applies to Thursdays" .
 
 gtfs:timeframe_group_id a gtfs:Field ;
@@ -1616,17 +1356,11 @@ gtfs:timeframe_group_id a gtfs:Field ;
 gtfs:timepoint a gtfs:Field ;
     rdfs:label "timepoint" ;
     gtfs:additionalInfo "Valid options are: 0 - Times are considered approximate. 1 or empty - Times are considered exact." ;
-    gtfs:hasEnumValue <http://gtfs.org/timepoint/0>,
-        <http://gtfs.org/timepoint/1> ;
-    gtfs:isPresence "Recommended" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/timepoint/0",
+        "http://gtfs.org/timepoint/1" ;
+    gtfs:isPresence gtfs:Recommended ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates if arrival and departure times for a stop are strictly adhered to by the vehicle or if they are instead approximate and/or interpolated times. This field allows a GTFS producer to provide interpolated stop-times, while indicating that the times are approximate. Valid options are: 0 - Times are considered approximate. 1 or empty - Times are considered exact." .
-
-<http://gtfs.org/timepoint/0> rdfs:label "0" ;
-    rdfs:comment "Times are considered approximate" .
-
-<http://gtfs.org/timepoint/1> rdfs:label "1" ;
-    rdfs:comment "Times are considered exact" .
 
 gtfs:to_area_id a gtfs:Field ;
     rdfs:label "to_area_id" ;
@@ -1699,56 +1433,26 @@ gtfs:transfer_duration a gtfs:Field ;
 gtfs:transfer_type a gtfs:Field ;
     rdfs:label "transfer_type" ;
     gtfs:additionalInfo "Valid options are: 0 or empty - Recommended transfer point between routes. 1 - Timed transfer point between two routes. The departing vehicle is expected to wait for the arriving one and leave sufficient time for a rider to transfer between routes. 2 - Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time. 3 - Transfers are not possible between routes at the location. 4 - Passengers can transfer from one trip to another by staying onboard the same vehicle (an 'in-seat transfer'). 5 - In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board." ;
-    gtfs:hasEnumValue <http://gtfs.org/transfer_type/0>,
-        <http://gtfs.org/transfer_type/1>,
-        <http://gtfs.org/transfer_type/2>,
-        <http://gtfs.org/transfer_type/3>,
-        <http://gtfs.org/transfer_type/4>,
-        <http://gtfs.org/transfer_type/5> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/transfer_type/0",
+        "http://gtfs.org/transfer_type/1",
+        "http://gtfs.org/transfer_type/2",
+        "http://gtfs.org/transfer_type/3",
+        "http://gtfs.org/transfer_type/4",
+        "http://gtfs.org/transfer_type/5" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates the type of connection for the specified (from_stop_id, to_stop_id) pair." .
-
-<http://gtfs.org/transfer_type/0> rdfs:label "0" ;
-    rdfs:comment "Recommended transfer point between routes" .
-
-<http://gtfs.org/transfer_type/1> rdfs:label "1" ;
-    rdfs:comment "Timed transfer point between two routes" .
-
-<http://gtfs.org/transfer_type/2> rdfs:label "2" ;
-    rdfs:comment "Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time" .
-
-<http://gtfs.org/transfer_type/3> rdfs:label "3" ;
-    rdfs:comment "Transfers are not possible between routes at the location" .
-
-<http://gtfs.org/transfer_type/4> rdfs:label "4" ;
-    rdfs:comment "Passengers can transfer from one trip to another by staying onboard the same vehicle (an 'in-seat transfer')" .
-
-<http://gtfs.org/transfer_type/5> rdfs:label "5" ;
-    rdfs:comment "In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board" .
 
 gtfs:transfers a gtfs:Field ;
     rdfs:label "transfers" ;
     gtfs:additionalInfo "Enum field with options: 0 - No transfers permitted, 1 - Riders may transfer once, 2 - Riders may transfer twice, empty - Unlimited transfers permitted." ;
-    gtfs:hasEnumValue <http://gtfs.org/transfers/0>,
-        <http://gtfs.org/transfers/1>,
-        <http://gtfs.org/transfers/2>,
-        <http://gtfs.org/transfers/empty> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/transfers/0",
+        "http://gtfs.org/transfers/1",
+        "http://gtfs.org/transfers/2",
+        "http://gtfs.org/transfers/empty" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates the number of transfers permitted on this fare. Valid options are: 0 - No transfers permitted on this fare. 1 - Riders may transfer once. 2 - Riders may transfer twice. empty - Unlimited transfers are permitted." .
-
-<http://gtfs.org/transfers/0> rdfs:label "0" ;
-    rdfs:comment "No transfers permitted on this fare" .
-
-<http://gtfs.org/transfers/1> rdfs:label "1" ;
-    rdfs:comment "Riders may transfer once" .
-
-<http://gtfs.org/transfers/2> rdfs:label "2" ;
-    rdfs:comment "Riders may transfer twice" .
-
-<http://gtfs.org/transfers/empty> rdfs:label "empty" ;
-    rdfs:comment "Unlimited transfers permitted" .
 
 gtfs:translation a gtfs:Field ;
     rdfs:label "translation" ;
@@ -1788,61 +1492,37 @@ gtfs:tts_stop_name a gtfs:Field ;
 gtfs:tuesday a gtfs:Field ;
     rdfs:label "tuesday" ;
     gtfs:additionalInfo "Enum type field" ;
-    gtfs:hasEnumValue <http://gtfs.org/tuesday/0> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/tuesday/0" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Functions in the same way as `monday` except applies to Tuesdays" .
-
-<http://gtfs.org/tuesday/0> rdfs:label "0" ;
-    rdfs:comment "Functions in the same way as 'monday' except applies to Tuesdays" .
 
 gtfs:wednesday a gtfs:Field ;
     rdfs:label "wednesday" ;
     gtfs:additionalInfo "Enum type field" ;
-    gtfs:hasEnumValue <http://gtfs.org/wednesday/1> ;
-    gtfs:isPresence "Required" ;
-    gtfs:isType "Enum" ;
-    rdfs:comment "Functions in the same way as `monday` except applies to Wednesdays" .
-
-<http://gtfs.org/wednesday/1> rdfs:label "1" ;
+    gtfs:hasEnumValue "http://gtfs.org/wednesday/1" ;
+    gtfs:isPresence gtfs:Required ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Functions in the same way as `monday` except applies to Wednesdays" .
 
 gtfs:wheelchair_accessible a gtfs:Field ;
     rdfs:label "wheelchair_accessible" ;
     gtfs:additionalInfo "Enum field with options 0, 1, 2" ;
-    gtfs:hasEnumValue <http://gtfs.org/wheelchair_accessible/0>,
-        <http://gtfs.org/wheelchair_accessible/1>,
-        <http://gtfs.org/wheelchair_accessible/2> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/wheelchair_accessible/0",
+        "http://gtfs.org/wheelchair_accessible/1",
+        "http://gtfs.org/wheelchair_accessible/2" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates wheelchair accessibility. Valid options are: 0 or empty - No accessibility information for the trip. 1 - Vehicle being used on this particular trip can accommodate at least one rider in a wheelchair. 2 - No riders in wheelchairs can be accommodated on this trip." .
-
-<http://gtfs.org/wheelchair_accessible/0> rdfs:label "0" ;
-    rdfs:comment "No accessibility information for the trip" .
-
-<http://gtfs.org/wheelchair_accessible/1> rdfs:label "1" ;
-    rdfs:comment "Vehicle can accommodate at least one rider in a wheelchair" .
-
-<http://gtfs.org/wheelchair_accessible/2> rdfs:label "2" ;
-    rdfs:comment "No riders in wheelchairs can be accommodated on this trip" .
 
 gtfs:wheelchair_boarding a gtfs:Field ;
     rdfs:label "wheelchair_boarding" ;
-    gtfs:hasEnumValue <http://gtfs.org/wheelchair_boarding/0>,
-        <http://gtfs.org/wheelchair_boarding/1>,
-        <http://gtfs.org/wheelchair_boarding/2> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/wheelchair_boarding/0",
+        "http://gtfs.org/wheelchair_boarding/1",
+        "http://gtfs.org/wheelchair_boarding/2" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates whether wheelchair boardings are possible from the location. Valid options are: For parentless stops: 0 or empty - No accessibility information for the stop. 1 - Some vehicles at this stop can be boarded by a rider in a wheelchair. 2 - Wheelchair boarding is not possible at this stop. For child stops: 0 or empty - Stop will inherit its wheelchair_boarding behavior from the parent station, if specified in the parent. 1 - There exists some accessible path from outside the station to the specific stop/platform. 2 - There exists no accessible path from outside the station to the specific stop/platform. For station entrances/exits: 0 or empty - Station entrance will inherit its wheelchair_boarding behavior from the parent station, if specified for the parent. 1 - Station entrance is wheelchair accessible. 2 - No accessible path from station entrance to stops/platforms." .
-
-<http://gtfs.org/wheelchair_boarding/0> rdfs:label "0" ;
-    rdfs:comment "No accessibility information for the stop" .
-
-<http://gtfs.org/wheelchair_boarding/1> rdfs:label "1" ;
-    rdfs:comment "Some vehicles at this stop can be boarded by a rider in a wheelchair" .
-
-<http://gtfs.org/wheelchair_boarding/2> rdfs:label "2" ;
-    rdfs:comment "Wheelchair boarding is not possible at this stop" .
 
 gtfs:zone_id a gtfs:Field ;
     rdfs:label "zone_id" ;
@@ -1857,6 +1537,321 @@ gtfs:zone_id a gtfs:Field ;
     rdfs:subClassOf <http://schema.org/Intangible> .
 
 rdfs:Resource a owl:Class .
+
+"http://gtfs.org/bikes_allowed/0" rdfs:label "0" ;
+    rdfs:comment "No bike information for the trip" .
+
+"http://gtfs.org/bikes_allowed/1" rdfs:label "1" ;
+    rdfs:comment "Vehicle being used on this particular trip can accommodate at least one bicycle" .
+
+"http://gtfs.org/bikes_allowed/2" rdfs:label "2" ;
+    rdfs:comment "No bicycles are allowed on this trip" .
+
+"http://gtfs.org/continuous_drop_off/0" rdfs:label "0" ;
+    rdfs:comment "Continuous stopping drop off" .
+
+"http://gtfs.org/continuous_drop_off/1" rdfs:label "1" ;
+    rdfs:comment "No continuous stopping drop off" .
+
+"http://gtfs.org/continuous_drop_off/2" rdfs:label "2" ;
+    rdfs:comment "Must phone agency to arrange continuous stopping drop off" .
+
+"http://gtfs.org/continuous_drop_off/3" rdfs:label "3" ;
+    rdfs:comment "Must coordinate with driver to arrange continuous stopping drop off" .
+
+"http://gtfs.org/continuous_pickup/0" rdfs:label "0" ;
+    rdfs:comment "Continuous stopping pickup" .
+
+"http://gtfs.org/continuous_pickup/1" rdfs:label "1" ;
+    rdfs:comment "No continuous stopping pickup" .
+
+"http://gtfs.org/continuous_pickup/2" rdfs:label "2" ;
+    rdfs:comment "Must phone agency to arrange continuous stopping pickup" .
+
+"http://gtfs.org/continuous_pickup/3" rdfs:label "3" ;
+    rdfs:comment "Must coordinate with driver to arrange continuous stopping pickup" .
+
+"http://gtfs.org/direction_id/0" rdfs:label "0" ;
+    rdfs:comment "Travel in one direction (e.g. outbound travel)" .
+
+"http://gtfs.org/direction_id/1" rdfs:label "1" ;
+    rdfs:comment "Travel in the opposite direction (e.g. inbound travel)" .
+
+"http://gtfs.org/drop_off_type/0" rdfs:label "0" ;
+    rdfs:comment "Regularly scheduled drop off" .
+
+"http://gtfs.org/drop_off_type/1" rdfs:label "1" ;
+    rdfs:comment "No drop off available" .
+
+"http://gtfs.org/drop_off_type/2" rdfs:label "2" ;
+    rdfs:comment "Must phone agency to arrange drop off" .
+
+"http://gtfs.org/drop_off_type/3" rdfs:label "3" ;
+    rdfs:comment "Must coordinate with driver to arrange drop off" .
+
+"http://gtfs.org/duration_limit_type/0" rdfs:label "0" ;
+    rdfs:comment "Between the departure fare validation of the current leg and the arrival fare validation of the next leg" .
+
+"http://gtfs.org/duration_limit_type/1" rdfs:label "1" ;
+    rdfs:comment "Between the departure fare validation of the current leg and the departure fare validation of the next leg" .
+
+"http://gtfs.org/duration_limit_type/2" rdfs:label "2" ;
+    rdfs:comment "Between the arrival fare validation of the current leg and the departure fare validation of the next leg" .
+
+"http://gtfs.org/duration_limit_type/3" rdfs:label "3" ;
+    rdfs:comment "Between the arrival fare validation of the current leg and the arrival fare validation of the next leg" .
+
+"http://gtfs.org/exact_times/0" rdfs:label "0" ;
+    rdfs:comment "Frequency-based trips" .
+
+"http://gtfs.org/exact_times/1" rdfs:label "1" ;
+    rdfs:comment "Schedule-based trips with exact same headway throughout the day" .
+
+"http://gtfs.org/exception_type/1" rdfs:label "1" ;
+    rdfs:comment "Service has been added for the specified date" .
+
+"http://gtfs.org/exception_type/2" rdfs:label "2" ;
+    rdfs:comment "Service has been removed for the specified date" .
+
+"http://gtfs.org/fare_media_type/0" rdfs:label "0" ;
+    rdfs:comment "None" .
+
+"http://gtfs.org/fare_media_type/1" rdfs:label "1" ;
+    rdfs:comment "Physical paper ticket" .
+
+"http://gtfs.org/fare_media_type/2" rdfs:label "2" ;
+    rdfs:comment "Physical transit card" .
+
+"http://gtfs.org/fare_media_type/3" rdfs:label "3" ;
+    rdfs:comment "cEMV" .
+
+"http://gtfs.org/fare_media_type/4" rdfs:label "4" ;
+    rdfs:comment "Mobile app" .
+
+"http://gtfs.org/fare_transfer_type/0" rdfs:label "0" ;
+    rdfs:comment "From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB" .
+
+"http://gtfs.org/fare_transfer_type/1" rdfs:label "1" ;
+    rdfs:comment "From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B" .
+
+"http://gtfs.org/fare_transfer_type/2" rdfs:label "2" ;
+    rdfs:comment "fare_transfer_rules.fare_product_id; AB" .
+
+"http://gtfs.org/friday/0" rdfs:label "0" ;
+    rdfs:comment "No" .
+
+"http://gtfs.org/friday/1" rdfs:label "1" ;
+    rdfs:comment "Yes" .
+
+"http://gtfs.org/is_authority/0" rdfs:label "0" ;
+    rdfs:comment "False" .
+
+"http://gtfs.org/is_authority/1" rdfs:label "1" ;
+    rdfs:comment "True" .
+
+"http://gtfs.org/is_bidirectional/0" rdfs:label "0" ;
+    rdfs:comment "Unidirectional pathway that can only be used from from_stop_id to to_stop_id." .
+
+"http://gtfs.org/is_bidirectional/1" rdfs:label "1" ;
+    rdfs:comment "Bidirectional pathway that can be used in both directions." .
+
+"http://gtfs.org/is_operator/0" rdfs:label "0" ;
+    rdfs:comment "False" .
+
+"http://gtfs.org/is_operator/1" rdfs:label "1" ;
+    rdfs:comment "True" .
+
+"http://gtfs.org/is_producer/0" rdfs:label "0" ;
+    rdfs:comment "Organization doesn’t have this role" .
+
+"http://gtfs.org/is_producer/1" rdfs:label "1" ;
+    rdfs:comment "Organization does have this role" .
+
+"http://gtfs.org/location_type/0" rdfs:label "0" ;
+    rdfs:comment "Stop (or Platform)" .
+
+"http://gtfs.org/location_type/1" rdfs:label "1" ;
+    rdfs:comment "Station" .
+
+"http://gtfs.org/location_type/2" rdfs:label "2" ;
+    rdfs:comment "Entrance/Exit" .
+
+"http://gtfs.org/location_type/3" rdfs:label "3" ;
+    rdfs:comment "Generic Node" .
+
+"http://gtfs.org/location_type/4" rdfs:label "4" ;
+    rdfs:comment "Boarding Area" .
+
+"http://gtfs.org/monday/0" rdfs:label "0" ;
+    rdfs:comment "Service is not available for Mondays in the date range" .
+
+"http://gtfs.org/monday/1" rdfs:label "1" ;
+    rdfs:comment "Service is available for all Mondays in the date range" .
+
+"http://gtfs.org/pathway_mode/1" rdfs:label "1" ;
+    rdfs:comment "Walkway" .
+
+"http://gtfs.org/pathway_mode/2" rdfs:label "2" ;
+    rdfs:comment "Stairs" .
+
+"http://gtfs.org/pathway_mode/3" rdfs:label "3" ;
+    rdfs:comment "Moving sidewalk/travelator" .
+
+"http://gtfs.org/pathway_mode/4" rdfs:label "4" ;
+    rdfs:comment "Escalator" .
+
+"http://gtfs.org/pathway_mode/5" rdfs:label "5" ;
+    rdfs:comment "Elevator" .
+
+"http://gtfs.org/pathway_mode/6" rdfs:label "6" ;
+    rdfs:comment "Fare gate" .
+
+"http://gtfs.org/pathway_mode/7" rdfs:label "7" ;
+    rdfs:comment "Exit gate" .
+
+"http://gtfs.org/payment_method/0" rdfs:label "0" ;
+    rdfs:comment "Fare is paid on board" .
+
+"http://gtfs.org/payment_method/1" rdfs:label "1" ;
+    rdfs:comment "Fare must be paid before boarding" .
+
+"http://gtfs.org/pickup_type/0" rdfs:label "0" ;
+    rdfs:comment "Regularly scheduled pickup" .
+
+"http://gtfs.org/pickup_type/1" rdfs:label "1" ;
+    rdfs:comment "No pickup available" .
+
+"http://gtfs.org/pickup_type/2" rdfs:label "2" ;
+    rdfs:comment "Must phone agency to arrange pickup" .
+
+"http://gtfs.org/pickup_type/3" rdfs:label "3" ;
+    rdfs:comment "Must coordinate with driver to arrange pickup" .
+
+"http://gtfs.org/route_type/0" rdfs:label "0" ;
+    rdfs:comment "Tram, Streetcar, Light rail" .
+
+"http://gtfs.org/route_type/1" rdfs:label "1" ;
+    rdfs:comment "Subway, Metro" .
+
+"http://gtfs.org/route_type/11" rdfs:label "11" ;
+    rdfs:comment "Trolleybus" .
+
+"http://gtfs.org/route_type/12" rdfs:label "12" ;
+    rdfs:comment "Monorail" .
+
+"http://gtfs.org/route_type/2" rdfs:label "2" ;
+    rdfs:comment "Rail" .
+
+"http://gtfs.org/route_type/3" rdfs:label "3" ;
+    rdfs:comment "Bus" .
+
+"http://gtfs.org/route_type/4" rdfs:label "4" ;
+    rdfs:comment "Ferry" .
+
+"http://gtfs.org/route_type/5" rdfs:label "5" ;
+    rdfs:comment "Cable tram" .
+
+"http://gtfs.org/route_type/6" rdfs:label "6" ;
+    rdfs:comment "Aerial lift, suspended cable car" .
+
+"http://gtfs.org/route_type/7" rdfs:label "7" ;
+    rdfs:comment "Funicular" .
+
+"http://gtfs.org/saturday/example_key" rdfs:label "example_key" ;
+    rdfs:comment "example_value" .
+
+"http://gtfs.org/sunday/1" rdfs:label "1" ;
+    rdfs:comment "Applies to Sundays" .
+
+"http://gtfs.org/table_name/agency" rdfs:label "agency" ;
+    rdfs:comment "Agency" .
+
+"http://gtfs.org/table_name/attributions" rdfs:label "attributions" ;
+    rdfs:comment "Attributions" .
+
+"http://gtfs.org/table_name/feed_info" rdfs:label "feed_info" ;
+    rdfs:comment "Feed Info" .
+
+"http://gtfs.org/table_name/levels" rdfs:label "levels" ;
+    rdfs:comment "Levels" .
+
+"http://gtfs.org/table_name/pathways" rdfs:label "pathways" ;
+    rdfs:comment "Pathways" .
+
+"http://gtfs.org/table_name/routes" rdfs:label "routes" ;
+    rdfs:comment "Routes" .
+
+"http://gtfs.org/table_name/stop_times" rdfs:label "stop_times" ;
+    rdfs:comment "Stop Times" .
+
+"http://gtfs.org/table_name/stops" rdfs:label "stops" ;
+    rdfs:comment "Stops" .
+
+"http://gtfs.org/table_name/trips" rdfs:label "trips" ;
+    rdfs:comment "Trips" .
+
+"http://gtfs.org/thursday/1" rdfs:label "1" ;
+    rdfs:comment "Functions in the same way as `monday` except applies to Thursdays" .
+
+"http://gtfs.org/timepoint/0" rdfs:label "0" ;
+    rdfs:comment "Times are considered approximate" .
+
+"http://gtfs.org/timepoint/1" rdfs:label "1" ;
+    rdfs:comment "Times are considered exact" .
+
+"http://gtfs.org/transfer_type/0" rdfs:label "0" ;
+    rdfs:comment "Recommended transfer point between routes" .
+
+"http://gtfs.org/transfer_type/1" rdfs:label "1" ;
+    rdfs:comment "Timed transfer point between two routes" .
+
+"http://gtfs.org/transfer_type/2" rdfs:label "2" ;
+    rdfs:comment "Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time" .
+
+"http://gtfs.org/transfer_type/3" rdfs:label "3" ;
+    rdfs:comment "Transfers are not possible between routes at the location" .
+
+"http://gtfs.org/transfer_type/4" rdfs:label "4" ;
+    rdfs:comment "Passengers can transfer from one trip to another by staying onboard the same vehicle (an 'in-seat transfer')" .
+
+"http://gtfs.org/transfer_type/5" rdfs:label "5" ;
+    rdfs:comment "In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board" .
+
+"http://gtfs.org/transfers/0" rdfs:label "0" ;
+    rdfs:comment "No transfers permitted on this fare" .
+
+"http://gtfs.org/transfers/1" rdfs:label "1" ;
+    rdfs:comment "Riders may transfer once" .
+
+"http://gtfs.org/transfers/2" rdfs:label "2" ;
+    rdfs:comment "Riders may transfer twice" .
+
+"http://gtfs.org/transfers/empty" rdfs:label "empty" ;
+    rdfs:comment "Unlimited transfers permitted" .
+
+"http://gtfs.org/tuesday/0" rdfs:label "0" ;
+    rdfs:comment "Functions in the same way as 'monday' except applies to Tuesdays" .
+
+"http://gtfs.org/wednesday/1" rdfs:label "1" ;
+    rdfs:comment "Functions in the same way as `monday` except applies to Wednesdays" .
+
+"http://gtfs.org/wheelchair_accessible/0" rdfs:label "0" ;
+    rdfs:comment "No accessibility information for the trip" .
+
+"http://gtfs.org/wheelchair_accessible/1" rdfs:label "1" ;
+    rdfs:comment "Vehicle can accommodate at least one rider in a wheelchair" .
+
+"http://gtfs.org/wheelchair_accessible/2" rdfs:label "2" ;
+    rdfs:comment "No riders in wheelchairs can be accommodated on this trip" .
+
+"http://gtfs.org/wheelchair_boarding/0" rdfs:label "0" ;
+    rdfs:comment "No accessibility information for the stop" .
+
+"http://gtfs.org/wheelchair_boarding/1" rdfs:label "1" ;
+    rdfs:comment "Some vehicles at this stop can be boarded by a rider in a wheelchair" .
+
+"http://gtfs.org/wheelchair_boarding/2" rdfs:label "2" ;
+    rdfs:comment "Wheelchair boarding is not possible at this stop" .
 
 gtfs:Latitude a owl:Class ;
     rdfs:label "Latitude"@en ;
@@ -1890,12 +1885,12 @@ gtfs:area_id a gtfs:Field ;
 gtfs:continuous_drop_off a gtfs:Field ;
     rdfs:label "continuous_drop_off" ;
     gtfs:additionalInfo "Valid options are: 0 - Continuous stopping drop off, 1 or empty - No continuous stopping drop off, 2 - Must phone agency to arrange continuous stopping drop off, 3 - Must coordinate with driver to arrange continuous stopping drop off. Values for routes.continuous_drop_off may be overridden by defining values in stop_times.continuous_drop_off for specific stop_times along the route." ;
-    gtfs:hasEnumValue <http://gtfs.org/continuous_drop_off/0>,
-        <http://gtfs.org/continuous_drop_off/1>,
-        <http://gtfs.org/continuous_drop_off/2>,
-        <http://gtfs.org/continuous_drop_off/3> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/continuous_drop_off/0",
+        "http://gtfs.org/continuous_drop_off/1",
+        "http://gtfs.org/continuous_drop_off/2",
+        "http://gtfs.org/continuous_drop_off/3" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates that the rider can alight from the transit vehicle at any point along the vehicle’s travel path as described by `shapes.txt`, from this `stop_time` to the next `stop_time` in the trip’s `stop_sequence`. Valid options are: `0` - Continuous stopping drop off. `1` or empty - No continuous stopping drop off. `2` - Must phone agency to arrange continuous stopping drop off. `3` - Must coordinate with driver to arrange continuous stopping drop off. If this field is populated, it overrides any continuous drop-off behavior defined in `routes.txt`. If this field is empty, the `stop_time` inherits any continuous drop-off behavior defined in `routes.txt`.",
         "Indicates that the rider can alight from the transit vehicle at any point along the vehicle’s travel path as described by shapes.txt, on every trip of the route." .
 
@@ -1903,12 +1898,12 @@ gtfs:continuous_pickup a gtfs:Field ;
     rdfs:label "continuous_pickup" ;
     gtfs:additionalInfo "Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup.",
         "Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup. Values for `routes.continuous_pickup` may be overridden by defining values in `stop_times.continuous_pickup` for specific `stop_time`s along the route." ;
-    gtfs:hasEnumValue <http://gtfs.org/continuous_pickup/0>,
-        <http://gtfs.org/continuous_pickup/1>,
-        <http://gtfs.org/continuous_pickup/2>,
-        <http://gtfs.org/continuous_pickup/3> ;
-    gtfs:isPresence "Optional" ;
-    gtfs:isType "Enum" ;
+    gtfs:hasEnumValue "http://gtfs.org/continuous_pickup/0",
+        "http://gtfs.org/continuous_pickup/1",
+        "http://gtfs.org/continuous_pickup/2",
+        "http://gtfs.org/continuous_pickup/3" ;
+    gtfs:isPresence gtfs:Optional ;
+    gtfs:isType gtfs:Enum ;
     rdfs:comment "Indicates that the rider can board the transit vehicle at any point along the vehicle’s travel path as described by `shapes.txt`, from this `stop_time` to the next `stop_time` in the trip’s `stop_sequence`. If this field is populated, it overrides any continuous pickup behavior defined in `routes.txt`. If this field is empty, the `stop_time` inherits any continuous pickup behavior defined in `routes.txt`.",
         "Indicates that the rider can board the transit vehicle at any point along the vehicle’s travel path as described by `shapes.txt`, on every trip of the route." .
 
@@ -2021,11 +2016,6 @@ gtfs:Email a owl:Class ;
     rdfs:comment "An email address."@en ;
     rdfs:subClassOf gtfs:FieldType .
 
-gtfs:Recommended a owl:Class ;
-    rdfs:label "Recommended"@en ;
-    rdfs:comment "The field or file may be omitted from the dataset, but it is a best practice to include it. Before omitting this field or file, the best practice should be carefully evaluated and the full implications of omission should be understood." ;
-    rdfs:subClassOf gtfs:PresenceCondition .
-
 gtfs:fare_product_id a gtfs:Field ;
     rdfs:label "fare_product_id" ;
     gtfs:additionalInfo "Foreign ID referencing fare_products.fare_product_id",
@@ -2051,6 +2041,11 @@ gtfs:LanguageCode a owl:Class ;
     rdfs:label "LanguageCode"@en ;
     rdfs:comment "An IETF BCP 47 language code. For an introduction to IETF BCP 47, refer to http://www.rfc-editor.org/rfc/bcp/bcp47.txt and" ;
     rdfs:subClassOf gtfs:FieldType .
+
+gtfs:Recommended a owl:Class ;
+    rdfs:label "Recommended"@en ;
+    rdfs:comment "The field or file may be omitted from the dataset, but it is a best practice to include it. Before omitting this field or file, the best practice should be carefully evaluated and the full implications of omission should be understood." ;
+    rdfs:subClassOf gtfs:PresenceCondition .
 
 gtfs:Time a owl:Class ;
     rdfs:label "Time"@en ;
@@ -2153,6 +2148,11 @@ gtfs:File a owl:Class ;
     rdfs:label "File"@en ;
     rdfs:comment "A File refers to a single file within the GTFS feed" ;
     rdfs:subClassOf <http://schema.org/Intangible> .
+
+gtfs:Enum a owl:Class ;
+    rdfs:label "Enum"@en ;
+    rdfs:comment "An option from a set of predefined constants defined in the \"Description\" column."@en ;
+    rdfs:subClassOf gtfs:FieldType .
 
 gtfs:ID a owl:Class ;
     rdfs:label "ID"@en ;
