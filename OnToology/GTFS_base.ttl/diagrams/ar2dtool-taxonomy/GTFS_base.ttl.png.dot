@@ -26,9 +26,9 @@ node [shape = rectangle, color="black"]; "gtfs:CurrencyAmount" "http://schema.or
 	"gtfs:FieldType" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
 	"gtfs:Field" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
 	"gtfs:ServiceDay" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
-	"gtfs:Longitude" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
-	"http://schema.org/Enumeration" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
 	"gtfs:Required" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"http://schema.org/Enumeration" -> "http://schema.org/Intangible" [ label = "rdfs:subClassOf" ];
+	"gtfs:Longitude" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
 	"gtfs:Float" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
 	"gtfs:Enum" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
 	"gtfs:PhoneNumber" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];

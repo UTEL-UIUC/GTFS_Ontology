@@ -3,7 +3,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "http://gtfs.org/ConditionallyForbidden",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The field or file must not be included under conditions outlined in the field or file description."
   } ],
@@ -16,7 +16,7 @@
   } ]
 }, {
   "@id" : "http://gtfs.org/ConditionallyRequired",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The field or file must be included under conditions outlined in the field or file description."
   } ],
@@ -243,7 +243,7 @@
   } ]
 }, {
   "@id" : "http://gtfs.org/Optional",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The field or file may be omitted from the dataset."
   } ],
@@ -282,7 +282,7 @@
   } ]
 }, {
   "@id" : "http://gtfs.org/Recommended",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The field or file may be omitted from the dataset, but it is a best practice to include it. Before omitting this field or file, the best practice should be carefully evaluated and the full implications of omission should be understood."
   } ],
@@ -295,7 +295,7 @@
   } ]
 }, {
   "@id" : "http://gtfs.org/Required",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The field or file must be included in the dataset and contain a valid value for each record."
   } ],
@@ -846,7 +846,11 @@
     "@value" : "Enum field with options 0, 1, 2"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/bikes_allowed/enum_mapping"
+    "@id" : "http://gtfs.org/bikes_allowed/0"
+  }, {
+    "@id" : "http://gtfs.org/bikes_allowed/1"
+  }, {
+    "@id" : "http://gtfs.org/bikes_allowed/2"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -864,13 +868,31 @@
     "@value" : "bikes_allowed"
   } ]
 }, {
-  "@id" : "http://gtfs.org/bikes_allowed/enum_mapping",
+  "@id" : "http://gtfs.org/bikes_allowed/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'No bike information for the trip', '1': 'Vehicle being used on this particular trip can accommodate at least one bicycle', '2': 'No bicycles are allowed on this trip'}"
+    "@value" : "No bike information for the trip"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/bikes_allowed/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Vehicle being used on this particular trip can accommodate at least one bicycle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/bikes_allowed/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "No bicycles are allowed on this trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
   } ]
 }, {
   "@id" : "http://gtfs.org/block_id",
@@ -988,7 +1010,13 @@
     "@value" : "Valid options are: 0 - Continuous stopping drop off, 1 or empty - No continuous stopping drop off, 2 - Must phone agency to arrange continuous stopping drop off, 3 - Must coordinate with driver to arrange continuous stopping drop off. Values for routes.continuous_drop_off may be overridden by defining values in stop_times.continuous_drop_off for specific stop_times along the route."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/continuous_drop_off/enum_mapping"
+    "@id" : "http://gtfs.org/continuous_drop_off/0"
+  }, {
+    "@id" : "http://gtfs.org/continuous_drop_off/1"
+  }, {
+    "@id" : "http://gtfs.org/continuous_drop_off/2"
+  }, {
+    "@id" : "http://gtfs.org/continuous_drop_off/3"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -1008,13 +1036,40 @@
     "@value" : "continuous_drop_off"
   } ]
 }, {
-  "@id" : "http://gtfs.org/continuous_drop_off/enum_mapping",
+  "@id" : "http://gtfs.org/continuous_drop_off/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Continuous stopping drop off', '1': 'No continuous stopping drop off', '2': 'Must phone agency to arrange continuous stopping drop off', '3': 'Must coordinate with driver to arrange continuous stopping drop off'}"
+    "@value" : "Continuous stopping drop off"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/continuous_drop_off/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "No continuous stopping drop off"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/continuous_drop_off/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Must phone agency to arrange continuous stopping drop off"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/continuous_drop_off/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Must coordinate with driver to arrange continuous stopping drop off"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
   } ]
 }, {
   "@id" : "http://gtfs.org/continuous_pickup",
@@ -1025,7 +1080,13 @@
     "@value" : "Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup. Values for `routes.continuous_pickup` may be overridden by defining values in `stop_times.continuous_pickup` for specific `stop_time`s along the route."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/continuous_pickup/enum_mapping"
+    "@id" : "http://gtfs.org/continuous_pickup/0"
+  }, {
+    "@id" : "http://gtfs.org/continuous_pickup/1"
+  }, {
+    "@id" : "http://gtfs.org/continuous_pickup/2"
+  }, {
+    "@id" : "http://gtfs.org/continuous_pickup/3"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -1045,13 +1106,40 @@
     "@value" : "continuous_pickup"
   } ]
 }, {
-  "@id" : "http://gtfs.org/continuous_pickup/enum_mapping",
+  "@id" : "http://gtfs.org/continuous_pickup/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Continuous stopping pickup', '1': 'No continuous stopping pickup', '2': 'Must phone agency to arrange continuous stopping pickup', '3': 'Must coordinate with driver to arrange continuous stopping pickup'}"
+    "@value" : "Continuous stopping pickup"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/continuous_pickup/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "No continuous stopping pickup"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/continuous_pickup/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Must phone agency to arrange continuous stopping pickup"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/continuous_pickup/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Must coordinate with driver to arrange continuous stopping pickup"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
   } ]
 }, {
   "@id" : "http://gtfs.org/currency",
@@ -1192,7 +1280,9 @@
     "@value" : "Valid options are: 0 - Travel in one direction (e.g. outbound travel). 1 - Travel in the opposite direction (e.g. inbound travel)."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/direction_id/enum_mapping"
+    "@id" : "http://gtfs.org/direction_id/0"
+  }, {
+    "@id" : "http://gtfs.org/direction_id/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -1210,13 +1300,22 @@
     "@value" : "direction_id"
   } ]
 }, {
-  "@id" : "http://gtfs.org/direction_id/enum_mapping",
+  "@id" : "http://gtfs.org/direction_id/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Travel in one direction (e.g. outbound travel)', '1': 'Travel in the opposite direction (e.g. inbound travel)'}"
+    "@value" : "Travel in one direction (e.g. outbound travel)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/direction_id/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Travel in the opposite direction (e.g. inbound travel)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/drop_off_type",
@@ -1225,7 +1324,13 @@
     "@value" : "Enum field with options 0, 1, 2, 3"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/drop_off_type/enum_mapping"
+    "@id" : "http://gtfs.org/drop_off_type/0"
+  }, {
+    "@id" : "http://gtfs.org/drop_off_type/1"
+  }, {
+    "@id" : "http://gtfs.org/drop_off_type/2"
+  }, {
+    "@id" : "http://gtfs.org/drop_off_type/3"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -1243,13 +1348,40 @@
     "@value" : "drop_off_type"
   } ]
 }, {
-  "@id" : "http://gtfs.org/drop_off_type/enum_mapping",
+  "@id" : "http://gtfs.org/drop_off_type/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Regularly scheduled drop off', '1': 'No drop off available', '2': 'Must phone agency to arrange drop off', '3': 'Must coordinate with driver to arrange drop off'}"
+    "@value" : "Regularly scheduled drop off"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/drop_off_type/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "No drop off available"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/drop_off_type/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Must phone agency to arrange drop off"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/drop_off_type/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Must coordinate with driver to arrange drop off"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
   } ]
 }, {
   "@id" : "http://gtfs.org/duration_limit",
@@ -1278,8 +1410,17 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Defines the relative start and end of `fare_transfer_rules.duration_limit`."
   } ],
+  "http://gtfs.org/hasCondition" : [ {
+    "@value" : "Required if `fare_transfer_rules.duration_limit` is defined. Forbidden if `fare_transfer_rules.duration_limit` is empty."
+  } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/duration_limit_type/enum_mapping"
+    "@id" : "http://gtfs.org/duration_limit_type/0"
+  }, {
+    "@id" : "http://gtfs.org/duration_limit_type/1"
+  }, {
+    "@id" : "http://gtfs.org/duration_limit_type/2"
+  }, {
+    "@id" : "http://gtfs.org/duration_limit_type/3"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "ConditionallyRequired"
@@ -1297,13 +1438,40 @@
     "@value" : "duration_limit_type"
   } ]
 }, {
-  "@id" : "http://gtfs.org/duration_limit_type/enum_mapping",
+  "@id" : "http://gtfs.org/duration_limit_type/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Between the departure fare validation of the current leg and the arrival fare validation of the next leg', '1': 'Between the departure fare validation of the current leg and the departure fare validation of the next leg', '2': 'Between the arrival fare validation of the current leg and the departure fare validation of the next leg', '3': 'Between the arrival fare validation of the current leg and the arrival fare validation of the next leg'}"
+    "@value" : "Between the departure fare validation of the current leg and the arrival fare validation of the next leg"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/duration_limit_type/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Between the departure fare validation of the current leg and the departure fare validation of the next leg"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/duration_limit_type/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Between the arrival fare validation of the current leg and the departure fare validation of the next leg"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/duration_limit_type/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Between the arrival fare validation of the current leg and the arrival fare validation of the next leg"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
   } ]
 }, {
   "@id" : "http://gtfs.org/end_date",
@@ -1363,7 +1531,9 @@
     "@value" : "Enum field with options 0 or 1"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/exact_times/enum_mapping"
+    "@id" : "http://gtfs.org/exact_times/0"
+  }, {
+    "@id" : "http://gtfs.org/exact_times/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -1381,13 +1551,22 @@
     "@value" : "exact_times"
   } ]
 }, {
-  "@id" : "http://gtfs.org/exact_times/enum_mapping",
+  "@id" : "http://gtfs.org/exact_times/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Frequency-based trips', '1': 'Schedule-based trips with exact same headway throughout the day'}"
+    "@value" : "Frequency-based trips"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/exact_times/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Schedule-based trips with exact same headway throughout the day"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/example",
@@ -1406,7 +1585,9 @@
     "@value" : "Suppose a route has one set of trips available on holidays and another set of trips available on all other days. One service_id could correspond to the regular service schedule and another service_id could correspond to the holiday schedule. For a particular holiday, the calendar_dates.txt file could be used to add the holiday to the holiday service_id and to remove the holiday from the regular service_id schedule."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/exception_type/enum_mapping"
+    "@id" : "http://gtfs.org/exception_type/1"
+  }, {
+    "@id" : "http://gtfs.org/exception_type/2"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -1424,13 +1605,22 @@
     "@value" : "exception_type"
   } ]
 }, {
-  "@id" : "http://gtfs.org/exception_type/enum_mapping",
+  "@id" : "http://gtfs.org/exception_type/1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'1': 'Service has been added for the specified date', '2': 'Service has been removed for the specified date'}"
+    "@value" : "Service has been added for the specified date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/exception_type/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Service has been removed for the specified date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
   } ]
 }, {
   "@id" : "http://gtfs.org/fare_attributes.txt",
@@ -1598,7 +1788,15 @@
     "@value" : "Enum field with options: 0 - None, 1 - Physical paper ticket, 2 - Physical transit card, 3 - cEMV, 4 - Mobile app"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/fare_media_type/enum_mapping"
+    "@id" : "http://gtfs.org/fare_media_type/0"
+  }, {
+    "@id" : "http://gtfs.org/fare_media_type/1"
+  }, {
+    "@id" : "http://gtfs.org/fare_media_type/2"
+  }, {
+    "@id" : "http://gtfs.org/fare_media_type/3"
+  }, {
+    "@id" : "http://gtfs.org/fare_media_type/4"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -1616,13 +1814,49 @@
     "@value" : "fare_media_type"
   } ]
 }, {
-  "@id" : "http://gtfs.org/fare_media_type/enum_mapping",
+  "@id" : "http://gtfs.org/fare_media_type/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'None', '1': 'Physical paper ticket', '2': 'Physical transit card', '3': 'cEMV', '4': 'Mobile app'}"
+    "@value" : "None"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/fare_media_type/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Physical paper ticket"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/fare_media_type/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Physical transit card"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/fare_media_type/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "cEMV"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/fare_media_type/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Mobile app"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "4"
   } ]
 }, {
   "@id" : "http://gtfs.org/fare_product_id",
@@ -1769,7 +2003,11 @@
     "@value" : "Valid options are: 0 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB. 1 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B. 2 - fare_transfer_rules.fare_product_id; AB. Cost processing interactions between multiple transfers in a journey: Where S indicates the total processed cost of the preceding leg(s) and transfer(s."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/fare_transfer_type/enum_mapping"
+    "@id" : "http://gtfs.org/fare_transfer_type/0"
+  }, {
+    "@id" : "http://gtfs.org/fare_transfer_type/1"
+  }, {
+    "@id" : "http://gtfs.org/fare_transfer_type/2"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -1787,13 +2025,31 @@
     "@value" : "fare_transfer_type"
   } ]
 }, {
-  "@id" : "http://gtfs.org/fare_transfer_type/enum_mapping",
+  "@id" : "http://gtfs.org/fare_transfer_type/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB', '1': 'From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B', '2': 'fare_transfer_rules.fare_product_id; AB'}"
+    "@value" : "From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/fare_transfer_type/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/fare_transfer_type/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "fare_transfer_rules.fare_product_id; AB"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
   } ]
 }, {
   "@id" : "http://gtfs.org/feed_contact_email",
@@ -2075,7 +2331,9 @@
     "@value" : "Enum field representing the behavior on Fridays"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/friday/enum_mapping"
+    "@id" : "http://gtfs.org/friday/0"
+  }, {
+    "@id" : "http://gtfs.org/friday/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -2093,13 +2351,22 @@
     "@value" : "friday"
   } ]
 }, {
-  "@id" : "http://gtfs.org/friday/enum_mapping",
+  "@id" : "http://gtfs.org/friday/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'No', '1': 'Yes'}"
+    "@value" : "No"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/friday/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Yes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/from_area_id",
@@ -2239,7 +2506,22 @@
   } ]
 }, {
   "@id" : "http://gtfs.org/hasCondition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property links a file to its fields"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://gtfs.org/Field"
+  }, {
+    "@id" : "http://gtfs.org/File"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
 }, {
   "@id" : "http://gtfs.org/hasEnumValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -2279,27 +2561,6 @@
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
-  "@id" : "http://gtfs.org/hasPresenceCondition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This property links a field to its PresenceCondition."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://gtfs.org/Field"
-  }, {
-    "@id" : "http://gtfs.org/File"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "hasPresenceCondition"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://gtfs.org/PresenceCondition"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ]
-}, {
   "@id" : "http://gtfs.org/headway_secs",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
@@ -2322,7 +2583,25 @@
   } ]
 }, {
   "@id" : "http://gtfs.org/isPresence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property links a file or field to its PresenceCondition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://gtfs.org/Field"
+  }, {
+    "@id" : "http://gtfs.org/File"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "isPresence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://gtfs.org/PresenceCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
 }, {
   "@id" : "http://gtfs.org/isType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -2348,7 +2627,9 @@
     "@value" : "Enum field representing the role of the organization as an authority."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/is_authority/enum_mapping"
+    "@id" : "http://gtfs.org/is_authority/0"
+  }, {
+    "@id" : "http://gtfs.org/is_authority/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -2366,13 +2647,22 @@
     "@value" : "is_authority"
   } ]
 }, {
-  "@id" : "http://gtfs.org/is_authority/enum_mapping",
+  "@id" : "http://gtfs.org/is_authority/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'False', '1': 'True'}"
+    "@value" : "False"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/is_authority/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "True"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/is_bidirectional",
@@ -2381,7 +2671,9 @@
     "@value" : "Exit gates (pathway_mode=7) must not be bidirectional."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/is_bidirectional/enum_mapping"
+    "@id" : "http://gtfs.org/is_bidirectional/0"
+  }, {
+    "@id" : "http://gtfs.org/is_bidirectional/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -2399,13 +2691,22 @@
     "@value" : "is_bidirectional"
   } ]
 }, {
-  "@id" : "http://gtfs.org/is_bidirectional/enum_mapping",
+  "@id" : "http://gtfs.org/is_bidirectional/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Unidirectional pathway that can only be used from from_stop_id to to_stop_id.', '1': 'Bidirectional pathway that can be used in both directions.'}"
+    "@value" : "Unidirectional pathway that can only be used from from_stop_id to to_stop_id."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/is_bidirectional/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Bidirectional pathway that can be used in both directions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/is_operator",
@@ -2414,7 +2715,9 @@
     "@value" : "Enum type field"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/is_operator/enum_mapping"
+    "@id" : "http://gtfs.org/is_operator/0"
+  }, {
+    "@id" : "http://gtfs.org/is_operator/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -2432,13 +2735,22 @@
     "@value" : "is_operator"
   } ]
 }, {
-  "@id" : "http://gtfs.org/is_operator/enum_mapping",
+  "@id" : "http://gtfs.org/is_operator/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'False', '1': 'True'}"
+    "@value" : "False"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/is_operator/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "True"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/is_producer",
@@ -2447,7 +2759,9 @@
     "@value" : "Valid options are: 0 or empty - Organization doesn’t have this role. 1 - Organization does have this role."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/is_producer/enum_mapping"
+    "@id" : "http://gtfs.org/is_producer/0"
+  }, {
+    "@id" : "http://gtfs.org/is_producer/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -2465,13 +2779,22 @@
     "@value" : "is_producer"
   } ]
 }, {
-  "@id" : "http://gtfs.org/is_producer/enum_mapping",
+  "@id" : "http://gtfs.org/is_producer/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Organization doesn’t have this role', '1': 'Organization does have this role'}"
+    "@value" : "Organization doesn’t have this role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/is_producer/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Organization does have this role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/language",
@@ -2640,7 +2963,15 @@
     "@value" : "Valid options are: 0 (or blank) - Stop (or Platform), 1 - Station, 2 - Entrance/Exit, 3 - Generic Node, 4 - Boarding Area"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/location_type/enum_mapping"
+    "@id" : "http://gtfs.org/location_type/0"
+  }, {
+    "@id" : "http://gtfs.org/location_type/1"
+  }, {
+    "@id" : "http://gtfs.org/location_type/2"
+  }, {
+    "@id" : "http://gtfs.org/location_type/3"
+  }, {
+    "@id" : "http://gtfs.org/location_type/4"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -2658,13 +2989,49 @@
     "@value" : "location_type"
   } ]
 }, {
-  "@id" : "http://gtfs.org/location_type/enum_mapping",
+  "@id" : "http://gtfs.org/location_type/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Stop (or Platform)', '1': 'Station', '2': 'Entrance/Exit', '3': 'Generic Node', '4': 'Boarding Area'}"
+    "@value" : "Stop (or Platform)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/location_type/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Station"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/location_type/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Entrance/Exit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/location_type/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Generic Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/location_type/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Boarding Area"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "4"
   } ]
 }, {
   "@id" : "http://gtfs.org/max_slope",
@@ -2736,7 +3103,9 @@
     "@value" : "Valid options are: 1 - Service is available for all Mondays in the date range. 0 - Service is not available for Mondays in the date range."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/monday/enum_mapping"
+    "@id" : "http://gtfs.org/monday/0"
+  }, {
+    "@id" : "http://gtfs.org/monday/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -2754,13 +3123,22 @@
     "@value" : "monday"
   } ]
 }, {
-  "@id" : "http://gtfs.org/monday/enum_mapping",
+  "@id" : "http://gtfs.org/monday/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'1': 'Service is available for all Mondays in the date range', '0': 'Service is not available for Mondays in the date range'}"
+    "@value" : "Service is not available for Mondays in the date range"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/monday/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Service is available for all Mondays in the date range"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/network_id",
@@ -2881,7 +3259,19 @@
     "@value" : "Valid options are: 1 - Walkway, 2 - Stairs, 3 - Moving sidewalk/travelator, 4 - Escalator, 5 - Elevator, 6 - Fare gate, 7 - Exit gate"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/pathway_mode/enum_mapping"
+    "@id" : "http://gtfs.org/pathway_mode/1"
+  }, {
+    "@id" : "http://gtfs.org/pathway_mode/2"
+  }, {
+    "@id" : "http://gtfs.org/pathway_mode/3"
+  }, {
+    "@id" : "http://gtfs.org/pathway_mode/4"
+  }, {
+    "@id" : "http://gtfs.org/pathway_mode/5"
+  }, {
+    "@id" : "http://gtfs.org/pathway_mode/6"
+  }, {
+    "@id" : "http://gtfs.org/pathway_mode/7"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -2899,13 +3289,67 @@
     "@value" : "pathway_mode"
   } ]
 }, {
-  "@id" : "http://gtfs.org/pathway_mode/enum_mapping",
+  "@id" : "http://gtfs.org/pathway_mode/1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'1': 'Walkway', '2': 'Stairs', '3': 'Moving sidewalk/travelator', '4': 'Escalator', '5': 'Elevator', '6': 'Fare gate', '7': 'Exit gate'}"
+    "@value" : "Walkway"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/pathway_mode/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Stairs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/pathway_mode/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Moving sidewalk/travelator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/pathway_mode/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Escalator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "4"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/pathway_mode/5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Elevator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "5"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/pathway_mode/6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Fare gate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "6"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/pathway_mode/7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Exit gate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "7"
   } ]
 }, {
   "@id" : "http://gtfs.org/pathways.txt",
@@ -2954,7 +3398,9 @@
     "@value" : "Valid options are: 0 - Fare is paid on board. 1 - Fare must be paid before boarding."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/payment_method/enum_mapping"
+    "@id" : "http://gtfs.org/payment_method/0"
+  }, {
+    "@id" : "http://gtfs.org/payment_method/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -2972,13 +3418,22 @@
     "@value" : "payment_method"
   } ]
 }, {
-  "@id" : "http://gtfs.org/payment_method/enum_mapping",
+  "@id" : "http://gtfs.org/payment_method/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Fare is paid on board', '1': 'Fare must be paid before boarding'}"
+    "@value" : "Fare is paid on board"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/payment_method/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Fare must be paid before boarding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/pickup_type",
@@ -2987,7 +3442,13 @@
     "@value" : "Enum field with options 0, 1, 2, 3"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/pickup_type/enum_mapping"
+    "@id" : "http://gtfs.org/pickup_type/0"
+  }, {
+    "@id" : "http://gtfs.org/pickup_type/1"
+  }, {
+    "@id" : "http://gtfs.org/pickup_type/2"
+  }, {
+    "@id" : "http://gtfs.org/pickup_type/3"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -3005,13 +3466,40 @@
     "@value" : "pickup_type"
   } ]
 }, {
-  "@id" : "http://gtfs.org/pickup_type/enum_mapping",
+  "@id" : "http://gtfs.org/pickup_type/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Regularly scheduled pickup', '1': 'No pickup available', '2': 'Must phone agency to arrange pickup', '3': 'Must coordinate with driver to arrange pickup'}"
+    "@value" : "Regularly scheduled pickup"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/pickup_type/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "No pickup available"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/pickup_type/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Must phone agency to arrange pickup"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/pickup_type/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Must coordinate with driver to arrange pickup"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
   } ]
 }, {
   "@id" : "http://gtfs.org/platform_code",
@@ -3297,7 +3785,25 @@
     "@value" : "Valid options are: 0 - Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area. 1 - Subway, Metro. Any underground rail system within a metropolitan area. 2 - Rail. Used for intercity or long-distance travel. 3 - Bus. Used for short- and long-distance bus routes. 4 - Ferry. Used for short- and long-distance boat service. 5 - Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle (e.g., cable car in San Francisco). 6 - Aerial lift, suspended cable car (e.g., gondola lift, aerial tramway). Cable transport where cabins, cars, gondolas or open chairs are suspended by means of one or more cables. 7 - Funicular. Any rail system designed for steep inclines. 11 - Trolleybus. Electric buses that draw power from overhead wires using poles. 12 - Monorail. Railway in which the track consists of a single rail or a beam."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/route_type/enum_mapping"
+    "@id" : "http://gtfs.org/route_type/0"
+  }, {
+    "@id" : "http://gtfs.org/route_type/1"
+  }, {
+    "@id" : "http://gtfs.org/route_type/11"
+  }, {
+    "@id" : "http://gtfs.org/route_type/12"
+  }, {
+    "@id" : "http://gtfs.org/route_type/2"
+  }, {
+    "@id" : "http://gtfs.org/route_type/3"
+  }, {
+    "@id" : "http://gtfs.org/route_type/4"
+  }, {
+    "@id" : "http://gtfs.org/route_type/5"
+  }, {
+    "@id" : "http://gtfs.org/route_type/6"
+  }, {
+    "@id" : "http://gtfs.org/route_type/7"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -3315,13 +3821,94 @@
     "@value" : "route_type"
   } ]
 }, {
-  "@id" : "http://gtfs.org/route_type/enum_mapping",
+  "@id" : "http://gtfs.org/route_type/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Tram, Streetcar, Light rail', '1': 'Subway, Metro', '2': 'Rail', '3': 'Bus', '4': 'Ferry', '5': 'Cable tram', '6': 'Aerial lift, suspended cable car', '7': 'Funicular', '11': 'Trolleybus', '12': 'Monorail'}"
+    "@value" : "Tram, Streetcar, Light rail"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Subway, Metro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Trolleybus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "11"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Monorail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "12"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Rail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Bus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ferry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "4"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cable tram"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "5"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Aerial lift, suspended cable car"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "6"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/route_type/7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Funicular"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "7"
   } ]
 }, {
   "@id" : "http://gtfs.org/route_url",
@@ -3393,7 +3980,7 @@
     "@value" : "Enum type field"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/saturday/enum_mapping"
+    "@id" : "http://gtfs.org/saturday/example_key"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -3411,13 +3998,13 @@
     "@value" : "saturday"
   } ]
 }, {
-  "@id" : "http://gtfs.org/saturday/enum_mapping",
+  "@id" : "http://gtfs.org/saturday/example_key",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'example_key': 'example_value'}"
+    "@value" : "example_value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "example_key"
   } ]
 }, {
   "@id" : "http://gtfs.org/service_id",
@@ -4029,7 +4616,7 @@
     "@value" : "Enum type field that applies to Sundays."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/sunday/enum_mapping"
+    "@id" : "http://gtfs.org/sunday/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -4047,13 +4634,13 @@
     "@value" : "sunday"
   } ]
 }, {
-  "@id" : "http://gtfs.org/sunday/enum_mapping",
+  "@id" : "http://gtfs.org/sunday/1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'1': 'Applies to Sundays'}"
+    "@value" : "Applies to Sundays"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/table_name",
@@ -4062,7 +4649,23 @@
     "@value" : "Allowed values: agency, stops, routes, trips, stop_times, pathways, levels, feed_info, attributions"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/table_name/enum_mapping"
+    "@id" : "http://gtfs.org/table_name/agency"
+  }, {
+    "@id" : "http://gtfs.org/table_name/attributions"
+  }, {
+    "@id" : "http://gtfs.org/table_name/feed_info"
+  }, {
+    "@id" : "http://gtfs.org/table_name/levels"
+  }, {
+    "@id" : "http://gtfs.org/table_name/pathways"
+  }, {
+    "@id" : "http://gtfs.org/table_name/routes"
+  }, {
+    "@id" : "http://gtfs.org/table_name/stop_times"
+  }, {
+    "@id" : "http://gtfs.org/table_name/stops"
+  }, {
+    "@id" : "http://gtfs.org/table_name/trips"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -4080,13 +4683,85 @@
     "@value" : "table_name"
   } ]
 }, {
-  "@id" : "http://gtfs.org/table_name/enum_mapping",
+  "@id" : "http://gtfs.org/table_name/agency",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'agency': 'Agency', 'stops': 'Stops', 'routes': 'Routes', 'trips': 'Trips', 'stop_times': 'Stop Times', 'pathways': 'Pathways', 'levels': 'Levels', 'feed_info': 'Feed Info', 'attributions': 'Attributions'}"
+    "@value" : "Agency"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "agency"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/table_name/attributions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Attributions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "attributions"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/table_name/feed_info",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Feed Info"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "feed_info"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/table_name/levels",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Levels"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "levels"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/table_name/pathways",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pathways"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "pathways"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/table_name/routes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Routes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "routes"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/table_name/stop_times",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Stop Times"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "stop_times"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/table_name/stops",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Stops"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "stops"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/table_name/trips",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Trips"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "trips"
   } ]
 }, {
   "@id" : "http://gtfs.org/thursday",
@@ -4095,7 +4770,7 @@
     "@value" : "Enum type field"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/thursday/enum_mapping"
+    "@id" : "http://gtfs.org/thursday/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -4113,13 +4788,13 @@
     "@value" : "thursday"
   } ]
 }, {
-  "@id" : "http://gtfs.org/thursday/enum_mapping",
+  "@id" : "http://gtfs.org/thursday/1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'1': 'Functions in the same way as `monday` except applies to Thursdays'}"
+    "@value" : "Functions in the same way as `monday` except applies to Thursdays"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/timeframe_group_id",
@@ -4173,7 +4848,9 @@
     "@value" : "Valid options are: 0 - Times are considered approximate. 1 or empty - Times are considered exact."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/timepoint/enum_mapping"
+    "@id" : "http://gtfs.org/timepoint/0"
+  }, {
+    "@id" : "http://gtfs.org/timepoint/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Recommended"
@@ -4191,13 +4868,22 @@
     "@value" : "timepoint"
   } ]
 }, {
-  "@id" : "http://gtfs.org/timepoint/enum_mapping",
+  "@id" : "http://gtfs.org/timepoint/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Times are considered approximate', '1': 'Times are considered exact'}"
+    "@value" : "Times are considered approximate"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/timepoint/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Times are considered exact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/to_area_id",
@@ -4386,7 +5072,17 @@
     "@value" : "Valid options are: 0 or empty - Recommended transfer point between routes. 1 - Timed transfer point between two routes. The departing vehicle is expected to wait for the arriving one and leave sufficient time for a rider to transfer between routes. 2 - Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time. 3 - Transfers are not possible between routes at the location. 4 - Passengers can transfer from one trip to another by staying onboard the same vehicle (an 'in-seat transfer'). 5 - In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/transfer_type/enum_mapping"
+    "@id" : "http://gtfs.org/transfer_type/0"
+  }, {
+    "@id" : "http://gtfs.org/transfer_type/1"
+  }, {
+    "@id" : "http://gtfs.org/transfer_type/2"
+  }, {
+    "@id" : "http://gtfs.org/transfer_type/3"
+  }, {
+    "@id" : "http://gtfs.org/transfer_type/4"
+  }, {
+    "@id" : "http://gtfs.org/transfer_type/5"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -4404,13 +5100,58 @@
     "@value" : "transfer_type"
   } ]
 }, {
-  "@id" : "http://gtfs.org/transfer_type/enum_mapping",
+  "@id" : "http://gtfs.org/transfer_type/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'Recommended transfer point between routes', '1': 'Timed transfer point between two routes', '2': 'Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time', '3': 'Transfers are not possible between routes at the location', '4': \"Passengers can transfer from one trip to another by staying onboard the same vehicle (an 'in-seat transfer')\", '5': 'In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board'}"
+    "@value" : "Recommended transfer point between routes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/transfer_type/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Timed transfer point between two routes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/transfer_type/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/transfer_type/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Transfers are not possible between routes at the location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/transfer_type/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Passengers can transfer from one trip to another by staying onboard the same vehicle (an 'in-seat transfer')"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "4"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/transfer_type/5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "5"
   } ]
 }, {
   "@id" : "http://gtfs.org/transfers",
@@ -4419,7 +5160,13 @@
     "@value" : "Enum field with options: 0 - No transfers permitted, 1 - Riders may transfer once, 2 - Riders may transfer twice, empty - Unlimited transfers permitted."
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/transfers/enum_mapping"
+    "@id" : "http://gtfs.org/transfers/empty"
+  }, {
+    "@id" : "http://gtfs.org/transfers/0"
+  }, {
+    "@id" : "http://gtfs.org/transfers/1"
+  }, {
+    "@id" : "http://gtfs.org/transfers/2"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -4469,13 +5216,40 @@
     "@value" : "transfers.txt"
   } ]
 }, {
-  "@id" : "http://gtfs.org/transfers/enum_mapping",
+  "@id" : "http://gtfs.org/transfers/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'No transfers permitted on this fare', '1': 'Riders may transfer once', '2': 'Riders may transfer twice', 'empty': 'Unlimited transfers permitted'}"
+    "@value" : "No transfers permitted on this fare"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/transfers/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Riders may transfer once"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/transfers/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Riders may transfer twice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/transfers/empty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Unlimited transfers permitted"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "empty"
   } ]
 }, {
   "@id" : "http://gtfs.org/translation",
@@ -4686,7 +5460,7 @@
     "@value" : "Enum type field"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/tuesday/enum_mapping"
+    "@id" : "http://gtfs.org/tuesday/0"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -4704,13 +5478,13 @@
     "@value" : "tuesday"
   } ]
 }, {
-  "@id" : "http://gtfs.org/tuesday/enum_mapping",
+  "@id" : "http://gtfs.org/tuesday/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': \"Functions in the same way as 'monday' except applies to Tuesdays\"}"
+    "@value" : "Functions in the same way as 'monday' except applies to Tuesdays"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
   } ]
 }, {
   "@id" : "http://gtfs.org/wednesday",
@@ -4719,7 +5493,7 @@
     "@value" : "Enum type field"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/wednesday/enum_mapping"
+    "@id" : "http://gtfs.org/wednesday/1"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Required"
@@ -4737,13 +5511,13 @@
     "@value" : "wednesday"
   } ]
 }, {
-  "@id" : "http://gtfs.org/wednesday/enum_mapping",
+  "@id" : "http://gtfs.org/wednesday/1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'1': 'Functions in the same way as `monday` except applies to Wednesdays'}"
+    "@value" : "Functions in the same way as `monday` except applies to Wednesdays"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://gtfs.org/wheelchair_accessible",
@@ -4752,7 +5526,11 @@
     "@value" : "Enum field with options 0, 1, 2"
   } ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/wheelchair_accessible/enum_mapping"
+    "@id" : "http://gtfs.org/wheelchair_accessible/0"
+  }, {
+    "@id" : "http://gtfs.org/wheelchair_accessible/1"
+  }, {
+    "@id" : "http://gtfs.org/wheelchair_accessible/2"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -4770,19 +5548,41 @@
     "@value" : "wheelchair_accessible"
   } ]
 }, {
-  "@id" : "http://gtfs.org/wheelchair_accessible/enum_mapping",
+  "@id" : "http://gtfs.org/wheelchair_accessible/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'No accessibility information for the trip', '1': 'Vehicle can accommodate at least one rider in a wheelchair', '2': 'No riders in wheelchairs can be accommodated on this trip'}"
+    "@value" : "No accessibility information for the trip"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/wheelchair_accessible/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Vehicle can accommodate at least one rider in a wheelchair"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/wheelchair_accessible/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "No riders in wheelchairs can be accommodated on this trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
   } ]
 }, {
   "@id" : "http://gtfs.org/wheelchair_boarding",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/hasEnumValue" : [ {
-    "@id" : "http://gtfs.org/wheelchair_boarding/enum_mapping"
+    "@id" : "http://gtfs.org/wheelchair_boarding/0"
+  }, {
+    "@id" : "http://gtfs.org/wheelchair_boarding/1"
+  }, {
+    "@id" : "http://gtfs.org/wheelchair_boarding/2"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@value" : "Optional"
@@ -4800,13 +5600,31 @@
     "@value" : "wheelchair_boarding"
   } ]
 }, {
-  "@id" : "http://gtfs.org/wheelchair_boarding/enum_mapping",
+  "@id" : "http://gtfs.org/wheelchair_boarding/0",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "{'0': 'No accessibility information for the stop', '1': 'Some vehicles at this stop can be boarded by a rider in a wheelchair', '2': 'Wheelchair boarding is not possible at this stop'}"
+    "@value" : "No accessibility information for the stop"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "enum_mapping"
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/wheelchair_boarding/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Some vehicles at this stop can be boarded by a rider in a wheelchair"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/wheelchair_boarding/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Wheelchair boarding is not possible at this stop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
   } ]
 }, {
   "@id" : "http://gtfs.org/zone_id",
