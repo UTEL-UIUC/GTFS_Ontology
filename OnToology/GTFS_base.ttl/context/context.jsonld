@@ -1,5 +1,8 @@
 {
   "@context" : {
+    "abstract" : {
+      "@id" : "http://purl.org/dc/elements/1.1/abstract"
+    },
     "URL" : {
       "@id" : "http://gtfs.org/URL"
     },
@@ -7,7 +10,8 @@
       "@id" : "http://gtfs.org/ServiceDay"
     },
     "isType" : {
-      "@id" : "http://gtfs.org/isType"
+      "@id" : "http://gtfs.org/isType",
+      "@type" : "@id"
     },
     "example" : {
       "@id" : "http://gtfs.org/example"
@@ -20,6 +24,12 @@
     },
     "Recommended" : {
       "@id" : "http://gtfs.org/Recommended"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "hasCondition" : {
+      "@id" : "http://gtfs.org/hasCondition"
     },
     "ConditionallyRequired" : {
       "@id" : "http://gtfs.org/ConditionallyRequired"
@@ -36,10 +46,6 @@
     "SubJourney" : {
       "@id" : "http://gtfs.org/SubJourney"
     },
-    "hasPresence" : {
-      "@id" : "http://gtfs.org/hasPresence",
-      "@type" : "@id"
-    },
     "Date" : {
       "@id" : "http://gtfs.org/Date"
     },
@@ -49,12 +55,22 @@
     "PresenceCondition" : {
       "@id" : "http://gtfs.org/PresenceCondition"
     },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
     "topObjectProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
       "@type" : "@id"
     },
+    "hasPresenceCondition" : {
+      "@id" : "http://gtfs.org/hasPresenceCondition",
+      "@type" : "@id"
+    },
     "StructuredValue" : {
       "@id" : "http://schema.org/StructuredValue"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
     },
     "hasField" : {
       "@id" : "http://gtfs.org/hasField",
@@ -70,7 +86,7 @@
       "@id" : "http://gtfs.org/LanguageCode"
     },
     "hasEnumValue" : {
-      "@id" : "http://www.example.org/gtfs#hasEnumValue",
+      "@id" : "http://gtfs.org/hasEnumValue",
       "@type" : "@id"
     },
     "Journey" : {
@@ -87,6 +103,12 @@
     },
     "Property" : {
       "@id" : "http://schema.org/Property"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/elements/1.1/source"
     },
     "QuantitativeValue" : {
       "@id" : "http://schema.org/QuantitativeValue"
@@ -116,7 +138,7 @@
       "@id" : "http://gtfs.org/additionalInfo"
     },
     "Field" : {
-      "@id" : "http://www.example.org/gtfs#Field"
+      "@id" : "http://gtfs.org/Field"
     },
     "Enumeration" : {
       "@id" : "http://schema.org/Enumeration"
@@ -127,6 +149,9 @@
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
+    "language" : {
+      "@id" : "http://purl.org/dc/elements/1.1/language"
+    },
     "Vehicle" : {
       "@id" : "http://schema.org/Vehicle"
     },
@@ -135,6 +160,9 @@
     },
     "Intangible" : {
       "@id" : "http://schema.org/Intangible"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
     },
     "Time" : {
       "@id" : "http://gtfs.org/Time"
