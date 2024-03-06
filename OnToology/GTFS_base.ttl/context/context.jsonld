@@ -1,8 +1,5 @@
 {
   "@context" : {
-    "" : {
-      "@id" : "http://gtfs.org/transfer_type/1"
-    },
     "RouteTypeEnum" : {
       "@id" : "http://gtfs.org/RouteTypeEnum"
     },
@@ -21,12 +18,6 @@
     "isType" : {
       "@id" : "http://gtfs.org/isType",
       "@type" : "@id"
-    },
-    "stops" : {
-      "@id" : "http://gtfs.org/table_name/stops"
-    },
-    "stop_times" : {
-      "@id" : "http://gtfs.org/table_name/stop_times"
     },
     "example" : {
       "@id" : "http://gtfs.org/example"
@@ -50,8 +41,7 @@
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
     },
     "hasCondition" : {
-      "@id" : "http://gtfs.org/hasCondition",
-      "@type" : "@id"
+      "@id" : "http://gtfs.org/hasCondition"
     },
     "ContinuousDropOffEnum" : {
       "@id" : "http://gtfs.org/ContinuousDropOffEnum"
@@ -68,20 +58,11 @@
     "ConditionallyRequired" : {
       "@id" : "http://gtfs.org/ConditionallyRequired"
     },
-    "attributions" : {
-      "@id" : "http://gtfs.org/table_name/attributions"
-    },
-    "trips" : {
-      "@id" : "http://gtfs.org/table_name/trips"
-    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "File" : {
       "@id" : "http://gtfs.org/File"
-    },
-    "feed_info" : {
-      "@id" : "http://gtfs.org/table_name/feed_info"
     },
     "TimeZone" : {
       "@id" : "http://gtfs.org/TimeZone"
@@ -100,9 +81,6 @@
     },
     "PaymentMethodEnum" : {
       "@id" : "http://gtfs.org/PaymentMethodEnum"
-    },
-    "example_key" : {
-      "@id" : "http://gtfs.org/saturday/example_key"
     },
     "Date" : {
       "@id" : "http://gtfs.org/Date"
@@ -126,14 +104,14 @@
     "ExceptionTypeEnum" : {
       "@id" : "http://gtfs.org/ExceptionTypeEnum"
     },
-    "StructuredValue" : {
-      "@id" : "http://schema.org/StructuredValue"
-    },
     "DropOffTypeEnum" : {
       "@id" : "http://gtfs.org/DropOffTypeEnum"
     },
     "rights" : {
       "@id" : "http://purl.org/dc/elements/1.1/rights"
+    },
+    "FareProduct" : {
+      "@id" : "http://gtfs.org/FareProduct"
     },
     "hasField" : {
       "@id" : "http://gtfs.org/hasField",
@@ -158,17 +136,13 @@
       "@id" : "http://gtfs.org/LanguageCode"
     },
     "hasEnumValue" : {
-      "@id" : "http://gtfs.org/hasEnumValue",
-      "@type" : "@id"
+      "@id" : "http://gtfs.org/hasEnumValue"
     },
     "Journey" : {
       "@id" : "http://gtfs.org/Journey"
     },
     "WheelchairAccessibleEnum" : {
       "@id" : "http://gtfs.org/WheelchairAccessibleEnum"
-    },
-    "empty" : {
-      "@id" : "http://gtfs.org/transfers/empty"
     },
     "Required" : {
       "@id" : "http://gtfs.org/Required"
@@ -182,17 +156,11 @@
     "LocationTypeEnum" : {
       "@id" : "http://gtfs.org/LocationTypeEnum"
     },
-    "levels" : {
-      "@id" : "http://gtfs.org/table_name/levels"
-    },
     "Latitude" : {
       "@id" : "http://gtfs.org/Latitude"
     },
     "SundayEnum" : {
       "@id" : "http://gtfs.org/SundayEnum"
-    },
-    "Property" : {
-      "@id" : "http://schema.org/Property"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
@@ -206,12 +174,6 @@
     "source" : {
       "@id" : "http://purl.org/dc/elements/1.1/source"
     },
-    "agency" : {
-      "@id" : "http://gtfs.org/table_name/agency"
-    },
-    "QuantitativeValue" : {
-      "@id" : "http://schema.org/QuantitativeValue"
-    },
     "Enum" : {
       "@id" : "http://gtfs.org/Enum"
     },
@@ -220,12 +182,6 @@
     },
     "FieldType" : {
       "@id" : "http://gtfs.org/FieldType"
-    },
-    "Resource" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
-    },
-    "FareProdcut" : {
-      "@id" : "http://gtfs.org/FareProdcut"
     },
     "ConditionallyForbidden" : {
       "@id" : "http://gtfs.org/ConditionallyForbidden"
@@ -264,9 +220,6 @@
     "BikesAllowedEnum" : {
       "@id" : "http://gtfs.org/BikesAllowedEnum"
     },
-    "Vehicle" : {
-      "@id" : "http://schema.org/Vehicle"
-    },
     "Float" : {
       "@id" : "http://gtfs.org/Float"
     },
@@ -276,17 +229,11 @@
     "IsProducerEnum" : {
       "@id" : "http://gtfs.org/IsProducerEnum"
     },
-    "routes" : {
-      "@id" : "http://gtfs.org/table_name/routes"
-    },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
     },
     "Time" : {
       "@id" : "http://gtfs.org/Time"
-    },
-    "pathways" : {
-      "@id" : "http://gtfs.org/table_name/pathways"
     },
     "TableNameEnum" : {
       "@id" : "http://gtfs.org/TableNameEnum"

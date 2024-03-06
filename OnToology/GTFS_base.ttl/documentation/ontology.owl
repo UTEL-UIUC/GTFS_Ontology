@@ -42,6 +42,9 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
     <owl:AnnotationProperty rdf:about="http://gtfs.org/additionalInfo">
         <rdfs:comment>Any additional information about the object</rdfs:comment>
         <rdfs:label xml:lang="en">additionalInfo</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://gtfs.org/Field"/>
+        <rdfs:domain rdf:resource="http://gtfs.org/File"/>
     </owl:AnnotationProperty>
     
 
@@ -52,6 +55,33 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
     <owl:AnnotationProperty rdf:about="http://gtfs.org/example">
         <rdfs:comment>An example FieldType or use case</rdfs:comment>
         <rdfs:label xml:lang="en">example</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://gtfs.org/Field"/>
+        <rdfs:domain rdf:resource="http://gtfs.org/File"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://gtfs.org/hasCondition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://gtfs.org/hasCondition">
+        <rdfs:comment>This property specifies the conditions for a File or Field if they are Conditionally Required or Conditionally Forbidden</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://gtfs.org/Field"/>
+        <rdfs:domain rdf:resource="http://gtfs.org/File"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://gtfs.org/hasEnumValue -->
+
+
+    <owl:AnnotationProperty rdf:about="http://gtfs.org/hasEnumValue">
+        <rdfs:comment>This property specifies the enum value for the named individual within an Enum Class</rdfs:comment>
+        <rdfs:label xml:lang="en">hasEnumValue</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://gtfs.org/Enum"/>
     </owl:AnnotationProperty>
     
 
@@ -117,30 +147,6 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
     
 
 
-    <!-- http://gtfs.org/hasCondition -->
-
-
-    <owl:ObjectProperty rdf:about="http://gtfs.org/hasCondition">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://gtfs.org/Field"/>
-        <rdfs:domain rdf:resource="http://gtfs.org/File"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://gtfs.org/hasEnumValue -->
-
-
-    <owl:ObjectProperty rdf:about="http://gtfs.org/hasEnumValue">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://gtfs.org/Field"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-        <rdfs:comment>This property links a field to its possible enumeration values.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasEnumValue</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://gtfs.org/hasField -->
 
 
@@ -175,7 +181,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://gtfs.org/Field"/>
         <rdfs:range rdf:resource="http://gtfs.org/FieldType"/>
-        <rdfs:comment>This propert is used to specify the FieldType for a Field</rdfs:comment>
+        <rdfs:comment>This property is used to specify the FieldType for a Field</rdfs:comment>
         <rdfs:label>isType</rdfs:label>
     </owl:ObjectProperty>
     
@@ -319,6 +325,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
 
     <owl:Class rdf:about="http://gtfs.org/Enum">
+        <owl:equivalentClass rdf:resource="http://schema.org/Enumeration"/>
         <rdfs:subClassOf rdf:resource="http://gtfs.org/FieldType"/>
         <rdfs:comment xml:lang="en">An option from a set of predefined constants defined in the &quot;Description&quot; column.</rdfs:comment>
         <rdfs:label xml:lang="en">Enum</rdfs:label>
@@ -353,10 +360,10 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
     
 
 
-    <!-- http://gtfs.org/FareProdcut -->
+    <!-- http://gtfs.org/FareProduct -->
 
 
-    <owl:Class rdf:about="http://gtfs.org/FareProdcut">
+    <owl:Class rdf:about="http://gtfs.org/FareProduct">
         <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
         <rdfs:comment>Purchasable fare products that can be used to pay for or validate travel.</rdfs:comment>
         <rdfs:label xml:lang="en">FareProdcut</rdfs:label>
@@ -377,6 +384,20 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
 
     <owl:Class rdf:about="http://gtfs.org/Field">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gtfs.org/isPresence"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gtfs.org/Field"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gtfs.org/isType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gtfs.org/Field"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
         <rdfs:comment>A field refers to a single item of data or a column header within a GTFS file</rdfs:comment>
         <rdfs:label xml:lang="en">Field</rdfs:label>
@@ -398,6 +419,20 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
 
     <owl:Class rdf:about="http://gtfs.org/File">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gtfs.org/hasField"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://gtfs.org/File"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://gtfs.org/isPresence"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://gtfs.org/File"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
         <rdfs:comment>A File refers to a single file within the GTFS feed</rdfs:comment>
         <rdfs:label xml:lang="en">File</rdfs:label>
@@ -784,1161 +819,6 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
     
 
 
-    <!-- http://gtfs.org/bikes_allowed/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/bikes_allowed/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/BikesAllowedEnum"/>
-        <rdfs:comment>No bike information for the trip</rdfs:comment>
-        <rdfs:label>bikes_allowed:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/bikes_allowed/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/bikes_allowed/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/BikesAllowedEnum"/>
-        <rdfs:comment>Vehicle being used on this particular trip can accommodate at least one bicycle</rdfs:comment>
-        <rdfs:label>bikes_allowed:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/bikes_allowed/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/bikes_allowed/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/BikesAllowedEnum"/>
-        <rdfs:comment>No bicycles are allowed on this trip</rdfs:comment>
-        <rdfs:label>bikes_allowed:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/continuous_drop_off/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/continuous_drop_off/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ContinuousDropOffEnum"/>
-        <rdfs:comment>Continuous stopping drop off</rdfs:comment>
-        <rdfs:label>continuous_drop_off:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/continuous_drop_off/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/continuous_drop_off/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ContinuousDropOffEnum"/>
-        <rdfs:comment>No continuous stopping drop off</rdfs:comment>
-        <rdfs:label>continuous_drop_off:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/continuous_drop_off/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/continuous_drop_off/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ContinuousDropOffEnum"/>
-        <rdfs:comment>Must phone agency to arrange continuous stopping drop off</rdfs:comment>
-        <rdfs:label>continuous_drop_off:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/continuous_drop_off/3 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/continuous_drop_off/3">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ContinuousDropOffEnum"/>
-        <rdfs:comment>Must coordinate with driver to arrange continuous stopping drop off</rdfs:comment>
-        <rdfs:label>continuous_drop_off:3</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/continuous_pickup/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/continuous_pickup/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ContinuousPickupEnum"/>
-        <rdfs:comment>Continuous stopping pickup</rdfs:comment>
-        <rdfs:label>continuous_pickup:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/continuous_pickup/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/continuous_pickup/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ContinuousPickupEnum"/>
-        <rdfs:comment>No continuous stopping pickup</rdfs:comment>
-        <rdfs:label>continuous_pickup:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/continuous_pickup/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/continuous_pickup/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ContinuousPickupEnum"/>
-        <rdfs:comment>Must phone agency to arrange continuous stopping pickup</rdfs:comment>
-        <rdfs:label>continuous_pickup:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/continuous_pickup/3 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/continuous_pickup/3">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ContinuousPickupEnum"/>
-        <rdfs:comment>Must coordinate with driver to arrange continuous stopping pickup</rdfs:comment>
-        <rdfs:label>continuous_pickup:3</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/direction_id/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/direction_id/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/DirectionIdEnum"/>
-        <rdfs:comment>Travel in one direction (e.g. outbound travel)</rdfs:comment>
-        <rdfs:label>direction_id:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/direction_id/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/direction_id/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/DirectionIdEnum"/>
-        <rdfs:comment>Travel in the opposite direction (e.g. inbound travel)</rdfs:comment>
-        <rdfs:label>direction_id:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/drop_off_type/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/drop_off_type/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/DropOffTypeEnum"/>
-        <rdfs:comment>Regularly scheduled drop off</rdfs:comment>
-        <rdfs:label>drop_off_type:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/drop_off_type/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/drop_off_type/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/DropOffTypeEnum"/>
-        <rdfs:comment>No drop off available</rdfs:comment>
-        <rdfs:label>drop_off_type:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/drop_off_type/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/drop_off_type/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/DropOffTypeEnum"/>
-        <rdfs:comment>Must phone agency to arrange drop off</rdfs:comment>
-        <rdfs:label>drop_off_type:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/drop_off_type/3 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/drop_off_type/3">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/DropOffTypeEnum"/>
-        <rdfs:comment>Must coordinate with driver to arrange drop off</rdfs:comment>
-        <rdfs:label>drop_off_type:3</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/duration_limit_type/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/duration_limit_type/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/DurationLimitTypeEnum"/>
-        <rdfs:comment>Between the departure fare validation of the current leg and the arrival fare validation of the next leg</rdfs:comment>
-        <rdfs:label>duration_limit_type:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/duration_limit_type/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/duration_limit_type/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/DurationLimitTypeEnum"/>
-        <rdfs:comment>Between the departure fare validation of the current leg and the departure fare validation of the next leg</rdfs:comment>
-        <rdfs:label>duration_limit_type:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/duration_limit_type/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/duration_limit_type/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/DurationLimitTypeEnum"/>
-        <rdfs:comment>Between the arrival fare validation of the current leg and the departure fare validation of the next leg</rdfs:comment>
-        <rdfs:label>duration_limit_type:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/duration_limit_type/3 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/duration_limit_type/3">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/DurationLimitTypeEnum"/>
-        <rdfs:comment>Between the arrival fare validation of the current leg and the arrival fare validation of the next leg</rdfs:comment>
-        <rdfs:label>duration_limit_type:3</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/exact_times/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/exact_times/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ExactTimesEnum"/>
-        <rdfs:comment>Frequency-based trips</rdfs:comment>
-        <rdfs:label>exact_times:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/exact_times/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/exact_times/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ExactTimesEnum"/>
-        <rdfs:comment>Schedule-based trips with exact same headway throughout the day</rdfs:comment>
-        <rdfs:label>exact_times:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/exception_type/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/exception_type/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ExceptionTypeEnum"/>
-        <rdfs:comment>Service has been added for the specified date</rdfs:comment>
-        <rdfs:label>exception_type:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/exception_type/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/exception_type/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ExceptionTypeEnum"/>
-        <rdfs:comment>Service has been removed for the specified date</rdfs:comment>
-        <rdfs:label>exception_type:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/fare_media_type/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/fare_media_type/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/FareMediaTypeEnum"/>
-        <rdfs:comment>None</rdfs:comment>
-        <rdfs:label>fare_media_type:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/fare_media_type/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/fare_media_type/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/FareMediaTypeEnum"/>
-        <rdfs:comment>Physical paper ticket</rdfs:comment>
-        <rdfs:label>fare_media_type:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/fare_media_type/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/fare_media_type/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/FareMediaTypeEnum"/>
-        <rdfs:comment>Physical transit card</rdfs:comment>
-        <rdfs:label>fare_media_type:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/fare_media_type/3 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/fare_media_type/3">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/FareMediaTypeEnum"/>
-        <rdfs:comment>cEMV</rdfs:comment>
-        <rdfs:label>fare_media_type:3</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/fare_media_type/4 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/fare_media_type/4">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/FareMediaTypeEnum"/>
-        <rdfs:comment>Mobile app</rdfs:comment>
-        <rdfs:label>fare_media_type:4</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/fare_transfer_type/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/fare_transfer_type/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/FareTransferTypeEnum"/>
-        <rdfs:comment>From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB</rdfs:comment>
-        <rdfs:label>fare_transfer_type:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/fare_transfer_type/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/fare_transfer_type/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/FareTransferTypeEnum"/>
-        <rdfs:comment>From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B</rdfs:comment>
-        <rdfs:label>fare_transfer_type:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/fare_transfer_type/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/fare_transfer_type/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/FareTransferTypeEnum"/>
-        <rdfs:comment>fare_transfer_rules.fare_product_id; AB</rdfs:comment>
-        <rdfs:label>fare_transfer_type:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/friday/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/friday/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/FridayEnum"/>
-        <rdfs:comment>No</rdfs:comment>
-        <rdfs:label>friday:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/friday/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/friday/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/FridayEnum"/>
-        <rdfs:comment>Yes</rdfs:comment>
-        <rdfs:label>friday:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/is_authority/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/is_authority/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/IsAuthorityEnum"/>
-        <rdfs:comment>False</rdfs:comment>
-        <rdfs:label>is_authority:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/is_authority/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/is_authority/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/IsAuthorityEnum"/>
-        <rdfs:comment>True</rdfs:comment>
-        <rdfs:label>is_authority:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/is_bidirectional/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/is_bidirectional/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/IsBidirectionalEnum"/>
-        <rdfs:comment>Unidirectional pathway that can only be used from from_stop_id to to_stop_id.</rdfs:comment>
-        <rdfs:label>is_bidirectional:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/is_bidirectional/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/is_bidirectional/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/IsBidirectionalEnum"/>
-        <rdfs:comment>Bidirectional pathway that can be used in both directions.</rdfs:comment>
-        <rdfs:label>is_bidirectional:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/is_operator/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/is_operator/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/IsOperatorEnum"/>
-        <rdfs:comment>False</rdfs:comment>
-        <rdfs:label>is_operator:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/is_operator/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/is_operator/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/IsOperatorEnum"/>
-        <rdfs:comment>True</rdfs:comment>
-        <rdfs:label>is_operator:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/is_producer/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/is_producer/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/IsProducerEnum"/>
-        <rdfs:comment>Organization doesn’t have this role</rdfs:comment>
-        <rdfs:label>is_producer:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/is_producer/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/is_producer/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/IsProducerEnum"/>
-        <rdfs:comment>Organization does have this role</rdfs:comment>
-        <rdfs:label>is_producer:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/location_type/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/location_type/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/LocationTypeEnum"/>
-        <rdfs:comment>Stop (or Platform)</rdfs:comment>
-        <rdfs:label>location_type:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/location_type/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/location_type/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/LocationTypeEnum"/>
-        <rdfs:comment>Station</rdfs:comment>
-        <rdfs:label>location_type:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/location_type/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/location_type/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/LocationTypeEnum"/>
-        <rdfs:comment>Entrance/Exit</rdfs:comment>
-        <rdfs:label>location_type:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/location_type/3 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/location_type/3">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/LocationTypeEnum"/>
-        <rdfs:comment>Generic Node</rdfs:comment>
-        <rdfs:label>location_type:3</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/location_type/4 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/location_type/4">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/LocationTypeEnum"/>
-        <rdfs:comment>Boarding Area</rdfs:comment>
-        <rdfs:label>location_type:4</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/monday/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/monday/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/MondayEnum"/>
-        <rdfs:comment>Service is not available for Mondays in the date range</rdfs:comment>
-        <rdfs:label>monday:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/monday/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/monday/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/MondayEnum"/>
-        <rdfs:comment>Service is available for all Mondays in the date range</rdfs:comment>
-        <rdfs:label>monday:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/pathway_mode/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/pathway_mode/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PathwayModeEnum"/>
-        <rdfs:comment>Walkway</rdfs:comment>
-        <rdfs:label>pathway_mode:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/pathway_mode/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/pathway_mode/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PathwayModeEnum"/>
-        <rdfs:comment>Stairs</rdfs:comment>
-        <rdfs:label>pathway_mode:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/pathway_mode/3 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/pathway_mode/3">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PathwayModeEnum"/>
-        <rdfs:comment>Moving sidewalk/travelator</rdfs:comment>
-        <rdfs:label>pathway_mode:3</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/pathway_mode/4 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/pathway_mode/4">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PathwayModeEnum"/>
-        <rdfs:comment>Escalator</rdfs:comment>
-        <rdfs:label>pathway_mode:4</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/pathway_mode/5 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/pathway_mode/5">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PathwayModeEnum"/>
-        <rdfs:comment>Elevator</rdfs:comment>
-        <rdfs:label>pathway_mode:5</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/pathway_mode/6 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/pathway_mode/6">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PathwayModeEnum"/>
-        <rdfs:comment>Fare gate</rdfs:comment>
-        <rdfs:label>pathway_mode:6</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/pathway_mode/7 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/pathway_mode/7">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PathwayModeEnum"/>
-        <rdfs:comment>Exit gate</rdfs:comment>
-        <rdfs:label>pathway_mode:7</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/payment_method/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/payment_method/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PaymentMethodEnum"/>
-        <rdfs:comment>Fare is paid on board</rdfs:comment>
-        <rdfs:label>payment_method:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/payment_method/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/payment_method/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PaymentMethodEnum"/>
-        <rdfs:comment>Fare must be paid before boarding</rdfs:comment>
-        <rdfs:label>payment_method:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/pickup_type/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/pickup_type/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PickupTypeEnum"/>
-        <rdfs:comment>Regularly scheduled pickup</rdfs:comment>
-        <rdfs:label>pickup_type:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/pickup_type/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/pickup_type/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PickupTypeEnum"/>
-        <rdfs:comment>No pickup available</rdfs:comment>
-        <rdfs:label>pickup_type:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/pickup_type/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/pickup_type/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PickupTypeEnum"/>
-        <rdfs:comment>Must phone agency to arrange pickup</rdfs:comment>
-        <rdfs:label>pickup_type:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/pickup_type/3 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/pickup_type/3">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/PickupTypeEnum"/>
-        <rdfs:comment>Must coordinate with driver to arrange pickup</rdfs:comment>
-        <rdfs:label>pickup_type:3</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/route_type/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/route_type/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/RouteTypeEnum"/>
-        <rdfs:comment>Tram, Streetcar, Light rail</rdfs:comment>
-        <rdfs:label>route_type:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/route_type/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/route_type/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/RouteTypeEnum"/>
-        <rdfs:comment>Subway, Metro</rdfs:comment>
-        <rdfs:label>route_type:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/route_type/11 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/route_type/11">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/RouteTypeEnum"/>
-        <rdfs:comment>Trolleybus</rdfs:comment>
-        <rdfs:label>route_type:11</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/route_type/12 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/route_type/12">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/RouteTypeEnum"/>
-        <rdfs:comment>Monorail</rdfs:comment>
-        <rdfs:label>route_type:12</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/route_type/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/route_type/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/RouteTypeEnum"/>
-        <rdfs:comment>Rail</rdfs:comment>
-        <rdfs:label>route_type:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/route_type/3 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/route_type/3">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/RouteTypeEnum"/>
-        <rdfs:comment>Bus</rdfs:comment>
-        <rdfs:label>route_type:3</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/route_type/4 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/route_type/4">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/RouteTypeEnum"/>
-        <rdfs:comment>Ferry</rdfs:comment>
-        <rdfs:label>route_type:4</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/route_type/5 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/route_type/5">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/RouteTypeEnum"/>
-        <rdfs:comment>Cable tram</rdfs:comment>
-        <rdfs:label>route_type:5</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/route_type/6 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/route_type/6">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/RouteTypeEnum"/>
-        <rdfs:comment>Aerial lift, suspended cable car</rdfs:comment>
-        <rdfs:label>route_type:6</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/route_type/7 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/route_type/7">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/RouteTypeEnum"/>
-        <rdfs:comment>Funicular</rdfs:comment>
-        <rdfs:label>route_type:7</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/saturday/example_key -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/saturday/example_key">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/SaturdayEnum"/>
-        <rdfs:comment>example_value</rdfs:comment>
-        <rdfs:label>saturday:example_key</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/sunday/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/sunday/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/SundayEnum"/>
-        <rdfs:comment>Applies to Sundays</rdfs:comment>
-        <rdfs:label>sunday:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/table_name/agency -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/table_name/agency">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TableNameEnum"/>
-        <rdfs:comment>Agency</rdfs:comment>
-        <rdfs:label>table_name:agency</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/table_name/attributions -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/table_name/attributions">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TableNameEnum"/>
-        <rdfs:comment>Attributions</rdfs:comment>
-        <rdfs:label>table_name:attributions</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/table_name/feed_info -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/table_name/feed_info">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TableNameEnum"/>
-        <rdfs:comment>Feed Info</rdfs:comment>
-        <rdfs:label>table_name:feed_info</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/table_name/levels -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/table_name/levels">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TableNameEnum"/>
-        <rdfs:comment>Levels</rdfs:comment>
-        <rdfs:label>table_name:levels</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/table_name/pathways -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/table_name/pathways">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TableNameEnum"/>
-        <rdfs:comment>Pathways</rdfs:comment>
-        <rdfs:label>table_name:pathways</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/table_name/routes -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/table_name/routes">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TableNameEnum"/>
-        <rdfs:comment>Routes</rdfs:comment>
-        <rdfs:label>table_name:routes</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/table_name/stop_times -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/table_name/stop_times">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TableNameEnum"/>
-        <rdfs:comment>Stop Times</rdfs:comment>
-        <rdfs:label>table_name:stop_times</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/table_name/stops -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/table_name/stops">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TableNameEnum"/>
-        <rdfs:comment>Stops</rdfs:comment>
-        <rdfs:label>table_name:stops</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/table_name/trips -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/table_name/trips">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TableNameEnum"/>
-        <rdfs:comment>Trips</rdfs:comment>
-        <rdfs:label>table_name:trips</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/thursday/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/thursday/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/ThursdayEnum"/>
-        <rdfs:comment>Functions in the same way as `monday` except applies to Thursdays</rdfs:comment>
-        <rdfs:label>thursday:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/timepoint/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/timepoint/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TimepointEnum"/>
-        <rdfs:comment>Times are considered approximate</rdfs:comment>
-        <rdfs:label>timepoint:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/timepoint/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/timepoint/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TimepointEnum"/>
-        <rdfs:comment>Times are considered exact</rdfs:comment>
-        <rdfs:label>timepoint:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/transfer_type/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/transfer_type/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TransferTypeEnum"/>
-        <rdfs:comment>Recommended transfer point between routes</rdfs:comment>
-        <rdfs:label>transfer_type:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/transfer_type/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/transfer_type/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TransferTypeEnum"/>
-        <rdfs:comment>Timed transfer point between two routes</rdfs:comment>
-        <rdfs:label>transfer_type:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/transfer_type/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/transfer_type/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TransferTypeEnum"/>
-        <rdfs:comment>Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time</rdfs:comment>
-        <rdfs:label>transfer_type:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/transfer_type/3 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/transfer_type/3">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TransferTypeEnum"/>
-        <rdfs:comment>Transfers are not possible between routes at the location</rdfs:comment>
-        <rdfs:label>transfer_type:3</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/transfer_type/4 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/transfer_type/4">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TransferTypeEnum"/>
-        <rdfs:comment>Passengers can transfer from one trip to another by staying onboard the same vehicle (an &apos;in-seat transfer&apos;)</rdfs:comment>
-        <rdfs:label>transfer_type:4</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/transfer_type/5 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/transfer_type/5">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TransferTypeEnum"/>
-        <rdfs:comment>In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board</rdfs:comment>
-        <rdfs:label>transfer_type:5</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/transfers/empty -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/transfers/empty">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TransfersEnum"/>
-        <rdfs:comment>Unlimited transfers permitted</rdfs:comment>
-        <rdfs:label>transfers:empty</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/transfers/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/transfers/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TransfersEnum"/>
-        <rdfs:comment>No transfers permitted on this fare</rdfs:comment>
-        <rdfs:label>transfers:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/transfers/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/transfers/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TransfersEnum"/>
-        <rdfs:comment>Riders may transfer once</rdfs:comment>
-        <rdfs:label>transfers:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/transfers/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/transfers/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TransfersEnum"/>
-        <rdfs:comment>Riders may transfer twice</rdfs:comment>
-        <rdfs:label>transfers:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/tuesday/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/tuesday/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/TuesdayEnum"/>
-        <rdfs:comment>Functions in the same way as &apos;monday&apos; except applies to Tuesdays</rdfs:comment>
-        <rdfs:label>tuesday:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/wednesday/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/wednesday/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/WednesdayEnum"/>
-        <rdfs:comment>Functions in the same way as `monday` except applies to Wednesdays</rdfs:comment>
-        <rdfs:label>wednesday:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/wheelchair_accessible/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/wheelchair_accessible/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/WheelchairAccessibleEnum"/>
-        <rdfs:comment>No accessibility information for the trip</rdfs:comment>
-        <rdfs:label>wheelchair_accessible:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/wheelchair_accessible/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/wheelchair_accessible/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/WheelchairAccessibleEnum"/>
-        <rdfs:comment>Vehicle can accommodate at least one rider in a wheelchair</rdfs:comment>
-        <rdfs:label>wheelchair_accessible:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/wheelchair_accessible/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/wheelchair_accessible/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/WheelchairAccessibleEnum"/>
-        <rdfs:comment>No riders in wheelchairs can be accommodated on this trip</rdfs:comment>
-        <rdfs:label>wheelchair_accessible:2</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/wheelchair_boarding/0 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/wheelchair_boarding/0">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/WheelchairBoardingEnum"/>
-        <rdfs:comment>No accessibility information for the stop</rdfs:comment>
-        <rdfs:label>wheelchair_boarding:0</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/wheelchair_boarding/1 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/wheelchair_boarding/1">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/WheelchairBoardingEnum"/>
-        <rdfs:comment>Some vehicles at this stop can be boarded by a rider in a wheelchair</rdfs:comment>
-        <rdfs:label>wheelchair_boarding:1</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://gtfs.org/wheelchair_boarding/2 -->
-
-
-    <owl:Class rdf:about="http://gtfs.org/wheelchair_boarding/2">
-        <rdfs:subClassOf rdf:resource="http://gtfs.org/WheelchairBoardingEnum"/>
-        <rdfs:comment>Wheelchair boarding is not possible at this stop</rdfs:comment>
-        <rdfs:label>wheelchair_boarding:2</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://schema.org/Enumeration -->
 
 
@@ -1955,49 +835,6 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
     <owl:Class rdf:about="http://schema.org/Intangible">
         <rdfs:label xml:lang="en">Intangible</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://schema.org/Property -->
-
-
-    <owl:Class rdf:about="http://schema.org/Property">
-        <rdfs:label xml:lang="en">Property</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://schema.org/QuantitativeValue -->
-
-
-    <owl:Class rdf:about="http://schema.org/QuantitativeValue">
-        <rdfs:label xml:lang="en">QuantitativeValue</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://schema.org/StructuredValue -->
-
-
-    <owl:Class rdf:about="http://schema.org/StructuredValue">
-        <rdfs:label xml:lang="en">StructuredValue</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://schema.org/Vehicle -->
-
-
-    <owl:Class rdf:about="http://schema.org/Vehicle">
-        <rdfs:label xml:lang="en">Vehicle</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     
 
 
@@ -2689,6 +1526,42 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
     
 
 
+    <!-- http://gtfs.org/bikes_allowed_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/bikes_allowed_0">
+        <rdf:type rdf:resource="http://gtfs.org/BikesAllowedEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>No bike information for the trip</rdfs:comment>
+        <rdfs:label>bikes_allowed:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/bikes_allowed_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/bikes_allowed_1">
+        <rdf:type rdf:resource="http://gtfs.org/BikesAllowedEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Vehicle being used on this particular trip can accommodate at least one bicycle</rdfs:comment>
+        <rdfs:label>bikes_allowed:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/bikes_allowed_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/bikes_allowed_2">
+        <rdf:type rdf:resource="http://gtfs.org/BikesAllowedEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>No bicycles are allowed on this trip</rdfs:comment>
+        <rdfs:label>bikes_allowed:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/block_id -->
 
 
@@ -2775,6 +1648,54 @@ c,GRT,...,7</gtfs:example>
     
 
 
+    <!-- http://gtfs.org/continuous_drop_off_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_drop_off_0">
+        <rdf:type rdf:resource="http://gtfs.org/ContinuousDropOffEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Continuous stopping drop off</rdfs:comment>
+        <rdfs:label>continuous_drop_off:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/continuous_drop_off_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_drop_off_1">
+        <rdf:type rdf:resource="http://gtfs.org/ContinuousDropOffEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>No continuous stopping drop off</rdfs:comment>
+        <rdfs:label>continuous_drop_off:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/continuous_drop_off_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_drop_off_2">
+        <rdf:type rdf:resource="http://gtfs.org/ContinuousDropOffEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Must phone agency to arrange continuous stopping drop off</rdfs:comment>
+        <rdfs:label>continuous_drop_off:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/continuous_drop_off_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_drop_off_3">
+        <rdf:type rdf:resource="http://gtfs.org/ContinuousDropOffEnum"/>
+        <gtfs:hasEnumValue>3</gtfs:hasEnumValue>
+        <rdfs:comment>Must coordinate with driver to arrange continuous stopping drop off</rdfs:comment>
+        <rdfs:label>continuous_drop_off:3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/continuous_pickup -->
 
 
@@ -2787,6 +1708,54 @@ c,GRT,...,7</gtfs:example>
         <rdfs:comment>Indicates that the rider can board the transit vehicle at any point along the vehicle’s travel path as described by `shapes.txt`, from this `stop_time` to the next `stop_time` in the trip’s `stop_sequence`. If this field is populated, it overrides any continuous pickup behavior defined in `routes.txt`. If this field is empty, the `stop_time` inherits any continuous pickup behavior defined in `routes.txt`.</rdfs:comment>
         <rdfs:comment>Indicates that the rider can board the transit vehicle at any point along the vehicle’s travel path as described by `shapes.txt`, on every trip of the route.</rdfs:comment>
         <rdfs:label>continuous_pickup</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/continuous_pickup_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_pickup_0">
+        <rdf:type rdf:resource="http://gtfs.org/ContinuousPickupEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Continuous stopping pickup</rdfs:comment>
+        <rdfs:label>continuous_pickup:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/continuous_pickup_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_pickup_1">
+        <rdf:type rdf:resource="http://gtfs.org/ContinuousPickupEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>No continuous stopping pickup</rdfs:comment>
+        <rdfs:label>continuous_pickup:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/continuous_pickup_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_pickup_2">
+        <rdf:type rdf:resource="http://gtfs.org/ContinuousPickupEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Must phone agency to arrange continuous stopping pickup</rdfs:comment>
+        <rdfs:label>continuous_pickup:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/continuous_pickup_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_pickup_3">
+        <rdf:type rdf:resource="http://gtfs.org/ContinuousPickupEnum"/>
+        <gtfs:hasEnumValue>3</gtfs:hasEnumValue>
+        <rdfs:comment>Must coordinate with driver to arrange continuous stopping pickup</rdfs:comment>
+        <rdfs:label>continuous_pickup:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2897,6 +1866,30 @@ For times occurring after midnight on the service day, enter the time as a value
     
 
 
+    <!-- http://gtfs.org/direction_id_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/direction_id_0">
+        <rdf:type rdf:resource="http://gtfs.org/DirectionIdEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Travel in one direction (e.g. outbound travel)</rdfs:comment>
+        <rdfs:label>direction_id:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/direction_id_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/direction_id_1">
+        <rdf:type rdf:resource="http://gtfs.org/DirectionIdEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Travel in the opposite direction (e.g. inbound travel)</rdfs:comment>
+        <rdfs:label>direction_id:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/drop_off_type -->
 
 
@@ -2907,6 +1900,54 @@ For times occurring after midnight on the service day, enter the time as a value
         <gtfs:additionalInfo>Enum field with options 0, 1, 2, 3</gtfs:additionalInfo>
         <rdfs:comment>Indicates drop off method. Valid options are: 0 or empty - Regularly scheduled drop off. 1 - No drop off available. 2 - Must phone agency to arrange drop off. 3 - Must coordinate with driver to arrange drop off.</rdfs:comment>
         <rdfs:label>drop_off_type</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/drop_off_type_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/drop_off_type_0">
+        <rdf:type rdf:resource="http://gtfs.org/DropOffTypeEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Regularly scheduled drop off</rdfs:comment>
+        <rdfs:label>drop_off_type:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/drop_off_type_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/drop_off_type_1">
+        <rdf:type rdf:resource="http://gtfs.org/DropOffTypeEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>No drop off available</rdfs:comment>
+        <rdfs:label>drop_off_type:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/drop_off_type_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/drop_off_type_2">
+        <rdf:type rdf:resource="http://gtfs.org/DropOffTypeEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Must phone agency to arrange drop off</rdfs:comment>
+        <rdfs:label>drop_off_type:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/drop_off_type_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/drop_off_type_3">
+        <rdf:type rdf:resource="http://gtfs.org/DropOffTypeEnum"/>
+        <gtfs:hasEnumValue>3</gtfs:hasEnumValue>
+        <rdfs:comment>Must coordinate with driver to arrange drop off</rdfs:comment>
+        <rdfs:label>drop_off_type:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2940,6 +1981,54 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
         <gtfs:hasCondition>Required if `fare_transfer_rules.duration_limit` is defined. Forbidden if `fare_transfer_rules.duration_limit` is empty.</gtfs:hasCondition>
         <rdfs:comment>Defines the relative start and end of `fare_transfer_rules.duration_limit`. Valid options are: `0` - Between the departure fare validation of the current leg and the arrival fare validation of the next leg. `1` - Between the departure fare validation of the current leg and the departure fare validation of the next leg. `2` - Between the arrival fare validation of the current leg and the departure fare validation of the next leg. `3` - Between the arrival fare validation of the current leg and the arrival fare validation of the next leg.</rdfs:comment>
         <rdfs:label>duration_limit_type</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/duration_limit_type_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/duration_limit_type_0">
+        <rdf:type rdf:resource="http://gtfs.org/DurationLimitTypeEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Between the departure fare validation of the current leg and the arrival fare validation of the next leg</rdfs:comment>
+        <rdfs:label>duration_limit_type:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/duration_limit_type_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/duration_limit_type_1">
+        <rdf:type rdf:resource="http://gtfs.org/DurationLimitTypeEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Between the departure fare validation of the current leg and the departure fare validation of the next leg</rdfs:comment>
+        <rdfs:label>duration_limit_type:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/duration_limit_type_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/duration_limit_type_2">
+        <rdf:type rdf:resource="http://gtfs.org/DurationLimitTypeEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Between the arrival fare validation of the current leg and the departure fare validation of the next leg</rdfs:comment>
+        <rdfs:label>duration_limit_type:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/duration_limit_type_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/duration_limit_type_3">
+        <rdf:type rdf:resource="http://gtfs.org/DurationLimitTypeEnum"/>
+        <gtfs:hasEnumValue>3</gtfs:hasEnumValue>
+        <rdfs:comment>Between the arrival fare validation of the current leg and the arrival fare validation of the next leg</rdfs:comment>
+        <rdfs:label>duration_limit_type:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2990,6 +2079,30 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
     
 
 
+    <!-- http://gtfs.org/exact_times_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/exact_times_0">
+        <rdf:type rdf:resource="http://gtfs.org/ExactTimesEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Frequency-based trips</rdfs:comment>
+        <rdfs:label>exact_times:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/exact_times_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/exact_times_1">
+        <rdf:type rdf:resource="http://gtfs.org/ExactTimesEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Schedule-based trips with exact same headway throughout the day</rdfs:comment>
+        <rdfs:label>exact_times:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/exception_type -->
 
 
@@ -3000,6 +2113,30 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
         <gtfs:additionalInfo>Suppose a route has one set of trips available on holidays and another set of trips available on all other days. One service_id could correspond to the regular service schedule and another service_id could correspond to the holiday schedule. For a particular holiday, the calendar_dates.txt file could be used to add the holiday to the holiday service_id and to remove the holiday from the regular service_id schedule.</gtfs:additionalInfo>
         <rdfs:comment>Indicates whether service is available on the date specified in the date field. Valid options are: 1 - Service has been added for the specified date. 2 - Service has been removed for the specified date.</rdfs:comment>
         <rdfs:label>exception_type</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/exception_type_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/exception_type_1">
+        <rdf:type rdf:resource="http://gtfs.org/ExceptionTypeEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Service has been added for the specified date</rdfs:comment>
+        <rdfs:label>exception_type:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/exception_type_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/exception_type_2">
+        <rdf:type rdf:resource="http://gtfs.org/ExceptionTypeEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Service has been removed for the specified date</rdfs:comment>
+        <rdfs:label>exception_type:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3121,6 +2258,66 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
     
 
 
+    <!-- http://gtfs.org/fare_media_type_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_type_0">
+        <rdf:type rdf:resource="http://gtfs.org/FareMediaTypeEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>None</rdfs:comment>
+        <rdfs:label>fare_media_type:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/fare_media_type_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_type_1">
+        <rdf:type rdf:resource="http://gtfs.org/FareMediaTypeEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Physical paper ticket</rdfs:comment>
+        <rdfs:label>fare_media_type:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/fare_media_type_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_type_2">
+        <rdf:type rdf:resource="http://gtfs.org/FareMediaTypeEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Physical transit card</rdfs:comment>
+        <rdfs:label>fare_media_type:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/fare_media_type_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_type_3">
+        <rdf:type rdf:resource="http://gtfs.org/FareMediaTypeEnum"/>
+        <gtfs:hasEnumValue>3</gtfs:hasEnumValue>
+        <rdfs:comment>cEMV</rdfs:comment>
+        <rdfs:label>fare_media_type:3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/fare_media_type_4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_type_4">
+        <rdf:type rdf:resource="http://gtfs.org/FareMediaTypeEnum"/>
+        <gtfs:hasEnumValue>4</gtfs:hasEnumValue>
+        <rdfs:comment>Mobile app</rdfs:comment>
+        <rdfs:label>fare_media_type:4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/fare_product_id -->
 
 
@@ -3218,6 +2415,42 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
         <gtfs:additionalInfo>Valid options are: 0 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB. 1 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B. 2 - fare_transfer_rules.fare_product_id; AB. Cost processing interactions between multiple transfers in a journey: Where S indicates the total processed cost of the preceding leg(s) and transfer(s.</gtfs:additionalInfo>
         <rdfs:comment>Indicates the cost processing method of transferring between legs in a journey</rdfs:comment>
         <rdfs:label>fare_transfer_type</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/fare_transfer_type_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/fare_transfer_type_0">
+        <rdf:type rdf:resource="http://gtfs.org/FareTransferTypeEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB</rdfs:comment>
+        <rdfs:label>fare_transfer_type:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/fare_transfer_type_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/fare_transfer_type_1">
+        <rdf:type rdf:resource="http://gtfs.org/FareTransferTypeEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B</rdfs:comment>
+        <rdfs:label>fare_transfer_type:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/fare_transfer_type_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/fare_transfer_type_2">
+        <rdf:type rdf:resource="http://gtfs.org/FareTransferTypeEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>fare_transfer_rules.fare_product_id; AB</rdfs:comment>
+        <rdfs:label>fare_transfer_type:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3425,6 +2658,30 @@ If two translation rules match the same record (one with `field_value`, and the 
     
 
 
+    <!-- http://gtfs.org/friday_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/friday_0">
+        <rdf:type rdf:resource="http://gtfs.org/FridayEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>No</rdfs:comment>
+        <rdfs:label>friday:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/friday_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/friday_1">
+        <rdf:type rdf:resource="http://gtfs.org/FridayEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Yes</rdfs:comment>
+        <rdfs:label>friday:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/from_area_id -->
 
 
@@ -3545,6 +2802,30 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
     
 
 
+    <!-- http://gtfs.org/is_authority_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/is_authority_0">
+        <rdf:type rdf:resource="http://gtfs.org/IsAuthorityEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>False</rdfs:comment>
+        <rdfs:label>is_authority:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/is_authority_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/is_authority_1">
+        <rdf:type rdf:resource="http://gtfs.org/IsAuthorityEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>True</rdfs:comment>
+        <rdfs:label>is_authority:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/is_bidirectional -->
 
 
@@ -3555,6 +2836,30 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
         <gtfs:additionalInfo>Exit gates (pathway_mode=7) must not be bidirectional.</gtfs:additionalInfo>
         <rdfs:comment>Indicates the direction that the pathway can be taken</rdfs:comment>
         <rdfs:label>is_bidirectional</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/is_bidirectional_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/is_bidirectional_0">
+        <rdf:type rdf:resource="http://gtfs.org/IsBidirectionalEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Unidirectional pathway that can only be used from from_stop_id to to_stop_id.</rdfs:comment>
+        <rdfs:label>is_bidirectional:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/is_bidirectional_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/is_bidirectional_1">
+        <rdf:type rdf:resource="http://gtfs.org/IsBidirectionalEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Bidirectional pathway that can be used in both directions.</rdfs:comment>
+        <rdfs:label>is_bidirectional:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3573,6 +2878,30 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
     
 
 
+    <!-- http://gtfs.org/is_operator_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/is_operator_0">
+        <rdf:type rdf:resource="http://gtfs.org/IsOperatorEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>False</rdfs:comment>
+        <rdfs:label>is_operator:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/is_operator_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/is_operator_1">
+        <rdf:type rdf:resource="http://gtfs.org/IsOperatorEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>True</rdfs:comment>
+        <rdfs:label>is_operator:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/is_producer -->
 
 
@@ -3583,6 +2912,30 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
         <gtfs:additionalInfo>Valid options are: 0 or empty - Organization doesn’t have this role. 1 - Organization does have this role.</gtfs:additionalInfo>
         <rdfs:comment>The role of the organization is producer. At least one of the fields is_producer, is_operator, or is_authority should be set at 1.</rdfs:comment>
         <rdfs:label>is_producer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/is_producer_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/is_producer_0">
+        <rdf:type rdf:resource="http://gtfs.org/IsProducerEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Organization doesn’t have this role</rdfs:comment>
+        <rdfs:label>is_producer:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/is_producer_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/is_producer_1">
+        <rdf:type rdf:resource="http://gtfs.org/IsProducerEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Organization does have this role</rdfs:comment>
+        <rdfs:label>is_producer:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3709,6 +3062,66 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
     
 
 
+    <!-- http://gtfs.org/location_type_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/location_type_0">
+        <rdf:type rdf:resource="http://gtfs.org/LocationTypeEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Stop (or Platform)</rdfs:comment>
+        <rdfs:label>location_type:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/location_type_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/location_type_1">
+        <rdf:type rdf:resource="http://gtfs.org/LocationTypeEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Station</rdfs:comment>
+        <rdfs:label>location_type:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/location_type_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/location_type_2">
+        <rdf:type rdf:resource="http://gtfs.org/LocationTypeEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Entrance/Exit</rdfs:comment>
+        <rdfs:label>location_type:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/location_type_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/location_type_3">
+        <rdf:type rdf:resource="http://gtfs.org/LocationTypeEnum"/>
+        <gtfs:hasEnumValue>3</gtfs:hasEnumValue>
+        <rdfs:comment>Generic Node</rdfs:comment>
+        <rdfs:label>location_type:3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/location_type_4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/location_type_4">
+        <rdf:type rdf:resource="http://gtfs.org/LocationTypeEnum"/>
+        <gtfs:hasEnumValue>4</gtfs:hasEnumValue>
+        <rdfs:comment>Boarding Area</rdfs:comment>
+        <rdfs:label>location_type:4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/max_slope -->
 
 
@@ -3761,6 +3174,30 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
         <gtfs:additionalInfo>Valid options are: 1 - Service is available for all Mondays in the date range. 0 - Service is not available for Mondays in the date range.</gtfs:additionalInfo>
         <rdfs:comment>Indicates whether the service operates on all Mondays in the date range specified by the `start_date` and `end_date` fields. Note that exceptions for particular dates may be listed in [calendar_dates.txt](#calendar_datestxt). Valid options are: 1 - Service is available for all Mondays in the date range. 0 - Service is not available for Mondays in the date range.</rdfs:comment>
         <rdfs:label>monday</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/monday_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/monday_0">
+        <rdf:type rdf:resource="http://gtfs.org/MondayEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Service is not available for Mondays in the date range</rdfs:comment>
+        <rdfs:label>monday:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/monday_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/monday_1">
+        <rdf:type rdf:resource="http://gtfs.org/MondayEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Service is available for all Mondays in the date range</rdfs:comment>
+        <rdfs:label>monday:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3852,6 +3289,90 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
     
 
 
+    <!-- http://gtfs.org/pathway_mode_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode_1">
+        <rdf:type rdf:resource="http://gtfs.org/PathwayModeEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Walkway</rdfs:comment>
+        <rdfs:label>pathway_mode:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/pathway_mode_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode_2">
+        <rdf:type rdf:resource="http://gtfs.org/PathwayModeEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Stairs</rdfs:comment>
+        <rdfs:label>pathway_mode:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/pathway_mode_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode_3">
+        <rdf:type rdf:resource="http://gtfs.org/PathwayModeEnum"/>
+        <gtfs:hasEnumValue>3</gtfs:hasEnumValue>
+        <rdfs:comment>Moving sidewalk/travelator</rdfs:comment>
+        <rdfs:label>pathway_mode:3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/pathway_mode_4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode_4">
+        <rdf:type rdf:resource="http://gtfs.org/PathwayModeEnum"/>
+        <gtfs:hasEnumValue>4</gtfs:hasEnumValue>
+        <rdfs:comment>Escalator</rdfs:comment>
+        <rdfs:label>pathway_mode:4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/pathway_mode_5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode_5">
+        <rdf:type rdf:resource="http://gtfs.org/PathwayModeEnum"/>
+        <gtfs:hasEnumValue>5</gtfs:hasEnumValue>
+        <rdfs:comment>Elevator</rdfs:comment>
+        <rdfs:label>pathway_mode:5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/pathway_mode_6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode_6">
+        <rdf:type rdf:resource="http://gtfs.org/PathwayModeEnum"/>
+        <gtfs:hasEnumValue>6</gtfs:hasEnumValue>
+        <rdfs:comment>Fare gate</rdfs:comment>
+        <rdfs:label>pathway_mode:6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/pathway_mode_7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode_7">
+        <rdf:type rdf:resource="http://gtfs.org/PathwayModeEnum"/>
+        <gtfs:hasEnumValue>7</gtfs:hasEnumValue>
+        <rdfs:comment>Exit gate</rdfs:comment>
+        <rdfs:label>pathway_mode:7</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/pathways.txt -->
 
 
@@ -3890,6 +3411,30 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
     
 
 
+    <!-- http://gtfs.org/payment_method_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/payment_method_0">
+        <rdf:type rdf:resource="http://gtfs.org/PaymentMethodEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Fare is paid on board</rdfs:comment>
+        <rdfs:label>payment_method:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/payment_method_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/payment_method_1">
+        <rdf:type rdf:resource="http://gtfs.org/PaymentMethodEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Fare must be paid before boarding</rdfs:comment>
+        <rdfs:label>payment_method:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/pickup_type -->
 
 
@@ -3900,6 +3445,54 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
         <gtfs:additionalInfo>Enum field with options 0, 1, 2, 3</gtfs:additionalInfo>
         <rdfs:comment>Indicates pickup method. Valid options are: 0 or empty - Regularly scheduled pickup. 1 - No pickup available. 2 - Must phone agency to arrange pickup. 3 - Must coordinate with driver to arrange pickup.</rdfs:comment>
         <rdfs:label>pickup_type</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/pickup_type_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/pickup_type_0">
+        <rdf:type rdf:resource="http://gtfs.org/PickupTypeEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Regularly scheduled pickup</rdfs:comment>
+        <rdfs:label>pickup_type:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/pickup_type_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/pickup_type_1">
+        <rdf:type rdf:resource="http://gtfs.org/PickupTypeEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>No pickup available</rdfs:comment>
+        <rdfs:label>pickup_type:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/pickup_type_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/pickup_type_2">
+        <rdf:type rdf:resource="http://gtfs.org/PickupTypeEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Must phone agency to arrange pickup</rdfs:comment>
+        <rdfs:label>pickup_type:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/pickup_type_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/pickup_type_3">
+        <rdf:type rdf:resource="http://gtfs.org/PickupTypeEnum"/>
+        <gtfs:hasEnumValue>3</gtfs:hasEnumValue>
+        <rdfs:comment>Must coordinate with driver to arrange pickup</rdfs:comment>
+        <rdfs:label>pickup_type:3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4139,6 +3732,126 @@ Conditionally Required:
     
 
 
+    <!-- http://gtfs.org/route_type_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/route_type_0">
+        <rdf:type rdf:resource="http://gtfs.org/RouteTypeEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Tram, Streetcar, Light rail</rdfs:comment>
+        <rdfs:label>route_type:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/route_type_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/route_type_1">
+        <rdf:type rdf:resource="http://gtfs.org/RouteTypeEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Subway, Metro</rdfs:comment>
+        <rdfs:label>route_type:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/route_type_11 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/route_type_11">
+        <rdf:type rdf:resource="http://gtfs.org/RouteTypeEnum"/>
+        <gtfs:hasEnumValue>11</gtfs:hasEnumValue>
+        <rdfs:comment>Trolleybus</rdfs:comment>
+        <rdfs:label>route_type:11</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/route_type_12 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/route_type_12">
+        <rdf:type rdf:resource="http://gtfs.org/RouteTypeEnum"/>
+        <gtfs:hasEnumValue>12</gtfs:hasEnumValue>
+        <rdfs:comment>Monorail</rdfs:comment>
+        <rdfs:label>route_type:12</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/route_type_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/route_type_2">
+        <rdf:type rdf:resource="http://gtfs.org/RouteTypeEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Rail</rdfs:comment>
+        <rdfs:label>route_type:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/route_type_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/route_type_3">
+        <rdf:type rdf:resource="http://gtfs.org/RouteTypeEnum"/>
+        <gtfs:hasEnumValue>3</gtfs:hasEnumValue>
+        <rdfs:comment>Bus</rdfs:comment>
+        <rdfs:label>route_type:3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/route_type_4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/route_type_4">
+        <rdf:type rdf:resource="http://gtfs.org/RouteTypeEnum"/>
+        <gtfs:hasEnumValue>4</gtfs:hasEnumValue>
+        <rdfs:comment>Ferry</rdfs:comment>
+        <rdfs:label>route_type:4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/route_type_5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/route_type_5">
+        <rdf:type rdf:resource="http://gtfs.org/RouteTypeEnum"/>
+        <gtfs:hasEnumValue>5</gtfs:hasEnumValue>
+        <rdfs:comment>Cable tram</rdfs:comment>
+        <rdfs:label>route_type:5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/route_type_6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/route_type_6">
+        <rdf:type rdf:resource="http://gtfs.org/RouteTypeEnum"/>
+        <gtfs:hasEnumValue>6</gtfs:hasEnumValue>
+        <rdfs:comment>Aerial lift, suspended cable car</rdfs:comment>
+        <rdfs:label>route_type:6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/route_type_7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/route_type_7">
+        <rdf:type rdf:resource="http://gtfs.org/RouteTypeEnum"/>
+        <gtfs:hasEnumValue>7</gtfs:hasEnumValue>
+        <rdfs:comment>Funicular</rdfs:comment>
+        <rdfs:label>route_type:7</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/route_url -->
 
 
@@ -4188,6 +3901,18 @@ Conditionally Required:
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
         <rdfs:comment>Functions in the same way as `monday` except applies to Saturdays.</rdfs:comment>
         <rdfs:label>saturday</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/saturday_example_key -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/saturday_example_key">
+        <rdf:type rdf:resource="http://gtfs.org/SaturdayEnum"/>
+        <gtfs:hasEnumValue>example_key</gtfs:hasEnumValue>
+        <rdfs:comment>example_value</rdfs:comment>
+        <rdfs:label>saturday:example_key</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4614,6 +4339,18 @@ Conditionally Required:
     
 
 
+    <!-- http://gtfs.org/sunday_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/sunday_1">
+        <rdf:type rdf:resource="http://gtfs.org/SundayEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Applies to Sundays</rdfs:comment>
+        <rdfs:label>sunday:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/table_name -->
 
 
@@ -4628,6 +4365,114 @@ Conditionally Required:
     
 
 
+    <!-- http://gtfs.org/table_name_agency -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/table_name_agency">
+        <rdf:type rdf:resource="http://gtfs.org/TableNameEnum"/>
+        <gtfs:hasEnumValue>agency</gtfs:hasEnumValue>
+        <rdfs:comment>Agency</rdfs:comment>
+        <rdfs:label>table_name:agency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/table_name_attributions -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/table_name_attributions">
+        <rdf:type rdf:resource="http://gtfs.org/TableNameEnum"/>
+        <gtfs:hasEnumValue>attributions</gtfs:hasEnumValue>
+        <rdfs:comment>Attributions</rdfs:comment>
+        <rdfs:label>table_name:attributions</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/table_name_feed_info -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/table_name_feed_info">
+        <rdf:type rdf:resource="http://gtfs.org/TableNameEnum"/>
+        <gtfs:hasEnumValue>feed_info</gtfs:hasEnumValue>
+        <rdfs:comment>Feed Info</rdfs:comment>
+        <rdfs:label>table_name:feed_info</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/table_name_levels -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/table_name_levels">
+        <rdf:type rdf:resource="http://gtfs.org/TableNameEnum"/>
+        <gtfs:hasEnumValue>levels</gtfs:hasEnumValue>
+        <rdfs:comment>Levels</rdfs:comment>
+        <rdfs:label>table_name:levels</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/table_name_pathways -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/table_name_pathways">
+        <rdf:type rdf:resource="http://gtfs.org/TableNameEnum"/>
+        <gtfs:hasEnumValue>pathways</gtfs:hasEnumValue>
+        <rdfs:comment>Pathways</rdfs:comment>
+        <rdfs:label>table_name:pathways</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/table_name_routes -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/table_name_routes">
+        <rdf:type rdf:resource="http://gtfs.org/TableNameEnum"/>
+        <gtfs:hasEnumValue>routes</gtfs:hasEnumValue>
+        <rdfs:comment>Routes</rdfs:comment>
+        <rdfs:label>table_name:routes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/table_name_stop_times -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/table_name_stop_times">
+        <rdf:type rdf:resource="http://gtfs.org/TableNameEnum"/>
+        <gtfs:hasEnumValue>stop_times</gtfs:hasEnumValue>
+        <rdfs:comment>Stop Times</rdfs:comment>
+        <rdfs:label>table_name:stop_times</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/table_name_stops -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/table_name_stops">
+        <rdf:type rdf:resource="http://gtfs.org/TableNameEnum"/>
+        <gtfs:hasEnumValue>stops</gtfs:hasEnumValue>
+        <rdfs:comment>Stops</rdfs:comment>
+        <rdfs:label>table_name:stops</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/table_name_trips -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/table_name_trips">
+        <rdf:type rdf:resource="http://gtfs.org/TableNameEnum"/>
+        <gtfs:hasEnumValue>trips</gtfs:hasEnumValue>
+        <rdfs:comment>Trips</rdfs:comment>
+        <rdfs:label>table_name:trips</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/thursday -->
 
 
@@ -4638,6 +4483,18 @@ Conditionally Required:
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
         <rdfs:comment>Functions in the same way as `monday` except applies to Thursdays</rdfs:comment>
         <rdfs:label>thursday</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/thursday_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/thursday_1">
+        <rdf:type rdf:resource="http://gtfs.org/ThursdayEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Functions in the same way as `monday` except applies to Thursdays</rdfs:comment>
+        <rdfs:label>thursday:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4682,6 +4539,30 @@ Conditionally Required:
         <gtfs:additionalInfo>Valid options are: 0 - Times are considered approximate. 1 or empty - Times are considered exact.</gtfs:additionalInfo>
         <rdfs:comment>Indicates if arrival and departure times for a stop are strictly adhered to by the vehicle or if they are instead approximate and/or interpolated times. This field allows a GTFS producer to provide interpolated stop-times, while indicating that the times are approximate. Valid options are: 0 - Times are considered approximate. 1 or empty - Times are considered exact.</rdfs:comment>
         <rdfs:label>timepoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/timepoint_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/timepoint_0">
+        <rdf:type rdf:resource="http://gtfs.org/TimepointEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Times are considered approximate</rdfs:comment>
+        <rdfs:label>timepoint:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/timepoint_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/timepoint_1">
+        <rdf:type rdf:resource="http://gtfs.org/TimepointEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Times are considered exact</rdfs:comment>
+        <rdfs:label>timepoint:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4839,6 +4720,78 @@ If a sub-journey matches multiple records with different transfer_counts, then t
     
 
 
+    <!-- http://gtfs.org/transfer_type_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type_0">
+        <rdf:type rdf:resource="http://gtfs.org/TransferTypeEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Recommended transfer point between routes</rdfs:comment>
+        <rdfs:label>transfer_type:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/transfer_type_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type_1">
+        <rdf:type rdf:resource="http://gtfs.org/TransferTypeEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Timed transfer point between two routes</rdfs:comment>
+        <rdfs:label>transfer_type:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/transfer_type_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type_2">
+        <rdf:type rdf:resource="http://gtfs.org/TransferTypeEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time</rdfs:comment>
+        <rdfs:label>transfer_type:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/transfer_type_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type_3">
+        <rdf:type rdf:resource="http://gtfs.org/TransferTypeEnum"/>
+        <gtfs:hasEnumValue>3</gtfs:hasEnumValue>
+        <rdfs:comment>Transfers are not possible between routes at the location</rdfs:comment>
+        <rdfs:label>transfer_type:3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/transfer_type_4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type_4">
+        <rdf:type rdf:resource="http://gtfs.org/TransferTypeEnum"/>
+        <gtfs:hasEnumValue>4</gtfs:hasEnumValue>
+        <rdfs:comment>Passengers can transfer from one trip to another by staying onboard the same vehicle (an &apos;in-seat transfer&apos;)</rdfs:comment>
+        <rdfs:label>transfer_type:4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/transfer_type_5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type_5">
+        <rdf:type rdf:resource="http://gtfs.org/TransferTypeEnum"/>
+        <gtfs:hasEnumValue>5</gtfs:hasEnumValue>
+        <rdfs:comment>In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board</rdfs:comment>
+        <rdfs:label>transfer_type:5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/transfers -->
 
 
@@ -4869,6 +4822,54 @@ If a sub-journey matches multiple records with different transfer_counts, then t
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <rdfs:comment>Rules for making connections at transfer points between routes.</rdfs:comment>
         <rdfs:label>transfers.txt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/transfers_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/transfers_0">
+        <rdf:type rdf:resource="http://gtfs.org/TransfersEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>No transfers permitted on this fare</rdfs:comment>
+        <rdfs:label>transfers:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/transfers_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/transfers_1">
+        <rdf:type rdf:resource="http://gtfs.org/TransfersEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Riders may transfer once</rdfs:comment>
+        <rdfs:label>transfers:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/transfers_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/transfers_2">
+        <rdf:type rdf:resource="http://gtfs.org/TransfersEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Riders may transfer twice</rdfs:comment>
+        <rdfs:label>transfers:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/transfers_empty -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/transfers_empty">
+        <rdf:type rdf:resource="http://gtfs.org/TransfersEnum"/>
+        <gtfs:hasEnumValue>empty</gtfs:hasEnumValue>
+        <rdfs:comment>Unlimited transfers permitted</rdfs:comment>
+        <rdfs:label>transfers:empty</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5017,6 +5018,18 @@ If a sub-journey matches multiple records with different transfer_counts, then t
     
 
 
+    <!-- http://gtfs.org/tuesday_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/tuesday_0">
+        <rdf:type rdf:resource="http://gtfs.org/TuesdayEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>Functions in the same way as &apos;monday&apos; except applies to Tuesdays</rdfs:comment>
+        <rdfs:label>tuesday:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/wednesday -->
 
 
@@ -5027,6 +5040,18 @@ If a sub-journey matches multiple records with different transfer_counts, then t
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
         <rdfs:comment>Functions in the same way as `monday` except applies to Wednesdays</rdfs:comment>
         <rdfs:label>wednesday</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/wednesday_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/wednesday_1">
+        <rdf:type rdf:resource="http://gtfs.org/WednesdayEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Functions in the same way as `monday` except applies to Wednesdays</rdfs:comment>
+        <rdfs:label>wednesday:1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5045,6 +5070,42 @@ If a sub-journey matches multiple records with different transfer_counts, then t
     
 
 
+    <!-- http://gtfs.org/wheelchair_accessible_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_accessible_0">
+        <rdf:type rdf:resource="http://gtfs.org/WheelchairAccessibleEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>No accessibility information for the trip</rdfs:comment>
+        <rdfs:label>wheelchair_accessible:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/wheelchair_accessible_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_accessible_1">
+        <rdf:type rdf:resource="http://gtfs.org/WheelchairAccessibleEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Vehicle can accommodate at least one rider in a wheelchair</rdfs:comment>
+        <rdfs:label>wheelchair_accessible:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/wheelchair_accessible_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_accessible_2">
+        <rdf:type rdf:resource="http://gtfs.org/WheelchairAccessibleEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>No riders in wheelchairs can be accommodated on this trip</rdfs:comment>
+        <rdfs:label>wheelchair_accessible:2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://gtfs.org/wheelchair_boarding -->
 
 
@@ -5054,6 +5115,42 @@ If a sub-journey matches multiple records with different transfer_counts, then t
         <gtfs:isType rdf:resource="http://gtfs.org/WheelchairBoardingEnum"/>
         <rdfs:comment>Indicates whether wheelchair boardings are possible from the location. Valid options are: For parentless stops: 0 or empty - No accessibility information for the stop. 1 - Some vehicles at this stop can be boarded by a rider in a wheelchair. 2 - Wheelchair boarding is not possible at this stop. For child stops: 0 or empty - Stop will inherit its wheelchair_boarding behavior from the parent station, if specified in the parent. 1 - There exists some accessible path from outside the station to the specific stop/platform. 2 - There exists no accessible path from outside the station to the specific stop/platform. For station entrances/exits: 0 or empty - Station entrance will inherit its wheelchair_boarding behavior from the parent station, if specified for the parent. 1 - Station entrance is wheelchair accessible. 2 - No accessible path from station entrance to stops/platforms.</rdfs:comment>
         <rdfs:label>wheelchair_boarding</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/wheelchair_boarding_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_boarding_0">
+        <rdf:type rdf:resource="http://gtfs.org/WheelchairBoardingEnum"/>
+        <gtfs:hasEnumValue>0</gtfs:hasEnumValue>
+        <rdfs:comment>No accessibility information for the stop</rdfs:comment>
+        <rdfs:label>wheelchair_boarding:0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/wheelchair_boarding_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_boarding_1">
+        <rdf:type rdf:resource="http://gtfs.org/WheelchairBoardingEnum"/>
+        <gtfs:hasEnumValue>1</gtfs:hasEnumValue>
+        <rdfs:comment>Some vehicles at this stop can be boarded by a rider in a wheelchair</rdfs:comment>
+        <rdfs:label>wheelchair_boarding:1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gtfs.org/wheelchair_boarding_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_boarding_2">
+        <rdf:type rdf:resource="http://gtfs.org/WheelchairBoardingEnum"/>
+        <gtfs:hasEnumValue>2</gtfs:hasEnumValue>
+        <rdfs:comment>Wheelchair boarding is not possible at this stop</rdfs:comment>
+        <rdfs:label>wheelchair_boarding:2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -5284,10 +5381,6 @@ If a sub-journey matches multiple records with different transfer_counts, then t
     <rdf:Description rdf:about="http://gtfs.org/WheelchairBoardingEnum">
         <rdfs:comment>Enumeration class for wheelchair_boarding</rdfs:comment>
         <rdfs:label>WheelchairBoardingEnum</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://gtfs.org/hasCondition">
-        <rdfs:comment>This property links a file to its fields</rdfs:comment>
-        <rdfs:label xml:lang="en">hasCondition</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 

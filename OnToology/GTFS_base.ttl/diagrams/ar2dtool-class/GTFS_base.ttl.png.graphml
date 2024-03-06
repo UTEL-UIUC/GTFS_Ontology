@@ -5,7 +5,7 @@
    <key for="edge" id="d2" yfiles.type="edgegraphics" />
    <key attr.name="description" attr.type="string" for="edge" id="d3" />
    <key for="graphml" id="d4" yfiles.type="resources" />
-   <graph edgedefault="directed" id="G" parse.edges="507" parse.nodes="233" parse.order="free">
+   <graph edgedefault="directed" id="G" parse.edges="513" parse.nodes="234" parse.order="free">
       <node id="nid_gtfs:fare_id">
          <data key="d0">
             <y:ShapeNode>
@@ -4455,7 +4455,42 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType231" source="nid_gtfs:fare_product_name" target="nid_gtfs:Text">
+      <node id="nid_gtfs:Enum">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="90.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFA500" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">gtfs:Enum</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+      <node id="nid_http://schema.org/Enumeration">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="290.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFA500" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">http://schema.org/Enumeration</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:equivalentClass231" source="nid_gtfs:Enum" target="nid_http://schema.org/Enumeration">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:equivalentClass</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_gtfs:isType232" source="nid_gtfs:fare_product_name" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4466,7 +4501,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence232" source="nid_gtfs:fare_product_name" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence233" source="nid_gtfs:fare_product_name" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4477,7 +4512,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType233" source="nid_gtfs:stop_timezone" target="nid_gtfs:TimeZone">
+    <edge id="eid_gtfs:isType234" source="nid_gtfs:stop_timezone" target="nid_gtfs:TimeZone">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4488,7 +4523,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence234" source="nid_gtfs:stop_timezone" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence235" source="nid_gtfs:stop_timezone" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4511,7 +4546,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType235" source="nid_gtfs:from_route_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType236" source="nid_gtfs:from_route_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4522,7 +4557,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence236" source="nid_gtfs:from_route_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence237" source="nid_gtfs:from_route_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4545,7 +4580,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType237" source="nid_gtfs:feed_start_date" target="nid_gtfs:Date">
+    <edge id="eid_gtfs:isType238" source="nid_gtfs:feed_start_date" target="nid_gtfs:Date">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4556,7 +4591,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence238" source="nid_gtfs:feed_start_date" target="nid_gtfs:Recommended">
+    <edge id="eid_gtfs:isPresence239" source="nid_gtfs:feed_start_date" target="nid_gtfs:Recommended">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4567,7 +4602,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType239" source="nid_gtfs:record_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType240" source="nid_gtfs:record_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4578,7 +4613,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence240" source="nid_gtfs:record_id" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence241" source="nid_gtfs:record_id" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4613,7 +4648,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType241" source="nid_gtfs:is_producer" target="nid_gtfs:IsProducerEnum">
+    <edge id="eid_gtfs:isType242" source="nid_gtfs:is_producer" target="nid_gtfs:IsProducerEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4624,7 +4659,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence242" source="nid_gtfs:is_producer" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence243" source="nid_gtfs:is_producer" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4635,7 +4670,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType243" source="nid_gtfs:fare_product_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType244" source="nid_gtfs:fare_product_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4646,7 +4681,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence244" source="nid_gtfs:fare_product_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence245" source="nid_gtfs:fare_product_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4657,7 +4692,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence245" source="nid_gtfs:fare_product_id" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence246" source="nid_gtfs:fare_product_id" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4680,7 +4715,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isPresence246" source="nid_gtfs:shape_id" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence247" source="nid_gtfs:shape_id" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4691,7 +4726,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType247" source="nid_gtfs:shape_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType248" source="nid_gtfs:shape_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4702,7 +4737,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence248" source="nid_gtfs:shape_id" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence249" source="nid_gtfs:shape_id" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4725,7 +4760,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType249" source="nid_gtfs:route_text_color" target="nid_gtfs:Color">
+    <edge id="eid_gtfs:isType250" source="nid_gtfs:route_text_color" target="nid_gtfs:Color">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4736,7 +4771,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence250" source="nid_gtfs:route_text_color" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence251" source="nid_gtfs:route_text_color" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4747,7 +4782,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType251" source="nid_gtfs:start_time" target="nid_gtfs:Time">
+    <edge id="eid_gtfs:isType252" source="nid_gtfs:start_time" target="nid_gtfs:Time">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4758,7 +4793,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence252" source="nid_gtfs:start_time" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence253" source="nid_gtfs:start_time" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4769,7 +4804,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence253" source="nid_gtfs:start_time" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence254" source="nid_gtfs:start_time" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4780,7 +4815,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType254" source="nid_gtfs:field_name" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType255" source="nid_gtfs:field_name" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4791,7 +4826,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence255" source="nid_gtfs:field_name" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence256" source="nid_gtfs:field_name" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4814,7 +4849,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType256" source="nid_gtfs:trip_short_name" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType257" source="nid_gtfs:trip_short_name" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4825,7 +4860,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence257" source="nid_gtfs:trip_short_name" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence258" source="nid_gtfs:trip_short_name" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4836,7 +4871,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType258" source="nid_gtfs:from_leg_group_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType259" source="nid_gtfs:from_leg_group_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4847,7 +4882,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence259" source="nid_gtfs:from_leg_group_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence260" source="nid_gtfs:from_leg_group_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4858,7 +4893,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType260" source="nid_gtfs:agency_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType261" source="nid_gtfs:agency_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4869,7 +4904,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence261" source="nid_gtfs:agency_id" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence262" source="nid_gtfs:agency_id" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4880,7 +4915,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence262" source="nid_gtfs:agency_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence263" source="nid_gtfs:agency_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4903,7 +4938,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType263" source="nid_gtfs:network_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType264" source="nid_gtfs:network_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4914,7 +4949,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence264" source="nid_gtfs:network_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence265" source="nid_gtfs:network_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4949,7 +4984,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType265" source="nid_gtfs:wednesday" target="nid_gtfs:WednesdayEnum">
+    <edge id="eid_gtfs:isType266" source="nid_gtfs:wednesday" target="nid_gtfs:WednesdayEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4960,7 +4995,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence266" source="nid_gtfs:wednesday" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence267" source="nid_gtfs:wednesday" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4971,7 +5006,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType267" source="nid_gtfs:pathway_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType268" source="nid_gtfs:pathway_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4982,7 +5017,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence268" source="nid_gtfs:pathway_id" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence269" source="nid_gtfs:pathway_id" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5005,7 +5040,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType269" source="nid_gtfs:table_name" target="nid_gtfs:TableNameEnum">
+    <edge id="eid_gtfs:isType270" source="nid_gtfs:table_name" target="nid_gtfs:TableNameEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5016,7 +5051,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence270" source="nid_gtfs:table_name" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence271" source="nid_gtfs:table_name" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5051,7 +5086,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType271" source="nid_gtfs:thursday" target="nid_gtfs:ThursdayEnum">
+    <edge id="eid_gtfs:isType272" source="nid_gtfs:thursday" target="nid_gtfs:ThursdayEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5062,7 +5097,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence272" source="nid_gtfs:thursday" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence273" source="nid_gtfs:thursday" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5073,7 +5108,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType273" source="nid_gtfs:end_time" target="nid_gtfs:Time">
+    <edge id="eid_gtfs:isType274" source="nid_gtfs:end_time" target="nid_gtfs:Time">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5084,7 +5119,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence274" source="nid_gtfs:end_time" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence275" source="nid_gtfs:end_time" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5095,7 +5130,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence275" source="nid_gtfs:end_time" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence276" source="nid_gtfs:end_time" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5118,7 +5153,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType276" source="nid_gtfs:to_route_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType277" source="nid_gtfs:to_route_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5129,7 +5164,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence277" source="nid_gtfs:to_route_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence278" source="nid_gtfs:to_route_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5140,7 +5175,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType278" source="nid_gtfs:transfer_count" target="nid_gtfs:Integer">
+    <edge id="eid_gtfs:isType279" source="nid_gtfs:transfer_count" target="nid_gtfs:Integer">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5163,7 +5198,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isPresence279" source="nid_gtfs:transfer_count" target="nid_gtfs:ConditionallyForbidden">
+    <edge id="eid_gtfs:isPresence280" source="nid_gtfs:transfer_count" target="nid_gtfs:ConditionallyForbidden">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5186,7 +5221,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType280" source="nid_gtfs:to_area_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType281" source="nid_gtfs:to_area_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5197,7 +5232,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence281" source="nid_gtfs:to_area_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence282" source="nid_gtfs:to_area_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5220,7 +5255,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType282" source="nid_gtfs:end_date" target="nid_gtfs:Date">
+    <edge id="eid_gtfs:isType283" source="nid_gtfs:end_date" target="nid_gtfs:Date">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5231,7 +5266,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence283" source="nid_gtfs:end_date" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence284" source="nid_gtfs:end_date" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5254,7 +5289,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType284" source="nid_gtfs:organization_name" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType285" source="nid_gtfs:organization_name" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5265,7 +5300,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence285" source="nid_gtfs:organization_name" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence286" source="nid_gtfs:organization_name" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5276,7 +5311,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType286" source="nid_gtfs:agency_lang" target="nid_gtfs:LanguageCode">
+    <edge id="eid_gtfs:isType287" source="nid_gtfs:agency_lang" target="nid_gtfs:LanguageCode">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5287,7 +5322,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence287" source="nid_gtfs:agency_lang" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence288" source="nid_gtfs:agency_lang" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5310,7 +5345,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType288" source="nid_gtfs:price" target="nid_gtfs:Float">
+    <edge id="eid_gtfs:isType289" source="nid_gtfs:price" target="nid_gtfs:Float">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5321,7 +5356,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence289" source="nid_gtfs:price" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence290" source="nid_gtfs:price" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5344,7 +5379,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType290" source="nid_gtfs:to_timeframe_group_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType291" source="nid_gtfs:to_timeframe_group_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5355,7 +5390,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence291" source="nid_gtfs:to_timeframe_group_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence292" source="nid_gtfs:to_timeframe_group_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5366,7 +5401,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType292" source="nid_gtfs:level_index" target="nid_gtfs:Float">
+    <edge id="eid_gtfs:isType293" source="nid_gtfs:level_index" target="nid_gtfs:Float">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5377,7 +5412,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence293" source="nid_gtfs:level_index" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence294" source="nid_gtfs:level_index" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5388,7 +5423,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence294" source="nid_gtfs:service_id" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence295" source="nid_gtfs:service_id" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5399,7 +5434,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType295" source="nid_gtfs:service_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType296" source="nid_gtfs:service_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5410,7 +5445,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence296" source="nid_gtfs:trip_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence297" source="nid_gtfs:trip_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5421,7 +5456,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType297" source="nid_gtfs:trip_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType298" source="nid_gtfs:trip_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5432,7 +5467,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence298" source="nid_gtfs:trip_id" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence299" source="nid_gtfs:trip_id" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5455,7 +5490,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField299" source="nid_gtfs:routes.txt" target="nid_gtfs:route_color">
+    <edge id="eid_gtfs:hasField300" source="nid_gtfs:routes.txt" target="nid_gtfs:route_color">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5466,7 +5501,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField300" source="nid_gtfs:routes.txt" target="nid_gtfs:network_id">
+    <edge id="eid_gtfs:hasField301" source="nid_gtfs:routes.txt" target="nid_gtfs:network_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5477,7 +5512,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField301" source="nid_gtfs:routes.txt" target="nid_gtfs:route_long_name">
+    <edge id="eid_gtfs:hasField302" source="nid_gtfs:routes.txt" target="nid_gtfs:route_long_name">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5488,7 +5523,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField302" source="nid_gtfs:routes.txt" target="nid_gtfs:route_url">
+    <edge id="eid_gtfs:hasField303" source="nid_gtfs:routes.txt" target="nid_gtfs:route_url">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5499,7 +5534,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField303" source="nid_gtfs:routes.txt" target="nid_gtfs:continuous_pickup">
+    <edge id="eid_gtfs:hasField304" source="nid_gtfs:routes.txt" target="nid_gtfs:continuous_pickup">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5522,7 +5557,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField304" source="nid_gtfs:routes.txt" target="nid_gtfs:route_short_name">
+    <edge id="eid_gtfs:hasField305" source="nid_gtfs:routes.txt" target="nid_gtfs:route_short_name">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5533,7 +5568,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField305" source="nid_gtfs:routes.txt" target="nid_gtfs:route_id">
+    <edge id="eid_gtfs:hasField306" source="nid_gtfs:routes.txt" target="nid_gtfs:route_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5544,7 +5579,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence306" source="nid_gtfs:routes.txt" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence307" source="nid_gtfs:routes.txt" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5567,7 +5602,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField307" source="nid_gtfs:routes.txt" target="nid_gtfs:route_sort_order">
+    <edge id="eid_gtfs:hasField308" source="nid_gtfs:routes.txt" target="nid_gtfs:route_sort_order">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5578,7 +5613,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField308" source="nid_gtfs:routes.txt" target="nid_gtfs:continuous_drop_off">
+    <edge id="eid_gtfs:hasField309" source="nid_gtfs:routes.txt" target="nid_gtfs:continuous_drop_off">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5589,7 +5624,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField309" source="nid_gtfs:routes.txt" target="nid_gtfs:route_text_color">
+    <edge id="eid_gtfs:hasField310" source="nid_gtfs:routes.txt" target="nid_gtfs:route_text_color">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5612,7 +5647,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField310" source="nid_gtfs:routes.txt" target="nid_gtfs:route_type">
+    <edge id="eid_gtfs:hasField311" source="nid_gtfs:routes.txt" target="nid_gtfs:route_type">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5623,7 +5658,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField311" source="nid_gtfs:routes.txt" target="nid_gtfs:agency_id">
+    <edge id="eid_gtfs:hasField312" source="nid_gtfs:routes.txt" target="nid_gtfs:agency_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5634,7 +5669,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField312" source="nid_gtfs:routes.txt" target="nid_gtfs:route_desc">
+    <edge id="eid_gtfs:hasField313" source="nid_gtfs:routes.txt" target="nid_gtfs:route_desc">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5645,7 +5680,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType313" source="nid_gtfs:agency_fare_url" target="nid_gtfs:URL">
+    <edge id="eid_gtfs:isType314" source="nid_gtfs:agency_fare_url" target="nid_gtfs:URL">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5656,7 +5691,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence314" source="nid_gtfs:agency_fare_url" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence315" source="nid_gtfs:agency_fare_url" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5667,7 +5702,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType315" source="nid_gtfs:currency" target="nid_gtfs:CurrencyCode">
+    <edge id="eid_gtfs:isType316" source="nid_gtfs:currency" target="nid_gtfs:CurrencyCode">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5678,7 +5713,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence316" source="nid_gtfs:currency" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence317" source="nid_gtfs:currency" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5701,7 +5736,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType317" source="nid_gtfs:area_name" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType318" source="nid_gtfs:area_name" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5712,7 +5747,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence318" source="nid_gtfs:area_name" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence319" source="nid_gtfs:area_name" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5735,7 +5770,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType319" source="nid_gtfs:attribution_url" target="nid_gtfs:URL">
+    <edge id="eid_gtfs:isType320" source="nid_gtfs:attribution_url" target="nid_gtfs:URL">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5746,7 +5781,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence320" source="nid_gtfs:attribution_url" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence321" source="nid_gtfs:attribution_url" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5757,7 +5792,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType321" source="nid_gtfs:record_sub_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType322" source="nid_gtfs:record_sub_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5768,7 +5803,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence322" source="nid_gtfs:record_sub_id" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence323" source="nid_gtfs:record_sub_id" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5803,7 +5838,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType323" source="nid_gtfs:sunday" target="nid_gtfs:SundayEnum">
+    <edge id="eid_gtfs:isType324" source="nid_gtfs:sunday" target="nid_gtfs:SundayEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5814,7 +5849,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence324" source="nid_gtfs:sunday" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence325" source="nid_gtfs:sunday" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5837,7 +5872,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType325" source="nid_gtfs:from_trip_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType326" source="nid_gtfs:from_trip_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5848,7 +5883,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence326" source="nid_gtfs:from_trip_id" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence327" source="nid_gtfs:from_trip_id" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5859,7 +5894,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType327" source="nid_gtfs:translation" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType328" source="nid_gtfs:translation" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5870,7 +5905,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence328" source="nid_gtfs:translation" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence329" source="nid_gtfs:translation" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5893,7 +5928,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isPresence329" source="nid_gtfs:shapes.txt" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence330" source="nid_gtfs:shapes.txt" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5916,7 +5951,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField330" source="nid_gtfs:shapes.txt" target="nid_gtfs:shape_pt_sequence">
+    <edge id="eid_gtfs:hasField331" source="nid_gtfs:shapes.txt" target="nid_gtfs:shape_pt_sequence">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5927,7 +5962,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField331" source="nid_gtfs:shapes.txt" target="nid_gtfs:shape_pt_lon">
+    <edge id="eid_gtfs:hasField332" source="nid_gtfs:shapes.txt" target="nid_gtfs:shape_pt_lon">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5938,7 +5973,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField332" source="nid_gtfs:shapes.txt" target="nid_gtfs:shape_pt_lat">
+    <edge id="eid_gtfs:hasField333" source="nid_gtfs:shapes.txt" target="nid_gtfs:shape_pt_lat">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5949,7 +5984,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField333" source="nid_gtfs:shapes.txt" target="nid_gtfs:shape_id">
+    <edge id="eid_gtfs:hasField334" source="nid_gtfs:shapes.txt" target="nid_gtfs:shape_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5960,7 +5995,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField334" source="nid_gtfs:shapes.txt" target="nid_gtfs:shape_dist_traveled">
+    <edge id="eid_gtfs:hasField335" source="nid_gtfs:shapes.txt" target="nid_gtfs:shape_dist_traveled">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5971,7 +6006,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType335" source="nid_gtfs:tts_stop_name" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType336" source="nid_gtfs:tts_stop_name" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5982,7 +6017,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence336" source="nid_gtfs:tts_stop_name" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence337" source="nid_gtfs:tts_stop_name" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5993,7 +6028,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType337" source="nid_gtfs:level_name" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType338" source="nid_gtfs:level_name" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6004,7 +6039,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence338" source="nid_gtfs:level_name" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence339" source="nid_gtfs:level_name" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6027,7 +6062,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType339" source="nid_gtfs:block_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType340" source="nid_gtfs:block_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6038,7 +6073,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence340" source="nid_gtfs:block_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence341" source="nid_gtfs:block_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6061,7 +6096,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType341" source="nid_gtfs:continuous_drop_off" target="nid_gtfs:ContinuousDropOffEnum">
+    <edge id="eid_gtfs:isType342" source="nid_gtfs:continuous_drop_off" target="nid_gtfs:ContinuousDropOffEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6072,7 +6107,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence342" source="nid_gtfs:continuous_drop_off" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence343" source="nid_gtfs:continuous_drop_off" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6083,7 +6118,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType343" source="nid_gtfs:route_short_name" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType344" source="nid_gtfs:route_short_name" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6094,7 +6129,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence344" source="nid_gtfs:route_short_name" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence345" source="nid_gtfs:route_short_name" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6105,7 +6140,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType345" source="nid_gtfs:to_leg_group_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType346" source="nid_gtfs:to_leg_group_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6116,7 +6151,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence346" source="nid_gtfs:to_leg_group_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence347" source="nid_gtfs:to_leg_group_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6139,7 +6174,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField347" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_version">
+    <edge id="eid_gtfs:hasField348" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_version">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6150,7 +6185,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence348" source="nid_gtfs:feed_info.txt" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence349" source="nid_gtfs:feed_info.txt" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6161,7 +6196,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField349" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_end_date">
+    <edge id="eid_gtfs:hasField350" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_end_date">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6172,7 +6207,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField350" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_publisher_url">
+    <edge id="eid_gtfs:hasField351" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_publisher_url">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6183,7 +6218,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField351" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_start_date">
+    <edge id="eid_gtfs:hasField352" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_start_date">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6206,7 +6241,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField352" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_publisher_name">
+    <edge id="eid_gtfs:hasField353" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_publisher_name">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6229,7 +6264,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField353" source="nid_gtfs:feed_info.txt" target="nid_gtfs:default_lang">
+    <edge id="eid_gtfs:hasField354" source="nid_gtfs:feed_info.txt" target="nid_gtfs:default_lang">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6240,7 +6275,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField354" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_contact_email">
+    <edge id="eid_gtfs:hasField355" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_contact_email">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6251,7 +6286,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField355" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_contact_url">
+    <edge id="eid_gtfs:hasField356" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_contact_url">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6262,7 +6297,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField356" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_lang">
+    <edge id="eid_gtfs:hasField357" source="nid_gtfs:feed_info.txt" target="nid_gtfs:feed_lang">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6285,7 +6320,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isPresence357" source="nid_gtfs:areas.txt" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence358" source="nid_gtfs:areas.txt" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6296,7 +6331,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField358" source="nid_gtfs:areas.txt" target="nid_gtfs:area_name">
+    <edge id="eid_gtfs:hasField359" source="nid_gtfs:areas.txt" target="nid_gtfs:area_name">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6307,35 +6342,12 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField359" source="nid_gtfs:areas.txt" target="nid_gtfs:area_id">
+    <edge id="eid_gtfs:hasField360" source="nid_gtfs:areas.txt" target="nid_gtfs:area_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">gtfs:hasField</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_gtfs:hasCondition">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="170.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">gtfs:hasCondition</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdfs:subPropertyOf360" source="nid_gtfs:hasCondition" target="nid_owl:topObjectProperty">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subPropertyOf</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -6810,6 +6822,97 @@
          </data>
          <data key="d3" />
       </edge>
+      <node id="nid_NULL">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="40.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">NULL</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:onProperty396" source="nid_NULL" target="nid_gtfs:hasField">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onProperty</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_gtfs:File">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="90.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">gtfs:File</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:onClass397" source="nid_NULL" target="nid_gtfs:File">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onClass</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_owl:onProperty398" source="nid_NULL" target="nid_gtfs:isPresence">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onProperty</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_owl:onProperty399" source="nid_NULL" target="nid_gtfs:isType">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onProperty</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_gtfs:Field">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="100.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">gtfs:Field</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:onClass400" source="nid_NULL" target="nid_gtfs:Field">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onClass</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_gtfs:trips.txt">
          <data key="d0">
             <y:ShapeNode>
@@ -6834,7 +6937,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField396" source="nid_gtfs:trips.txt" target="nid_gtfs:bikes_allowed">
+    <edge id="eid_gtfs:hasField401" source="nid_gtfs:trips.txt" target="nid_gtfs:bikes_allowed">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6857,7 +6960,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField397" source="nid_gtfs:trips.txt" target="nid_gtfs:direction_id">
+    <edge id="eid_gtfs:hasField402" source="nid_gtfs:trips.txt" target="nid_gtfs:direction_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6868,7 +6971,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField398" source="nid_gtfs:trips.txt" target="nid_gtfs:route_id">
+    <edge id="eid_gtfs:hasField403" source="nid_gtfs:trips.txt" target="nid_gtfs:route_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6879,7 +6982,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField399" source="nid_gtfs:trips.txt" target="nid_gtfs:block_id">
+    <edge id="eid_gtfs:hasField404" source="nid_gtfs:trips.txt" target="nid_gtfs:block_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6890,7 +6993,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField400" source="nid_gtfs:trips.txt" target="nid_gtfs:shape_id">
+    <edge id="eid_gtfs:hasField405" source="nid_gtfs:trips.txt" target="nid_gtfs:shape_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6901,7 +7004,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField401" source="nid_gtfs:trips.txt" target="nid_gtfs:trip_short_name">
+    <edge id="eid_gtfs:hasField406" source="nid_gtfs:trips.txt" target="nid_gtfs:trip_short_name">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6924,7 +7027,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField402" source="nid_gtfs:trips.txt" target="nid_gtfs:trip_headsign">
+    <edge id="eid_gtfs:hasField407" source="nid_gtfs:trips.txt" target="nid_gtfs:trip_headsign">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6935,7 +7038,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence403" source="nid_gtfs:trips.txt" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence408" source="nid_gtfs:trips.txt" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6946,7 +7049,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField404" source="nid_gtfs:trips.txt" target="nid_gtfs:service_id">
+    <edge id="eid_gtfs:hasField409" source="nid_gtfs:trips.txt" target="nid_gtfs:service_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6957,7 +7060,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField405" source="nid_gtfs:trips.txt" target="nid_gtfs:wheelchair_accessible">
+    <edge id="eid_gtfs:hasField410" source="nid_gtfs:trips.txt" target="nid_gtfs:wheelchair_accessible">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6968,7 +7071,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField406" source="nid_gtfs:trips.txt" target="nid_gtfs:trip_id">
+    <edge id="eid_gtfs:hasField411" source="nid_gtfs:trips.txt" target="nid_gtfs:trip_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6979,7 +7082,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType407" source="nid_gtfs:stop_url" target="nid_gtfs:URL">
+    <edge id="eid_gtfs:isType412" source="nid_gtfs:stop_url" target="nid_gtfs:URL">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6990,7 +7093,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence408" source="nid_gtfs:stop_url" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence413" source="nid_gtfs:stop_url" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7013,7 +7116,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType409" source="nid_gtfs:bikes_allowed" target="nid_gtfs:BikesAllowedEnum">
+    <edge id="eid_gtfs:isType414" source="nid_gtfs:bikes_allowed" target="nid_gtfs:BikesAllowedEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7024,7 +7127,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence410" source="nid_gtfs:bikes_allowed" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence415" source="nid_gtfs:bikes_allowed" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7035,7 +7138,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType411" source="nid_gtfs:headway_secs" target="nid_gtfs:Integer">
+    <edge id="eid_gtfs:isType416" source="nid_gtfs:headway_secs" target="nid_gtfs:Integer">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7046,7 +7149,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence412" source="nid_gtfs:headway_secs" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence417" source="nid_gtfs:headway_secs" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7057,7 +7160,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType413" source="nid_gtfs:feed_publisher_name" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType418" source="nid_gtfs:feed_publisher_name" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7068,7 +7171,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence414" source="nid_gtfs:feed_publisher_name" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence419" source="nid_gtfs:feed_publisher_name" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7091,7 +7194,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType415" source="nid_gtfs:attribution_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType420" source="nid_gtfs:attribution_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7102,7 +7205,75 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence416" source="nid_gtfs:attribution_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence421" source="nid_gtfs:attribution_id" target="nid_gtfs:Optional">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">gtfs:isPresence</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_gtfs:DurationLimitTypeEnum">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">gtfs:DurationLimitTypeEnum</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_gtfs:isType422" source="nid_gtfs:duration_limit_type" target="nid_gtfs:DurationLimitTypeEnum">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">gtfs:isType</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_gtfs:isPresence423" source="nid_gtfs:duration_limit_type" target="nid_gtfs:ConditionallyRequired">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">gtfs:isPresence</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_gtfs:PathwayModeEnum">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="200.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">gtfs:PathwayModeEnum</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_gtfs:isType424" source="nid_gtfs:pathway_mode" target="nid_gtfs:PathwayModeEnum">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">gtfs:isType</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_gtfs:isPresence425" source="nid_gtfs:pathway_mode" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7137,7 +7308,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType417" source="nid_gtfs:friday" target="nid_gtfs:FridayEnum">
+    <edge id="eid_gtfs:isType426" source="nid_gtfs:friday" target="nid_gtfs:FridayEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7148,75 +7319,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence418" source="nid_gtfs:friday" target="nid_gtfs:Required">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">gtfs:isPresence</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_gtfs:PathwayModeEnum">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="200.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">gtfs:PathwayModeEnum</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_gtfs:isType419" source="nid_gtfs:pathway_mode" target="nid_gtfs:PathwayModeEnum">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">gtfs:isType</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_gtfs:isPresence420" source="nid_gtfs:pathway_mode" target="nid_gtfs:Required">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">gtfs:isPresence</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_gtfs:DurationLimitTypeEnum">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">gtfs:DurationLimitTypeEnum</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_gtfs:isType421" source="nid_gtfs:duration_limit_type" target="nid_gtfs:DurationLimitTypeEnum">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">gtfs:isType</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_gtfs:isPresence422" source="nid_gtfs:duration_limit_type" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence427" source="nid_gtfs:friday" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7239,7 +7342,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField423" source="nid_gtfs:attributions.txt" target="nid_gtfs:organization_name">
+    <edge id="eid_gtfs:hasField428" source="nid_gtfs:attributions.txt" target="nid_gtfs:organization_name">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7250,7 +7353,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField424" source="nid_gtfs:attributions.txt" target="nid_gtfs:is_authority">
+    <edge id="eid_gtfs:hasField429" source="nid_gtfs:attributions.txt" target="nid_gtfs:is_authority">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7261,7 +7364,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField425" source="nid_gtfs:attributions.txt" target="nid_gtfs:is_operator">
+    <edge id="eid_gtfs:hasField430" source="nid_gtfs:attributions.txt" target="nid_gtfs:is_operator">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7272,7 +7375,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField426" source="nid_gtfs:attributions.txt" target="nid_gtfs:trip_id">
+    <edge id="eid_gtfs:hasField431" source="nid_gtfs:attributions.txt" target="nid_gtfs:trip_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7283,7 +7386,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField427" source="nid_gtfs:attributions.txt" target="nid_gtfs:attribution_phone">
+    <edge id="eid_gtfs:hasField432" source="nid_gtfs:attributions.txt" target="nid_gtfs:attribution_phone">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7294,7 +7397,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence428" source="nid_gtfs:attributions.txt" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence433" source="nid_gtfs:attributions.txt" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7305,7 +7408,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField429" source="nid_gtfs:attributions.txt" target="nid_gtfs:attribution_id">
+    <edge id="eid_gtfs:hasField434" source="nid_gtfs:attributions.txt" target="nid_gtfs:attribution_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7316,7 +7419,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField430" source="nid_gtfs:attributions.txt" target="nid_gtfs:route_id">
+    <edge id="eid_gtfs:hasField435" source="nid_gtfs:attributions.txt" target="nid_gtfs:route_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7327,7 +7430,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField431" source="nid_gtfs:attributions.txt" target="nid_gtfs:agency_id">
+    <edge id="eid_gtfs:hasField436" source="nid_gtfs:attributions.txt" target="nid_gtfs:agency_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7338,7 +7441,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField432" source="nid_gtfs:attributions.txt" target="nid_gtfs:attribution_email">
+    <edge id="eid_gtfs:hasField437" source="nid_gtfs:attributions.txt" target="nid_gtfs:attribution_email">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7349,7 +7452,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField433" source="nid_gtfs:attributions.txt" target="nid_gtfs:attribution_url">
+    <edge id="eid_gtfs:hasField438" source="nid_gtfs:attributions.txt" target="nid_gtfs:attribution_url">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7360,7 +7463,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField434" source="nid_gtfs:attributions.txt" target="nid_gtfs:is_producer">
+    <edge id="eid_gtfs:hasField439" source="nid_gtfs:attributions.txt" target="nid_gtfs:is_producer">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7371,7 +7474,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType435" source="nid_gtfs:field_value" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType440" source="nid_gtfs:field_value" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7382,7 +7485,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence436" source="nid_gtfs:field_value" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence441" source="nid_gtfs:field_value" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7405,7 +7508,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType437" source="nid_gtfs:route_type" target="nid_gtfs:RouteTypeEnum">
+    <edge id="eid_gtfs:isType442" source="nid_gtfs:route_type" target="nid_gtfs:RouteTypeEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7416,7 +7519,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence438" source="nid_gtfs:route_type" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence443" source="nid_gtfs:route_type" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7427,7 +7530,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType439" source="nid_gtfs:max_slope" target="nid_gtfs:Float">
+    <edge id="eid_gtfs:isType444" source="nid_gtfs:max_slope" target="nid_gtfs:Float">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7438,7 +7541,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence440" source="nid_gtfs:max_slope" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence445" source="nid_gtfs:max_slope" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7449,7 +7552,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType441" source="nid_gtfs:departure_time" target="nid_gtfs:Time">
+    <edge id="eid_gtfs:isType446" source="nid_gtfs:departure_time" target="nid_gtfs:Time">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7460,7 +7563,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence442" source="nid_gtfs:departure_time" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence447" source="nid_gtfs:departure_time" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7471,7 +7574,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType443" source="nid_gtfs:platform_code" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType448" source="nid_gtfs:platform_code" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7482,7 +7585,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence444" source="nid_gtfs:platform_code" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence449" source="nid_gtfs:platform_code" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7517,7 +7620,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType445" source="nid_gtfs:fare_media_type" target="nid_gtfs:FareMediaTypeEnum">
+    <edge id="eid_gtfs:isType450" source="nid_gtfs:fare_media_type" target="nid_gtfs:FareMediaTypeEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7528,7 +7631,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence446" source="nid_gtfs:fare_media_type" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence451" source="nid_gtfs:fare_media_type" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7551,7 +7654,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField447" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:to_area_id">
+    <edge id="eid_gtfs:hasField452" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:to_area_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7562,7 +7665,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField448" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:network_id">
+    <edge id="eid_gtfs:hasField453" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:network_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7585,7 +7688,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField449" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:leg_group_id">
+    <edge id="eid_gtfs:hasField454" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:leg_group_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7596,7 +7699,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField450" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:to_timeframe_group_id">
+    <edge id="eid_gtfs:hasField455" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:to_timeframe_group_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7607,7 +7710,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField451" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:from_timeframe_group_id">
+    <edge id="eid_gtfs:hasField456" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:from_timeframe_group_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7618,7 +7721,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField452" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:from_area_id">
+    <edge id="eid_gtfs:hasField457" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:from_area_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7629,7 +7732,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField453" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:fare_product_id">
+    <edge id="eid_gtfs:hasField458" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:fare_product_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7640,7 +7743,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence454" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence459" source="nid_gtfs:fare_leg_rules.txt" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7663,7 +7766,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType455" source="nid_gtfs:is_bidirectional" target="nid_gtfs:IsBidirectionalEnum">
+    <edge id="eid_gtfs:isType460" source="nid_gtfs:is_bidirectional" target="nid_gtfs:IsBidirectionalEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7674,7 +7777,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence456" source="nid_gtfs:is_bidirectional" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence461" source="nid_gtfs:is_bidirectional" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7697,7 +7800,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isPresence457" source="nid_gtfs:fare_media.txt" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence462" source="nid_gtfs:fare_media.txt" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7708,7 +7811,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField458" source="nid_gtfs:fare_media.txt" target="nid_gtfs:fare_media_type">
+    <edge id="eid_gtfs:hasField463" source="nid_gtfs:fare_media.txt" target="nid_gtfs:fare_media_type">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7719,7 +7822,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField459" source="nid_gtfs:fare_media.txt" target="nid_gtfs:fare_media_name">
+    <edge id="eid_gtfs:hasField464" source="nid_gtfs:fare_media.txt" target="nid_gtfs:fare_media_name">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7730,7 +7833,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField460" source="nid_gtfs:fare_media.txt" target="nid_gtfs:fare_media_id">
+    <edge id="eid_gtfs:hasField465" source="nid_gtfs:fare_media.txt" target="nid_gtfs:fare_media_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7741,7 +7844,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType461" source="nid_gtfs:duration_limit" target="nid_gtfs:Integer">
+    <edge id="eid_gtfs:isType466" source="nid_gtfs:duration_limit" target="nid_gtfs:Integer">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7752,7 +7855,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence462" source="nid_gtfs:duration_limit" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence467" source="nid_gtfs:duration_limit" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7763,7 +7866,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType463" source="nid_gtfs:leg_group_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType468" source="nid_gtfs:leg_group_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7774,7 +7877,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence464" source="nid_gtfs:leg_group_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence469" source="nid_gtfs:leg_group_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7785,7 +7888,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType465" source="nid_gtfs:agency_phone" target="nid_gtfs:PhoneNumber">
+    <edge id="eid_gtfs:isType470" source="nid_gtfs:agency_phone" target="nid_gtfs:PhoneNumber">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7796,7 +7899,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence466" source="nid_gtfs:agency_phone" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence471" source="nid_gtfs:agency_phone" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7807,7 +7910,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType467" source="nid_gtfs:default_lang" target="nid_gtfs:LanguageCode">
+    <edge id="eid_gtfs:isType472" source="nid_gtfs:default_lang" target="nid_gtfs:LanguageCode">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7818,7 +7921,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence468" source="nid_gtfs:default_lang" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence473" source="nid_gtfs:default_lang" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7841,7 +7944,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasField469" source="nid_gtfs:calendar.txt" target="nid_gtfs:service_id">
+    <edge id="eid_gtfs:hasField474" source="nid_gtfs:calendar.txt" target="nid_gtfs:service_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7852,7 +7955,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField470" source="nid_gtfs:calendar.txt" target="nid_gtfs:end_date">
+    <edge id="eid_gtfs:hasField475" source="nid_gtfs:calendar.txt" target="nid_gtfs:end_date">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7863,7 +7966,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField471" source="nid_gtfs:calendar.txt" target="nid_gtfs:saturday">
+    <edge id="eid_gtfs:hasField476" source="nid_gtfs:calendar.txt" target="nid_gtfs:saturday">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7874,7 +7977,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField472" source="nid_gtfs:calendar.txt" target="nid_gtfs:friday">
+    <edge id="eid_gtfs:hasField477" source="nid_gtfs:calendar.txt" target="nid_gtfs:friday">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7885,7 +7988,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField473" source="nid_gtfs:calendar.txt" target="nid_gtfs:tuesday">
+    <edge id="eid_gtfs:hasField478" source="nid_gtfs:calendar.txt" target="nid_gtfs:tuesday">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7896,7 +7999,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence474" source="nid_gtfs:calendar.txt" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence479" source="nid_gtfs:calendar.txt" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7907,7 +8010,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField475" source="nid_gtfs:calendar.txt" target="nid_gtfs:thursday">
+    <edge id="eid_gtfs:hasField480" source="nid_gtfs:calendar.txt" target="nid_gtfs:thursday">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7918,7 +8021,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField476" source="nid_gtfs:calendar.txt" target="nid_gtfs:start_date">
+    <edge id="eid_gtfs:hasField481" source="nid_gtfs:calendar.txt" target="nid_gtfs:start_date">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7929,7 +8032,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField477" source="nid_gtfs:calendar.txt" target="nid_gtfs:sunday">
+    <edge id="eid_gtfs:hasField482" source="nid_gtfs:calendar.txt" target="nid_gtfs:sunday">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7940,7 +8043,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField478" source="nid_gtfs:calendar.txt" target="nid_gtfs:wednesday">
+    <edge id="eid_gtfs:hasField483" source="nid_gtfs:calendar.txt" target="nid_gtfs:wednesday">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7951,7 +8054,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField479" source="nid_gtfs:calendar.txt" target="nid_gtfs:monday">
+    <edge id="eid_gtfs:hasField484" source="nid_gtfs:calendar.txt" target="nid_gtfs:monday">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7974,7 +8077,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType480" source="nid_gtfs:timepoint" target="nid_gtfs:TimepointEnum">
+    <edge id="eid_gtfs:isType485" source="nid_gtfs:timepoint" target="nid_gtfs:TimepointEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7985,7 +8088,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence481" source="nid_gtfs:timepoint" target="nid_gtfs:Recommended">
+    <edge id="eid_gtfs:isPresence486" source="nid_gtfs:timepoint" target="nid_gtfs:Recommended">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -7996,7 +8099,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType482" source="nid_gtfs:route_sort_order" target="nid_gtfs:Integer">
+    <edge id="eid_gtfs:isType487" source="nid_gtfs:route_sort_order" target="nid_gtfs:Integer">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8007,7 +8110,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence483" source="nid_gtfs:route_sort_order" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence488" source="nid_gtfs:route_sort_order" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8018,7 +8121,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType484" source="nid_gtfs:stop_lat" target="nid_gtfs:Latitude">
+    <edge id="eid_gtfs:isType489" source="nid_gtfs:stop_lat" target="nid_gtfs:Latitude">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8029,7 +8132,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence485" source="nid_gtfs:stop_lat" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence490" source="nid_gtfs:stop_lat" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8040,7 +8143,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType486" source="nid_gtfs:stop_lon" target="nid_gtfs:Longitude">
+    <edge id="eid_gtfs:isType491" source="nid_gtfs:stop_lon" target="nid_gtfs:Longitude">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8051,7 +8154,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence487" source="nid_gtfs:stop_lon" target="nid_gtfs:ConditionallyRequired">
+    <edge id="eid_gtfs:isPresence492" source="nid_gtfs:stop_lon" target="nid_gtfs:ConditionallyRequired">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8074,7 +8177,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType488" source="nid_gtfs:direction_id" target="nid_gtfs:DirectionIdEnum">
+    <edge id="eid_gtfs:isType493" source="nid_gtfs:direction_id" target="nid_gtfs:DirectionIdEnum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8085,7 +8188,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence489" source="nid_gtfs:direction_id" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence494" source="nid_gtfs:direction_id" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8096,30 +8199,7 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_gtfs:hasEnumValue">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="170.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">gtfs:hasEnumValue</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdfs:subPropertyOf490" source="nid_gtfs:hasEnumValue" target="nid_owl:topObjectProperty">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subPropertyOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_gtfs:isType491" source="nid_gtfs:trip_headsign" target="nid_gtfs:Text">
+    <edge id="eid_gtfs:isType495" source="nid_gtfs:trip_headsign" target="nid_gtfs:Text">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8130,7 +8210,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence492" source="nid_gtfs:trip_headsign" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence496" source="nid_gtfs:trip_headsign" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8141,7 +8221,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isType493" source="nid_gtfs:timeframe_group_id" target="nid_gtfs:ID">
+    <edge id="eid_gtfs:isType497" source="nid_gtfs:timeframe_group_id" target="nid_gtfs:ID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8152,7 +8232,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:isPresence494" source="nid_gtfs:timeframe_group_id" target="nid_gtfs:Required">
+    <edge id="eid_gtfs:isPresence498" source="nid_gtfs:timeframe_group_id" target="nid_gtfs:Required">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8175,7 +8255,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isPresence495" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:Optional">
+    <edge id="eid_gtfs:isPresence499" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:Optional">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8186,7 +8266,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField496" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:route_id">
+    <edge id="eid_gtfs:hasField500" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:route_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8197,7 +8277,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField497" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:origin_id">
+    <edge id="eid_gtfs:hasField501" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:origin_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8208,7 +8288,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField498" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:fare_id">
+    <edge id="eid_gtfs:hasField502" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:fare_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8219,7 +8299,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField499" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:destination_id">
+    <edge id="eid_gtfs:hasField503" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:destination_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8230,7 +8310,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasField500" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:contains_id">
+    <edge id="eid_gtfs:hasField504" source="nid_gtfs:fare_rules.txt" target="nid_gtfs:contains_id">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8241,18 +8321,6 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_gtfs:Field">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="100.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFA500" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">gtfs:Field</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
       <node id="nid_gtfs:FieldType">
          <data key="d0">
             <y:ShapeNode>
@@ -8265,7 +8333,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isType501" source="nid_gtfs:Field" target="nid_gtfs:FieldType">
+    <edge id="eid_gtfs:isType505" source="nid_gtfs:Field" target="nid_gtfs:FieldType">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8276,19 +8344,7 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_gtfs:File">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="90.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFA500" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">gtfs:File</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_gtfs:hasField502" source="nid_gtfs:File" target="nid_gtfs:Field">
+    <edge id="eid_gtfs:hasField506" source="nid_gtfs:File" target="nid_gtfs:Field">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8299,19 +8355,19 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_rdfs:Resource">
+      <node id="nid_xsd:string">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="130.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="100.0" x="0.0" y="0.0" />
                <y:Fill color="#FFA500" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">rdfs:Resource</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">xsd:string</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:hasEnumValue503" source="nid_gtfs:Field" target="nid_rdfs:Resource">
+    <edge id="eid_gtfs:hasEnumValue507" source="nid_gtfs:Enum" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8334,12 +8390,23 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:topDataProperty504" source="nid_gtfs:Field" target="nid_owl:Thing">
+    <edge id="eid_owl:topDataProperty508" source="nid_gtfs:Field" target="nid_owl:Thing">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:topDataProperty</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_gtfs:additionalInfo509" source="nid_gtfs:Field" target="nid_xsd:string">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">gtfs:additionalInfo</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -8357,7 +8424,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_gtfs:isPresence505" source="nid_gtfs:Field" target="nid_gtfs:PresenceCondition">
+    <edge id="eid_gtfs:isPresence510" source="nid_gtfs:Field" target="nid_gtfs:PresenceCondition">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -8368,7 +8435,18 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_gtfs:hasCondition506" source="nid_gtfs:Field" target="nid_owl:Thing">
+    <edge id="eid_gtfs:example511" source="nid_gtfs:Field" target="nid_xsd:string">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">gtfs:example</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_gtfs:hasCondition512" source="nid_gtfs:Field" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
