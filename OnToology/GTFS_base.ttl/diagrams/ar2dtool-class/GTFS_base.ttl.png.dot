@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "gtfs:Required" "gtfs:WheelchairAccessibleEnum" "gtfs:DirectionIdEnum" "gtfs:PhoneNumber" "gtfs:ThursdayEnum" "gtfs:FareMediaTypeEnum" "gtfs:WheelchairBoardingEnum" "gtfs:SaturdayEnum" "gtfs:Text" "gtfs:PickupTypeEnum" "gtfs:DurationLimitTypeEnum" "gtfs:TransfersEnum" "gtfs:TimeZone" "gtfs:BikesAllowedEnum" "gtfs:CurrencyAmount" "gtfs:Field" "gtfs:ExactTimesEnum" "gtfs:ID" "gtfs:MondayEnum" "gtfs:RouteTypeEnum" "gtfs:URL" "gtfs:PaymentMethodEnum" "gtfs:PathwayModeEnum" "gtfs:Float" "gtfs:ContinuousDropOffEnum" "gtfs:DropOffTypeEnum" "gtfs:TimepointEnum" "gtfs:ExceptionTypeEnum" "gtfs:WednesdayEnum" "gtfs:LanguageCode" "gtfs:TransferTypeEnum" "gtfs:Longitude" "gtfs:TuesdayEnum" "gtfs:FridayEnum" "gtfs:FieldType" "rdfs:Resource" "gtfs:Optional" "gtfs:Time" "gtfs:IsProducerEnum" "gtfs:SundayEnum" "gtfs:IsBidirectionalEnum" "gtfs:FareTransferTypeEnum" "gtfs:File" "gtfs:Integer" "gtfs:Email" "gtfs:ConditionallyRequired" "gtfs:TableNameEnum" "gtfs:IsOperatorEnum" "gtfs:ContinuousPickupEnum" "gtfs:Recommended" "gtfs:LocationTypeEnum" "gtfs:ConditionallyForbidden" "gtfs:Date" "gtfs:PresenceCondition" "gtfs:Latitude" "gtfs:IsAuthorityEnum" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "gtfs:Required" "gtfs:WheelchairAccessibleEnum" "gtfs:DirectionIdEnum" "gtfs:PhoneNumber" "gtfs:ThursdayEnum" "gtfs:FareMediaTypeEnum" "gtfs:WheelchairBoardingEnum" "gtfs:SaturdayEnum" "gtfs:Text" "gtfs:PickupTypeEnum" "gtfs:DurationLimitTypeEnum" "gtfs:TransfersEnum" "gtfs:TimeZone" "gtfs:BikesAllowedEnum" "gtfs:CurrencyAmount" "gtfs:Field" "gtfs:ExactTimesEnum" "gtfs:ID" "gtfs:MondayEnum" "gtfs:RouteTypeEnum" "gtfs:URL" "gtfs:PaymentMethodEnum" "gtfs:PathwayModeEnum" "gtfs:Float" "gtfs:ContinuousDropOffEnum" "gtfs:DropOffTypeEnum" "http://schema.org/Enumeration" "gtfs:TimepointEnum" "gtfs:ExceptionTypeEnum" "gtfs:WednesdayEnum" "gtfs:LanguageCode" "gtfs:TransferTypeEnum" "gtfs:Longitude" "gtfs:TuesdayEnum" "gtfs:FridayEnum" "gtfs:FieldType" "gtfs:Optional" "gtfs:Time" "gtfs:IsProducerEnum" "gtfs:SundayEnum" "gtfs:IsBidirectionalEnum" "gtfs:FareTransferTypeEnum" "gtfs:File" "gtfs:Integer" "gtfs:Email" "gtfs:ConditionallyRequired" "gtfs:TableNameEnum" "gtfs:IsOperatorEnum" "gtfs:ContinuousPickupEnum" "gtfs:Recommended" "gtfs:LocationTypeEnum" "gtfs:ConditionallyForbidden" "gtfs:Date" "gtfs:PresenceCondition" "gtfs:Enum" "gtfs:Latitude" "gtfs:IsAuthorityEnum" ; /*classes style*/
 	"gtfs:fare_id" -> "gtfs:ID" [ label = "gtfs:isType" ];
 	"gtfs:fare_id" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
 	"gtfs:transfer_type" -> "gtfs:TransferTypeEnum" [ label = "gtfs:isType" ];
@@ -233,6 +233,7 @@ node [shape = rectangle, color="orange"]; "gtfs:Required" "gtfs:WheelchairAccess
 	"gtfs:length" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
 	"gtfs:exception_type" -> "gtfs:ExceptionTypeEnum" [ label = "gtfs:isType" ];
 	"gtfs:exception_type" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
+	"gtfs:Enum" -> "http://schema.org/Enumeration" [ label = "owl:equivalentClass" ];
 	"gtfs:fare_product_name" -> "gtfs:Text" [ label = "gtfs:isType" ];
 	"gtfs:fare_product_name" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
 	"gtfs:stop_timezone" -> "gtfs:TimeZone" [ label = "gtfs:isType" ];
@@ -362,7 +363,6 @@ node [shape = rectangle, color="orange"]; "gtfs:Required" "gtfs:WheelchairAccess
 	"gtfs:areas.txt" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
 	"gtfs:areas.txt" -> "gtfs:area_name" [ label = "gtfs:hasField" ];
 	"gtfs:areas.txt" -> "gtfs:area_id" [ label = "gtfs:hasField" ];
-	"gtfs:hasCondition" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
 	"gtfs:agency_email" -> "gtfs:Email" [ label = "gtfs:isType" ];
 	"gtfs:agency_email" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
 	"gtfs:attribution_email" -> "gtfs:Email" [ label = "gtfs:isType" ];
@@ -398,6 +398,11 @@ node [shape = rectangle, color="orange"]; "gtfs:Required" "gtfs:WheelchairAccess
 	"gtfs:destination_id" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
 	"gtfs:amount" -> "gtfs:CurrencyAmount" [ label = "gtfs:isType" ];
 	"gtfs:amount" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
+	"NULL" -> "gtfs:hasField" [ label = "owl:onProperty" ];
+	"NULL" -> "gtfs:File" [ label = "owl:onClass" ];
+	"NULL" -> "gtfs:isPresence" [ label = "owl:onProperty" ];
+	"NULL" -> "gtfs:isType" [ label = "owl:onProperty" ];
+	"NULL" -> "gtfs:Field" [ label = "owl:onClass" ];
 	"gtfs:trips.txt" -> "gtfs:bikes_allowed" [ label = "gtfs:hasField" ];
 	"gtfs:trips.txt" -> "gtfs:direction_id" [ label = "gtfs:hasField" ];
 	"gtfs:trips.txt" -> "gtfs:route_id" [ label = "gtfs:hasField" ];
@@ -419,12 +424,12 @@ node [shape = rectangle, color="orange"]; "gtfs:Required" "gtfs:WheelchairAccess
 	"gtfs:feed_publisher_name" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
 	"gtfs:attribution_id" -> "gtfs:ID" [ label = "gtfs:isType" ];
 	"gtfs:attribution_id" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
-	"gtfs:friday" -> "gtfs:FridayEnum" [ label = "gtfs:isType" ];
-	"gtfs:friday" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
-	"gtfs:pathway_mode" -> "gtfs:PathwayModeEnum" [ label = "gtfs:isType" ];
-	"gtfs:pathway_mode" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
 	"gtfs:duration_limit_type" -> "gtfs:DurationLimitTypeEnum" [ label = "gtfs:isType" ];
 	"gtfs:duration_limit_type" -> "gtfs:ConditionallyRequired" [ label = "gtfs:isPresence" ];
+	"gtfs:pathway_mode" -> "gtfs:PathwayModeEnum" [ label = "gtfs:isType" ];
+	"gtfs:pathway_mode" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
+	"gtfs:friday" -> "gtfs:FridayEnum" [ label = "gtfs:isType" ];
+	"gtfs:friday" -> "gtfs:Required" [ label = "gtfs:isPresence" ];
 	"gtfs:attributions.txt" -> "gtfs:organization_name" [ label = "gtfs:hasField" ];
 	"gtfs:attributions.txt" -> "gtfs:is_authority" [ label = "gtfs:hasField" ];
 	"gtfs:attributions.txt" -> "gtfs:is_operator" [ label = "gtfs:hasField" ];
@@ -492,7 +497,6 @@ node [shape = rectangle, color="orange"]; "gtfs:Required" "gtfs:WheelchairAccess
 	"gtfs:stop_lon" -> "gtfs:ConditionallyRequired" [ label = "gtfs:isPresence" ];
 	"gtfs:direction_id" -> "gtfs:DirectionIdEnum" [ label = "gtfs:isType" ];
 	"gtfs:direction_id" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
-	"gtfs:hasEnumValue" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
 	"gtfs:trip_headsign" -> "gtfs:Text" [ label = "gtfs:isType" ];
 	"gtfs:trip_headsign" -> "gtfs:Optional" [ label = "gtfs:isPresence" ];
 	"gtfs:timeframe_group_id" -> "gtfs:ID" [ label = "gtfs:isType" ];
@@ -505,9 +509,11 @@ node [shape = rectangle, color="orange"]; "gtfs:Required" "gtfs:WheelchairAccess
 	"gtfs:fare_rules.txt" -> "gtfs:contains_id" [ label = "gtfs:hasField" ];
 	"gtfs:Field" -> "gtfs:FieldType" [ label = "gtfs:isType" ];
 	"gtfs:File" -> "gtfs:Field" [ label = "gtfs:hasField" ];
-	"gtfs:Field" -> "rdfs:Resource" [ label = "gtfs:hasEnumValue" ];
+	"gtfs:Enum" -> "xsd:string" [ label = "gtfs:hasEnumValue" ];
 	"gtfs:Field" -> "owl:Thing" [ label = "owl:topDataProperty" ];
+	"gtfs:Field" -> "xsd:string" [ label = "gtfs:additionalInfo" ];
 	"gtfs:Field" -> "gtfs:PresenceCondition" [ label = "gtfs:isPresence" ];
-	"gtfs:Field" -> "owl:Thing" [ label = "gtfs:hasCondition" ];
+	"gtfs:Field" -> "xsd:string" [ label = "gtfs:example" ];
+	"gtfs:Field" -> "xsd:string" [ label = "gtfs:hasCondition" ];
 
 }
