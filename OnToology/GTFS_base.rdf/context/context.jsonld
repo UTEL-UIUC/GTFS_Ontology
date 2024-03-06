@@ -1,0 +1,251 @@
+{
+  "@context" : {
+    "RouteTypeEnum" : {
+      "@id" : "http://gtfs.org/RouteTypeEnum"
+    },
+    "abstract" : {
+      "@id" : "http://purl.org/dc/elements/1.1/abstract"
+    },
+    "URL" : {
+      "@id" : "http://gtfs.org/URL"
+    },
+    "ServiceDay" : {
+      "@id" : "http://gtfs.org/ServiceDay"
+    },
+    "ThursdayEnum" : {
+      "@id" : "http://gtfs.org/ThursdayEnum"
+    },
+    "isType" : {
+      "@id" : "http://gtfs.org/isType",
+      "@type" : "@id"
+    },
+    "example" : {
+      "@id" : "http://gtfs.org/example"
+    },
+    "SaturdayEnum" : {
+      "@id" : "http://gtfs.org/SaturdayEnum"
+    },
+    "Longitude" : {
+      "@id" : "http://gtfs.org/Longitude"
+    },
+    "Email" : {
+      "@id" : "http://gtfs.org/Email"
+    },
+    "PathwayModeEnum" : {
+      "@id" : "http://gtfs.org/PathwayModeEnum"
+    },
+    "Recommended" : {
+      "@id" : "http://gtfs.org/Recommended"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "hasCondition" : {
+      "@id" : "http://gtfs.org/hasCondition"
+    },
+    "ContinuousDropOffEnum" : {
+      "@id" : "http://gtfs.org/ContinuousDropOffEnum"
+    },
+    "TransferTypeEnum" : {
+      "@id" : "http://gtfs.org/TransferTypeEnum"
+    },
+    "IsAuthorityEnum" : {
+      "@id" : "http://gtfs.org/IsAuthorityEnum"
+    },
+    "FareMediaTypeEnum" : {
+      "@id" : "http://gtfs.org/FareMediaTypeEnum"
+    },
+    "ConditionallyRequired" : {
+      "@id" : "http://gtfs.org/ConditionallyRequired"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "File" : {
+      "@id" : "http://gtfs.org/File"
+    },
+    "TimeZone" : {
+      "@id" : "http://gtfs.org/TimeZone"
+    },
+    "DirectionIdEnum" : {
+      "@id" : "http://gtfs.org/DirectionIdEnum"
+    },
+    "SubJourney" : {
+      "@id" : "http://gtfs.org/SubJourney"
+    },
+    "ContinuousPickupEnum" : {
+      "@id" : "http://gtfs.org/ContinuousPickupEnum"
+    },
+    "FareTransferTypeEnum" : {
+      "@id" : "http://gtfs.org/FareTransferTypeEnum"
+    },
+    "PaymentMethodEnum" : {
+      "@id" : "http://gtfs.org/PaymentMethodEnum"
+    },
+    "Date" : {
+      "@id" : "http://gtfs.org/Date"
+    },
+    "PickupTypeEnum" : {
+      "@id" : "http://gtfs.org/PickupTypeEnum"
+    },
+    "Leg" : {
+      "@id" : "http://gtfs.org/Leg"
+    },
+    "PresenceCondition" : {
+      "@id" : "http://gtfs.org/PresenceCondition"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "ExceptionTypeEnum" : {
+      "@id" : "http://gtfs.org/ExceptionTypeEnum"
+    },
+    "DropOffTypeEnum" : {
+      "@id" : "http://gtfs.org/DropOffTypeEnum"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
+    },
+    "FareProduct" : {
+      "@id" : "http://gtfs.org/FareProduct"
+    },
+    "hasField" : {
+      "@id" : "http://gtfs.org/hasField",
+      "@type" : "@id"
+    },
+    "ID" : {
+      "@id" : "http://gtfs.org/ID"
+    },
+    "CurrencyAmount" : {
+      "@id" : "http://gtfs.org/CurrencyAmount"
+    },
+    "ExactTimesEnum" : {
+      "@id" : "http://gtfs.org/ExactTimesEnum"
+    },
+    "MondayEnum" : {
+      "@id" : "http://gtfs.org/MondayEnum"
+    },
+    "DurationLimitTypeEnum" : {
+      "@id" : "http://gtfs.org/DurationLimitTypeEnum"
+    },
+    "LanguageCode" : {
+      "@id" : "http://gtfs.org/LanguageCode"
+    },
+    "hasEnumValue" : {
+      "@id" : "http://gtfs.org/hasEnumValue"
+    },
+    "Journey" : {
+      "@id" : "http://gtfs.org/Journey"
+    },
+    "WheelchairAccessibleEnum" : {
+      "@id" : "http://gtfs.org/WheelchairAccessibleEnum"
+    },
+    "Required" : {
+      "@id" : "http://gtfs.org/Required"
+    },
+    "Integer" : {
+      "@id" : "http://gtfs.org/Integer"
+    },
+    "WheelchairBoardingEnum" : {
+      "@id" : "http://gtfs.org/WheelchairBoardingEnum"
+    },
+    "LocationTypeEnum" : {
+      "@id" : "http://gtfs.org/LocationTypeEnum"
+    },
+    "Latitude" : {
+      "@id" : "http://gtfs.org/Latitude"
+    },
+    "SundayEnum" : {
+      "@id" : "http://gtfs.org/SundayEnum"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "IsOperatorEnum" : {
+      "@id" : "http://gtfs.org/IsOperatorEnum"
+    },
+    "TransfersEnum" : {
+      "@id" : "http://gtfs.org/TransfersEnum"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/elements/1.1/source"
+    },
+    "Enum" : {
+      "@id" : "http://gtfs.org/Enum"
+    },
+    "Text" : {
+      "@id" : "http://gtfs.org/Text"
+    },
+    "FieldType" : {
+      "@id" : "http://gtfs.org/FieldType"
+    },
+    "ConditionallyForbidden" : {
+      "@id" : "http://gtfs.org/ConditionallyForbidden"
+    },
+    "Optional" : {
+      "@id" : "http://gtfs.org/Optional"
+    },
+    "additionalInfo" : {
+      "@id" : "http://gtfs.org/additionalInfo"
+    },
+    "TimepointEnum" : {
+      "@id" : "http://gtfs.org/TimepointEnum"
+    },
+    "Field" : {
+      "@id" : "http://gtfs.org/Field"
+    },
+    "Enumeration" : {
+      "@id" : "http://schema.org/Enumeration"
+    },
+    "isPresence" : {
+      "@id" : "http://gtfs.org/isPresence",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/elements/1.1/language"
+    },
+    "IsBidirectionalEnum" : {
+      "@id" : "http://gtfs.org/IsBidirectionalEnum"
+    },
+    "FridayEnum" : {
+      "@id" : "http://gtfs.org/FridayEnum"
+    },
+    "BikesAllowedEnum" : {
+      "@id" : "http://gtfs.org/BikesAllowedEnum"
+    },
+    "Float" : {
+      "@id" : "http://gtfs.org/Float"
+    },
+    "Intangible" : {
+      "@id" : "http://schema.org/Intangible"
+    },
+    "IsProducerEnum" : {
+      "@id" : "http://gtfs.org/IsProducerEnum"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "Time" : {
+      "@id" : "http://gtfs.org/Time"
+    },
+    "TableNameEnum" : {
+      "@id" : "http://gtfs.org/TableNameEnum"
+    },
+    "TuesdayEnum" : {
+      "@id" : "http://gtfs.org/TuesdayEnum"
+    },
+    "PhoneNumber" : {
+      "@id" : "http://gtfs.org/PhoneNumber"
+    },
+    "WednesdayEnum" : {
+      "@id" : "http://gtfs.org/WednesdayEnum"
+    }
+  }
+}
