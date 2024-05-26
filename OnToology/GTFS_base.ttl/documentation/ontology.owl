@@ -160,6 +160,19 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
     
 
 
+    <!-- http://gtfs.org/isFieldOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://gtfs.org/isFieldOf">
+        <owl:inverseOf rdf:resource="http://gtfs.org/hasField"/>
+        <rdfs:domain rdf:resource="http://gtfs.org/Field"/>
+        <rdfs:range rdf:resource="http://gtfs.org/File"/>
+        <rdfs:comment>This property links a field back to its file</rdfs:comment>
+        <rdfs:label xml:lang="en">isFieldOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://gtfs.org/isPresence -->
 
 
@@ -1246,6 +1259,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/agency_email">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/agency.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Email"/>
         <gtfs:additionalInfo>Email address actively monitored by the agency’s customer service department. This email address should be a direct contact point where transit riders can reach a customer service representative at the agency.</gtfs:additionalInfo>
@@ -1260,6 +1274,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/agency_fare_url">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/agency.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/URL"/>
         <gtfs:additionalInfo>Field Type: URL</gtfs:additionalInfo>
@@ -1274,6 +1289,10 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/agency_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/agency.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/attributions.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_attributes.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
@@ -1295,6 +1314,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/agency_lang">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/agency.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/LanguageCode"/>
         <gtfs:additionalInfo>Language code</gtfs:additionalInfo>
@@ -1309,6 +1329,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/agency_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/agency.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Type: Text</gtfs:additionalInfo>
@@ -1323,6 +1344,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/agency_phone">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/agency.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/PhoneNumber"/>
         <gtfs:additionalInfo>Phone number should be in a standard format without any descriptive text.</gtfs:additionalInfo>
@@ -1337,6 +1359,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/agency_timezone">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/agency.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/TimeZone"/>
         <gtfs:additionalInfo>Timezone where the transit agency is located. If multiple agencies are specified in the dataset, each must have the same `agency_timezone`.</gtfs:additionalInfo>
@@ -1351,6 +1374,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/agency_url">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/agency.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/URL"/>
         <gtfs:additionalInfo>URL</gtfs:additionalInfo>
@@ -1365,6 +1389,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/amount">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_products.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/CurrencyAmount"/>
         <gtfs:additionalInfo>Currency amount</gtfs:additionalInfo>
@@ -1379,6 +1404,8 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/area_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/areas.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_areas.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing `areas.area_id`</gtfs:additionalInfo>
@@ -1395,6 +1422,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/area_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/areas.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Field Type: Text</gtfs:additionalInfo>
@@ -1423,6 +1451,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/arrival_time">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Time"/>
         <gtfs:additionalInfo>The arrival time should be provided in the time zone specified by the agency. If exact arrival and departure times are not available, estimated or interpolated times should be provided.</gtfs:additionalInfo>
@@ -1438,6 +1467,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/attribution_email">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/attributions.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Email"/>
         <gtfs:additionalInfo>Email of the organization.</gtfs:additionalInfo>
@@ -1452,6 +1482,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/attribution_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/attributions.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Unique ID</gtfs:additionalInfo>
@@ -1466,6 +1497,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/attribution_phone">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/attributions.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/PhoneNumber"/>
         <gtfs:additionalInfo>Phone number of the organization.</gtfs:additionalInfo>
@@ -1480,6 +1512,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/attribution_url">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/attributions.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/URL"/>
         <gtfs:additionalInfo>URL</gtfs:additionalInfo>
@@ -1517,6 +1550,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/bikes_allowed">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/trips.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/BikesAllowedEnum"/>
         <gtfs:additionalInfo>Enum field with options 0, 1, 2</gtfs:additionalInfo>
@@ -1567,6 +1601,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/block_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/trips.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>A block consists of a single trip or many sequential trips made using the same vehicle, defined by shared service days and `block_id`.</gtfs:additionalInfo>
@@ -1620,6 +1655,7 @@ The ontology leverages RDF (Resource Description Framework) to define these clas
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/contains_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Because all `contains_id` zones must be matched for the fare to apply, an itinerary that passes through zones 5 and 6 but not zone 7 would not have fare class &quot;c&quot;. For more detail, see [https://code.google.com/p/googletransitdatafeed/wiki/FareExamples](https://code.google.com/p/googletransitdatafeed/wiki/FareExamples) in the GoogleTransitDataFeed project wiki.</gtfs:additionalInfo>
@@ -1638,6 +1674,8 @@ c,GRT,...,7</gtfs:example>
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_drop_off">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ContinuousDropOffEnum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Continuous stopping drop off, 1 or empty - No continuous stopping drop off, 2 - Must phone agency to arrange continuous stopping drop off, 3 - Must coordinate with driver to arrange continuous stopping drop off. Values for routes.continuous_drop_off may be overridden by defining values in stop_times.continuous_drop_off for specific stop_times along the route.</gtfs:additionalInfo>
@@ -1701,6 +1739,8 @@ c,GRT,...,7</gtfs:example>
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/continuous_pickup">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ContinuousPickupEnum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup.</gtfs:additionalInfo>
@@ -1765,6 +1805,7 @@ c,GRT,...,7</gtfs:example>
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/currency">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_products.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/CurrencyCode"/>
         <gtfs:additionalInfo>Currency code</gtfs:additionalInfo>
@@ -1779,6 +1820,7 @@ c,GRT,...,7</gtfs:example>
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/currency_type">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_attributes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/CurrencyCode"/>
         <gtfs:additionalInfo>Currency code</gtfs:additionalInfo>
@@ -1793,6 +1835,7 @@ c,GRT,...,7</gtfs:example>
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/date">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar_dates.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Date"/>
         <gtfs:additionalInfo>Field Type: Date</gtfs:additionalInfo>
@@ -1807,6 +1850,7 @@ c,GRT,...,7</gtfs:example>
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/default_lang">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/feed_info.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/LanguageCode"/>
         <gtfs:additionalInfo>Language code</gtfs:additionalInfo>
@@ -1821,6 +1865,7 @@ c,GRT,...,7</gtfs:example>
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/departure_time">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Time"/>
         <gtfs:additionalInfo>Conditionally Required: Required for `timepoint=1`. Optional otherwise</gtfs:additionalInfo>
@@ -1842,6 +1887,7 @@ For times occurring after midnight on the service day, enter the time as a value
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/destination_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing stops.zone_id</gtfs:additionalInfo>
@@ -1857,6 +1903,7 @@ For times occurring after midnight on the service day, enter the time as a value
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/direction_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/trips.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/DirectionIdEnum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Travel in one direction (e.g. outbound travel). 1 - Travel in the opposite direction (e.g. inbound travel).</gtfs:additionalInfo>
@@ -1895,6 +1942,7 @@ For times occurring after midnight on the service day, enter the time as a value
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/drop_off_type">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/DropOffTypeEnum"/>
         <gtfs:additionalInfo>Enum field with options 0, 1, 2, 3</gtfs:additionalInfo>
@@ -1957,6 +2005,7 @@ For times occurring after midnight on the service day, enter the time as a value
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/duration_limit">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_transfer_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Integer"/>
         <gtfs:additionalInfo>Positive integer</gtfs:additionalInfo>
@@ -1975,6 +2024,7 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/duration_limit_type">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_transfer_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/DurationLimitTypeEnum"/>
         <gtfs:additionalInfo>Defines the relative start and end of `fare_transfer_rules.duration_limit`.</gtfs:additionalInfo>
@@ -2038,6 +2088,7 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/end_date">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Date"/>
         <gtfs:additionalInfo>The end_date field specifies the end service day for the service interval.</gtfs:additionalInfo>
@@ -2052,6 +2103,8 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/end_time">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/frequencies.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/timeframes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Time"/>
@@ -2070,6 +2123,7 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/exact_times">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/frequencies.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ExactTimesEnum"/>
         <gtfs:additionalInfo>Enum field with options 0 or 1</gtfs:additionalInfo>
@@ -2108,6 +2162,7 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/exception_type">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar_dates.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ExceptionTypeEnum"/>
         <gtfs:additionalInfo>Suppose a route has one set of trips available on holidays and another set of trips available on all other days. One service_id could correspond to the regular service schedule and another service_id could correspond to the holiday schedule. For a particular holiday, the calendar_dates.txt file could be used to add the holiday to the holiday service_id and to remove the holiday from the regular service_id schedule.</gtfs:additionalInfo>
@@ -2165,6 +2220,8 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_attributes.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing fare_attributes.fare_id</gtfs:additionalInfo>
@@ -2216,6 +2273,8 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_media.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_products.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
@@ -2233,6 +2292,7 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_media.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>None</gtfs:additionalInfo>
@@ -2249,6 +2309,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_media_type">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_media.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/FareMediaTypeEnum"/>
         <gtfs:additionalInfo>Enum field with options: 0 - None, 1 - Physical paper ticket, 2 - Physical transit card, 3 - cEMV, 4 - Mobile app</gtfs:additionalInfo>
@@ -2323,6 +2384,9 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_product_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_leg_rules.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_products.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_transfer_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
@@ -2341,6 +2405,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_product_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_products.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Type: Text</gtfs:additionalInfo>
@@ -2410,6 +2475,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/fare_transfer_type">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_transfer_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/FareTransferTypeEnum"/>
         <gtfs:additionalInfo>Valid options are: 0 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB. 1 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B. 2 - fare_transfer_rules.fare_product_id; AB. Cost processing interactions between multiple transfers in a journey: Where S indicates the total processed cost of the preceding leg(s) and transfer(s.</gtfs:additionalInfo>
@@ -2460,6 +2526,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/feed_contact_email">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/feed_info.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Email"/>
         <gtfs:additionalInfo>Email address for communication regarding the GTFS dataset and data publishing practices. `feed_contact_email` is a technical contact for GTFS-consuming applications. Provide customer service contact information through [agency.txt](#agencytxt). It&apos;s recommended that at least one of `feed_contact_email` or `feed_contact_url` are provided.</gtfs:additionalInfo>
@@ -2474,6 +2541,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/feed_contact_url">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/feed_info.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/URL"/>
         <gtfs:additionalInfo>URL for contact information</gtfs:additionalInfo>
@@ -2488,6 +2556,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/feed_end_date">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/feed_info.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Recommended"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Date"/>
         <gtfs:additionalInfo>The end date for the feed</gtfs:additionalInfo>
@@ -2523,6 +2592,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/feed_lang">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/feed_info.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/LanguageCode"/>
         <gtfs:additionalInfo>The `feed_lang` field is crucial for specifying the default language used in the dataset and providing translations for multilingual datasets.</gtfs:additionalInfo>
@@ -2538,6 +2608,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/feed_publisher_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/feed_info.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Type: Text</gtfs:additionalInfo>
@@ -2552,6 +2623,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/feed_publisher_url">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/feed_info.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/URL"/>
         <gtfs:additionalInfo>URL of the dataset publishing organization&apos;s website.</gtfs:additionalInfo>
@@ -2566,6 +2638,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/feed_start_date">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/feed_info.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Recommended"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Date"/>
         <rdfs:comment>The dataset provides complete and reliable schedule information for service in the period from the beginning of the `feed_start_date` day to the end of the `feed_end_date` day. Both days may be left empty if unavailable. The `feed_end_date` date must not precede the `feed_start_date` date if both are given. It is recommended that dataset providers give schedule data outside this period to advise of likely future service, but dataset consumers should treat it mindful of its non-authoritative status. If `feed_start_date` or `feed_end_date` extend beyond the active calendar dates defined in calendar.txt and calendar_dates.txt, the dataset is making an explicit assertion that there is no service for dates within the `feed_start_date` or `feed_end_date` range but not included in the active calendar dates.</rdfs:comment>
@@ -2579,6 +2652,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/feed_version">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/feed_info.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Recommended"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Recommended field to indicate the version of the GTFS dataset.</gtfs:additionalInfo>
@@ -2593,6 +2667,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/field_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/translations.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Fields with type `Text` may be translated, fields with type `URL`, `Email` and `Phone number` may also be “translated” to provide resources in the correct language. Fields with other types should not be translated.</gtfs:additionalInfo>
@@ -2607,6 +2682,7 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/field_value">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/translations.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Instead of defining which record should be translated by using `record_id` and `record_sub_id`, this field can be used to define the value which should be translated. When used, the translation will be applied when the fields identified by `table_name` and `field_name` contains the exact same value defined in field_value.
@@ -2649,6 +2725,7 @@ If two translation rules match the same record (one with `field_value`, and the 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/friday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/FridayEnum"/>
         <gtfs:additionalInfo>Enum field representing the behavior on Fridays</gtfs:additionalInfo>
@@ -2687,6 +2764,7 @@ If two translation rules match the same record (one with `field_value`, and the 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/from_area_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_leg_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>If there are no matching fare_leg_rules.from_area_id values to the area_id being filtered, empty fare_leg_rules.from_area_id will be matched by default. An empty entry in fare_leg_rules.from_area_id corresponds to all areas defined in areas.area_id excluding the ones listed under fare_leg_rules.from_area_id</gtfs:additionalInfo>
@@ -2701,6 +2779,7 @@ If two translation rules match the same record (one with `field_value`, and the 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/from_leg_group_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_transfer_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing fare_leg_rules.leg_group_id</gtfs:additionalInfo>
@@ -2719,6 +2798,7 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/from_route_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/transfers.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing `routes.route_id`</gtfs:additionalInfo>
@@ -2733,6 +2813,8 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/from_stop_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/transfers.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
@@ -2750,6 +2832,7 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/from_timeframe_group_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_leg_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing timeframes.timeframe_group_id</gtfs:additionalInfo>
@@ -2764,6 +2847,7 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/from_trip_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/transfers.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing `trips.trip_id`</gtfs:additionalInfo>
@@ -2779,6 +2863,7 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/headway_secs">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/frequencies.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Integer"/>
         <gtfs:additionalInfo>Positive integer</gtfs:additionalInfo>
@@ -2793,6 +2878,7 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_authority">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/attributions.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/IsAuthorityEnum"/>
         <gtfs:additionalInfo>Enum field representing the role of the organization as an authority.</gtfs:additionalInfo>
@@ -2831,6 +2917,7 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_bidirectional">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/IsBidirectionalEnum"/>
         <gtfs:additionalInfo>Exit gates (pathway_mode=7) must not be bidirectional.</gtfs:additionalInfo>
@@ -2869,6 +2956,7 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_operator">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/attributions.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/IsOperatorEnum"/>
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
@@ -2907,6 +2995,7 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/is_producer">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/attributions.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/IsProducerEnum"/>
         <gtfs:additionalInfo>Valid options are: 0 or empty - Organization doesn’t have this role. 1 - Organization does have this role.</gtfs:additionalInfo>
@@ -2945,6 +3034,7 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/language">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/translations.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/LanguageCode"/>
         <gtfs:additionalInfo>If the language is the same as in `feed_info.feed_lang`, the original value of the field will be assumed to be the default value to use in languages without specific translations (if `default_lang` doesn&apos;t specify otherwise).</gtfs:additionalInfo>
@@ -2963,6 +3053,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/leg_group_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_leg_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>This field is an ID type that identifies a group of entries in fare_leg_rules.txt.</gtfs:additionalInfo>
@@ -2977,6 +3068,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/length">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Float"/>
         <gtfs:additionalInfo>Non-negative float</gtfs:additionalInfo>
@@ -2991,6 +3083,8 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/level_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/levels.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
@@ -3008,6 +3102,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/level_index">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/levels.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Float"/>
         <gtfs:additionalInfo>The level index is a float value.</gtfs:additionalInfo>
@@ -3022,6 +3117,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/level_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/levels.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>This field represents the name of the level within a building or station.</gtfs:additionalInfo>
@@ -3053,6 +3149,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/location_type">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/LocationTypeEnum"/>
         <gtfs:additionalInfo>Valid options are: 0 (or blank) - Stop (or Platform), 1 - Station, 2 - Entrance/Exit, 3 - Generic Node, 4 - Boarding Area</gtfs:additionalInfo>
@@ -3127,6 +3224,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/max_slope">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Float"/>
         <gtfs:additionalInfo>Valid options are: 0 or empty - No slope. Float - Slope ratio of the pathway, positive for upwards, negative for downwards. This field should only be used with walkways (pathway_mode=1) and moving sidewalks (pathway_mode=3). Example: In the US, 0.083 (also written 8.3%) is the maximum slope ratio for hand-propelled wheelchair, which means an increase of 0.083m (so 8.3cm) for each 1m.</gtfs:additionalInfo>
@@ -3141,6 +3239,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/min_transfer_time">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/transfers.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Integer"/>
         <gtfs:additionalInfo>Non-negative integer</gtfs:additionalInfo>
@@ -3155,6 +3254,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/min_width">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Float"/>
         <gtfs:additionalInfo>This field is recommended if the minimum width is less than 1 meter.</gtfs:additionalInfo>
@@ -3169,6 +3269,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/monday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/MondayEnum"/>
         <gtfs:additionalInfo>Valid options are: 1 - Service is available for all Mondays in the date range. 0 - Service is not available for Mondays in the date range.</gtfs:additionalInfo>
@@ -3207,6 +3308,8 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/network_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_leg_rules.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing routes.network_id</gtfs:additionalInfo>
@@ -3223,6 +3326,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/organization_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/attributions.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>This field stores the name of the organization associated with the dataset.</gtfs:additionalInfo>
@@ -3237,6 +3341,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/origin_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing stops.zone_id</gtfs:additionalInfo>
@@ -3251,6 +3356,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/parent_station">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing stops.stop_id</gtfs:additionalInfo>
@@ -3266,6 +3372,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Unique ID</gtfs:additionalInfo>
@@ -3280,6 +3387,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pathway_mode">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/PathwayModeEnum"/>
         <gtfs:additionalInfo>Valid options are: 1 - Walkway, 2 - Stairs, 3 - Moving sidewalk/travelator, 4 - Escalator, 5 - Elevator, 6 - Fare gate, 7 - Exit gate</gtfs:additionalInfo>
@@ -3402,6 +3510,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/payment_method">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_attributes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/PaymentMethodEnum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Fare is paid on board. 1 - Fare must be paid before boarding.</gtfs:additionalInfo>
@@ -3440,6 +3549,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/pickup_type">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/PickupTypeEnum"/>
         <gtfs:additionalInfo>Enum field with options 0, 1, 2, 3</gtfs:additionalInfo>
@@ -3502,6 +3612,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/platform_code">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Platform identifier should be a text value without including words like “platform” or &quot;track&quot;</gtfs:additionalInfo>
@@ -3516,6 +3627,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/price">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_attributes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Float"/>
         <gtfs:additionalInfo>Non-negative float</gtfs:additionalInfo>
@@ -3530,6 +3642,7 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/record_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/translations.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID</gtfs:additionalInfo>
@@ -3564,6 +3677,7 @@ Fields in tables not defined above should not be translated. However producers s
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/record_sub_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/translations.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:hasCondition>Forbidden if `table_name` is `feed_info` or if `field_value` is defined. Required if `table_name=stop_times` and `record_id` is defined.</gtfs:hasCondition>
@@ -3602,6 +3716,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/reversed_signposted_as">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Text field to store the reversed signposted information.</gtfs:additionalInfo>
@@ -3616,6 +3731,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_color">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Color"/>
         <gtfs:additionalInfo>The color difference between `route_color` and `route_text_color` should provide sufficient contrast when viewed on a black and white screen.</gtfs:additionalInfo>
@@ -3630,6 +3746,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_desc">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>This field should contain detailed information about the route.</gtfs:additionalInfo>
@@ -3645,6 +3762,10 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/attributions.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_rules.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/trips.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
@@ -3665,6 +3786,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_long_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>The name is generally more descriptive than the route_short_name and often includes the route&apos;s destination or stop.</gtfs:additionalInfo>
@@ -3680,6 +3802,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_short_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Both `route_short_name` and `route_long_name` may be defined.</gtfs:additionalInfo>
@@ -3695,6 +3818,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_sort_order">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Integer"/>
         <gtfs:additionalInfo>Non-negative integer</gtfs:additionalInfo>
@@ -3709,6 +3833,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_text_color">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Color"/>
         <gtfs:additionalInfo>The color should provide sufficient contrast when viewed on a black and white screen.</gtfs:additionalInfo>
@@ -3723,6 +3848,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_type">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/RouteTypeEnum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area. 1 - Subway, Metro. Any underground rail system within a metropolitan area. 2 - Rail. Used for intercity or long-distance travel. 3 - Bus. Used for short- and long-distance bus routes. 4 - Ferry. Used for short- and long-distance boat service. 5 - Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle (e.g., cable car in San Francisco). 6 - Aerial lift, suspended cable car (e.g., gondola lift, aerial tramway). Cable transport where cabins, cars, gondolas or open chairs are suspended by means of one or more cables. 7 - Funicular. Any rail system designed for steep inclines. 11 - Trolleybus. Electric buses that draw power from overhead wires using poles. 12 - Monorail. Railway in which the track consists of a single rail or a beam.</gtfs:additionalInfo>
@@ -3857,6 +3983,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/route_url">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/routes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/URL"/>
         <gtfs:additionalInfo>URL of a web page about the particular route. Should be different from the `agency.agency_url` value.</gtfs:additionalInfo>
@@ -3896,6 +4023,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/saturday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/SaturdayEnum"/>
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
@@ -3922,6 +4050,10 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/service_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar_dates.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/timeframes.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/trips.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing `calendar.service_id` or `calendar_dates.service_id`</gtfs:additionalInfo>
@@ -3941,6 +4073,8 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/shape_dist_traveled">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/shapes.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Float"/>
         <gtfs:additionalInfo>Non-negative float. Must be in the same units as shapes.txt.</gtfs:additionalInfo>
@@ -3958,6 +4092,8 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/shape_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/shapes.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/trips.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
@@ -3976,6 +4112,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/shape_pt_lat">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/shapes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Latitude"/>
         <gtfs:additionalInfo>Latitude</gtfs:additionalInfo>
@@ -3990,6 +4127,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/shape_pt_lon">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/shapes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Longitude"/>
         <gtfs:additionalInfo>This field represents the longitude of a shape point on a map.</gtfs:additionalInfo>
@@ -4004,6 +4142,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/shape_pt_sequence">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/shapes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Integer"/>
         <gtfs:additionalInfo>Values must increase along the trip but do not need to be consecutive.</gtfs:additionalInfo>
@@ -4036,6 +4175,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/signposted_as">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>May be used to provide text directions to riders, such as &apos;follow signs to &apos;. The text in `singposted_as` should appear exactly how it is printed on the signs. When the physical signage is multilingual, this field may be populated and translated following the example of `stops.stop_name` in the field definition of `feed_info.feed_lang`.</gtfs:additionalInfo>
@@ -4050,6 +4190,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/stair_count">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Integer"/>
         <gtfs:additionalInfo>Non-null integer</gtfs:additionalInfo>
@@ -4070,6 +4211,7 @@ If only an estimated stair count can be provided, it is recommended to approxima
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/start_date">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Date"/>
         <gtfs:additionalInfo>The start service day for the service interval must be provided in the specified format.</gtfs:additionalInfo>
@@ -4084,6 +4226,8 @@ If only an estimated stair count can be provided, it is recommended to approxima
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/start_time">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/frequencies.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/timeframes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Time"/>
@@ -4115,6 +4259,7 @@ If only an estimated stair count can be provided, it is recommended to approxima
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/stop_code">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>The `stop_code` field is used to identify locations for riders in transit systems.</gtfs:additionalInfo>
@@ -4129,6 +4274,7 @@ If only an estimated stair count can be provided, it is recommended to approxima
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/stop_desc">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Description of the location that provides useful, quality information. Should not be a duplicate of `stop_name`.</gtfs:additionalInfo>
@@ -4143,6 +4289,7 @@ If only an estimated stair count can be provided, it is recommended to approxima
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/stop_headsign">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <rdfs:comment>Text that appears on signage identifying the trip&apos;s destination to riders. This field overrides the default `trips.trip_headsign` when the headsign changes between stops. If the headsign is displayed for an entire trip, `trips.trip_headsign` should be used instead. A `stop_headsign` value specified for one `stop_time` does not apply to subsequent `stop_time`s in the same trip. If you want to override the `trip_headsign` for multiple `stop_time`s in the same trip, the `stop_headsign` value must be repeated in each `stop_time` row.</rdfs:comment>
@@ -4156,6 +4303,9 @@ If only an estimated stair count can be provided, it is recommended to approxima
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/stop_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_areas.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing stops.stop_id</gtfs:additionalInfo>
@@ -4173,6 +4323,7 @@ If only an estimated stair count can be provided, it is recommended to approxima
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/stop_lat">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Latitude"/>
         <gtfs:additionalInfo>Latitude</gtfs:additionalInfo>
@@ -4194,6 +4345,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/stop_lon">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Longitude"/>
         <gtfs:additionalInfo>The coordinates must be provided for specific location types as mentioned in the description.</gtfs:additionalInfo>
@@ -4215,6 +4367,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/stop_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>The `stop_name` field is used to specify the name of the location in the GTFS data.</gtfs:additionalInfo>
@@ -4236,6 +4389,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/stop_sequence">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Integer"/>
         <gtfs:additionalInfo>Non-negative integer</gtfs:additionalInfo>
@@ -4275,6 +4429,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/stop_timezone">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/TimeZone"/>
         <gtfs:additionalInfo>Timezone of the location. If the location has a parent station, it inherits the parent station’s timezone instead of applying its own. Stations and parentless stops with empty stop_timezone inherit the timezone specified by agency.agency_timezone. If stop_timezone values are provided, the times in stop_times.txt should be entered as the time since midnight in the timezone specified by agency.agency_timezone. This ensures that the time values in a trip always increase over the course of a trip, regardless of which timezones the trip crosses.</gtfs:additionalInfo>
@@ -4289,6 +4444,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/stop_url">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/URL"/>
         <gtfs:additionalInfo>URL should be different from `agency.agency_url` and `routes.route_url` field values.</gtfs:additionalInfo>
@@ -4330,6 +4486,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/sunday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/SundayEnum"/>
         <gtfs:additionalInfo>Enum type field that applies to Sundays.</gtfs:additionalInfo>
@@ -4356,6 +4513,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/table_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/translations.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/TableNameEnum"/>
         <gtfs:additionalInfo>Allowed values: agency, stops, routes, trips, stop_times, pathways, levels, feed_info, attributions</gtfs:additionalInfo>
@@ -4478,6 +4636,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/thursday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ThursdayEnum"/>
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
@@ -4504,6 +4663,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/timeframe_group_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/timeframes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Field Type: ID</gtfs:additionalInfo>
@@ -4534,6 +4694,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/timepoint">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Recommended"/>
         <gtfs:isType rdf:resource="http://gtfs.org/TimepointEnum"/>
         <gtfs:additionalInfo>Valid options are: 0 - Times are considered approximate. 1 or empty - Times are considered exact.</gtfs:additionalInfo>
@@ -4572,6 +4733,7 @@ Conditionally Required:
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/to_area_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_leg_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing areas.area_id</gtfs:additionalInfo>
@@ -4590,6 +4752,7 @@ An empty entry in fare_leg_rules.to_area_id corresponds to all areas defined in 
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/to_leg_group_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_transfer_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing fare_leg_rules.leg_group_id</gtfs:additionalInfo>
@@ -4608,6 +4771,7 @@ An empty entry in fare_transfer_rules.to_leg_group_id corresponds to all leg gro
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/to_route_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/transfers.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing `routes.route_id`</gtfs:additionalInfo>
@@ -4622,6 +4786,8 @@ An empty entry in fare_transfer_rules.to_leg_group_id corresponds to all leg gro
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/to_stop_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/transfers.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
@@ -4644,6 +4810,7 @@ Values for `stop_id` that identify stations (`location_type=1`) are forbidden.</
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/to_timeframe_group_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_leg_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing timeframes.timeframe_group_id</gtfs:additionalInfo>
@@ -4664,6 +4831,7 @@ An empty fare_leg_rules.to_timeframe_group_id indicates that the end time of the
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/to_trip_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/transfers.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>Foreign ID referencing `trips.trip_id`</gtfs:additionalInfo>
@@ -4679,6 +4847,7 @@ An empty fare_leg_rules.to_timeframe_group_id indicates that the end time of the
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_count">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_transfer_rules.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyForbidden"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Integer"/>
         <gtfs:hasCondition>Forbidden if fare_transfer_rules.from_leg_group_id does not equal fare_transfer_rules.to_leg_group_id. Required if fare_transfer_rules.from_leg_group_id equals fare_transfer_rules.to_leg_group_id.</gtfs:hasCondition>
@@ -4697,6 +4866,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_duration">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_attributes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Integer"/>
         <gtfs:additionalInfo>Non-negative integer</gtfs:additionalInfo>
@@ -4711,6 +4881,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfer_type">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/transfers.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/TransferTypeEnum"/>
         <gtfs:additionalInfo>Valid options are: 0 or empty - Recommended transfer point between routes. 1 - Timed transfer point between two routes. The departing vehicle is expected to wait for the arriving one and leave sufficient time for a rider to transfer between routes. 2 - Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time. 3 - Transfers are not possible between routes at the location. 4 - Passengers can transfer from one trip to another by staying onboard the same vehicle (an &apos;in-seat transfer&apos;). 5 - In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board.</gtfs:additionalInfo>
@@ -4797,6 +4968,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/transfers">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/fare_attributes.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/TransfersEnum"/>
         <gtfs:additionalInfo>Enum field with options: 0 - No transfers permitted, 1 - Riders may transfer once, 2 - Riders may transfer twice, empty - Unlimited transfers permitted.</gtfs:additionalInfo>
@@ -4879,6 +5051,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/translation">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/translations.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>The field can store text, URL, email, or phone number data.</gtfs:additionalInfo>
@@ -4912,6 +5085,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/traversal_time">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/pathways.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Integer"/>
         <gtfs:additionalInfo>Positive integer</gtfs:additionalInfo>
@@ -4926,6 +5100,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/trip_headsign">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/trips.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Text that appears on signage identifying the trip&apos;s destination to riders. Should be used to distinguish between different patterns of service on the same route. If the headsign changes during a trip, values for trip_headsign may be overridden by defining values in stop_times.stop_headsign for specific stop_times along the trip.</gtfs:additionalInfo>
@@ -4940,6 +5115,10 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/trip_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/attributions.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/frequencies.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stop_times.txt"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/trips.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
@@ -4959,6 +5138,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/trip_short_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/trips.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>Public facing text used to identify the trip to riders.</gtfs:additionalInfo>
@@ -4995,6 +5175,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/tts_stop_name">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/Text"/>
         <gtfs:additionalInfo>This field provides a text representation of the stop name for text-to-speech purposes.</gtfs:additionalInfo>
@@ -5009,6 +5190,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/tuesday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/TuesdayEnum"/>
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
@@ -5035,6 +5217,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/wednesday">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/calendar.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Required"/>
         <gtfs:isType rdf:resource="http://gtfs.org/WednesdayEnum"/>
         <gtfs:additionalInfo>Enum type field</gtfs:additionalInfo>
@@ -5061,6 +5244,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_accessible">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/trips.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/WheelchairAccessibleEnum"/>
         <gtfs:additionalInfo>Enum field with options 0, 1, 2</gtfs:additionalInfo>
@@ -5111,6 +5295,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/wheelchair_boarding">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/Optional"/>
         <gtfs:isType rdf:resource="http://gtfs.org/WheelchairBoardingEnum"/>
         <rdfs:comment>Indicates whether wheelchair boardings are possible from the location. Valid options are: For parentless stops: 0 or empty - No accessibility information for the stop. 1 - Some vehicles at this stop can be boarded by a rider in a wheelchair. 2 - Wheelchair boarding is not possible at this stop. For child stops: 0 or empty - Stop will inherit its wheelchair_boarding behavior from the parent station, if specified in the parent. 1 - There exists some accessible path from outside the station to the specific stop/platform. 2 - There exists no accessible path from outside the station to the specific stop/platform. For station entrances/exits: 0 or empty - Station entrance will inherit its wheelchair_boarding behavior from the parent station, if specified for the parent. 1 - Station entrance is wheelchair accessible. 2 - No accessible path from station entrance to stops/platforms.</rdfs:comment>
@@ -5160,6 +5345,7 @@ If a sub-journey matches multiple records with different transfer_counts, then t
 
     <owl:NamedIndividual rdf:about="http://gtfs.org/zone_id">
         <rdf:type rdf:resource="http://gtfs.org/Field"/>
+        <gtfs:isFieldOf rdf:resource="http://gtfs.org/stops.txt"/>
         <gtfs:isPresence rdf:resource="http://gtfs.org/ConditionallyRequired"/>
         <gtfs:isType rdf:resource="http://gtfs.org/ID"/>
         <gtfs:additionalInfo>If this record represents a station or station entrance, the `zone_id` is ignored.</gtfs:additionalInfo>

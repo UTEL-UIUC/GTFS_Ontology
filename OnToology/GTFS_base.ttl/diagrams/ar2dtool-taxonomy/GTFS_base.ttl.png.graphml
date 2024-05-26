@@ -41,31 +41,31 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_http://schema.org/Enumeration">
+      <node id="nid_schema1:Enumeration">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="290.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="190.0" x="0.0" y="0.0" />
                <y:Fill color="#000000" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">http://schema.org/Enumeration</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">schema1:Enumeration</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-      <node id="nid_http://schema.org/Intangible">
+      <node id="nid_schema1:Intangible">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="280.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="180.0" x="0.0" y="0.0" />
                <y:Fill color="#000000" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">http://schema.org/Intangible</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">schema1:Intangible</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf1" source="nid_http://schema.org/Enumeration" target="nid_http://schema.org/Intangible">
+    <edge id="eid_rdfs:subClassOf1" source="nid_schema1:Enumeration" target="nid_schema1:Intangible">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -123,7 +123,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf3" source="nid_gtfs:FareProduct" target="nid_http://schema.org/Intangible">
+    <edge id="eid_rdfs:subClassOf3" source="nid_gtfs:FareProduct" target="nid_schema1:Intangible">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -537,7 +537,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf21" source="nid_gtfs:FieldType" target="nid_http://schema.org/Intangible">
+    <edge id="eid_rdfs:subClassOf21" source="nid_gtfs:FieldType" target="nid_schema1:Intangible">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -698,7 +698,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf28" source="nid_gtfs:Field" target="nid_http://schema.org/Intangible">
+    <edge id="eid_rdfs:subClassOf28" source="nid_gtfs:Field" target="nid_schema1:Intangible">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -836,7 +836,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf34" source="nid_gtfs:File" target="nid_http://schema.org/Intangible">
+    <edge id="eid_rdfs:subClassOf34" source="nid_gtfs:File" target="nid_schema1:Intangible">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -859,7 +859,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf35" source="nid_gtfs:ServiceDay" target="nid_http://schema.org/Intangible">
+    <edge id="eid_rdfs:subClassOf35" source="nid_gtfs:ServiceDay" target="nid_schema1:Intangible">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1123,7 +1123,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf47" source="nid_gtfs:PresenceCondition" target="nid_http://schema.org/Enumeration">
+    <edge id="eid_rdfs:subClassOf47" source="nid_gtfs:PresenceCondition" target="nid_schema1:Enumeration">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1215,7 +1215,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf51" source="nid_gtfs:Journey" target="nid_http://schema.org/Intangible">
+    <edge id="eid_rdfs:subClassOf51" source="nid_gtfs:Journey" target="nid_schema1:Intangible">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1353,7 +1353,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf57" source="nid_gtfs:Leg" target="nid_http://schema.org/Intangible">
+    <edge id="eid_rdfs:subClassOf57" source="nid_gtfs:Leg" target="nid_schema1:Intangible">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />

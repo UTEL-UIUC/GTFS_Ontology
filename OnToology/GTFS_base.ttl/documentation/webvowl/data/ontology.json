@@ -76,181 +76,181 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
     "id" : "28",
     "type" : "owl:Class"
   }, {
     "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "45",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "50",
-    "type" : "owl:Class"
-  }, {
-    "id" : "53",
-    "type" : "owl:Class"
-  }, {
-    "id" : "67",
-    "type" : "owl:Class"
-  }, {
-    "id" : "68",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "69",
-    "type" : "owl:Class"
-  }, {
-    "id" : "61",
-    "type" : "owl:Class"
-  }, {
-    "id" : "75",
-    "type" : "owl:Class"
-  }, {
-    "id" : "78",
-    "type" : "owl:Class"
-  }, {
-    "id" : "39",
-    "type" : "owl:Class"
-  }, {
-    "id" : "81",
-    "type" : "owl:Class"
-  }, {
-    "id" : "80",
-    "type" : "owl:equivalentClass"
-  }, {
-    "id" : "52",
-    "type" : "owl:Class"
-  }, {
-    "id" : "41",
-    "type" : "owl:Class"
-  }, {
-    "id" : "77",
-    "type" : "owl:Class"
-  }, {
-    "id" : "87",
-    "type" : "owl:Class"
-  }, {
-    "id" : "47",
-    "type" : "owl:Class"
-  }, {
-    "id" : "36",
-    "type" : "owl:Class"
-  }, {
-    "id" : "14",
-    "type" : "owl:Class"
-  }, {
-    "id" : "89",
-    "type" : "owl:Class"
-  }, {
-    "id" : "6",
-    "type" : "owl:Class"
-  }, {
-    "id" : "105",
-    "type" : "owl:Class"
-  }, {
-    "id" : "101",
-    "type" : "owl:Class"
-  }, {
-    "id" : "95",
-    "type" : "owl:Class"
-  }, {
-    "id" : "111",
-    "type" : "owl:Class"
-  }, {
-    "id" : "2",
-    "type" : "owl:equivalentClass"
-  }, {
-    "id" : "4",
-    "type" : "owl:Class"
-  }, {
-    "id" : "57",
-    "type" : "owl:Class"
-  }, {
-    "id" : "100",
-    "type" : "owl:Class"
-  }, {
-    "id" : "43",
-    "type" : "owl:Class"
-  }, {
-    "id" : "97",
-    "type" : "owl:Class"
-  }, {
-    "id" : "31",
-    "type" : "owl:Class"
-  }, {
-    "id" : "22",
-    "type" : "owl:Class"
-  }, {
-    "id" : "99",
-    "type" : "owl:Class"
-  }, {
-    "id" : "71",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
+    "id" : "102",
     "type" : "owl:Class"
   }, {
     "id" : "73",
     "type" : "owl:Class"
   }, {
-    "id" : "102",
+    "id" : "75",
     "type" : "owl:Class"
   }, {
-    "id" : "109",
-    "type" : "owl:Class"
-  }, {
-    "id" : "112",
-    "type" : "owl:Class"
-  }, {
-    "id" : "91",
-    "type" : "owl:Class"
-  }, {
-    "id" : "40",
-    "type" : "owl:Class"
-  }, {
-    "id" : "63",
-    "type" : "owl:Class"
-  }, {
-    "id" : "113",
-    "type" : "owl:Class"
-  }, {
-    "id" : "114",
-    "type" : "owl:Class"
-  }, {
-    "id" : "15",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "92",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "59",
-    "type" : "owl:Class"
-  }, {
-    "id" : "55",
-    "type" : "owl:Class"
-  }, {
-    "id" : "66",
+    "id" : "14",
     "type" : "owl:Class"
   }, {
     "id" : "98",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
+    "id" : "105",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
+    "id" : "114",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "93",
     "type" : "owl:Class"
   }, {
-    "id" : "103",
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "106",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -481,16 +481,6 @@
         "undefined" : "translations.txt"
       }
     }, {
-      "iri" : "http://gtfs.org/stops.txt",
-      "baseIri" : "http://gtfs.org",
-      "comment" : {
-        "undefined" : "Stops where vehicles pick up or drop off riders. Also defines stations and station entrances."
-      },
-      "labels" : {
-        "IRI-based" : "stops.txt",
-        "undefined" : "stops.txt"
-      }
-    }, {
       "iri" : "http://gtfs.org/trips.txt",
       "baseIri" : "http://gtfs.org",
       "comment" : {
@@ -499,6 +489,16 @@
       "labels" : {
         "IRI-based" : "trips.txt",
         "undefined" : "trips.txt"
+      }
+    }, {
+      "iri" : "http://gtfs.org/stops.txt",
+      "baseIri" : "http://gtfs.org",
+      "comment" : {
+        "undefined" : "Stops where vehicles pick up or drop off riders. Also defines stations and station entrances."
+      },
+      "labels" : {
+        "IRI-based" : "stops.txt",
+        "undefined" : "stops.txt"
       }
     }, {
       "iri" : "http://gtfs.org/calendar.txt",
@@ -539,16 +539,6 @@
         "undefined" : "areas.txt"
       }
     }, {
-      "iri" : "http://gtfs.org/fare_attributes.txt",
-      "baseIri" : "http://gtfs.org",
-      "comment" : {
-        "undefined" : "Fare information for a transit agency's routes."
-      },
-      "labels" : {
-        "IRI-based" : "fare_attributes.txt",
-        "undefined" : "fare_attributes.txt"
-      }
-    }, {
       "iri" : "http://gtfs.org/levels.txt",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -565,6 +555,16 @@
       "labels" : {
         "IRI-based" : "levels.txt",
         "undefined" : "levels.txt"
+      }
+    }, {
+      "iri" : "http://gtfs.org/fare_attributes.txt",
+      "baseIri" : "http://gtfs.org",
+      "comment" : {
+        "undefined" : "Fare information for a transit agency's routes."
+      },
+      "labels" : {
+        "IRI-based" : "fare_attributes.txt",
+        "undefined" : "fare_attributes.txt"
       }
     }, {
       "iri" : "http://gtfs.org/attributions.txt",
@@ -617,16 +617,6 @@
         "undefined" : "stop_areas.txt"
       }
     }, {
-      "iri" : "http://gtfs.org/transfers.txt",
-      "baseIri" : "http://gtfs.org",
-      "comment" : {
-        "undefined" : "Rules for making connections at transfer points between routes."
-      },
-      "labels" : {
-        "IRI-based" : "transfers.txt",
-        "undefined" : "transfers.txt"
-      }
-    }, {
       "iri" : "http://gtfs.org/routes.txt",
       "baseIri" : "http://gtfs.org",
       "comment" : {
@@ -635,6 +625,16 @@
       "labels" : {
         "IRI-based" : "routes.txt",
         "undefined" : "routes.txt"
+      }
+    }, {
+      "iri" : "http://gtfs.org/transfers.txt",
+      "baseIri" : "http://gtfs.org",
+      "comment" : {
+        "undefined" : "Rules for making connections at transfer points between routes."
+      },
+      "labels" : {
+        "IRI-based" : "transfers.txt",
+        "undefined" : "transfers.txt"
       }
     }, {
       "iri" : "http://gtfs.org/pathways.txt",
@@ -665,16 +665,6 @@
         "undefined" : "calendar_dates.txt"
       }
     }, {
-      "iri" : "http://gtfs.org/shapes.txt",
-      "baseIri" : "http://gtfs.org",
-      "comment" : {
-        "undefined" : "Rules for mapping vehicle travel paths, sometimes referred to as route alignments."
-      },
-      "labels" : {
-        "IRI-based" : "shapes.txt",
-        "undefined" : "shapes.txt"
-      }
-    }, {
       "iri" : "http://gtfs.org/agency.txt",
       "baseIri" : "http://gtfs.org",
       "comment" : {
@@ -683,6 +673,16 @@
       "labels" : {
         "IRI-based" : "agency.txt",
         "undefined" : "agency.txt"
+      }
+    }, {
+      "iri" : "http://gtfs.org/shapes.txt",
+      "baseIri" : "http://gtfs.org",
+      "comment" : {
+        "undefined" : "Rules for mapping vehicle travel paths, sometimes referred to as route alignments."
+      },
+      "labels" : {
+        "IRI-based" : "shapes.txt",
+        "undefined" : "shapes.txt"
       }
     }, {
       "iri" : "http://gtfs.org/fare_transfer_rules.txt",
@@ -804,7 +804,7 @@
       "undefined" : "Enumeration class for thursday"
     },
     "attributes" : [ "external" ],
-    "id" : "28",
+    "id" : "36",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/IsProducerEnum",
@@ -855,7 +855,7 @@
       "undefined" : "Enumeration class for is_producer"
     },
     "attributes" : [ "external" ],
-    "id" : "20",
+    "id" : "26",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/ServiceDay",
@@ -992,7 +992,7 @@
       "undefined" : "Enumeration class for transfer_type"
     },
     "attributes" : [ "external" ],
-    "id" : "1",
+    "id" : "49",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/TableNameEnum",
@@ -1169,7 +1169,7 @@
       "undefined" : "Enumeration class for table_name"
     },
     "attributes" : [ "external" ],
-    "id" : "50",
+    "id" : "52",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/TuesdayEnum",
@@ -1202,7 +1202,7 @@
       "undefined" : "Enumeration class for tuesday"
     },
     "attributes" : [ "external" ],
-    "id" : "53",
+    "id" : "55",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/Required",
@@ -1216,7 +1216,7 @@
       "undefined" : "The field or file must be included in the dataset and contain a valid value for each record."
     },
     "attributes" : [ "external" ],
-    "id" : "67",
+    "id" : "68",
     "superClasses" : [ "41" ]
   }, {
     "iri" : "http://gtfs.org/FareMediaTypeEnum",
@@ -1321,7 +1321,7 @@
       "undefined" : "Enumeration class for fare_media_type"
     },
     "attributes" : [ "external" ],
-    "id" : "68",
+    "id" : "69",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/Field",
@@ -1356,45 +1356,21 @@
         "additionalInfo" : [ {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup. Values for `routes.continuous_pickup` may be overridden by defining values in `stop_times.continuous_pickup` for specific `stop_time`s along the route.",
+          "value" : "Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup.",
           "type" : "label"
         }, {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup.",
+          "value" : "Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup. Values for `routes.continuous_pickup` may be overridden by defining values in `stop_times.continuous_pickup` for specific `stop_time`s along the route.",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "undefined" : "Indicates that the rider can board the transit vehicle at any point along the vehicle’s travel path as described by `shapes.txt`, on every trip of the route."
+        "undefined" : "Indicates that the rider can board the transit vehicle at any point along the vehicle’s travel path as described by `shapes.txt`, from this `stop_time` to the next `stop_time` in the trip’s `stop_sequence`. If this field is populated, it overrides any continuous pickup behavior defined in `routes.txt`. If this field is empty, the `stop_time` inherits any continuous pickup behavior defined in `routes.txt`."
       },
       "labels" : {
         "IRI-based" : "continuous_pickup",
         "undefined" : "continuous_pickup"
-      }
-    }, {
-      "iri" : "http://gtfs.org/record_id",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Foreign ID",
-          "type" : "label"
-        } ],
-        "hasCondition" : [ {
-          "identifier" : "hasCondition",
-          "language" : "undefined",
-          "value" : "Forbidden if `table_name` is `feed_info`. Forbidden if `field_value` is defined. Required if `field_value` is empty.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Defines the record that corresponds to the field to be translated. The value in `record_id` must be the first or only field of a table's primary key, as defined in the primary key attribute for each table and below:\n\n- `agency_id` for `agency.txt`\n- `stop_id` for `stops.txt`\n- `route_id` for `routes.txt`\n- `trip_id` for `trips.txt`\n- `trip_id` for `stop_times.txt`\n- `pathway_id` for `pathways.txt`\n- `level_id` for `levels.txt`\n- `attribution_id` for `attribution.txt`\n\nFields in tables not defined above should not be translated. However producers sometimes add extra fields that are outside the official specification and these unofficial fields may be translated. Below is the recommended way to use `record_id` for those tables:\n\n- `service_id` for `calendar.txt`\n- `service_id` for `calendar_dates.txt`\n- `fare_id` for `fare_attributes.txt`\n- `fare_id` for `fare_rules.txt`\n- `shape_id` for `shapes.txt`\n- `trip_id` for `frequencies.txt`\n- `from_stop_id` for `transfers.txt`"
-      },
-      "labels" : {
-        "IRI-based" : "record_id",
-        "undefined" : "record_id"
       }
     }, {
       "iri" : "http://gtfs.org/departure_time",
@@ -1421,6 +1397,48 @@
         "undefined" : "departure_time"
       }
     }, {
+      "iri" : "http://gtfs.org/record_id",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Foreign ID",
+          "type" : "label"
+        } ],
+        "hasCondition" : [ {
+          "identifier" : "hasCondition",
+          "language" : "undefined",
+          "value" : "Forbidden if `table_name` is `feed_info`. Forbidden if `field_value` is defined. Required if `field_value` is empty.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Defines the record that corresponds to the field to be translated. The value in `record_id` must be the first or only field of a table's primary key, as defined in the primary key attribute for each table and below:\n\n- `agency_id` for `agency.txt`\n- `stop_id` for `stops.txt`\n- `route_id` for `routes.txt`\n- `trip_id` for `trips.txt`\n- `trip_id` for `stop_times.txt`\n- `pathway_id` for `pathways.txt`\n- `level_id` for `levels.txt`\n- `attribution_id` for `attribution.txt`\n\nFields in tables not defined above should not be translated. However producers sometimes add extra fields that are outside the official specification and these unofficial fields may be translated. Below is the recommended way to use `record_id` for those tables:\n\n- `service_id` for `calendar.txt`\n- `service_id` for `calendar_dates.txt`\n- `fare_id` for `fare_attributes.txt`\n- `fare_id` for `fare_rules.txt`\n- `shape_id` for `shapes.txt`\n- `trip_id` for `frequencies.txt`\n- `from_stop_id` for `transfers.txt`"
+      },
+      "labels" : {
+        "IRI-based" : "record_id",
+        "undefined" : "record_id"
+      }
+    }, {
+      "iri" : "http://gtfs.org/pathway_id",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Unique ID",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Identifies a pathway. Used by systems as an internal identifier for the record. Must be unique in the dataset. Different pathways may have the same values for `from_stop_id` and `to_stop_id`. Example: When two escalators are side-by-side in opposite directions, or when a stair set and elevator go from the same place to the same place, different `pathway_id` may have the same `from_stop_id` and `to_stop_id` values."
+      },
+      "labels" : {
+        "IRI-based" : "pathway_id",
+        "undefined" : "pathway_id"
+      }
+    }, {
       "iri" : "http://gtfs.org/parent_station",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -1443,24 +1461,6 @@
       "labels" : {
         "IRI-based" : "parent_station",
         "undefined" : "parent_station"
-      }
-    }, {
-      "iri" : "http://gtfs.org/pathway_id",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Unique ID",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Identifies a pathway. Used by systems as an internal identifier for the record. Must be unique in the dataset. Different pathways may have the same values for `from_stop_id` and `to_stop_id`. Example: When two escalators are side-by-side in opposite directions, or when a stair set and elevator go from the same place to the same place, different `pathway_id` may have the same `from_stop_id` and `to_stop_id` values."
-      },
-      "labels" : {
-        "IRI-based" : "pathway_id",
-        "undefined" : "pathway_id"
       }
     }, {
       "iri" : "http://gtfs.org/payment_method",
@@ -1533,12 +1533,12 @@
         "additionalInfo" : [ {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Foreign ID referencing `stops.stop_id`",
+          "value" : "Foreign ID referencing stops.stop_id",
           "type" : "label"
         }, {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Foreign ID referencing stops.stop_id",
+          "value" : "Foreign ID referencing `stops.stop_id`",
           "type" : "label"
         } ],
         "hasCondition" : [ {
@@ -1549,40 +1549,11 @@
         } ]
       },
       "comment" : {
-        "undefined" : "Identifies a stop or station where a connection between routes ends. If this field refers to a station, the transfer rule applies to all child stops. Referring to a station is forbidden for transfer_types 4 and 5."
+        "undefined" : "Location at which the pathway ends.\n\nMust contain a `stop_id` that identifies a platform (`location_type=0` or empty), entrance/exit (`location_type=2`), generic node (`location_type=3`) or boarding area (`location_type=4`).\n\nValues for `stop_id` that identify stations (`location_type=1`) are forbidden."
       },
       "labels" : {
         "IRI-based" : "to_stop_id",
         "undefined" : "to_stop_id"
-      }
-    }, {
-      "iri" : "http://gtfs.org/shape_dist_traveled",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Non-negative float. Must be in the same units as shapes.txt.",
-          "type" : "label"
-        }, {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Recommended for routes that have looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip).",
-          "type" : "label"
-        } ],
-        "example" : [ {
-          "identifier" : "example",
-          "language" : "undefined",
-          "value" : "If a bus travels a distance of 5.25 kilometers from the start of the shape to the stop, shape_dist_traveled=5.25.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Actual distance traveled along the associated shape, from the first stop to the stop specified in this record. This field specifies how much of the shape to draw between any two stops during a trip. Must be in the same units used in shapes.txt. Values used for shape_dist_traveled must increase along with stop_sequence; they must not be used to show reverse travel along a route. Recommended for routes that have looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip). See shapes.shape_dist_traveled."
-      },
-      "labels" : {
-        "IRI-based" : "shape_dist_traveled",
-        "undefined" : "shape_dist_traveled"
       }
     }, {
       "iri" : "http://gtfs.org/drop_off_type",
@@ -1601,6 +1572,35 @@
       "labels" : {
         "IRI-based" : "drop_off_type",
         "undefined" : "drop_off_type"
+      }
+    }, {
+      "iri" : "http://gtfs.org/shape_dist_traveled",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Recommended for routes that have looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip).",
+          "type" : "label"
+        }, {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Non-negative float. Must be in the same units as shapes.txt.",
+          "type" : "label"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "If a bus travels a distance of 5.25 kilometers from the start of the shape to the stop, shape_dist_traveled=5.25.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Actual distance traveled along the shape from the first shape point to the point specified in this record. Used by trip planners to show the correct portion of the shape on a map. Values must increase along with shape_pt_sequence; they must not be used to show reverse travel along a route. Distance units must be consistent with those used in stop_times.txt. Recommended for routes that have looping or inlining (the vehicle crosses or travels over the same portion of alignment in one trip). If a vehicle retraces or crosses the route alignment at points in the course of a trip, shape_dist_traveled is important to clarify how portions of the points in shapes.txt line up correspond with records in stop_times.txt."
+      },
+      "labels" : {
+        "IRI-based" : "shape_dist_traveled",
+        "undefined" : "shape_dist_traveled"
       }
     }, {
       "iri" : "http://gtfs.org/leg_group_id",
@@ -1639,24 +1639,6 @@
         "undefined" : "language"
       }
     }, {
-      "iri" : "http://gtfs.org/is_authority",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Enum field representing the role of the organization as an authority.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Functions in the same way as `is_producer` except the role of the organization is authority."
-      },
-      "labels" : {
-        "IRI-based" : "is_authority",
-        "undefined" : "is_authority"
-      }
-    }, {
       "iri" : "http://gtfs.org/agency_name",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -1675,6 +1657,24 @@
         "undefined" : "agency_name"
       }
     }, {
+      "iri" : "http://gtfs.org/is_authority",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Enum field representing the role of the organization as an authority.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Functions in the same way as `is_producer` except the role of the organization is authority."
+      },
+      "labels" : {
+        "IRI-based" : "is_authority",
+        "undefined" : "is_authority"
+      }
+    }, {
       "iri" : "http://gtfs.org/headway_secs",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -1691,24 +1691,6 @@
       "labels" : {
         "IRI-based" : "headway_secs",
         "undefined" : "headway_secs"
-      }
-    }, {
-      "iri" : "http://gtfs.org/bikes_allowed",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Enum field with options 0, 1, 2",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Indicates whether bikes are allowed. Valid options are: 0 or empty - No bike information for the trip. 1 - Vehicle being used on this particular trip can accommodate at least one bicycle. 2 - No bicycles are allowed on this trip."
-      },
-      "labels" : {
-        "IRI-based" : "bikes_allowed",
-        "undefined" : "bikes_allowed"
       }
     }, {
       "iri" : "http://gtfs.org/block_id",
@@ -1745,6 +1727,24 @@
       "labels" : {
         "IRI-based" : "location_type",
         "undefined" : "location_type"
+      }
+    }, {
+      "iri" : "http://gtfs.org/bikes_allowed",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Enum field with options 0, 1, 2",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Indicates whether bikes are allowed. Valid options are: 0 or empty - No bike information for the trip. 1 - Vehicle being used on this particular trip can accommodate at least one bicycle. 2 - No bicycles are allowed on this trip."
+      },
+      "labels" : {
+        "IRI-based" : "bikes_allowed",
+        "undefined" : "bikes_allowed"
       }
     }, {
       "iri" : "http://gtfs.org/to_leg_group_id",
@@ -1858,7 +1858,7 @@
         } ]
       },
       "comment" : {
-        "undefined" : "Indicates that the rider can alight from the transit vehicle at any point along the vehicle’s travel path as described by shapes.txt, on every trip of the route."
+        "undefined" : "Indicates that the rider can alight from the transit vehicle at any point along the vehicle’s travel path as described by `shapes.txt`, from this `stop_time` to the next `stop_time` in the trip’s `stop_sequence`. Valid options are: `0` - Continuous stopping drop off. `1` or empty - No continuous stopping drop off. `2` - Must phone agency to arrange continuous stopping drop off. `3` - Must coordinate with driver to arrange continuous stopping drop off. If this field is populated, it overrides any continuous drop-off behavior defined in `routes.txt`. If this field is empty, the `stop_time` inherits any continuous drop-off behavior defined in `routes.txt`."
       },
       "labels" : {
         "IRI-based" : "continuous_drop_off",
@@ -1887,30 +1887,6 @@
       "labels" : {
         "IRI-based" : "destination_id",
         "undefined" : "destination_id"
-      }
-    }, {
-      "iri" : "http://gtfs.org/stop_name",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "The `stop_name` field is used to specify the name of the location in the GTFS data.",
-          "type" : "label"
-        } ],
-        "hasCondition" : [ {
-          "identifier" : "hasCondition",
-          "language" : "undefined",
-          "value" : "Required for locations which are stops (`location_type=0`), stations (`location_type=1`) or entrances/exits (`location_type=2`). Optional for locations which are generic nodes (`location_type=3`) or boarding areas (`location_type=4`).",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Name of the location. The `stop_name` should match the agency's rider-facing name for the location as printed on a timetable, published online, or represented on signage. For translations into other languages, use `translations.txt`.\n\nWhen the location is a boarding area (`location_type=4`), the `stop_name` should contains the name of the boarding area as displayed by the agency. It could be just one letter (like on some European intercity railway stations), or text like “Wheelchair boarding area” (NYC’s Subway) or “Head of short trains” (Paris’ RER).\n\nConditionally Required:\n- **Required** for locations which are stops (`location_type=0`), stations (`location_type=1`) or entrances/exits (`location_type=2`).\n- Optional for locations which are generic nodes (`location_type=3`) or boarding areas (`location_type=4`)."
-      },
-      "labels" : {
-        "IRI-based" : "stop_name",
-        "undefined" : "stop_name"
       }
     }, {
       "iri" : "http://gtfs.org/agency_phone",
@@ -1947,6 +1923,30 @@
       "labels" : {
         "IRI-based" : "to_timeframe_group_id",
         "undefined" : "to_timeframe_group_id"
+      }
+    }, {
+      "iri" : "http://gtfs.org/stop_name",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "The `stop_name` field is used to specify the name of the location in the GTFS data.",
+          "type" : "label"
+        } ],
+        "hasCondition" : [ {
+          "identifier" : "hasCondition",
+          "language" : "undefined",
+          "value" : "Required for locations which are stops (`location_type=0`), stations (`location_type=1`) or entrances/exits (`location_type=2`). Optional for locations which are generic nodes (`location_type=3`) or boarding areas (`location_type=4`).",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Name of the location. The `stop_name` should match the agency's rider-facing name for the location as printed on a timetable, published online, or represented on signage. For translations into other languages, use `translations.txt`.\n\nWhen the location is a boarding area (`location_type=4`), the `stop_name` should contains the name of the boarding area as displayed by the agency. It could be just one letter (like on some European intercity railway stations), or text like “Wheelchair boarding area” (NYC’s Subway) or “Head of short trains” (Paris’ RER).\n\nConditionally Required:\n- **Required** for locations which are stops (`location_type=0`), stations (`location_type=1`) or entrances/exits (`location_type=2`).\n- Optional for locations which are generic nodes (`location_type=3`) or boarding areas (`location_type=4`)."
+      },
+      "labels" : {
+        "IRI-based" : "stop_name",
+        "undefined" : "stop_name"
       }
     }, {
       "iri" : "http://gtfs.org/stop_headsign",
@@ -2197,17 +2197,17 @@
         "additionalInfo" : [ {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Foreign ID referencing routes.network_id",
+          "value" : "This field is an ID type that is used to group routes together.",
           "type" : "label"
         }, {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "This field is an ID type that is used to group routes together.",
+          "value" : "Foreign ID referencing routes.network_id",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "undefined" : "Identifies a route network that applies for the fare leg rule. If there are no matching fare_leg_rules.network_id values to the network_id being filtered, empty fare_leg_rules.network_id will be matched by default. An empty entry in fare_leg_rules.network_id corresponds to all networks defined in routes.txt excluding the ones listed under fare_leg_rules.network_id"
+        "undefined" : "Identifies a group of routes. Multiple rows in routes.txt may have the same network_id."
       },
       "labels" : {
         "IRI-based" : "network_id",
@@ -2250,24 +2250,6 @@
         "undefined" : "from_route_id"
       }
     }, {
-      "iri" : "http://gtfs.org/agency_url",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "URL",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "URL of the transit agency."
-      },
-      "labels" : {
-        "IRI-based" : "agency_url",
-        "undefined" : "agency_url"
-      }
-    }, {
       "iri" : "http://gtfs.org/to_trip_id",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -2290,6 +2272,24 @@
       "labels" : {
         "IRI-based" : "to_trip_id",
         "undefined" : "to_trip_id"
+      }
+    }, {
+      "iri" : "http://gtfs.org/agency_url",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "URL",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "URL of the transit agency."
+      },
+      "labels" : {
+        "IRI-based" : "agency_url",
+        "undefined" : "agency_url"
       }
     }, {
       "iri" : "http://gtfs.org/friday",
@@ -2328,6 +2328,29 @@
         "undefined" : "stop_timezone"
       }
     }, {
+      "iri" : "http://gtfs.org/stop_id",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Foreign ID referencing stops.stop_id",
+          "type" : "label"
+        }, {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Unique ID",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Identifies the serviced stop. All stops serviced during a trip must have a record in stop_times.txt. Referenced locations must be stops/platforms, i.e. their stops.location_type value must be 0 or empty. A stop may be serviced multiple times in the same trip, and multiple trips and routes may service the same stop."
+      },
+      "labels" : {
+        "IRI-based" : "stop_id",
+        "undefined" : "stop_id"
+      }
+    }, {
       "iri" : "http://gtfs.org/timepoint",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -2346,27 +2369,22 @@
         "undefined" : "timepoint"
       }
     }, {
-      "iri" : "http://gtfs.org/stop_id",
+      "iri" : "http://gtfs.org/transfer_duration",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
         "additionalInfo" : [ {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Unique ID",
-          "type" : "label"
-        }, {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Foreign ID referencing stops.stop_id",
+          "value" : "Non-negative integer",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "undefined" : "Identifies a stop. If a station (i.e. a stop with stops.location_type=1) is defined in this field, it is assumed that all of its platforms (i.e. all stops with stops.location_type=0 that have this station defined as stops.parent_station) are part of the same area. This behavior can be overridden by assigning platforms to other areas."
+        "undefined" : "Length of time in seconds before a transfer expires. When `transfers`=`0` this field may be used to indicate how long a ticket is valid for or it may be left empty."
       },
       "labels" : {
-        "IRI-based" : "stop_id",
-        "undefined" : "stop_id"
+        "IRI-based" : "transfer_duration",
+        "undefined" : "transfer_duration"
       }
     }, {
       "iri" : "http://gtfs.org/from_trip_id",
@@ -2393,24 +2411,6 @@
         "undefined" : "from_trip_id"
       }
     }, {
-      "iri" : "http://gtfs.org/transfer_duration",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Non-negative integer",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Length of time in seconds before a transfer expires. When `transfers`=`0` this field may be used to indicate how long a ticket is valid for or it may be left empty."
-      },
-      "labels" : {
-        "IRI-based" : "transfer_duration",
-        "undefined" : "transfer_duration"
-      }
-    }, {
       "iri" : "http://gtfs.org/from_area_id",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -2429,24 +2429,6 @@
         "undefined" : "from_area_id"
       }
     }, {
-      "iri" : "http://gtfs.org/min_transfer_time",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Non-negative integer",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Amount of time, in seconds, that must be available to permit a transfer between routes at the specified stops. The `min_transfer_time` should be sufficient to permit a typical rider to move between the two stops, including buffer time to allow for schedule variance on each route."
-      },
-      "labels" : {
-        "IRI-based" : "min_transfer_time",
-        "undefined" : "min_transfer_time"
-      }
-    }, {
       "iri" : "http://gtfs.org/agency_timezone",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -2463,6 +2445,24 @@
       "labels" : {
         "IRI-based" : "agency_timezone",
         "undefined" : "agency_timezone"
+      }
+    }, {
+      "iri" : "http://gtfs.org/min_transfer_time",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Non-negative integer",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Amount of time, in seconds, that must be available to permit a transfer between routes at the specified stops. The `min_transfer_time` should be sufficient to permit a typical rider to move between the two stops, including buffer time to allow for schedule variance on each route."
+      },
+      "labels" : {
+        "IRI-based" : "min_transfer_time",
+        "undefined" : "min_transfer_time"
       }
     }, {
       "iri" : "http://gtfs.org/attribution_phone",
@@ -2585,7 +2585,7 @@
         "additionalInfo" : [ {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Foreign ID referencing calendar.service_id or ID",
+          "value" : "Foreign ID referencing `calendar.service_id` or `calendar_dates.service_id`",
           "type" : "label"
         }, {
           "identifier" : "additionalInfo",
@@ -2595,12 +2595,12 @@
         }, {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Foreign ID referencing `calendar.service_id` or `calendar_dates.service_id`",
+          "value" : "Foreign ID referencing calendar.service_id or ID",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "undefined" : "Identifies a set of dates when a service exception occurs for one or more routes. Each (`service_id`, `date`) pair may only appear once in calendar_dates.txt if using calendar.txt and calendar_dates.txt in conjunction. If a service_id value appears in both calendar.txt and calendar_dates.txt, the information in calendar_dates.txt modifies the service information specified in calendar.txt."
+        "undefined" : "Identifies a set of dates when service is available for one or more routes."
       },
       "labels" : {
         "IRI-based" : "service_id",
@@ -2653,7 +2653,7 @@
         } ]
       },
       "comment" : {
-        "undefined" : "Identifies a shape."
+        "undefined" : "Identifies a geospatial shape describing the vehicle travel path for a trip."
       },
       "labels" : {
         "IRI-based" : "shape_id",
@@ -2676,24 +2676,6 @@
       "labels" : {
         "IRI-based" : "feed_contact_email",
         "undefined" : "feed_contact_email"
-      }
-    }, {
-      "iri" : "http://gtfs.org/fare_transfer_type",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Valid options are: 0 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB. 1 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B. 2 - fare_transfer_rules.fare_product_id; AB. Cost processing interactions between multiple transfers in a journey: Where S indicates the total processed cost of the preceding leg(s) and transfer(s.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Indicates the cost processing method of transferring between legs in a journey"
-      },
-      "labels" : {
-        "IRI-based" : "fare_transfer_type",
-        "undefined" : "fare_transfer_type"
       }
     }, {
       "iri" : "http://gtfs.org/arrival_time",
@@ -2720,6 +2702,24 @@
         "undefined" : "arrival_time"
       }
     }, {
+      "iri" : "http://gtfs.org/fare_transfer_type",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Valid options are: 0 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB. 1 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B. 2 - fare_transfer_rules.fare_product_id; AB. Cost processing interactions between multiple transfers in a journey: Where S indicates the total processed cost of the preceding leg(s) and transfer(s.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Indicates the cost processing method of transferring between legs in a journey"
+      },
+      "labels" : {
+        "IRI-based" : "fare_transfer_type",
+        "undefined" : "fare_transfer_type"
+      }
+    }, {
       "iri" : "http://gtfs.org/route_id",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -2731,12 +2731,12 @@
         }, {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Foreign ID referencing routes.route_id",
+          "value" : "Foreign ID referencing `routes.route_id`",
           "type" : "label"
         }, {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Foreign ID referencing `routes.route_id`",
+          "value" : "Foreign ID referencing routes.route_id",
           "type" : "label"
         } ],
         "example" : [ {
@@ -2946,24 +2946,6 @@
         "undefined" : "duration_limit_type"
       }
     }, {
-      "iri" : "http://gtfs.org/direction_id",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Valid options are: 0 - Travel in one direction (e.g. outbound travel). 1 - Travel in the opposite direction (e.g. inbound travel).",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Indicates the direction of travel for a trip. This field should not be used in routing; it provides a way to separate trips by direction when publishing time tables."
-      },
-      "labels" : {
-        "IRI-based" : "direction_id",
-        "undefined" : "direction_id"
-      }
-    }, {
       "iri" : "http://gtfs.org/attribution_id",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -2980,6 +2962,24 @@
       "labels" : {
         "IRI-based" : "attribution_id",
         "undefined" : "attribution_id"
+      }
+    }, {
+      "iri" : "http://gtfs.org/direction_id",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Valid options are: 0 - Travel in one direction (e.g. outbound travel). 1 - Travel in the opposite direction (e.g. inbound travel).",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Indicates the direction of travel for a trip. This field should not be used in routing; it provides a way to separate trips by direction when publishing time tables."
+      },
+      "labels" : {
+        "IRI-based" : "direction_id",
+        "undefined" : "direction_id"
       }
     }, {
       "iri" : "http://gtfs.org/timeframe_group_id",
@@ -3059,7 +3059,7 @@
         } ]
       },
       "comment" : {
-        "undefined" : "Location at which the pathway begins. Must contain a stop_id that identifies a platform (location_type=0 or empty), entrance/exit (location_type=2), generic node (location_type=3) or boarding area (location_type=4). Values for stop_id that identify stations (location_type=1) are forbidden."
+        "undefined" : "Identifies a stop or station where a connection between routes begins. If this field refers to a station, the transfer rule applies to all its child stops. Referring to a station is forbidden for transfer_types 4 and 5."
       },
       "labels" : {
         "IRI-based" : "from_stop_id",
@@ -3090,24 +3090,6 @@
         "undefined" : "route_short_name"
       }
     }, {
-      "iri" : "http://gtfs.org/transfer_type",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Valid options are: 0 or empty - Recommended transfer point between routes. 1 - Timed transfer point between two routes. The departing vehicle is expected to wait for the arriving one and leave sufficient time for a rider to transfer between routes. 2 - Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time. 3 - Transfers are not possible between routes at the location. 4 - Passengers can transfer from one trip to another by staying onboard the same vehicle (an 'in-seat transfer'). 5 - In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Indicates the type of connection for the specified (from_stop_id, to_stop_id) pair."
-      },
-      "labels" : {
-        "IRI-based" : "transfer_type",
-        "undefined" : "transfer_type"
-      }
-    }, {
       "iri" : "http://gtfs.org/fare_id",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -3129,6 +3111,24 @@
       "labels" : {
         "IRI-based" : "fare_id",
         "undefined" : "fare_id"
+      }
+    }, {
+      "iri" : "http://gtfs.org/transfer_type",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Valid options are: 0 or empty - Recommended transfer point between routes. 1 - Timed transfer point between two routes. The departing vehicle is expected to wait for the arriving one and leave sufficient time for a rider to transfer between routes. 2 - Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time. 3 - Transfers are not possible between routes at the location. 4 - Passengers can transfer from one trip to another by staying onboard the same vehicle (an 'in-seat transfer'). 5 - In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Indicates the type of connection for the specified (from_stop_id, to_stop_id) pair."
+      },
+      "labels" : {
+        "IRI-based" : "transfer_type",
+        "undefined" : "transfer_type"
       }
     }, {
       "iri" : "http://gtfs.org/stair_count",
@@ -3347,24 +3347,6 @@
         "undefined" : "stop_sequence"
       }
     }, {
-      "iri" : "http://gtfs.org/agency_lang",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Language code",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Primary language used by this transit agency. Should be provided to help GTFS consumers choose capitalization rules and other language-specific settings for the dataset."
-      },
-      "labels" : {
-        "IRI-based" : "agency_lang",
-        "undefined" : "agency_lang"
-      }
-    }, {
       "iri" : "http://gtfs.org/fare_media_type",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -3383,22 +3365,22 @@
         "undefined" : "fare_media_type"
       }
     }, {
-      "iri" : "http://gtfs.org/wheelchair_accessible",
+      "iri" : "http://gtfs.org/agency_lang",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
         "additionalInfo" : [ {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Enum field with options 0, 1, 2",
+          "value" : "Language code",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "undefined" : "Indicates wheelchair accessibility. Valid options are: 0 or empty - No accessibility information for the trip. 1 - Vehicle being used on this particular trip can accommodate at least one rider in a wheelchair. 2 - No riders in wheelchairs can be accommodated on this trip."
+        "undefined" : "Primary language used by this transit agency. Should be provided to help GTFS consumers choose capitalization rules and other language-specific settings for the dataset."
       },
       "labels" : {
-        "IRI-based" : "wheelchair_accessible",
-        "undefined" : "wheelchair_accessible"
+        "IRI-based" : "agency_lang",
+        "undefined" : "agency_lang"
       }
     }, {
       "iri" : "http://gtfs.org/to_area_id",
@@ -3419,6 +3401,24 @@
         "undefined" : "to_area_id"
       }
     }, {
+      "iri" : "http://gtfs.org/wheelchair_accessible",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Enum field with options 0, 1, 2",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Indicates wheelchair accessibility. Valid options are: 0 or empty - No accessibility information for the trip. 1 - Vehicle being used on this particular trip can accommodate at least one rider in a wheelchair. 2 - No riders in wheelchairs can be accommodated on this trip."
+      },
+      "labels" : {
+        "IRI-based" : "wheelchair_accessible",
+        "undefined" : "wheelchair_accessible"
+      }
+    }, {
       "iri" : "http://gtfs.org/fare_product_id",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -3435,7 +3435,7 @@
         } ]
       },
       "comment" : {
-        "undefined" : "The fare product required to transfer between two fare legs. If empty, the cost of the transfer rule is 0."
+        "undefined" : "The fare product required to travel the leg."
       },
       "labels" : {
         "IRI-based" : "fare_product_id",
@@ -3466,28 +3466,28 @@
         "additionalInfo" : [ {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Foreign ID referencing agency.agency_id",
+          "value" : "Unique ID",
           "type" : "label"
         }, {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Unique ID",
+          "value" : "Foreign ID referencing agency.agency_id",
           "type" : "label"
         } ],
         "hasCondition" : [ {
           "identifier" : "hasCondition",
           "language" : "undefined",
-          "value" : "Required when the dataset contains data for multiple transit agencies. Recommended otherwise.",
+          "value" : "Required if multiple agencies are defined in agency.txt. Recommended otherwise.",
           "type" : "label"
         }, {
           "identifier" : "hasCondition",
           "language" : "undefined",
-          "value" : "Required if multiple agencies are defined in agency.txt. Recommended otherwise.",
+          "value" : "Required when the dataset contains data for multiple transit agencies. Recommended otherwise.",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "undefined" : "Identifies a transit brand which is often synonymous with a transit agency. Note that in some cases, such as when a single agency operates multiple separate services, agencies and brands are distinct. This document uses the term 'agency' in place of 'brand'. A dataset may contain data from multiple agencies."
+        "undefined" : "Agency for the specified route."
       },
       "labels" : {
         "IRI-based" : "agency_id",
@@ -3613,36 +3613,18 @@
         "undefined" : "stop_lon"
       }
     }, {
-      "iri" : "http://gtfs.org/exception_type",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "additionalInfo" : [ {
-          "identifier" : "additionalInfo",
-          "language" : "undefined",
-          "value" : "Suppose a route has one set of trips available on holidays and another set of trips available on all other days. One service_id could correspond to the regular service schedule and another service_id could correspond to the holiday schedule. For a particular holiday, the calendar_dates.txt file could be used to add the holiday to the holiday service_id and to remove the holiday from the regular service_id schedule.",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Indicates whether service is available on the date specified in the date field. Valid options are: 1 - Service has been added for the specified date. 2 - Service has been removed for the specified date."
-      },
-      "labels" : {
-        "IRI-based" : "exception_type",
-        "undefined" : "exception_type"
-      }
-    }, {
       "iri" : "http://gtfs.org/end_time",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
         "additionalInfo" : [ {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Time at which service changes to a different headway (or ceases) at the first stop in the trip.",
+          "value" : "Values greater than 24:00:00 are forbidden. An empty value in end_time is considered 24:00:00.",
           "type" : "label"
         }, {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Values greater than 24:00:00 are forbidden. An empty value in end_time is considered 24:00:00.",
+          "value" : "Time at which service changes to a different headway (or ceases) at the first stop in the trip.",
           "type" : "label"
         } ],
         "hasCondition" : [ {
@@ -3653,7 +3635,7 @@
         } ]
       },
       "comment" : {
-        "undefined" : "Defines the end of a timeframe. The interval does not include the end time. Values greater than 24:00:00 are forbidden. An empty value in end_time is considered 24:00:00."
+        "undefined" : "Time at which service changes to a different headway (or ceases) at the first stop in the trip."
       },
       "labels" : {
         "IRI-based" : "end_time",
@@ -3676,6 +3658,24 @@
       "labels" : {
         "IRI-based" : "pathway_mode",
         "undefined" : "pathway_mode"
+      }
+    }, {
+      "iri" : "http://gtfs.org/exception_type",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "additionalInfo" : [ {
+          "identifier" : "additionalInfo",
+          "language" : "undefined",
+          "value" : "Suppose a route has one set of trips available on holidays and another set of trips available on all other days. One service_id could correspond to the regular service schedule and another service_id could correspond to the holiday schedule. For a particular holiday, the calendar_dates.txt file could be used to add the holiday to the holiday service_id and to remove the holiday from the regular service_id schedule.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Indicates whether service is available on the date specified in the date field. Valid options are: 1 - Service has been added for the specified date. 2 - Service has been removed for the specified date."
+      },
+      "labels" : {
+        "IRI-based" : "exception_type",
+        "undefined" : "exception_type"
       }
     }, {
       "iri" : "http://gtfs.org/tts_stop_name",
@@ -3840,17 +3840,17 @@
         "additionalInfo" : [ {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Unique ID",
+          "value" : "Foreign ID referencing `levels.level_id`",
           "type" : "label"
         }, {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Foreign ID referencing `levels.level_id`",
+          "value" : "Unique ID",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "undefined" : "Level of the location. The same level may be used by multiple unlinked stations."
+        "undefined" : "Identifies a level in a station."
       },
       "labels" : {
         "IRI-based" : "level_id",
@@ -4001,22 +4001,22 @@
         "undefined" : "record_sub_id"
       }
     }, {
-      "iri" : "http://gtfs.org/transfers",
+      "iri" : "http://gtfs.org/route_sort_order",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
         "additionalInfo" : [ {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Enum field with options: 0 - No transfers permitted, 1 - Riders may transfer once, 2 - Riders may transfer twice, empty - Unlimited transfers permitted.",
+          "value" : "Non-negative integer",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "undefined" : "Indicates the number of transfers permitted on this fare. Valid options are: 0 - No transfers permitted on this fare. 1 - Riders may transfer once. 2 - Riders may transfer twice. empty - Unlimited transfers are permitted."
+        "undefined" : "Orders the routes in a way which is ideal for presentation to customers. Routes with smaller `route_sort_order` values should be displayed first."
       },
       "labels" : {
-        "IRI-based" : "transfers",
-        "undefined" : "transfers"
+        "IRI-based" : "route_sort_order",
+        "undefined" : "route_sort_order"
       }
     }, {
       "iri" : "http://gtfs.org/price",
@@ -4037,22 +4037,22 @@
         "undefined" : "price"
       }
     }, {
-      "iri" : "http://gtfs.org/route_sort_order",
+      "iri" : "http://gtfs.org/transfers",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
         "additionalInfo" : [ {
           "identifier" : "additionalInfo",
           "language" : "undefined",
-          "value" : "Non-negative integer",
+          "value" : "Enum field with options: 0 - No transfers permitted, 1 - Riders may transfer once, 2 - Riders may transfer twice, empty - Unlimited transfers permitted.",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "undefined" : "Orders the routes in a way which is ideal for presentation to customers. Routes with smaller `route_sort_order` values should be displayed first."
+        "undefined" : "Indicates the number of transfers permitted on this fare. Valid options are: 0 - No transfers permitted on this fare. 1 - Riders may transfer once. 2 - Riders may transfer twice. empty - Unlimited transfers are permitted."
       },
       "labels" : {
-        "IRI-based" : "route_sort_order",
-        "undefined" : "route_sort_order"
+        "IRI-based" : "transfers",
+        "undefined" : "transfers"
       }
     }, {
       "iri" : "http://gtfs.org/start_date",
@@ -4229,7 +4229,7 @@
       "undefined" : "Enumeration class for direction_id"
     },
     "attributes" : [ "external" ],
-    "id" : "69",
+    "id" : "71",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/LocationTypeEnum",
@@ -4334,7 +4334,7 @@
       "undefined" : "Enumeration class for location_type"
     },
     "attributes" : [ "external" ],
-    "id" : "61",
+    "id" : "60",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/Leg",
@@ -4348,7 +4348,7 @@
       "undefined" : "Travel in which a rider boards and alights between a pair of subsequent locations along a trip."
     },
     "attributes" : [ "external" ],
-    "id" : "75",
+    "id" : "77",
     "superClasses" : [ "39" ]
   }, {
     "iri" : "http://gtfs.org/FareProduct",
@@ -4362,19 +4362,8 @@
       "undefined" : "Purchasable fare products that can be used to pay for or validate travel."
     },
     "attributes" : [ "external" ],
-    "id" : "78",
+    "id" : "80",
     "superClasses" : [ "39" ]
-  }, {
-    "iri" : "http://schema.org/Intangible",
-    "baseIri" : "http://schema.org",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Intangible",
-      "en" : "Intangible"
-    },
-    "subClasses" : [ "4", "45", "8", "6", "75", "78", "9", "80" ],
-    "attributes" : [ "external" ],
-    "id" : "39"
   }, {
     "iri" : "http://gtfs.org/Longitude",
     "baseIri" : "http://gtfs.org",
@@ -4387,8 +4376,19 @@
       "undefined" : "WGS84 longitude in decimal degrees. The value must be greater than or equal to -90.0 and less than or equal to 90.0."
     },
     "attributes" : [ "external" ],
-    "id" : "81",
+    "id" : "82",
     "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://schema.org/Intangible",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Intangible",
+      "en" : "Intangible"
+    },
+    "subClasses" : [ "4", "45", "8", "6", "77", "80", "9", "83" ],
+    "attributes" : [ "external" ],
+    "id" : "39"
   }, {
     "iri" : "http://schema.org/Enumeration",
     "equivalent" : [ "2" ],
@@ -4399,8 +4399,8 @@
       "en" : "Enumeration"
     },
     "subClasses" : [ "41" ],
-    "attributes" : [ "external", "equivalent" ],
-    "id" : "80",
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "83",
     "superClasses" : [ "39" ]
   }, {
     "iri" : "http://gtfs.org/RouteTypeEnum",
@@ -4519,24 +4519,6 @@
         "undefined" : "route_type:12"
       }
     }, {
-      "iri" : "http://gtfs.org/route_type_2",
-      "baseIri" : "http://gtfs.org",
-      "annotations" : {
-        "hasEnumValue" : [ {
-          "identifier" : "hasEnumValue",
-          "language" : "undefined",
-          "value" : "2",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "undefined" : "Rail"
-      },
-      "labels" : {
-        "IRI-based" : "route_type_2",
-        "undefined" : "route_type:2"
-      }
-    }, {
       "iri" : "http://gtfs.org/route_type_11",
       "baseIri" : "http://gtfs.org",
       "annotations" : {
@@ -4553,6 +4535,24 @@
       "labels" : {
         "IRI-based" : "route_type_11",
         "undefined" : "route_type:11"
+      }
+    }, {
+      "iri" : "http://gtfs.org/route_type_2",
+      "baseIri" : "http://gtfs.org",
+      "annotations" : {
+        "hasEnumValue" : [ {
+          "identifier" : "hasEnumValue",
+          "language" : "undefined",
+          "value" : "2",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Rail"
+      },
+      "labels" : {
+        "IRI-based" : "route_type_2",
+        "undefined" : "route_type:2"
       }
     }, {
       "iri" : "http://gtfs.org/route_type_5",
@@ -4595,7 +4595,7 @@
       "undefined" : "Enumeration class for route_type"
     },
     "attributes" : [ "external" ],
-    "id" : "52",
+    "id" : "44",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/PresenceCondition",
@@ -4605,13 +4605,13 @@
       "IRI-based" : "PresenceCondition",
       "en" : "PresenceCondition"
     },
-    "subClasses" : [ "73", "71", "77", "67", "63" ],
+    "subClasses" : [ "75", "73", "79", "68", "64" ],
     "comment" : {
       "undefined" : "The presence conditions applicable to  Files and Fields"
     },
     "attributes" : [ "external" ],
     "id" : "41",
-    "superClasses" : [ "80" ]
+    "superClasses" : [ "83" ]
   }, {
     "iri" : "http://gtfs.org/ConditionallyForbidden",
     "baseIri" : "http://gtfs.org",
@@ -4624,7 +4624,7 @@
       "undefined" : "The field or file must not be included under conditions outlined in the field or file description."
     },
     "attributes" : [ "external" ],
-    "id" : "77",
+    "id" : "79",
     "superClasses" : [ "41" ]
   }, {
     "iri" : "http://gtfs.org/Integer",
@@ -4638,7 +4638,7 @@
       "undefined" : "An integer"
     },
     "attributes" : [ "external" ],
-    "id" : "87",
+    "id" : "89",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/ExactTimesEnum",
@@ -4689,7 +4689,7 @@
       "undefined" : "Enumeration class for exact_times"
     },
     "attributes" : [ "external" ],
-    "id" : "47",
+    "id" : "31",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/SundayEnum",
@@ -4722,7 +4722,7 @@
       "undefined" : "Enumeration class for sunday"
     },
     "attributes" : [ "external" ],
-    "id" : "36",
+    "id" : "34",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/WheelchairAccessibleEnum",
@@ -4791,7 +4791,7 @@
       "undefined" : "Enumeration class for wheelchair_accessible"
     },
     "attributes" : [ "external" ],
-    "id" : "14",
+    "id" : "12",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/ID",
@@ -4805,7 +4805,7 @@
       "en" : "An ID field value is an internal ID, not intended to be shown to riders, and is a sequence of any UTF-8 characters. Using only printable ASCII characters is recommended. An ID is labeled \"unique ID\" when it must be unique within a file. IDs defined in one .txt file are often referenced in another .txt file. IDs that reference an ID in another table are labeled \"foreign ID\"."
     },
     "attributes" : [ "external" ],
-    "id" : "89",
+    "id" : "91",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/FieldType",
@@ -4815,7 +4815,7 @@
       "IRI-based" : "FieldType",
       "en" : "FieldType"
     },
-    "subClasses" : [ "66", "38", "97", "87", "98", "99", "5", "2", "89", "18", "100", "101", "102", "103", "81" ],
+    "subClasses" : [ "67", "38", "100", "89", "101", "102", "5", "2", "91", "18", "103", "104", "105", "106", "82" ],
     "attributes" : [ "external" ],
     "id" : "6",
     "superClasses" : [ "39" ]
@@ -4868,7 +4868,7 @@
       "undefined" : "Enumeration class for monday"
     },
     "attributes" : [ "external" ],
-    "id" : "105",
+    "id" : "108",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/Time",
@@ -4882,7 +4882,7 @@
       "undefined" : "Time in the HH:MM:SS format (H:MM:SS is also accepted). The time is measured from \"noon minus 12h\" of the service day (effectively midnight except for days on which daylight savings time changes occur). For times occurring after midnight on the service day, enter the time as a value greater than 24:00:00 in HH:MM:SS."
     },
     "attributes" : [ "external" ],
-    "id" : "101",
+    "id" : "104",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/IsOperatorEnum",
@@ -4933,7 +4933,7 @@
       "undefined" : "Enumeration class for is_operator"
     },
     "attributes" : [ "external" ],
-    "id" : "95",
+    "id" : "96",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/DurationLimitTypeEnum",
@@ -5020,24 +5020,8 @@
       "undefined" : "Enumeration class for duration_limit_type"
     },
     "attributes" : [ "external" ],
-    "id" : "111",
+    "id" : "113",
     "superClasses" : [ "2" ]
-  }, {
-    "iri" : "http://gtfs.org/Enum",
-    "equivalent" : [ "80" ],
-    "baseIri" : "http://gtfs.org",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Enum",
-      "en" : "Enum"
-    },
-    "subClasses" : [ "112", "68", "111", "113", "69", "114", "57", "61", "59", "29", "32", "55", "52", "37", "43", "47", "31", "28", "36", "34", "22", "20", "26", "24", "14", "12", "1", "50", "53", "105", "109", "95" ],
-    "comment" : {
-      "en" : "An option from a set of predefined constants defined in the \"Description\" column."
-    },
-    "attributes" : [ "external", "equivalent" ],
-    "id" : "2",
-    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/Journey",
     "baseIri" : "http://gtfs.org",
@@ -5053,6 +5037,22 @@
     "attributes" : [ "external" ],
     "id" : "4",
     "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://gtfs.org/Enum",
+    "equivalent" : [ "83" ],
+    "baseIri" : "http://gtfs.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Enum",
+      "en" : "Enum"
+    },
+    "subClasses" : [ "114", "69", "113", "115", "71", "58", "62", "60", "51", "29", "32", "54", "44", "37", "47", "31", "28", "36", "34", "22", "20", "26", "24", "14", "12", "1", "49", "52", "55", "108", "98", "96" ],
+    "comment" : {
+      "en" : "An option from a set of predefined constants defined in the \"Description\" column."
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "2",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/WheelchairBoardingEnum",
     "baseIri" : "http://gtfs.org",
@@ -5120,7 +5120,7 @@
       "undefined" : "Enumeration class for wheelchair_boarding"
     },
     "attributes" : [ "external" ],
-    "id" : "57",
+    "id" : "62",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/Text",
@@ -5131,7 +5131,7 @@
       "en" : "Text"
     },
     "attributes" : [ "external" ],
-    "id" : "100",
+    "id" : "103",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/ContinuousDropOffEnum",
@@ -5218,7 +5218,7 @@
       "undefined" : "Enumeration class for continuous_drop_off"
     },
     "attributes" : [ "external" ],
-    "id" : "43",
+    "id" : "47",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/Float",
@@ -5232,7 +5232,7 @@
       "en" : "A floating point number."
     },
     "attributes" : [ "external" ],
-    "id" : "97",
+    "id" : "100",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/FridayEnum",
@@ -5283,7 +5283,7 @@
       "undefined" : "Enumeration class for friday"
     },
     "attributes" : [ "external" ],
-    "id" : "31",
+    "id" : "28",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/PaymentMethodEnum",
@@ -5334,7 +5334,7 @@
       "undefined" : "Enumeration class for payment_method"
     },
     "attributes" : [ "external" ],
-    "id" : "22",
+    "id" : "20",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/TimeZone",
@@ -5348,7 +5348,7 @@
       "undefined" : "TZ timezone from the https://www.iana.org/time-zones. Timezone names never contain the space character but may contain an underscore. Refer to http://en.wikipedia.org/wiki/List_of_tz_zones for a list of valid values."
     },
     "attributes" : [ "external" ],
-    "id" : "99",
+    "id" : "102",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/Recommended",
@@ -5362,7 +5362,21 @@
       "undefined" : "The field or file may be omitted from the dataset, but it is a best practice to include it. Before omitting this field or file, the best practice should be carefully evaluated and the full implications of omission should be understood."
     },
     "attributes" : [ "external" ],
-    "id" : "71",
+    "id" : "73",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://gtfs.org/ConditionallyRequired",
+    "baseIri" : "http://gtfs.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConditionallyRequired",
+      "en" : "ConditionallyRequired"
+    },
+    "comment" : {
+      "undefined" : "The field or file must be included under conditions outlined in the field or file description."
+    },
+    "attributes" : [ "external" ],
+    "id" : "75",
     "superClasses" : [ "41" ]
   }, {
     "iri" : "http://gtfs.org/SaturdayEnum",
@@ -5395,36 +5409,8 @@
       "undefined" : "Enumeration class for saturday"
     },
     "attributes" : [ "external" ],
-    "id" : "24",
+    "id" : "14",
     "superClasses" : [ "2" ]
-  }, {
-    "iri" : "http://gtfs.org/ConditionallyRequired",
-    "baseIri" : "http://gtfs.org",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ConditionallyRequired",
-      "en" : "ConditionallyRequired"
-    },
-    "comment" : {
-      "undefined" : "The field or file must be included under conditions outlined in the field or file description."
-    },
-    "attributes" : [ "external" ],
-    "id" : "73",
-    "superClasses" : [ "41" ]
-  }, {
-    "iri" : "http://gtfs.org/URL",
-    "baseIri" : "http://gtfs.org",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "URL",
-      "en" : "URL"
-    },
-    "comment" : {
-      "undefined" : "A fully qualified URL that includes http:// or https://, and any special characters in the URL must be correctly escaped. See the following http://www.w3.org/Addressing/URL/4_URI_Recommentations.html for a description of how to create fully qualified URL values."
-    },
-    "attributes" : [ "external" ],
-    "id" : "102",
-    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/TimepointEnum",
     "baseIri" : "http://gtfs.org",
@@ -5474,8 +5460,22 @@
       "undefined" : "Enumeration class for timepoint"
     },
     "attributes" : [ "external" ],
-    "id" : "109",
+    "id" : "98",
     "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://gtfs.org/URL",
+    "baseIri" : "http://gtfs.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "URL",
+      "en" : "URL"
+    },
+    "comment" : {
+      "undefined" : "A fully qualified URL that includes http:// or https://, and any special characters in the URL must be correctly escaped. See the following http://www.w3.org/Addressing/URL/4_URI_Recommentations.html for a description of how to create fully qualified URL values."
+    },
+    "attributes" : [ "external" ],
+    "id" : "105",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/ContinuousPickupEnum",
     "baseIri" : "http://gtfs.org",
@@ -5561,13 +5561,13 @@
       "undefined" : "Enumeration class for continuous_pickup"
     },
     "attributes" : [ "external" ],
-    "id" : "112",
+    "id" : "114",
     "superClasses" : [ "2" ]
   }, {
     "instances" : 0,
     "union" : [ "8", "9" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "91"
+    "id" : "93"
   }, {
     "instances" : 0,
     "union" : [ "8", "9" ],
@@ -5585,7 +5585,7 @@
       "undefined" : "The field or file may be omitted from the dataset."
     },
     "attributes" : [ "external" ],
-    "id" : "63",
+    "id" : "64",
     "superClasses" : [ "41" ]
   }, {
     "iri" : "http://gtfs.org/TransfersEnum",
@@ -5672,7 +5672,7 @@
       "undefined" : "Enumeration class for transfers"
     },
     "attributes" : [ "external" ],
-    "id" : "113",
+    "id" : "115",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/FareTransferTypeEnum",
@@ -5741,7 +5741,7 @@
       "undefined" : "Enumeration class for fare_transfer_type"
     },
     "attributes" : [ "external" ],
-    "id" : "114",
+    "id" : "58",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
@@ -5752,7 +5752,7 @@
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "92",
+    "id" : "94",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -5896,7 +5896,7 @@
       "undefined" : "Enumeration class for pathway_mode"
     },
     "attributes" : [ "external" ],
-    "id" : "59",
+    "id" : "51",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/PickupTypeEnum",
@@ -5983,7 +5983,7 @@
       "undefined" : "Enumeration class for pickup_type"
     },
     "attributes" : [ "external" ],
-    "id" : "55",
+    "id" : "54",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/LanguageCode",
@@ -5997,7 +5997,7 @@
       "undefined" : "An IETF BCP 47 language code. For an introduction to IETF BCP 47, refer to http://www.rfc-editor.org/rfc/bcp/bcp47.txt and"
     },
     "attributes" : [ "external" ],
-    "id" : "66",
+    "id" : "67",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/PhoneNumber",
@@ -6011,7 +6011,7 @@
       "undefined" : "A phone number"
     },
     "attributes" : [ "external" ],
-    "id" : "98",
+    "id" : "101",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "http://gtfs.org/IsBidirectionalEnum",
@@ -6062,7 +6062,7 @@
       "undefined" : "Enumeration class for is_bidirectional"
     },
     "attributes" : [ "external" ],
-    "id" : "34",
+    "id" : "22",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/ExceptionTypeEnum",
@@ -6113,7 +6113,7 @@
       "undefined" : "Enumeration class for exception_type"
     },
     "attributes" : [ "external" ],
-    "id" : "26",
+    "id" : "24",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/DropOffTypeEnum",
@@ -6200,7 +6200,7 @@
       "undefined" : "Enumeration class for drop_off_type"
     },
     "attributes" : [ "external" ],
-    "id" : "12",
+    "id" : "1",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://gtfs.org/Latitude",
@@ -6214,7 +6214,7 @@
       "undefined" : "WGS84 latitude in decimal degrees. The value must be greater than or equal to -90.0 and less than or equal to 90.0."
     },
     "attributes" : [ "external" ],
-    "id" : "103",
+    "id" : "106",
     "superClasses" : [ "6" ]
   } ],
   "property" : [ {
@@ -6263,7 +6263,7 @@
     "id" : "42",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "44",
+    "id" : "43",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "46",
@@ -6272,41 +6272,41 @@
     "id" : "48",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "49",
+    "id" : "50",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "51",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "54",
+    "id" : "53",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "56",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "58",
+    "id" : "57",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "60",
+    "id" : "59",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "62",
+    "id" : "61",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "64",
+    "id" : "63",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "65",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "70",
+    "id" : "66",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "16",
+    "id" : "70",
     "type" : "owl:objectProperty"
   }, {
     "id" : "72",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "74",
     "type" : "rdfs:SubClassOf"
@@ -6314,13 +6314,10 @@
     "id" : "76",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "79",
+    "id" : "78",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "82",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "83",
+    "id" : "81",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "84",
@@ -6332,37 +6329,40 @@
     "id" : "86",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "88",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "93",
+    "id" : "95",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "94",
+    "id" : "97",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "96",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "104",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "106",
+    "id" : "99",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "107",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "108",
+    "id" : "109",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "110",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "115",
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "116",
@@ -6418,11 +6418,14 @@
   }, {
     "id" : "133",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "0"
   }, {
     "iri" : "http://gtfs.org/hasField",
@@ -6437,17 +6440,17 @@
     "comment" : {
       "undefined" : "This property links a file to its fields"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "7"
   }, {
     "range" : "2",
     "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "11"
   }, {
     "range" : "2",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "13"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
@@ -6458,47 +6461,47 @@
     },
     "domain" : "15",
     "subproperty" : [ "7", "16", "17" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "10"
   }, {
     "range" : "2",
     "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "19"
   }, {
     "range" : "2",
     "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "21"
   }, {
     "range" : "2",
     "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "23"
   }, {
     "range" : "2",
     "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "25"
   }, {
     "range" : "2",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "27"
   }, {
     "range" : "2",
     "domain" : "31",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "30"
   }, {
     "range" : "2",
     "domain" : "34",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "33"
   }, {
     "range" : "2",
     "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "35"
   }, {
     "iri" : "http://gtfs.org/isPresence",
@@ -6513,78 +6516,93 @@
     "comment" : {
       "undefined" : "This property links a file or field to its PresenceCondition."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "17"
   }, {
     "range" : "2",
-    "domain" : "43",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "42"
   }, {
     "range" : "2",
-    "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "44"
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
   }, {
     "range" : "2",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "46"
   }, {
     "range" : "2",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "48"
   }, {
     "range" : "2",
-    "domain" : "29",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "49"
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
   }, {
     "range" : "2",
-    "domain" : "52",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "51"
+    "domain" : "54",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "53"
   }, {
     "range" : "2",
-    "domain" : "55",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "54"
-  }, {
-    "range" : "2",
-    "domain" : "57",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "56"
   }, {
     "range" : "2",
-    "domain" : "59",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "58"
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
   }, {
     "range" : "2",
-    "domain" : "61",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "60"
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "2",
+    "domain" : "62",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
   }, {
     "range" : "41",
-    "domain" : "63",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "62"
+    "domain" : "64",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "63"
   }, {
     "range" : "6",
     "domain" : "38",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "64"
-  }, {
-    "range" : "6",
-    "domain" : "66",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "65"
   }, {
-    "range" : "41",
-    "domain" : "71",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "6",
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://gtfs.org/isFieldOf",
+    "inverse" : "7",
+    "baseIri" : "http://gtfs.org",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "isFieldOf",
+      "en" : "isFieldOf"
+    },
+    "domain" : "9",
+    "comment" : {
+      "undefined" : "This property links a field back to its file"
+    },
+    "attributes" : [ "object", "external" ],
     "id" : "70"
+  }, {
+    "range" : "41",
+    "domain" : "73",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
   }, {
     "iri" : "http://gtfs.org/isType",
     "baseIri" : "http://gtfs.org",
@@ -6598,202 +6616,202 @@
     "comment" : {
       "undefined" : "This property is used to specify the FieldType for a Field"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "16"
   }, {
     "range" : "41",
-    "domain" : "73",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "72"
-  }, {
-    "range" : "41",
-    "domain" : "67",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "74"
   }, {
     "range" : "41",
-    "domain" : "77",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "76"
+  }, {
+    "range" : "41",
+    "domain" : "79",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "78"
   }, {
     "range" : "39",
     "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "79"
-  }, {
-    "range" : "39",
-    "domain" : "78",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "82"
-  }, {
-    "range" : "80",
-    "domain" : "41",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "83"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "81"
   }, {
     "range" : "39",
     "domain" : "80",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "84"
   }, {
-    "range" : "39",
-    "domain" : "75",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "83",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "85"
   }, {
     "range" : "39",
-    "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "83",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "86"
   }, {
     "range" : "39",
-    "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
+    "range" : "39",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "88"
+  }, {
+    "range" : "39",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
-    "range" : "92",
+    "range" : "94",
     "label" : {
       "IRI-based" : "topDataProperty"
     },
-    "domain" : "91",
-    "attributes" : [ "external", "functional", "datatype" ],
-    "id" : "90"
-  }, {
-    "range" : "4",
-    "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "93"
+    "domain" : "93",
+    "attributes" : [ "functional", "datatype", "external" ],
+    "id" : "92"
   }, {
     "range" : "2",
-    "domain" : "95",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "94"
+    "domain" : "96",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "range" : "2",
+    "domain" : "98",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "97"
   }, {
     "range" : "39",
     "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "96"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "99"
   }, {
     "range" : "39",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "104"
-  }, {
-    "range" : "2",
-    "domain" : "53",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "106"
-  }, {
-    "range" : "2",
-    "domain" : "50",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "107"
   }, {
     "range" : "2",
-    "domain" : "109",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "108"
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "109"
   }, {
     "range" : "2",
-    "domain" : "105",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "110"
   }, {
-    "range" : "6",
-    "domain" : "81",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "115"
+    "range" : "2",
+    "domain" : "108",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "111"
+  }, {
+    "range" : "2",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "112"
   }, {
     "range" : "6",
-    "domain" : "103",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "116"
   }, {
     "range" : "6",
-    "domain" : "100",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "106",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "117"
   }, {
     "range" : "6",
-    "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "103",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "118"
   }, {
     "range" : "6",
-    "domain" : "102",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "119"
   }, {
     "range" : "6",
-    "domain" : "101",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "105",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "120"
   }, {
     "range" : "6",
-    "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "104",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "121"
   }, {
     "range" : "6",
-    "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "122"
   }, {
     "range" : "6",
-    "domain" : "89",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "123"
   }, {
     "range" : "6",
-    "domain" : "87",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "91",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "124"
   }, {
     "range" : "6",
-    "domain" : "97",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "125"
   }, {
     "range" : "6",
-    "domain" : "99",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "100",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "126"
   }, {
     "range" : "6",
-    "domain" : "98",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "102",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "127"
   }, {
-    "range" : "2",
-    "domain" : "112",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "6",
+    "domain" : "101",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "128"
   }, {
-    "range" : "2",
-    "domain" : "68",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "129"
   }, {
     "range" : "2",
-    "domain" : "111",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "114",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "130"
   }, {
     "range" : "2",
-    "domain" : "113",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "131"
   }, {
     "range" : "2",
-    "domain" : "69",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "113",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "132"
   }, {
     "range" : "2",
-    "domain" : "114",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "115",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "133"
+  }, {
+    "range" : "2",
+    "domain" : "71",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
   } ]
 }
