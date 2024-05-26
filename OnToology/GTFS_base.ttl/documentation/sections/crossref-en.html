@@ -765,7 +765,8 @@ This section provides details for each class and property defined by [Ontology N
                target="_blank"
                title="http://gtfs.org/example">example</a>, <a href="http://gtfs.org/hasCondition"
                target="_blank"
-               title="http://gtfs.org/hasCondition">has condition</a>, <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
+               title="http://gtfs.org/hasCondition">has condition</a>, <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://gtfs.org/isType" title="http://gtfs.org/isType">isType</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -1002,6 +1003,11 @@ This section provides details for each class and property defined by [Ontology N
                target="_blank"
                title="http://gtfs.org/hasCondition">has condition</a>, <a href="#http://gtfs.org/hasField" title="http://gtfs.org/hasField">hasField</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>has members</dt>
@@ -1946,6 +1952,9 @@ This section provides details for each class and property defined by [Ontology N
          <a href="#http://gtfs.org/hasField" title="http://gtfs.org/hasField">hasField</a>
       </li>
       <li>
+         <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+      </li>
+      <li>
          <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
       </li>
       <li>
@@ -1979,6 +1988,41 @@ This section provides details for each class and property defined by [Ontology N
             <dd>
                <a href="#http://gtfs.org/Field" title="http://gtfs.org/Field">Field</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://gtfs.org/isFieldOf">
+      <h3>isFieldOf<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://gtfs.org/isFieldOf</p>
+      <div class="comment">
+         <span class="markdown">This property links a field back to its file</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://gtfs.org/Field" title="http://gtfs.org/Field">Field</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://gtfs.org/File" title="http://gtfs.org/File">File</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#http://gtfs.org/hasField" title="http://gtfs.org/hasField">hasField</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -2956,6 +3000,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/agency.txt" title="http://gtfs.org/agency.txt">agency.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -2985,6 +3034,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/agency.txt" title="http://gtfs.org/agency.txt">agency.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -3013,6 +3067,26 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/agency.txt" title="http://gtfs.org/agency.txt">agency.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/attributions.txt" title="http://gtfs.org/attributions.txt">attributions.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_attributes.txt" title="http://gtfs.org/fare_attributes.txt">fare_attributes.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -3048,6 +3122,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/agency.txt" title="http://gtfs.org/agency.txt">agency.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -3076,6 +3155,11 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/agency.txt" title="http://gtfs.org/agency.txt">agency.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -3106,6 +3190,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/agency.txt" title="http://gtfs.org/agency.txt">agency.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -3134,6 +3223,11 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/agency.txt" title="http://gtfs.org/agency.txt">agency.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -3164,6 +3258,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/agency.txt" title="http://gtfs.org/agency.txt">agency.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -3192,6 +3291,11 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_products.txt" title="http://gtfs.org/fare_products.txt">fare_products.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -3222,6 +3326,16 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/areas.txt" title="http://gtfs.org/areas.txt">areas.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_areas.txt" title="http://gtfs.org/stop_areas.txt">stop_areas.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -3250,6 +3364,11 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/areas.txt" title="http://gtfs.org/areas.txt">areas.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -3314,6 +3433,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/ConditionallyRequired" title="http://gtfs.org/ConditionallyRequired">ConditionallyRequired</a>
@@ -3342,6 +3466,11 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/attributions.txt" title="http://gtfs.org/attributions.txt">attributions.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -3372,6 +3501,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/attributions.txt" title="http://gtfs.org/attributions.txt">attributions.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -3401,6 +3535,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/attributions.txt" title="http://gtfs.org/attributions.txt">attributions.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -3429,6 +3568,11 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/attributions.txt" title="http://gtfs.org/attributions.txt">attributions.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -3538,6 +3682,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/trips.txt" title="http://gtfs.org/trips.txt">trips.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -3620,6 +3769,11 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/trips.txt" title="http://gtfs.org/trips.txt">trips.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -3763,6 +3917,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_rules.txt" title="http://gtfs.org/fare_rules.txt">fare_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -3791,6 +3950,16 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -3893,6 +4062,16 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -3994,6 +4173,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_products.txt" title="http://gtfs.org/fare_products.txt">fare_products.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -4024,6 +4208,11 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_attributes.txt" title="http://gtfs.org/fare_attributes.txt">fare_attributes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -4056,6 +4245,11 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar_dates.txt" title="http://gtfs.org/calendar_dates.txt">calendar_dates.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -4084,6 +4278,11 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/feed_info.txt" title="http://gtfs.org/feed_info.txt">feed_info.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -4120,6 +4319,11 @@ For times occurring after midnight on the service day, enter the time as a value
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/ConditionallyRequired" title="http://gtfs.org/ConditionallyRequired">ConditionallyRequired</a>
@@ -4149,6 +4353,11 @@ For times occurring after midnight on the service day, enter the time as a value
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_rules.txt" title="http://gtfs.org/fare_rules.txt">fare_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -4177,6 +4386,11 @@ For times occurring after midnight on the service day, enter the time as a value
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/trips.txt" title="http://gtfs.org/trips.txt">trips.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -4242,6 +4456,11 @@ For times occurring after midnight on the service day, enter the time as a value
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -4348,6 +4567,11 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_transfer_rules.txt" title="http://gtfs.org/fare_transfer_rules.txt">fare_transfer_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -4376,6 +4600,11 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_transfer_rules.txt" title="http://gtfs.org/fare_transfer_rules.txt">fare_transfer_rules.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -4478,6 +4707,11 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar.txt" title="http://gtfs.org/calendar.txt">calendar.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -4506,6 +4740,16 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/frequencies.txt" title="http://gtfs.org/frequencies.txt">frequencies.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/timeframes.txt" title="http://gtfs.org/timeframes.txt">timeframes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -4540,6 +4784,11 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/frequencies.txt" title="http://gtfs.org/frequencies.txt">frequencies.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -4605,6 +4854,11 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar_dates.txt" title="http://gtfs.org/calendar_dates.txt">calendar_dates.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -4729,6 +4983,16 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_attributes.txt" title="http://gtfs.org/fare_attributes.txt">fare_attributes.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_rules.txt" title="http://gtfs.org/fare_rules.txt">fare_rules.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -4857,6 +5121,16 @@ If there is no duration limit, `fare_transfer_rules.duration_limit` must be empt
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_media.txt" title="http://gtfs.org/fare_media.txt">fare_media.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_products.txt" title="http://gtfs.org/fare_products.txt">fare_products.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -4893,6 +5167,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_media.txt" title="http://gtfs.org/fare_media.txt">fare_media.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -4921,6 +5200,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_media.txt" title="http://gtfs.org/fare_media.txt">fare_media.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -5041,6 +5325,21 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_leg_rules.txt" title="http://gtfs.org/fare_leg_rules.txt">fare_leg_rules.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_products.txt" title="http://gtfs.org/fare_products.txt">fare_products.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_transfer_rules.txt" title="http://gtfs.org/fare_transfer_rules.txt">fare_transfer_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -5074,6 +5373,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_products.txt" title="http://gtfs.org/fare_products.txt">fare_products.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -5261,6 +5565,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_transfer_rules.txt" title="http://gtfs.org/fare_transfer_rules.txt">fare_transfer_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -5344,6 +5653,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/feed_info.txt" title="http://gtfs.org/feed_info.txt">feed_info.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -5373,6 +5687,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/feed_info.txt" title="http://gtfs.org/feed_info.txt">feed_info.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -5401,6 +5720,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/feed_info.txt" title="http://gtfs.org/feed_info.txt">feed_info.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -5500,6 +5824,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/feed_info.txt" title="http://gtfs.org/feed_info.txt">feed_info.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -5528,6 +5857,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/feed_info.txt" title="http://gtfs.org/feed_info.txt">feed_info.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -5558,6 +5892,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/feed_info.txt" title="http://gtfs.org/feed_info.txt">feed_info.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -5586,6 +5925,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/feed_info.txt" title="http://gtfs.org/feed_info.txt">feed_info.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -5616,6 +5960,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/feed_info.txt" title="http://gtfs.org/feed_info.txt">feed_info.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Recommended" title="http://gtfs.org/Recommended">Recommended</a>
@@ -5644,6 +5993,11 @@ For fare media which are transit cards (`fare_media_type =2`) or mobile apps (`f
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/translations.txt" title="http://gtfs.org/translations.txt">translations.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -5677,6 +6031,11 @@ If two translation rules match the same record (one with `field_value`, and the 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/translations.txt" title="http://gtfs.org/translations.txt">translations.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -5756,6 +6115,11 @@ If two translation rules match the same record (one with `field_value`, and the 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar.txt" title="http://gtfs.org/calendar.txt">calendar.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -5821,6 +6185,11 @@ If two translation rules match the same record (one with `field_value`, and the 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_leg_rules.txt" title="http://gtfs.org/fare_leg_rules.txt">fare_leg_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -5854,6 +6223,11 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_transfer_rules.txt" title="http://gtfs.org/fare_transfer_rules.txt">fare_transfer_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -5883,6 +6257,11 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/transfers.txt" title="http://gtfs.org/transfers.txt">transfers.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -5911,6 +6290,16 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/transfers.txt" title="http://gtfs.org/transfers.txt">transfers.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -5946,6 +6335,11 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_leg_rules.txt" title="http://gtfs.org/fare_leg_rules.txt">fare_leg_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -5974,6 +6368,11 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/transfers.txt" title="http://gtfs.org/transfers.txt">transfers.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -6004,6 +6403,11 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/frequencies.txt" title="http://gtfs.org/frequencies.txt">frequencies.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -6032,6 +6436,11 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/attributions.txt" title="http://gtfs.org/attributions.txt">attributions.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -6098,6 +6507,11 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -6163,6 +6577,11 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/attributions.txt" title="http://gtfs.org/attributions.txt">attributions.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -6227,6 +6646,11 @@ An empty entry in fare_transfer_rules.from_leg_group_id corresponds to all leg g
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/attributions.txt" title="http://gtfs.org/attributions.txt">attributions.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -6297,6 +6721,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/translations.txt" title="http://gtfs.org/translations.txt">translations.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -6325,6 +6754,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_leg_rules.txt" title="http://gtfs.org/fare_leg_rules.txt">fare_leg_rules.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -6355,6 +6789,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -6383,6 +6822,16 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/levels.txt" title="http://gtfs.org/levels.txt">levels.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -6418,6 +6867,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/levels.txt" title="http://gtfs.org/levels.txt">levels.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -6446,6 +6900,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/levels.txt" title="http://gtfs.org/levels.txt">levels.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -6514,6 +6973,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -6634,6 +7098,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -6662,6 +7131,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/transfers.txt" title="http://gtfs.org/transfers.txt">transfers.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -6692,6 +7166,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -6720,6 +7199,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar.txt" title="http://gtfs.org/calendar.txt">calendar.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -6786,6 +7270,16 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_leg_rules.txt" title="http://gtfs.org/fare_leg_rules.txt">fare_leg_rules.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -6814,6 +7308,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/attributions.txt" title="http://gtfs.org/attributions.txt">attributions.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -6844,6 +7343,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_rules.txt" title="http://gtfs.org/fare_rules.txt">fare_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -6872,6 +7376,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -6902,6 +7411,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -6930,6 +7444,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -7170,6 +7689,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_attributes.txt" title="http://gtfs.org/fare_attributes.txt">fare_attributes.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -7234,6 +7758,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -7336,6 +7865,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -7364,6 +7898,11 @@ Example: In Switzerland, a city in an officially bilingual canton is officially 
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_attributes.txt" title="http://gtfs.org/fare_attributes.txt">fare_attributes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -7412,6 +7951,11 @@ Fields in tables not defined above should not be translated. However producers s
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/translations.txt" title="http://gtfs.org/translations.txt">translations.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -7466,6 +8010,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/translations.txt" title="http://gtfs.org/translations.txt">translations.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/ConditionallyRequired" title="http://gtfs.org/ConditionallyRequired">ConditionallyRequired</a>
@@ -7495,6 +8044,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -7523,6 +8077,11 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -7555,6 +8114,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -7583,6 +8147,26 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/attributions.txt" title="http://gtfs.org/attributions.txt">attributions.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_rules.txt" title="http://gtfs.org/fare_rules.txt">fare_rules.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/trips.txt" title="http://gtfs.org/trips.txt">trips.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -7618,6 +8202,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/ConditionallyRequired" title="http://gtfs.org/ConditionallyRequired">ConditionallyRequired</a>
@@ -7646,6 +8235,11 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -7676,6 +8270,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -7704,6 +8303,11 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -7735,6 +8339,11 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -7945,6 +8554,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/routes.txt" title="http://gtfs.org/routes.txt">routes.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -8063,6 +8677,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar.txt" title="http://gtfs.org/calendar.txt">calendar.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -8110,6 +8729,26 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar.txt" title="http://gtfs.org/calendar.txt">calendar.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar_dates.txt" title="http://gtfs.org/calendar_dates.txt">calendar_dates.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/timeframes.txt" title="http://gtfs.org/timeframes.txt">timeframes.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/trips.txt" title="http://gtfs.org/trips.txt">trips.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -8139,6 +8778,16 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/shapes.txt" title="http://gtfs.org/shapes.txt">shapes.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -8167,6 +8816,16 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/shapes.txt" title="http://gtfs.org/shapes.txt">shapes.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/trips.txt" title="http://gtfs.org/trips.txt">trips.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -8202,6 +8861,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/shapes.txt" title="http://gtfs.org/shapes.txt">shapes.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -8231,6 +8895,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/shapes.txt" title="http://gtfs.org/shapes.txt">shapes.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -8259,6 +8928,11 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/shapes.txt" title="http://gtfs.org/shapes.txt">shapes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -8338,6 +9012,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -8373,6 +9052,11 @@ If only an estimated stair count can be provided, it is recommended to approxima
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -8402,6 +9086,11 @@ If only an estimated stair count can be provided, it is recommended to approxima
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar.txt" title="http://gtfs.org/calendar.txt">calendar.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -8430,6 +9119,16 @@ If only an estimated stair count can be provided, it is recommended to approxima
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/frequencies.txt" title="http://gtfs.org/frequencies.txt">frequencies.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/timeframes.txt" title="http://gtfs.org/timeframes.txt">timeframes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -8499,6 +9198,11 @@ If only an estimated stair count can be provided, it is recommended to approxima
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -8527,6 +9231,11 @@ If only an estimated stair count can be provided, it is recommended to approxima
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -8557,6 +9266,11 @@ If only an estimated stair count can be provided, it is recommended to approxima
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -8585,6 +9299,21 @@ If only an estimated stair count can be provided, it is recommended to approxima
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_areas.txt" title="http://gtfs.org/stop_areas.txt">stop_areas.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -8621,6 +9350,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/ConditionallyRequired" title="http://gtfs.org/ConditionallyRequired">ConditionallyRequired</a>
@@ -8655,6 +9389,11 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -8691,6 +9430,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/ConditionallyRequired" title="http://gtfs.org/ConditionallyRequired">ConditionallyRequired</a>
@@ -8719,6 +9463,11 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -8833,6 +9582,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -8861,6 +9615,11 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -8990,6 +9749,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar.txt" title="http://gtfs.org/calendar.txt">calendar.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -9036,6 +9800,11 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/translations.txt" title="http://gtfs.org/translations.txt">translations.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -9228,6 +9997,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar.txt" title="http://gtfs.org/calendar.txt">calendar.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -9274,6 +10048,11 @@ Conditionally Required:
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/timeframes.txt" title="http://gtfs.org/timeframes.txt">timeframes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -9348,6 +10127,11 @@ Conditionally Required:
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Recommended" title="http://gtfs.org/Recommended">Recommended</a>
@@ -9417,6 +10201,11 @@ An empty entry in fare_leg_rules.to_area_id corresponds to all areas defined in 
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_leg_rules.txt" title="http://gtfs.org/fare_leg_rules.txt">fare_leg_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -9450,6 +10239,11 @@ An empty entry in fare_transfer_rules.to_leg_group_id corresponds to all leg gro
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_transfer_rules.txt" title="http://gtfs.org/fare_transfer_rules.txt">fare_transfer_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -9479,6 +10273,11 @@ An empty entry in fare_transfer_rules.to_leg_group_id corresponds to all leg gro
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/transfers.txt" title="http://gtfs.org/transfers.txt">transfers.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -9507,6 +10306,16 @@ An empty entry in fare_transfer_rules.to_leg_group_id corresponds to all leg gro
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/transfers.txt" title="http://gtfs.org/transfers.txt">transfers.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -9548,6 +10357,11 @@ An empty fare_leg_rules.to_timeframe_group_id indicates that the end time of the
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_leg_rules.txt" title="http://gtfs.org/fare_leg_rules.txt">fare_leg_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -9576,6 +10390,11 @@ An empty fare_leg_rules.to_timeframe_group_id indicates that the end time of the
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/transfers.txt" title="http://gtfs.org/transfers.txt">transfers.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -9610,6 +10429,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_transfer_rules.txt" title="http://gtfs.org/fare_transfer_rules.txt">fare_transfer_rules.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/ConditionallyForbidden" title="http://gtfs.org/ConditionallyForbidden">ConditionallyForbidden</a>
@@ -9639,6 +10463,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_attributes.txt" title="http://gtfs.org/fare_attributes.txt">fare_attributes.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -9667,6 +10496,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/transfers.txt" title="http://gtfs.org/transfers.txt">transfers.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -9804,6 +10638,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/fare_attributes.txt" title="http://gtfs.org/fare_attributes.txt">fare_attributes.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -9970,6 +10809,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/translations.txt" title="http://gtfs.org/translations.txt">translations.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -10058,6 +10902,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/pathways.txt" title="http://gtfs.org/pathways.txt">pathways.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -10087,6 +10936,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/trips.txt" title="http://gtfs.org/trips.txt">trips.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -10115,6 +10969,26 @@ If a sub-journey matches multiple records with different transfer_counts, then t
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/attributions.txt" title="http://gtfs.org/attributions.txt">attributions.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/frequencies.txt" title="http://gtfs.org/frequencies.txt">frequencies.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stop_times.txt" title="http://gtfs.org/stop_times.txt">stop_times.txt</a>
+         </dd>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/trips.txt" title="http://gtfs.org/trips.txt">trips.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -10149,6 +11023,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/trips.txt" title="http://gtfs.org/trips.txt">trips.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -10253,6 +11132,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -10281,6 +11165,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar.txt" title="http://gtfs.org/calendar.txt">calendar.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -10329,6 +11218,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/calendar.txt" title="http://gtfs.org/calendar.txt">calendar.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">Required</a>
@@ -10375,6 +11269,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/trips.txt" title="http://gtfs.org/trips.txt">trips.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -10459,6 +11358,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
          </dd>
          <dt>has facts</dt>
          <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
+         <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 
             <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">Optional</a>
@@ -10541,6 +11445,11 @@ If a sub-journey matches multiple records with different transfer_counts, then t
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has facts</dt>
+         <dd>
+            <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://gtfs.org/stops.txt" title="http://gtfs.org/stops.txt">stops.txt</a>
+         </dd>
          <dd>
             <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
             <sup class="type-op" title="object property">op</sup> 

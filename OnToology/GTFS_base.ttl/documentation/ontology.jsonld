@@ -886,6 +886,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Email address actively monitored by the agency’s customer service department. This email address should be a direct contact point where transit riders can reach a customer service representative at the agency."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/agency.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -906,6 +909,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Field Type: URL"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/agency.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -934,6 +940,15 @@
     "@value" : "Required if multiple agencies are defined in agency.txt. Recommended otherwise."
   }, {
     "@value" : "Required when the dataset contains data for multiple transit agencies. Recommended otherwise."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/agency.txt"
+  }, {
+    "@id" : "http://gtfs.org/attributions.txt"
+  }, {
+    "@id" : "http://gtfs.org/fare_attributes.txt"
+  }, {
+    "@id" : "http://gtfs.org/routes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
@@ -964,6 +979,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Language code"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/agency.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -984,6 +1002,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Type: Text"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/agency.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -1006,6 +1027,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Phone number should be in a standard format without any descriptive text."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/agency.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -1026,6 +1050,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Timezone where the transit agency is located. If multiple agencies are specified in the dataset, each must have the same `agency_timezone`."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/agency.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -1048,6 +1075,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "URL"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/agency.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -1068,6 +1098,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Currency amount"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_products.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -1092,6 +1125,11 @@
   }, {
     "@value" : "Unique ID"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/areas.txt"
+  }, {
+    "@id" : "http://gtfs.org/stop_areas.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -1114,6 +1152,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Field Type: Text"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/areas.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -1159,6 +1200,9 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required for the first and last stop in a trip (defined by `stop_times.stop_sequence`). Required for `timepoint=1`. Optional otherwise."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stop_times.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   } ],
@@ -1179,6 +1223,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Email of the organization."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/attributions.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -1201,6 +1248,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Unique ID"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/attributions.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -1222,6 +1272,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Phone number of the organization."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/attributions.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -1242,6 +1295,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "URL"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/attributions.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -1301,6 +1357,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum field with options 0, 1, 2"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/trips.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -1367,6 +1426,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "A block consists of a single trip or many sequential trips made using the same vehicle, defined by shared service days and `block_id`."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/trips.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -1456,6 +1518,9 @@
   "http://gtfs.org/example" : [ {
     "@value" : "fare_id,route_id,...,contains_id\nc,GRT,...,5\nc,GRT,...,6\nc,GRT,...,7"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -1476,6 +1541,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 0 - Continuous stopping drop off, 1 or empty - No continuous stopping drop off, 2 - Must phone agency to arrange continuous stopping drop off, 3 - Must coordinate with driver to arrange continuous stopping drop off. Values for routes.continuous_drop_off may be overridden by defining values in stop_times.continuous_drop_off for specific stop_times along the route."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/routes.txt"
+  }, {
+    "@id" : "http://gtfs.org/stop_times.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -1562,6 +1632,11 @@
   }, {
     "@value" : "Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup. Values for `routes.continuous_pickup` may be overridden by defining values in `stop_times.continuous_pickup` for specific `stop_time`s along the route."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/routes.txt"
+  }, {
+    "@id" : "http://gtfs.org/stop_times.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -1645,6 +1720,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Currency code"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_products.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -1665,6 +1743,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Currency code"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_attributes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -1687,6 +1768,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Field Type: Date"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar_dates.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -1707,6 +1791,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Language code"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/feed_info.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -1732,6 +1819,9 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required for `timepoint=1`. Optional otherwise"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stop_times.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   } ],
@@ -1756,6 +1846,9 @@
   "http://gtfs.org/example" : [ {
     "@value" : "The origin_id and destination_id fields could be used together to specify that fare class 'b' is valid for travel between zones 3 and 4, and for travel between zones 3 and 5, the fare_rules.txt file would contain these records for the fare class: fare_id,...,origin_id,destination_id b,...,3,4 b,...,3,5"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -1776,6 +1869,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 0 - Travel in one direction (e.g. outbound travel). 1 - Travel in the opposite direction (e.g. inbound travel)."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/trips.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -1827,6 +1923,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum field with options 0, 1, 2, 3"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stop_times.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -1909,6 +2008,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Positive integer"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_transfer_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -1932,6 +2034,9 @@
   } ],
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required if `fare_transfer_rules.duration_limit` is defined. Forbidden if `fare_transfer_rules.duration_limit` is empty."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_transfer_rules.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
@@ -2014,6 +2119,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "The end_date field specifies the end service day for the service interval."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -2040,6 +2148,11 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required if timeframes.start_time is defined. Forbidden otherwise"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/frequencies.txt"
+  }, {
+    "@id" : "http://gtfs.org/timeframes.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   }, {
@@ -2064,6 +2177,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum field with options 0 or 1"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/frequencies.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -2133,6 +2249,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Suppose a route has one set of trips available on holidays and another set of trips available on all other days. One service_id could correspond to the regular service schedule and another service_id could correspond to the holiday schedule. For a particular holiday, the calendar_dates.txt file could be used to add the holiday to the holiday service_id and to remove the holiday from the regular service_id schedule."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar_dates.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -2217,6 +2336,11 @@
   }, {
     "@value" : "Unique ID"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_attributes.txt"
+  }, {
+    "@id" : "http://gtfs.org/fare_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -2298,6 +2422,11 @@
   }, {
     "@value" : "Unique ID"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_media.txt"
+  }, {
+    "@id" : "http://gtfs.org/fare_products.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   }, {
@@ -2323,6 +2452,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "None"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_media.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -2343,6 +2475,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum field with options: 0 - None, 1 - Physical paper ticket, 2 - Physical transit card, 3 - cEMV, 4 - Mobile app"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_media.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -2442,6 +2577,13 @@
   }, {
     "@value" : "This field is used to uniquely identify a fare product."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_leg_rules.txt"
+  }, {
+    "@id" : "http://gtfs.org/fare_products.txt"
+  }, {
+    "@id" : "http://gtfs.org/fare_transfer_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   }, {
@@ -2468,6 +2610,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Type: Text"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_products.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -2578,6 +2723,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 0 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB. 1 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B. 2 - fare_transfer_rules.fare_product_id; AB. Cost processing interactions between multiple transfers in a journey: Where S indicates the total processed cost of the preceding leg(s) and transfer(s."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_transfer_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -2644,6 +2792,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Email address for communication regarding the GTFS dataset and data publishing practices. `feed_contact_email` is a technical contact for GTFS-consuming applications. Provide customer service contact information through [agency.txt](#agencytxt). It's recommended that at least one of `feed_contact_email` or `feed_contact_url` are provided."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/feed_info.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -2665,6 +2816,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "URL for contact information"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/feed_info.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -2685,6 +2839,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "The end date for the feed"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/feed_info.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Recommended"
@@ -2744,6 +2901,9 @@
   "http://gtfs.org/example" : [ {
     "@value" : "None"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/feed_info.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -2764,6 +2924,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Type: Text"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/feed_info.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -2786,6 +2949,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "URL of the dataset publishing organization's website."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/feed_info.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -2804,6 +2970,9 @@
 }, {
   "@id" : "http://gtfs.org/feed_start_date",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/feed_info.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Recommended"
   } ],
@@ -2825,6 +2994,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Recommended field to indicate the version of the GTFS dataset."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/feed_info.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Recommended"
   } ],
@@ -2845,6 +3017,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Fields with type `Text` may be translated, fields with type `URL`, `Email` and `Phone number` may also be “translated” to provide resources in the correct language. Fields with other types should not be translated."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/translations.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -2869,6 +3044,9 @@
   } ],
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "- **Forbidden** if `table_name` is `feed_info`.\n- **Forbidden** if `record_id` is defined.\n- **Required** if `record_id` is empty."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/translations.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
@@ -2916,6 +3094,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum field representing the behavior on Fridays"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -2968,6 +3149,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "If there are no matching fare_leg_rules.from_area_id values to the area_id being filtered, empty fare_leg_rules.from_area_id will be matched by default. An empty entry in fare_leg_rules.from_area_id corresponds to all areas defined in areas.area_id excluding the ones listed under fare_leg_rules.from_area_id"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_leg_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -2989,6 +3173,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Foreign ID referencing fare_leg_rules.leg_group_id"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_transfer_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -3009,6 +3196,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Foreign ID referencing `routes.route_id`"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/transfers.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -3033,6 +3223,11 @@
   } ],
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "If this field refers to a station, the transfer rule applies to all its child stops. Referring to a station is forbidden for transfer_types 4 and 5."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
+  }, {
+    "@id" : "http://gtfs.org/transfers.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
@@ -3059,6 +3254,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Foreign ID referencing timeframes.timeframe_group_id"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_leg_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -3082,6 +3280,9 @@
   } ],
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "REQUIRED if `transfer_type` is `4` or `5`."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/transfers.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
@@ -3153,6 +3354,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Positive integer"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/frequencies.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -3167,6 +3371,25 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "headway_secs"
+  } ]
+}, {
+  "@id" : "http://gtfs.org/isFieldOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This property links a field back to its file"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://gtfs.org/Field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "isFieldOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://gtfs.org/File"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://gtfs.org/hasField"
   } ]
 }, {
   "@id" : "http://gtfs.org/isPresence",
@@ -3212,6 +3435,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum field representing the role of the organization as an authority."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/attributions.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -3264,6 +3490,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Exit gates (pathway_mode=7) must not be bidirectional."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -3314,6 +3543,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum type field"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/attributions.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -3366,6 +3598,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 0 or empty - Organization doesn’t have this role. 1 - Organization does have this role."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/attributions.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -3417,6 +3652,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "If the language is the same as in `feed_info.feed_lang`, the original value of the field will be assumed to be the default value to use in languages without specific translations (if `default_lang` doesn't specify otherwise)."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/translations.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -3438,6 +3676,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "This field is an ID type that identifies a group of entries in fare_leg_rules.txt."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_leg_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -3458,6 +3699,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Non-negative float"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -3481,6 +3725,11 @@
     "@value" : "Foreign ID referencing `levels.level_id`"
   }, {
     "@value" : "Unique ID"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/levels.txt"
+  }, {
+    "@id" : "http://gtfs.org/stops.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -3507,6 +3756,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "The level index is a float value."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/levels.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -3530,6 +3782,9 @@
   } ],
   "http://gtfs.org/example" : [ {
     "@value" : "Take the elevator to \"Mezzanine\" or \"Platform\" or \"-1\"."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/levels.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -3576,6 +3831,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 0 (or blank) - Stop (or Platform), 1 - Station, 2 - Entrance/Exit, 3 - Generic Node, 4 - Boarding Area"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -3673,6 +3931,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 0 or empty - No slope. Float - Slope ratio of the pathway, positive for upwards, negative for downwards. This field should only be used with walkways (pathway_mode=1) and moving sidewalks (pathway_mode=3). Example: In the US, 0.083 (also written 8.3%) is the maximum slope ratio for hand-propelled wheelchair, which means an increase of 0.083m (so 8.3cm) for each 1m."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -3693,6 +3954,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Non-negative integer"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/transfers.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -3715,6 +3979,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "This field is recommended if the minimum width is less than 1 meter."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -3735,6 +4002,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 1 - Service is available for all Mondays in the date range. 0 - Service is not available for Mondays in the date range."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -3789,6 +4059,11 @@
   }, {
     "@value" : "This field is an ID type that is used to group routes together."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_leg_rules.txt"
+  }, {
+    "@id" : "http://gtfs.org/routes.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -3812,6 +4087,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "This field stores the name of the organization associated with the dataset."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/attributions.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -3832,6 +4110,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Foreign ID referencing stops.zone_id"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_rules.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -3857,6 +4138,9 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required for locations which are entrances (location_type=2), generic nodes (location_type=3) or boarding areas (location_type=4). Optional for stops/platforms (location_type=0). Forbidden for stations (location_type=1)."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   } ],
@@ -3878,6 +4162,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Unique ID"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -3898,6 +4185,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 1 - Walkway, 2 - Stairs, 3 - Moving sidewalk/travelator, 4 - Escalator, 5 - Elevator, 6 - Fare gate, 7 - Exit gate"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -4065,6 +4355,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 0 - Fare is paid on board. 1 - Fare must be paid before boarding."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_attributes.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -4115,6 +4408,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum field with options 0, 1, 2, 3"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stop_times.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -4197,6 +4493,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Platform identifier should be a text value without including words like “platform” or \"track\""
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -4217,6 +4516,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Non-negative float"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_attributes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -4242,6 +4544,9 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Forbidden if `table_name` is `feed_info`. Forbidden if `field_value` is defined. Required if `field_value` is empty."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/translations.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   } ],
@@ -4262,6 +4567,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Forbidden if `table_name` is `feed_info` or if `field_value` is defined. Required if `table_name=stop_times` and `record_id` is defined."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/translations.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
@@ -4284,6 +4592,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Text field to store the reversed signposted information."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -4304,6 +4615,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "The color difference between `route_color` and `route_text_color` should provide sufficient contrast when viewed on a black and white screen."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/routes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -4328,6 +4642,9 @@
   } ],
   "http://gtfs.org/example" : [ {
     "@value" : "\"A\" trains operate between Inwood-207 St, Manhattan and Far Rockaway-Mott Avenue, Queens at all times. Also from about 6AM until about midnight, additional \"A\" trains operate between Inwood-207 St and Lefferts Boulevard (trains typically alternate between Lefferts Blvd and Far Rockaway)."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/routes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -4356,6 +4673,15 @@
   } ],
   "http://gtfs.org/example" : [ {
     "@value" : "If fare class \"b\" is valid on route \"TSW\" and \"TSE\", the fare_rules.txt file would contain these records for the fare class: fare_id,route_id b,TSW b,TSE"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/attributions.txt"
+  }, {
+    "@id" : "http://gtfs.org/fare_rules.txt"
+  }, {
+    "@id" : "http://gtfs.org/routes.txt"
+  }, {
+    "@id" : "http://gtfs.org/trips.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -4387,6 +4713,9 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required if routes.route_short_name is empty. Optional otherwise."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/routes.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   } ],
@@ -4411,6 +4740,9 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required if `routes.route_long_name` is empty. Recommended if there is a brief service designation. This should be the commonly-known passenger name of the service, and should be no longer than 12 characters."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/routes.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   } ],
@@ -4431,6 +4763,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Non-negative integer"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/routes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -4453,6 +4788,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "The color should provide sufficient contrast when viewed on a black and white screen."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/routes.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -4473,6 +4811,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 0 - Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area. 1 - Subway, Metro. Any underground rail system within a metropolitan area. 2 - Rail. Used for intercity or long-distance travel. 3 - Bus. Used for short- and long-distance bus routes. 4 - Ferry. Used for short- and long-distance boat service. 5 - Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle (e.g., cable car in San Francisco). 6 - Aerial lift, suspended cable car (e.g., gondola lift, aerial tramway). Cable transport where cabins, cars, gondolas or open chairs are suspended by means of one or more cables. 7 - Funicular. Any rail system designed for steep inclines. 11 - Trolleybus. Electric buses that draw power from overhead wires using poles. 12 - Monorail. Railway in which the track consists of a single rail or a beam."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/routes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -4645,6 +4986,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "URL of a web page about the particular route. Should be different from the `agency.agency_url` value."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/routes.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -4708,6 +5052,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum type field"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -4748,6 +5095,15 @@
   }, {
     "@value" : "Unique ID"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar.txt"
+  }, {
+    "@id" : "http://gtfs.org/calendar_dates.txt"
+  }, {
+    "@id" : "http://gtfs.org/timeframes.txt"
+  }, {
+    "@id" : "http://gtfs.org/trips.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -4780,6 +5136,11 @@
   "http://gtfs.org/example" : [ {
     "@value" : "If a bus travels a distance of 5.25 kilometers from the start of the shape to the stop, shape_dist_traveled=5.25."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/shapes.txt"
+  }, {
+    "@id" : "http://gtfs.org/stop_times.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -4808,6 +5169,11 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required if the trip has a continuous pickup or drop-off behavior defined either in routes.txt or in stop_times.txt. Optional otherwise."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/shapes.txt"
+  }, {
+    "@id" : "http://gtfs.org/trips.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   }, {
@@ -4833,6 +5199,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Latitude"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/shapes.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -4853,6 +5222,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "This field represents the longitude of a shape point on a map."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/shapes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -4877,6 +5249,9 @@
   } ],
   "http://gtfs.org/example" : [ {
     "@value" : "If the shape \"A_shp\" has three points in its definition, the shapes.txt file might contain these records to define the shape: shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence A_shp,37.61956,-122.48161,0 A_shp,37.64430,-122.41070,6 A_shp,37.65863,-122.30839,11"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/shapes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -4925,6 +5300,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "May be used to provide text directions to riders, such as 'follow signs to '. The text in `singposted_as` should appear exactly how it is printed on the signs. When the physical signage is multilingual, this field may be populated and translated following the example of `stops.stop_name` in the field definition of `feed_info.feed_lang`."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -4946,6 +5324,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Non-null integer"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -4966,6 +5347,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "The start service day for the service interval must be provided in the specified format."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -4990,6 +5374,11 @@
   } ],
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required if timeframes.end_time is defined. Forbidden otherwise"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/frequencies.txt"
+  }, {
+    "@id" : "http://gtfs.org/timeframes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
@@ -5036,6 +5425,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "The `stop_code` field is used to identify locations for riders in transit systems."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -5057,6 +5449,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Description of the location that provides useful, quality information. Should not be a duplicate of `stop_name`."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -5075,6 +5470,9 @@
 }, {
   "@id" : "http://gtfs.org/stop_headsign",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stop_times.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -5097,6 +5495,13 @@
     "@value" : "Foreign ID referencing stops.stop_id"
   }, {
     "@value" : "Unique ID"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stop_areas.txt"
+  }, {
+    "@id" : "http://gtfs.org/stop_times.txt"
+  }, {
+    "@id" : "http://gtfs.org/stops.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -5126,6 +5531,9 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required for locations which are stops (`location_type=0`), stations (`location_type=1`) or entrances/exits (`location_type=2`). Optional for locations which are generic nodes (`location_type=3`) or boarding areas (`location_type=4`)"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   } ],
@@ -5149,6 +5557,9 @@
   } ],
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
@@ -5174,6 +5585,9 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required for locations which are stops (`location_type=0`), stations (`location_type=1`) or entrances/exits (`location_type=2`). Optional for locations which are generic nodes (`location_type=3`) or boarding areas (`location_type=4`)."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   } ],
@@ -5197,6 +5611,9 @@
   } ],
   "http://gtfs.org/example" : [ {
     "@value" : "The first location on the trip could have a stop_sequence=1, the second location on the trip could have a stop_sequence=23, the third location could have a stop_sequence=40, and so on."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stop_times.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -5259,6 +5676,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Timezone of the location. If the location has a parent station, it inherits the parent station’s timezone instead of applying its own. Stations and parentless stops with empty stop_timezone inherit the timezone specified by agency.agency_timezone. If stop_timezone values are provided, the times in stop_times.txt should be entered as the time since midnight in the timezone specified by agency.agency_timezone. This ensures that the time values in a trip always increase over the course of a trip, regardless of which timezones the trip crosses."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -5279,6 +5699,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "URL should be different from `agency.agency_url` and `routes.route_url` field values."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -5347,6 +5770,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum type field that applies to Sundays."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -5382,6 +5808,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Allowed values: agency, stops, routes, trips, stop_times, pathways, levels, feed_info, attributions"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/translations.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -5539,6 +5968,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum type field"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -5574,6 +6006,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Field Type: ID"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/timeframes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -5619,6 +6054,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 0 - Times are considered approximate. 1 or empty - Times are considered exact."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stop_times.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Recommended"
@@ -5671,6 +6109,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Foreign ID referencing areas.area_id"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_leg_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -5692,6 +6133,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Foreign ID referencing fare_leg_rules.leg_group_id"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_transfer_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -5712,6 +6156,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Foreign ID referencing `routes.route_id`"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/transfers.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -5739,6 +6186,11 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "If this field refers to a station, the transfer rule applies to all child stops. Referring to a station is forbidden for transfer_types 4 and 5."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
+  }, {
+    "@id" : "http://gtfs.org/transfers.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   }, {
@@ -5764,6 +6216,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Foreign ID referencing timeframes.timeframe_group_id"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_leg_rules.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -5788,6 +6243,9 @@
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "REQUIRED if `transfer_type` is `4` or `5`."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/transfers.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
   } ],
@@ -5808,6 +6266,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Forbidden if fare_transfer_rules.from_leg_group_id does not equal fare_transfer_rules.to_leg_group_id. Required if fare_transfer_rules.from_leg_group_id equals fare_transfer_rules.to_leg_group_id."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_transfer_rules.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyForbidden"
@@ -5830,6 +6291,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Non-negative integer"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_attributes.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -5850,6 +6314,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Valid options are: 0 or empty - Recommended transfer point between routes. 1 - Timed transfer point between two routes. The departing vehicle is expected to wait for the arriving one and leave sufficient time for a rider to transfer between routes. 2 - Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time. 3 - Transfers are not possible between routes at the location. 4 - Passengers can transfer from one trip to another by staying onboard the same vehicle (an 'in-seat transfer'). 5 - In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/transfers.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -5961,6 +6428,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum field with options: 0 - No transfers permitted, 1 - Riders may transfer once, 2 - Riders may transfer twice, empty - Unlimited transfers permitted."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/fare_attributes.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -6075,6 +6545,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "The field can store text, URL, email, or phone number data."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/translations.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -6126,6 +6599,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Positive integer"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/pathways.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -6146,6 +6622,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Text that appears on signage identifying the trip's destination to riders. Should be used to distinguish between different patterns of service on the same route. If the headsign changes during a trip, values for trip_headsign may be overridden by defining values in stop_times.stop_headsign for specific stop_times along the trip."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/trips.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -6171,6 +6650,15 @@
     "@value" : "Foreign ID referencing trips.trip_id"
   }, {
     "@value" : "Unique ID"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/attributions.txt"
+  }, {
+    "@id" : "http://gtfs.org/frequencies.txt"
+  }, {
+    "@id" : "http://gtfs.org/stop_times.txt"
+  }, {
+    "@id" : "http://gtfs.org/trips.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -6198,6 +6686,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Public facing text used to identify the trip to riders."
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/trips.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -6256,6 +6747,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "This field provides a text representation of the stop name for text-to-speech purposes."
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -6276,6 +6770,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum type field"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
@@ -6313,6 +6810,9 @@
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum type field"
   } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/calendar.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Required"
   } ],
@@ -6348,6 +6848,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://gtfs.org/additionalInfo" : [ {
     "@value" : "Enum field with options 0, 1, 2"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/trips.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
@@ -6412,6 +6915,9 @@
 }, {
   "@id" : "http://gtfs.org/wheelchair_boarding",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
+  } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/Optional"
   } ],
@@ -6480,6 +6986,9 @@
   } ],
   "http://gtfs.org/hasCondition" : [ {
     "@value" : "Required if providing fare information using fare_rules.txt, Optional otherwise"
+  } ],
+  "http://gtfs.org/isFieldOf" : [ {
+    "@id" : "http://gtfs.org/stops.txt"
   } ],
   "http://gtfs.org/isPresence" : [ {
     "@id" : "http://gtfs.org/ConditionallyRequired"
