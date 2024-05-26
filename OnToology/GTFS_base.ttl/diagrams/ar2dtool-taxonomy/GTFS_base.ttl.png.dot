@@ -1,11 +1,10 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "gtfs:Required" "gtfs:WheelchairAccessibleEnum" "gtfs:DirectionIdEnum" "schema1:Intangible" "gtfs:PhoneNumber" "gtfs:ThursdayEnum" "gtfs:FareMediaTypeEnum" "gtfs:WheelchairBoardingEnum" "gtfs:SaturdayEnum" "gtfs:Text" "gtfs:PickupTypeEnum" "gtfs:DurationLimitTypeEnum" "gtfs:TransfersEnum" "gtfs:TimeZone" "gtfs:BikesAllowedEnum" "gtfs:CurrencyAmount" "gtfs:SubJourney" "gtfs:Field" "gtfs:ExactTimesEnum" "gtfs:ID" "gtfs:MondayEnum" "gtfs:RouteTypeEnum" "gtfs:Leg" "gtfs:URL" "gtfs:PaymentMethodEnum" "gtfs:PathwayModeEnum" "gtfs:Float" "gtfs:ContinuousDropOffEnum" "gtfs:DropOffTypeEnum" "schema1:Enumeration" "gtfs:TimepointEnum" "gtfs:ExceptionTypeEnum" "gtfs:WednesdayEnum" "gtfs:LanguageCode" "gtfs:TransferTypeEnum" "gtfs:Longitude" "gtfs:TuesdayEnum" "gtfs:FridayEnum" "gtfs:FieldType" "gtfs:Journey" "gtfs:Optional" "gtfs:Time" "gtfs:IsProducerEnum" "gtfs:SundayEnum" "gtfs:FareProduct" "gtfs:IsBidirectionalEnum" "gtfs:FareTransferTypeEnum" "gtfs:File" "gtfs:Integer" "gtfs:ServiceDay" "gtfs:Email" "gtfs:ConditionallyRequired" "gtfs:TableNameEnum" "gtfs:IsOperatorEnum" "gtfs:ContinuousPickupEnum" "gtfs:Recommended" "gtfs:LocationTypeEnum" "gtfs:ConditionallyForbidden" "gtfs:Date" "gtfs:PresenceCondition" "gtfs:Enum" "gtfs:Latitude" "gtfs:IsAuthorityEnum" ; /*classes style*/
+node [shape = rectangle, color="black"]; "gtfs:WheelchairAccessibleEnum" "gtfs:DirectionIdEnum" "schema1:Intangible" "gtfs:PhoneNumber" "gtfs:ThursdayEnum" "gtfs:FareMediaTypeEnum" "gtfs:WheelchairBoardingEnum" "gtfs:SaturdayEnum" "gtfs:Text" "gtfs:PickupTypeEnum" "gtfs:DurationLimitTypeEnum" "gtfs:TransfersEnum" "gtfs:TimeZone" "gtfs:BikesAllowedEnum" "gtfs:CurrencyAmount" "gtfs:Field" "gtfs:ExactTimesEnum" "gtfs:ID" "gtfs:MondayEnum" "gtfs:RouteTypeEnum" "gtfs:URL" "gtfs:PaymentMethodEnum" "gtfs:PathwayModeEnum" "gtfs:Float" "gtfs:ContinuousDropOffEnum" "gtfs:DropOffTypeEnum" "schema1:Enumeration" "gtfs:TimepointEnum" "gtfs:ExceptionTypeEnum" "gtfs:Specification" "gtfs:WednesdayEnum" "gtfs:LanguageCode" "gtfs:TransferTypeEnum" "gtfs:Longitude" "gtfs:TuesdayEnum" "gtfs:FridayEnum" "gtfs:FieldType" "gtfs:Time" "gtfs:IsProducerEnum" "gtfs:SundayEnum" "gtfs:IsBidirectionalEnum" "gtfs:FareTransferTypeEnum" "gtfs:File" "gtfs:Integer" "gtfs:Email" "gtfs:TableNameEnum" "gtfs:IsOperatorEnum" "gtfs:ContinuousPickupEnum" "gtfs:Recommended" "gtfs:LocationTypeEnum" "gtfs:Date" "gtfs:PresenceCondition" "gtfs:Enum" "gtfs:Latitude" "gtfs:IsAuthorityEnum" ; /*classes style*/
 	"gtfs:PhoneNumber" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
 	"schema1:Enumeration" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
 	"gtfs:ContinuousDropOffEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
-	"gtfs:FareProduct" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
 	"gtfs:TransfersEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
 	"gtfs:IsOperatorEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
 	"gtfs:Integer" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
@@ -32,16 +31,14 @@ node [shape = rectangle, color="black"]; "gtfs:Required" "gtfs:WheelchairAccessi
 	"gtfs:CurrencyAmount" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
 	"gtfs:Field" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
 	"gtfs:LanguageCode" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
-	"gtfs:FareTransferTypeEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
 	"gtfs:PickupTypeEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
 	"gtfs:ThursdayEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
-	"gtfs:Required" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"gtfs:FareTransferTypeEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
 	"gtfs:File" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
-	"gtfs:ServiceDay" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
 	"gtfs:MondayEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
 	"gtfs:ID" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
 	"gtfs:BikesAllowedEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
-	"gtfs:ConditionallyForbidden" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
+	"gtfs:Specification" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
 	"gtfs:SaturdayEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
 	"gtfs:ExceptionTypeEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
 	"gtfs:RouteTypeEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
@@ -51,15 +48,10 @@ node [shape = rectangle, color="black"]; "gtfs:Required" "gtfs:WheelchairAccessi
 	"gtfs:IsBidirectionalEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
 	"gtfs:PresenceCondition" -> "schema1:Enumeration" [ label = "rdfs:subClassOf" ];
 	"gtfs:IsAuthorityEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
-	"gtfs:SubJourney" -> "gtfs:Journey" [ label = "rdfs:subClassOf" ];
 	"gtfs:TransferTypeEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
-	"gtfs:Journey" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
-	"gtfs:ConditionallyRequired" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
 	"gtfs:Latitude" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
 	"gtfs:Float" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
-	"gtfs:Optional" -> "gtfs:PresenceCondition" [ label = "rdfs:subClassOf" ];
 	"gtfs:FareMediaTypeEnum" -> "gtfs:Enum" [ label = "rdfs:subClassOf" ];
-	"gtfs:Leg" -> "schema1:Intangible" [ label = "rdfs:subClassOf" ];
 	"gtfs:Longitude" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
 	"gtfs:Enum" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];
 	"gtfs:URL" -> "gtfs:FieldType" [ label = "rdfs:subClassOf" ];

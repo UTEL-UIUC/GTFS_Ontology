@@ -11,16 +11,6 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://gtfs.org/ConditionallyForbidden" title="http://gtfs.org/ConditionallyForbidden">
-         <span>ConditionallyForbidden</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://gtfs.org/ConditionallyRequired" title="http://gtfs.org/ConditionallyRequired">
-         <span>ConditionallyRequired</span>
-      </a>
-   </li>
-   <li>
       <a href="#http://gtfs.org/ContinuousDropOffEnum" title="http://gtfs.org/ContinuousDropOffEnum">
          <span>ContinuousDropOffEnum</span>
       </a>
@@ -34,6 +24,9 @@ This ontology has the following classes and properties.</span>
       <a href="#http://gtfs.org/CurrencyAmount" title="http://gtfs.org/CurrencyAmount">
          <span>CurrencyAmount</span>
       </a>
+   </li>
+   <li>
+      <a href="#http://gtfs.org/Dataset" title="http://gtfs.org/Dataset">Dataset</a>
    </li>
    <li>
       <a href="#http://gtfs.org/Date" title="http://gtfs.org/Date">
@@ -82,7 +75,7 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://gtfs.org/FareProduct" title="http://gtfs.org/FareProduct">FareProdcut</a>
+      <a href="#http://gtfs.org/FareProduct" title="http://gtfs.org/FareProduct">FareProduct</a>
    </li>
    <li>
       <a href="#http://gtfs.org/FareTransferTypeEnum" title="http://gtfs.org/FareTransferTypeEnum">
@@ -94,6 +87,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://gtfs.org/FieldType" title="http://gtfs.org/FieldType">FieldType</a>
+   </li>
+   <li>
+      <a href="#http://gtfs.org/FieldValue" title="http://gtfs.org/FieldValue">FieldValue</a>
    </li>
    <li>
       <a href="#http://gtfs.org/File" title="http://gtfs.org/File">File</a>
@@ -173,11 +169,6 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://gtfs.org/Optional" title="http://gtfs.org/Optional">
-         <span>Optional</span>
-      </a>
-   </li>
-   <li>
       <a href="#http://gtfs.org/PathwayModeEnum" title="http://gtfs.org/PathwayModeEnum">
          <span>PathwayModeEnum</span>
       </a>
@@ -206,9 +197,7 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://gtfs.org/Required" title="http://gtfs.org/Required">
-         <span>Required</span>
-      </a>
+      <a href="#http://gtfs.org/Record" title="http://gtfs.org/Record">Record</a>
    </li>
    <li>
       <a href="#http://gtfs.org/RouteTypeEnum" title="http://gtfs.org/RouteTypeEnum">
@@ -222,6 +211,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://gtfs.org/ServiceDay" title="http://gtfs.org/ServiceDay">ServiceDay</a>
+   </li>
+   <li>
+      <a href="#http://gtfs.org/Specification" title="http://gtfs.org/Specification">Specification</a>
    </li>
    <li>
       <a href="#http://gtfs.org/SubJourney" title="http://gtfs.org/SubJourney">SubJourney</a>
@@ -240,6 +232,9 @@ This ontology has the following classes and properties.</span>
       <a href="#http://gtfs.org/Text" title="http://gtfs.org/Text">
          <span>Text</span>
       </a>
+   </li>
+   <li>
+      <a href="#http://gtfs.org/TextToSpeechField" title="http://gtfs.org/TextToSpeechField">TextToSpeechField</a>
    </li>
    <li>
       <a href="#http://gtfs.org/ThursdayEnum" title="http://gtfs.org/ThursdayEnum">
@@ -303,10 +298,31 @@ This ontology has the following classes and properties.</span>
       <a href="#http://gtfs.org/hasField" title="http://gtfs.org/hasField">hasField</a>
    </li>
    <li>
+      <a href="#http://gtfs.org/hasFile" title="http://gtfs.org/hasFile">hasFile</a>
+   </li>
+   <li>
+      <a href="#http://gtfs.org/isConditionallyForbiddenIn" title="http://gtfs.org/isConditionallyForbiddenIn">isConditionallyForbiddenIn</a>
+   </li>
+   <li>
+      <a href="#http://gtfs.org/isConditionallyRequiredIn" title="http://gtfs.org/isConditionallyRequiredIn">isConditionallyRequiredIn</a>
+   </li>
+   <li>
       <a href="#http://gtfs.org/isFieldOf" title="http://gtfs.org/isFieldOf">isFieldOf</a>
    </li>
    <li>
+      <a href="#http://gtfs.org/isFileOf" title="http://gtfs.org/isFileOf">isFileOf</a>
+   </li>
+   <li>
+      <a href="#http://gtfs.org/isOptionalIn" title="http://gtfs.org/isOptionalIn">isOptionalIn</a>
+   </li>
+   <li>
       <a href="#http://gtfs.org/isPresence" title="http://gtfs.org/isPresence">isPresence</a>
+   </li>
+   <li>
+      <a href="#http://gtfs.org/isRecommendedIn" title="http://gtfs.org/isRecommendedIn">isRecommendedIn</a>
+   </li>
+   <li>
+      <a href="#http://gtfs.org/isRequiredIn" title="http://gtfs.org/isRequiredIn">isRequiredIn</a>
    </li>
    <li>
       <a href="#http://gtfs.org/isType" title="http://gtfs.org/isType">isType</a>
@@ -634,6 +650,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://gtfs.org/from_trip_id" title="http://gtfs.org/from_trip_id">from_trip_id</a>
+   </li>
+   <li>
+      <a href="#http://gtfs.org/GTFS_Static" title="http://gtfs.org/GTFS_Static">GTFS_Static</a>
    </li>
    <li>
       <a href="#http://gtfs.org/headway_secs" title="http://gtfs.org/headway_secs">headway_secs</a>

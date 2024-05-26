@@ -19,8 +19,8 @@
       "@id" : "http://gtfs.org/isType",
       "@type" : "@id"
     },
-    "example" : {
-      "@id" : "http://gtfs.org/example"
+    "Dataset" : {
+      "@id" : "http://gtfs.org/Dataset"
     },
     "SaturdayEnum" : {
       "@id" : "http://gtfs.org/SaturdayEnum"
@@ -33,6 +33,9 @@
     },
     "PathwayModeEnum" : {
       "@id" : "http://gtfs.org/PathwayModeEnum"
+    },
+    "hasAdditionalInfo" : {
+      "@id" : "http://gtfs.org/hasAdditionalInfo"
     },
     "Recommended" : {
       "@id" : "http://gtfs.org/Recommended"
@@ -52,11 +55,11 @@
     "IsAuthorityEnum" : {
       "@id" : "http://gtfs.org/IsAuthorityEnum"
     },
+    "hasExample" : {
+      "@id" : "http://gtfs.org/hasExample"
+    },
     "FareMediaTypeEnum" : {
       "@id" : "http://gtfs.org/FareMediaTypeEnum"
-    },
-    "ConditionallyRequired" : {
-      "@id" : "http://gtfs.org/ConditionallyRequired"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
@@ -76,11 +79,22 @@
     "ContinuousPickupEnum" : {
       "@id" : "http://gtfs.org/ContinuousPickupEnum"
     },
+    "Specification" : {
+      "@id" : "http://gtfs.org/Specification"
+    },
     "FareTransferTypeEnum" : {
       "@id" : "http://gtfs.org/FareTransferTypeEnum"
     },
+    "isRequiredIn" : {
+      "@id" : "http://gtfs.org/isRequiredIn",
+      "@type" : "@id"
+    },
     "PaymentMethodEnum" : {
       "@id" : "http://gtfs.org/PaymentMethodEnum"
+    },
+    "hasFile" : {
+      "@id" : "http://gtfs.org/hasFile",
+      "@type" : "@id"
     },
     "Date" : {
       "@id" : "http://gtfs.org/Date"
@@ -103,6 +117,9 @@
     },
     "ExceptionTypeEnum" : {
       "@id" : "http://gtfs.org/ExceptionTypeEnum"
+    },
+    "isUniqueID" : {
+      "@id" : "http://gtfs.org/isUniqueID"
     },
     "DropOffTypeEnum" : {
       "@id" : "http://gtfs.org/DropOffTypeEnum"
@@ -132,6 +149,10 @@
     "DurationLimitTypeEnum" : {
       "@id" : "http://gtfs.org/DurationLimitTypeEnum"
     },
+    "isRecommendedIn" : {
+      "@id" : "http://gtfs.org/isRecommendedIn",
+      "@type" : "@id"
+    },
     "LanguageCode" : {
       "@id" : "http://gtfs.org/LanguageCode"
     },
@@ -148,9 +169,6 @@
     "WheelchairAccessibleEnum" : {
       "@id" : "http://gtfs.org/WheelchairAccessibleEnum"
     },
-    "Required" : {
-      "@id" : "http://gtfs.org/Required"
-    },
     "Integer" : {
       "@id" : "http://gtfs.org/Integer"
     },
@@ -166,6 +184,9 @@
     "SundayEnum" : {
       "@id" : "http://gtfs.org/SundayEnum"
     },
+    "Record" : {
+      "@id" : "http://gtfs.org/Record"
+    },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
@@ -178,6 +199,10 @@
     "source" : {
       "@id" : "http://purl.org/dc/elements/1.1/source"
     },
+    "isConditionallyRequiredIn" : {
+      "@id" : "http://gtfs.org/isConditionallyRequiredIn",
+      "@type" : "@id"
+    },
     "Enum" : {
       "@id" : "http://gtfs.org/Enum"
     },
@@ -186,15 +211,6 @@
     },
     "FieldType" : {
       "@id" : "http://gtfs.org/FieldType"
-    },
-    "ConditionallyForbidden" : {
-      "@id" : "http://gtfs.org/ConditionallyForbidden"
-    },
-    "Optional" : {
-      "@id" : "http://gtfs.org/Optional"
-    },
-    "additionalInfo" : {
-      "@id" : "http://gtfs.org/additionalInfo"
     },
     "TimepointEnum" : {
       "@id" : "http://gtfs.org/TimepointEnum"
@@ -212,6 +228,9 @@
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
+    "TextToSpeechField" : {
+      "@id" : "http://gtfs.org/TextToSpeechField"
+    },
     "language" : {
       "@id" : "http://purl.org/dc/elements/1.1/language"
     },
@@ -221,11 +240,32 @@
     "FridayEnum" : {
       "@id" : "http://gtfs.org/FridayEnum"
     },
+    "isForeignID" : {
+      "@id" : "http://gtfs.org/isForeignID"
+    },
+    "namespacelang" : {
+      "@id" : "http://www.w3.org/XML/1998/namespacelang"
+    },
+    "isFileOf" : {
+      "@id" : "http://gtfs.org/isFileOf",
+      "@type" : "@id"
+    },
     "BikesAllowedEnum" : {
       "@id" : "http://gtfs.org/BikesAllowedEnum"
     },
+    "isConditionallyForbiddenIn" : {
+      "@id" : "http://gtfs.org/isConditionallyForbiddenIn",
+      "@type" : "@id"
+    },
+    "FieldValue" : {
+      "@id" : "http://gtfs.org/FieldValue"
+    },
     "Float" : {
       "@id" : "http://gtfs.org/Float"
+    },
+    "isOptionalIn" : {
+      "@id" : "http://gtfs.org/isOptionalIn",
+      "@type" : "@id"
     },
     "Intangible" : {
       "@id" : "http://schema.org/Intangible"
