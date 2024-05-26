@@ -83,6 +83,14 @@
 <http://gtfs.org/hasField> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links a file to its fields" .
 <http://gtfs.org/hasField> <http://www.w3.org/2000/01/rdf-schema#label> "hasField"@en .
 # 
+# http://gtfs.org/isFieldOf
+<http://gtfs.org/isFieldOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://gtfs.org/isFieldOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://gtfs.org/hasField> .
+<http://gtfs.org/isFieldOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://gtfs.org/Field> .
+<http://gtfs.org/isFieldOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://gtfs.org/File> .
+<http://gtfs.org/isFieldOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links a field back to its file" .
+<http://gtfs.org/isFieldOf> <http://www.w3.org/2000/01/rdf-schema#label> "isFieldOf"@en .
+# 
 # http://gtfs.org/isPresence
 <http://gtfs.org/isPresence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://gtfs.org/isPresence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
@@ -609,6 +617,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/agency_email
 <http://gtfs.org/agency_email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/agency_email> <http://gtfs.org/isFieldOf> <http://gtfs.org/agency.txt> .
 <http://gtfs.org/agency_email> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/agency_email> <http://gtfs.org/isType> <http://gtfs.org/Email> .
 <http://gtfs.org/agency_email> <http://gtfs.org/additionalInfo> "Email address actively monitored by the agency’s customer service department. This email address should be a direct contact point where transit riders can reach a customer service representative at the agency." .
@@ -617,6 +626,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/agency_fare_url
 <http://gtfs.org/agency_fare_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/agency_fare_url> <http://gtfs.org/isFieldOf> <http://gtfs.org/agency.txt> .
 <http://gtfs.org/agency_fare_url> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/agency_fare_url> <http://gtfs.org/isType> <http://gtfs.org/URL> .
 <http://gtfs.org/agency_fare_url> <http://gtfs.org/additionalInfo> "Field Type: URL" .
@@ -625,6 +635,13 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/agency_id
 <http://gtfs.org/agency_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/agency_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/agency.txt> .
+<http://gtfs.org/agency_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/attributions.txt> .
+<http://gtfs.org/attributions.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://gtfs.org/agency_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_attributes.txt> .
+<http://gtfs.org/fare_attributes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://gtfs.org/agency_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
+<http://gtfs.org/routes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/agency_id> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/agency_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/agency_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
@@ -640,6 +657,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/agency_lang
 <http://gtfs.org/agency_lang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/agency_lang> <http://gtfs.org/isFieldOf> <http://gtfs.org/agency.txt> .
 <http://gtfs.org/agency_lang> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/agency_lang> <http://gtfs.org/isType> <http://gtfs.org/LanguageCode> .
 <http://gtfs.org/agency_lang> <http://gtfs.org/additionalInfo> "Language code" .
@@ -648,6 +666,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/agency_name
 <http://gtfs.org/agency_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/agency_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/agency.txt> .
 <http://gtfs.org/agency_name> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/agency_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/agency_name> <http://gtfs.org/additionalInfo> "Type: Text" .
@@ -656,6 +675,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/agency_phone
 <http://gtfs.org/agency_phone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/agency_phone> <http://gtfs.org/isFieldOf> <http://gtfs.org/agency.txt> .
 <http://gtfs.org/agency_phone> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/agency_phone> <http://gtfs.org/isType> <http://gtfs.org/PhoneNumber> .
 <http://gtfs.org/agency_phone> <http://gtfs.org/additionalInfo> "Phone number should be in a standard format without any descriptive text." .
@@ -664,6 +684,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/agency_timezone
 <http://gtfs.org/agency_timezone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/agency_timezone> <http://gtfs.org/isFieldOf> <http://gtfs.org/agency.txt> .
 <http://gtfs.org/agency_timezone> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/agency_timezone> <http://gtfs.org/isType> <http://gtfs.org/TimeZone> .
 <http://gtfs.org/agency_timezone> <http://gtfs.org/additionalInfo> "Timezone where the transit agency is located. If multiple agencies are specified in the dataset, each must have the same `agency_timezone`." .
@@ -672,6 +693,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/agency_url
 <http://gtfs.org/agency_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/agency_url> <http://gtfs.org/isFieldOf> <http://gtfs.org/agency.txt> .
 <http://gtfs.org/agency_url> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/agency_url> <http://gtfs.org/isType> <http://gtfs.org/URL> .
 <http://gtfs.org/agency_url> <http://gtfs.org/additionalInfo> "URL" .
@@ -681,6 +703,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/amount
 <http://gtfs.org/amount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/amount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/amount> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_products.txt> .
+<http://gtfs.org/fare_products.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/amount> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/amount> <http://gtfs.org/isType> <http://gtfs.org/CurrencyAmount> .
 <http://gtfs.org/amount> <http://gtfs.org/additionalInfo> "Currency amount" .
@@ -690,6 +714,10 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/area_id
 <http://gtfs.org/area_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/area_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/area_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/areas.txt> .
+<http://gtfs.org/areas.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://gtfs.org/area_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_areas.txt> .
+<http://gtfs.org/stop_areas.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/area_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/area_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/area_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing `areas.area_id`" .
@@ -701,6 +729,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/area_name
 <http://gtfs.org/area_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/area_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/area_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/areas.txt> .
 <http://gtfs.org/area_name> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/area_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/area_name> <http://gtfs.org/additionalInfo> "Field Type: Text" .
@@ -708,7 +737,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/area_name> <http://www.w3.org/2000/01/rdf-schema#label> "area_name" .
 # 
 # http://gtfs.org/areas.txt
-<http://gtfs.org/areas.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/areas.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/areas.txt> <http://gtfs.org/hasField> <http://gtfs.org/area_id> .
 <http://gtfs.org/areas.txt> <http://gtfs.org/hasField> <http://gtfs.org/area_name> .
@@ -719,6 +747,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/arrival_time
 <http://gtfs.org/arrival_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/arrival_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/arrival_time> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
+<http://gtfs.org/stop_times.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/arrival_time> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/arrival_time> <http://gtfs.org/isType> <http://gtfs.org/Time> .
 <http://gtfs.org/arrival_time> <http://gtfs.org/additionalInfo> "The arrival time should be provided in the time zone specified by the agency. If exact arrival and departure times are not available, estimated or interpolated times should be provided." .
@@ -729,6 +759,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/attribution_email
 <http://gtfs.org/attribution_email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/attribution_email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/attribution_email> <http://gtfs.org/isFieldOf> <http://gtfs.org/attributions.txt> .
 <http://gtfs.org/attribution_email> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/attribution_email> <http://gtfs.org/isType> <http://gtfs.org/Email> .
 <http://gtfs.org/attribution_email> <http://gtfs.org/additionalInfo> "Email of the organization." .
@@ -738,6 +769,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/attribution_id
 <http://gtfs.org/attribution_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/attribution_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/attribution_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/attributions.txt> .
 <http://gtfs.org/attribution_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/attribution_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/attribution_id> <http://gtfs.org/additionalInfo> "Unique ID" .
@@ -747,6 +779,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/attribution_phone
 <http://gtfs.org/attribution_phone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/attribution_phone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/attribution_phone> <http://gtfs.org/isFieldOf> <http://gtfs.org/attributions.txt> .
 <http://gtfs.org/attribution_phone> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/attribution_phone> <http://gtfs.org/isType> <http://gtfs.org/PhoneNumber> .
 <http://gtfs.org/attribution_phone> <http://gtfs.org/additionalInfo> "Phone number of the organization." .
@@ -756,6 +789,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/attribution_url
 <http://gtfs.org/attribution_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/attribution_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/attribution_url> <http://gtfs.org/isFieldOf> <http://gtfs.org/attributions.txt> .
 <http://gtfs.org/attribution_url> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/attribution_url> <http://gtfs.org/isType> <http://gtfs.org/URL> .
 <http://gtfs.org/attribution_url> <http://gtfs.org/additionalInfo> "URL" .
@@ -763,7 +797,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/attribution_url> <http://www.w3.org/2000/01/rdf-schema#label> "attribution_url" .
 # 
 # http://gtfs.org/attributions.txt
-<http://gtfs.org/attributions.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/attributions.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/attributions.txt> <http://gtfs.org/hasField> <http://gtfs.org/agency_id> .
 <http://gtfs.org/attributions.txt> <http://gtfs.org/hasField> <http://gtfs.org/attribution_email> .
@@ -789,6 +822,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/bikes_allowed
 <http://gtfs.org/bikes_allowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/bikes_allowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/bikes_allowed> <http://gtfs.org/isFieldOf> <http://gtfs.org/trips.txt> .
+<http://gtfs.org/trips.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/bikes_allowed> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/bikes_allowed> <http://gtfs.org/isType> <http://gtfs.org/BikesAllowedEnum> .
 <http://gtfs.org/bikes_allowed> <http://gtfs.org/additionalInfo> "Enum field with options 0, 1, 2" .
@@ -819,6 +854,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/block_id
 <http://gtfs.org/block_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/block_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/block_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/trips.txt> .
 <http://gtfs.org/block_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/block_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/block_id> <http://gtfs.org/additionalInfo> "A block consists of a single trip or many sequential trips made using the same vehicle, defined by shared service days and `block_id`." .
@@ -869,6 +905,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/contains_id
 <http://gtfs.org/contains_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/contains_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/contains_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_rules.txt> .
+<http://gtfs.org/fare_rules.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/contains_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/contains_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/contains_id> <http://gtfs.org/additionalInfo> "Because all `contains_id` zones must be matched for the fare to apply, an itinerary that passes through zones 5 and 6 but not zone 7 would not have fare class \"c\". For more detail, see [https://code.google.com/p/googletransitdatafeed/wiki/FareExamples](https://code.google.com/p/googletransitdatafeed/wiki/FareExamples) in the GoogleTransitDataFeed project wiki." .
@@ -879,6 +917,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/continuous_drop_off
 <http://gtfs.org/continuous_drop_off> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/continuous_drop_off> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/continuous_drop_off> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
+<http://gtfs.org/continuous_drop_off> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
 <http://gtfs.org/continuous_drop_off> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/continuous_drop_off> <http://gtfs.org/isType> <http://gtfs.org/ContinuousDropOffEnum> .
 <http://gtfs.org/continuous_drop_off> <http://gtfs.org/additionalInfo> "Valid options are: 0 - Continuous stopping drop off, 1 or empty - No continuous stopping drop off, 2 - Must phone agency to arrange continuous stopping drop off, 3 - Must coordinate with driver to arrange continuous stopping drop off. Values for routes.continuous_drop_off may be overridden by defining values in stop_times.continuous_drop_off for specific stop_times along the route." .
@@ -917,6 +957,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/continuous_pickup
 <http://gtfs.org/continuous_pickup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/continuous_pickup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/continuous_pickup> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
+<http://gtfs.org/continuous_pickup> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
 <http://gtfs.org/continuous_pickup> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/continuous_pickup> <http://gtfs.org/isType> <http://gtfs.org/ContinuousPickupEnum> .
 <http://gtfs.org/continuous_pickup> <http://gtfs.org/additionalInfo> "Valid options are: 0 - Continuous stopping pickup, 1 or empty - No continuous stopping pickup, 2 - Must phone agency to arrange continuous stopping pickup, 3 - Must coordinate with driver to arrange continuous stopping pickup." .
@@ -956,6 +998,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/currency
 <http://gtfs.org/currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/currency> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_products.txt> .
 <http://gtfs.org/currency> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/currency> <http://gtfs.org/isType> <http://gtfs.org/CurrencyCode> .
 <http://gtfs.org/currency> <http://gtfs.org/additionalInfo> "Currency code" .
@@ -965,6 +1008,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/currency_type
 <http://gtfs.org/currency_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/currency_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/currency_type> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_attributes.txt> .
 <http://gtfs.org/currency_type> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/currency_type> <http://gtfs.org/isType> <http://gtfs.org/CurrencyCode> .
 <http://gtfs.org/currency_type> <http://gtfs.org/additionalInfo> "Currency code" .
@@ -973,6 +1017,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/date
 <http://gtfs.org/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/date> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar_dates.txt> .
 <http://gtfs.org/date> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/date> <http://gtfs.org/isType> <http://gtfs.org/Date> .
 <http://gtfs.org/date> <http://gtfs.org/additionalInfo> "Field Type: Date" .
@@ -982,6 +1027,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/default_lang
 <http://gtfs.org/default_lang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/default_lang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/default_lang> <http://gtfs.org/isFieldOf> <http://gtfs.org/feed_info.txt> .
+<http://gtfs.org/feed_info.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/default_lang> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/default_lang> <http://gtfs.org/isType> <http://gtfs.org/LanguageCode> .
 <http://gtfs.org/default_lang> <http://gtfs.org/additionalInfo> "Language code" .
@@ -991,6 +1038,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/departure_time
 <http://gtfs.org/departure_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/departure_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/departure_time> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
 <http://gtfs.org/departure_time> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/departure_time> <http://gtfs.org/isType> <http://gtfs.org/Time> .
 <http://gtfs.org/departure_time> <http://gtfs.org/additionalInfo> "Conditionally Required: Required for `timepoint=1`. Optional otherwise" .
@@ -1001,6 +1049,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/destination_id
 <http://gtfs.org/destination_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/destination_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/destination_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_rules.txt> .
 <http://gtfs.org/destination_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/destination_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/destination_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing stops.zone_id" .
@@ -1011,6 +1060,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/direction_id
 <http://gtfs.org/direction_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/direction_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/direction_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/trips.txt> .
 <http://gtfs.org/direction_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/direction_id> <http://gtfs.org/isType> <http://gtfs.org/DirectionIdEnum> .
 <http://gtfs.org/direction_id> <http://gtfs.org/additionalInfo> "Valid options are: 0 - Travel in one direction (e.g. outbound travel). 1 - Travel in the opposite direction (e.g. inbound travel)." .
@@ -1034,6 +1084,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/drop_off_type
 <http://gtfs.org/drop_off_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/drop_off_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/drop_off_type> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
 <http://gtfs.org/drop_off_type> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/drop_off_type> <http://gtfs.org/isType> <http://gtfs.org/DropOffTypeEnum> .
 <http://gtfs.org/drop_off_type> <http://gtfs.org/additionalInfo> "Enum field with options 0, 1, 2, 3" .
@@ -1071,6 +1122,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/duration_limit
 <http://gtfs.org/duration_limit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/duration_limit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/duration_limit> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_transfer_rules.txt> .
+<http://gtfs.org/fare_transfer_rules.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/duration_limit> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/duration_limit> <http://gtfs.org/isType> <http://gtfs.org/Integer> .
 <http://gtfs.org/duration_limit> <http://gtfs.org/additionalInfo> "Positive integer" .
@@ -1080,6 +1133,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/duration_limit_type
 <http://gtfs.org/duration_limit_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/duration_limit_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/duration_limit_type> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_transfer_rules.txt> .
 <http://gtfs.org/duration_limit_type> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/duration_limit_type> <http://gtfs.org/isType> <http://gtfs.org/DurationLimitTypeEnum> .
 <http://gtfs.org/duration_limit_type> <http://gtfs.org/additionalInfo> "Defines the relative start and end of `fare_transfer_rules.duration_limit`." .
@@ -1117,6 +1171,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/end_date
 <http://gtfs.org/end_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/end_date> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar.txt> .
 <http://gtfs.org/end_date> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/end_date> <http://gtfs.org/isType> <http://gtfs.org/Date> .
 <http://gtfs.org/end_date> <http://gtfs.org/additionalInfo> "The end_date field specifies the end service day for the service interval." .
@@ -1126,6 +1181,10 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/end_time
 <http://gtfs.org/end_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/end_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/end_time> <http://gtfs.org/isFieldOf> <http://gtfs.org/frequencies.txt> .
+<http://gtfs.org/frequencies.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://gtfs.org/end_time> <http://gtfs.org/isFieldOf> <http://gtfs.org/timeframes.txt> .
+<http://gtfs.org/timeframes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/end_time> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/end_time> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/end_time> <http://gtfs.org/isType> <http://gtfs.org/Time> .
@@ -1139,6 +1198,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/exact_times
 <http://gtfs.org/exact_times> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/exact_times> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/exact_times> <http://gtfs.org/isFieldOf> <http://gtfs.org/frequencies.txt> .
 <http://gtfs.org/exact_times> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/exact_times> <http://gtfs.org/isType> <http://gtfs.org/ExactTimesEnum> .
 <http://gtfs.org/exact_times> <http://gtfs.org/additionalInfo> "Enum field with options 0 or 1" .
@@ -1161,6 +1221,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/exception_type
 <http://gtfs.org/exception_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/exception_type> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar_dates.txt> .
 <http://gtfs.org/exception_type> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/exception_type> <http://gtfs.org/isType> <http://gtfs.org/ExceptionTypeEnum> .
 <http://gtfs.org/exception_type> <http://gtfs.org/additionalInfo> "Suppose a route has one set of trips available on holidays and another set of trips available on all other days. One service_id could correspond to the regular service schedule and another service_id could correspond to the holiday schedule. For a particular holiday, the calendar_dates.txt file could be used to add the holiday to the holiday service_id and to remove the holiday from the regular service_id schedule." .
@@ -1182,7 +1243,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/exception_type_2> <http://www.w3.org/2000/01/rdf-schema#label> "exception_type:2" .
 # 
 # http://gtfs.org/fare_attributes.txt
-<http://gtfs.org/fare_attributes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/fare_attributes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/fare_attributes.txt> <http://gtfs.org/hasField> <http://gtfs.org/agency_id> .
 <http://gtfs.org/fare_attributes.txt> <http://gtfs.org/hasField> <http://gtfs.org/currency_type> .
@@ -1202,6 +1262,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/fare_id
 <http://gtfs.org/fare_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/fare_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_attributes.txt> .
+<http://gtfs.org/fare_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_rules.txt> .
 <http://gtfs.org/fare_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/fare_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/fare_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing fare_attributes.fare_id" .
@@ -1247,6 +1309,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/fare_media_id
 <http://gtfs.org/fare_media_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/fare_media_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_media.txt> .
+<http://gtfs.org/fare_media_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_products.txt> .
 <http://gtfs.org/fare_media_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/fare_media_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/fare_media_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
@@ -1258,6 +1322,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/fare_media_name
 <http://gtfs.org/fare_media_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/fare_media_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_media.txt> .
 <http://gtfs.org/fare_media_name> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/fare_media_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/fare_media_name> <http://gtfs.org/additionalInfo> "None" .
@@ -1266,6 +1331,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/fare_media_type
 <http://gtfs.org/fare_media_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/fare_media_type> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_media.txt> .
 <http://gtfs.org/fare_media_type> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/fare_media_type> <http://gtfs.org/isType> <http://gtfs.org/FareMediaTypeEnum> .
 <http://gtfs.org/fare_media_type> <http://gtfs.org/additionalInfo> "Enum field with options: 0 - None, 1 - Physical paper ticket, 2 - Physical transit card, 3 - cEMV, 4 - Mobile app" .
@@ -1309,6 +1375,9 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/fare_product_id
 <http://gtfs.org/fare_product_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/fare_product_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_leg_rules.txt> .
+<http://gtfs.org/fare_product_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_products.txt> .
+<http://gtfs.org/fare_product_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_transfer_rules.txt> .
 <http://gtfs.org/fare_product_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/fare_product_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/fare_product_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
@@ -1322,6 +1391,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/fare_product_name
 <http://gtfs.org/fare_product_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/fare_product_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/fare_product_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_products.txt> .
 <http://gtfs.org/fare_product_name> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/fare_product_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/fare_product_name> <http://gtfs.org/additionalInfo> "Type: Text" .
@@ -1329,7 +1399,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/fare_product_name> <http://www.w3.org/2000/01/rdf-schema#label> "fare_product_name" .
 # 
 # http://gtfs.org/fare_products.txt
-<http://gtfs.org/fare_products.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/fare_products.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/fare_products.txt> <http://gtfs.org/hasField> <http://gtfs.org/amount> .
 <http://gtfs.org/fare_products.txt> <http://gtfs.org/hasField> <http://gtfs.org/currency> .
@@ -1342,7 +1411,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/fare_products.txt> <http://www.w3.org/2000/01/rdf-schema#label> "fare_products.txt" .
 # 
 # http://gtfs.org/fare_rules.txt
-<http://gtfs.org/fare_rules.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/fare_rules.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/fare_rules.txt> <http://gtfs.org/hasField> <http://gtfs.org/contains_id> .
 <http://gtfs.org/fare_rules.txt> <http://gtfs.org/hasField> <http://gtfs.org/destination_id> .
@@ -1355,7 +1423,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/fare_rules.txt> <http://www.w3.org/2000/01/rdf-schema#label> "fare_rules.txt" .
 # 
 # http://gtfs.org/fare_transfer_rules.txt
-<http://gtfs.org/fare_transfer_rules.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/fare_transfer_rules.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/fare_transfer_rules.txt> <http://gtfs.org/hasField> <http://gtfs.org/duration_limit> .
 <http://gtfs.org/fare_transfer_rules.txt> <http://gtfs.org/hasField> <http://gtfs.org/duration_limit_type> .
@@ -1375,6 +1442,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/fare_transfer_type
 <http://gtfs.org/fare_transfer_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/fare_transfer_type> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_transfer_rules.txt> .
 <http://gtfs.org/fare_transfer_type> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/fare_transfer_type> <http://gtfs.org/isType> <http://gtfs.org/FareTransferTypeEnum> .
 <http://gtfs.org/fare_transfer_type> <http://gtfs.org/additionalInfo> "Valid options are: 0 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id; A + AB. 1 - From-leg fare_leg_rules.fare_product_id plus fare_transfer_rules.fare_product_id plus to-leg fare_leg_rules.fare_product_id; A + AB + B. 2 - fare_transfer_rules.fare_product_id; AB. Cost processing interactions between multiple transfers in a journey: Where S indicates the total processed cost of the preceding leg(s) and transfer(s." .
@@ -1405,6 +1473,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/feed_contact_email
 <http://gtfs.org/feed_contact_email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/feed_contact_email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/feed_contact_email> <http://gtfs.org/isFieldOf> <http://gtfs.org/feed_info.txt> .
 <http://gtfs.org/feed_contact_email> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/feed_contact_email> <http://gtfs.org/isType> <http://gtfs.org/Email> .
 <http://gtfs.org/feed_contact_email> <http://gtfs.org/additionalInfo> "Email address for communication regarding the GTFS dataset and data publishing practices. `feed_contact_email` is a technical contact for GTFS-consuming applications. Provide customer service contact information through [agency.txt](#agencytxt). It's recommended that at least one of `feed_contact_email` or `feed_contact_url` are provided." .
@@ -1414,6 +1483,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/feed_contact_url
 <http://gtfs.org/feed_contact_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/feed_contact_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/feed_contact_url> <http://gtfs.org/isFieldOf> <http://gtfs.org/feed_info.txt> .
 <http://gtfs.org/feed_contact_url> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/feed_contact_url> <http://gtfs.org/isType> <http://gtfs.org/URL> .
 <http://gtfs.org/feed_contact_url> <http://gtfs.org/additionalInfo> "URL for contact information" .
@@ -1423,6 +1493,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/feed_end_date
 <http://gtfs.org/feed_end_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/feed_end_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/feed_end_date> <http://gtfs.org/isFieldOf> <http://gtfs.org/feed_info.txt> .
 <http://gtfs.org/feed_end_date> <http://gtfs.org/isPresence> <http://gtfs.org/Recommended> .
 <http://gtfs.org/feed_end_date> <http://gtfs.org/isType> <http://gtfs.org/Date> .
 <http://gtfs.org/feed_end_date> <http://gtfs.org/additionalInfo> "The end date for the feed" .
@@ -1430,7 +1501,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/feed_end_date> <http://www.w3.org/2000/01/rdf-schema#label> "feed_end_date" .
 # 
 # http://gtfs.org/feed_info.txt
-<http://gtfs.org/feed_info.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/feed_info.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/feed_info.txt> <http://gtfs.org/hasField> <http://gtfs.org/default_lang> .
 <http://gtfs.org/feed_info.txt> <http://gtfs.org/hasField> <http://gtfs.org/feed_contact_email> .
@@ -1452,6 +1522,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/feed_lang
 <http://gtfs.org/feed_lang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/feed_lang> <http://gtfs.org/isFieldOf> <http://gtfs.org/feed_info.txt> .
 <http://gtfs.org/feed_lang> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/feed_lang> <http://gtfs.org/isType> <http://gtfs.org/LanguageCode> .
 <http://gtfs.org/feed_lang> <http://gtfs.org/additionalInfo> "The `feed_lang` field is crucial for specifying the default language used in the dataset and providing translations for multilingual datasets." .
@@ -1461,6 +1532,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/feed_publisher_name
 <http://gtfs.org/feed_publisher_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/feed_publisher_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/feed_info.txt> .
 <http://gtfs.org/feed_publisher_name> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/feed_publisher_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/feed_publisher_name> <http://gtfs.org/additionalInfo> "Type: Text" .
@@ -1469,6 +1541,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/feed_publisher_url
 <http://gtfs.org/feed_publisher_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/feed_publisher_url> <http://gtfs.org/isFieldOf> <http://gtfs.org/feed_info.txt> .
 <http://gtfs.org/feed_publisher_url> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/feed_publisher_url> <http://gtfs.org/isType> <http://gtfs.org/URL> .
 <http://gtfs.org/feed_publisher_url> <http://gtfs.org/additionalInfo> "URL of the dataset publishing organization's website." .
@@ -1477,6 +1550,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/feed_start_date
 <http://gtfs.org/feed_start_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/feed_start_date> <http://gtfs.org/isFieldOf> <http://gtfs.org/feed_info.txt> .
 <http://gtfs.org/feed_start_date> <http://gtfs.org/isPresence> <http://gtfs.org/Recommended> .
 <http://gtfs.org/feed_start_date> <http://gtfs.org/isType> <http://gtfs.org/Date> .
 <http://gtfs.org/feed_start_date> <http://www.w3.org/2000/01/rdf-schema#comment> "The dataset provides complete and reliable schedule information for service in the period from the beginning of the `feed_start_date` day to the end of the `feed_end_date` day. Both days may be left empty if unavailable. The `feed_end_date` date must not precede the `feed_start_date` date if both are given. It is recommended that dataset providers give schedule data outside this period to advise of likely future service, but dataset consumers should treat it mindful of its non-authoritative status. If `feed_start_date` or `feed_end_date` extend beyond the active calendar dates defined in calendar.txt and calendar_dates.txt, the dataset is making an explicit assertion that there is no service for dates within the `feed_start_date` or `feed_end_date` range but not included in the active calendar dates." .
@@ -1484,6 +1558,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/feed_version
 <http://gtfs.org/feed_version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/feed_version> <http://gtfs.org/isFieldOf> <http://gtfs.org/feed_info.txt> .
 <http://gtfs.org/feed_version> <http://gtfs.org/isPresence> <http://gtfs.org/Recommended> .
 <http://gtfs.org/feed_version> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/feed_version> <http://gtfs.org/additionalInfo> "Recommended field to indicate the version of the GTFS dataset." .
@@ -1493,6 +1568,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/field_name
 <http://gtfs.org/field_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/field_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/field_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/translations.txt> .
+<http://gtfs.org/translations.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/field_name> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/field_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/field_name> <http://gtfs.org/additionalInfo> "Fields with type `Text` may be translated, fields with type `URL`, `Email` and `Phone number` may also be “translated” to provide resources in the correct language. Fields with other types should not be translated." .
@@ -1502,6 +1579,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/field_value
 <http://gtfs.org/field_value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/field_value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/field_value> <http://gtfs.org/isFieldOf> <http://gtfs.org/translations.txt> .
 <http://gtfs.org/field_value> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/field_value> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/field_value> <http://gtfs.org/additionalInfo> "Instead of defining which record should be translated by using `record_id` and `record_sub_id`, this field can be used to define the value which should be translated. When used, the translation will be applied when the fields identified by `table_name` and `field_name` contains the exact same value defined in field_value.\n\nThe field must have exactly the value defined in `field_value`. If only a subset of the value matches `field_value`, the translation won’t be applied.\n\nIf two translation rules match the same record (one with `field_value`, and the other one with `record_id`), the rule with `record_id` takes precedence." .
@@ -1510,7 +1588,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/field_value> <http://www.w3.org/2000/01/rdf-schema#label> "field_value" .
 # 
 # http://gtfs.org/frequencies.txt
-<http://gtfs.org/frequencies.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/frequencies.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/frequencies.txt> <http://gtfs.org/hasField> <http://gtfs.org/end_time> .
 <http://gtfs.org/frequencies.txt> <http://gtfs.org/hasField> <http://gtfs.org/exact_times> .
@@ -1525,6 +1602,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/friday
 <http://gtfs.org/friday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/friday> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar.txt> .
 <http://gtfs.org/friday> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/friday> <http://gtfs.org/isType> <http://gtfs.org/FridayEnum> .
 <http://gtfs.org/friday> <http://gtfs.org/additionalInfo> "Enum field representing the behavior on Fridays" .
@@ -1547,6 +1625,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/from_area_id
 <http://gtfs.org/from_area_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/from_area_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_leg_rules.txt> .
 <http://gtfs.org/from_area_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/from_area_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/from_area_id> <http://gtfs.org/additionalInfo> "If there are no matching fare_leg_rules.from_area_id values to the area_id being filtered, empty fare_leg_rules.from_area_id will be matched by default. An empty entry in fare_leg_rules.from_area_id corresponds to all areas defined in areas.area_id excluding the ones listed under fare_leg_rules.from_area_id" .
@@ -1555,6 +1634,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/from_leg_group_id
 <http://gtfs.org/from_leg_group_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/from_leg_group_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_transfer_rules.txt> .
 <http://gtfs.org/from_leg_group_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/from_leg_group_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/from_leg_group_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing fare_leg_rules.leg_group_id" .
@@ -1564,6 +1644,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/from_route_id
 <http://gtfs.org/from_route_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/from_route_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/from_route_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/transfers.txt> .
+<http://gtfs.org/transfers.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/from_route_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/from_route_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/from_route_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing `routes.route_id`" .
@@ -1573,6 +1655,9 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/from_stop_id
 <http://gtfs.org/from_stop_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/from_stop_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/from_stop_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
+<http://gtfs.org/pathways.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://gtfs.org/from_stop_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/transfers.txt> .
 <http://gtfs.org/from_stop_id> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/from_stop_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/from_stop_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
@@ -1584,6 +1669,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/from_timeframe_group_id
 <http://gtfs.org/from_timeframe_group_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/from_timeframe_group_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_leg_rules.txt> .
 <http://gtfs.org/from_timeframe_group_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/from_timeframe_group_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/from_timeframe_group_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing timeframes.timeframe_group_id" .
@@ -1593,6 +1679,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/from_trip_id
 <http://gtfs.org/from_trip_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/from_trip_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/from_trip_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/transfers.txt> .
 <http://gtfs.org/from_trip_id> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/from_trip_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/from_trip_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing `trips.trip_id`" .
@@ -1602,6 +1689,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/headway_secs
 <http://gtfs.org/headway_secs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/headway_secs> <http://gtfs.org/isFieldOf> <http://gtfs.org/frequencies.txt> .
 <http://gtfs.org/headway_secs> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/headway_secs> <http://gtfs.org/isType> <http://gtfs.org/Integer> .
 <http://gtfs.org/headway_secs> <http://gtfs.org/additionalInfo> "Positive integer" .
@@ -1610,6 +1698,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/is_authority
 <http://gtfs.org/is_authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/is_authority> <http://gtfs.org/isFieldOf> <http://gtfs.org/attributions.txt> .
 <http://gtfs.org/is_authority> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/is_authority> <http://gtfs.org/isType> <http://gtfs.org/IsAuthorityEnum> .
 <http://gtfs.org/is_authority> <http://gtfs.org/additionalInfo> "Enum field representing the role of the organization as an authority." .
@@ -1633,6 +1722,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/is_bidirectional
 <http://gtfs.org/is_bidirectional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/is_bidirectional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/is_bidirectional> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
 <http://gtfs.org/is_bidirectional> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/is_bidirectional> <http://gtfs.org/isType> <http://gtfs.org/IsBidirectionalEnum> .
 <http://gtfs.org/is_bidirectional> <http://gtfs.org/additionalInfo> "Exit gates (pathway_mode=7) must not be bidirectional." .
@@ -1655,6 +1745,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/is_operator
 <http://gtfs.org/is_operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/is_operator> <http://gtfs.org/isFieldOf> <http://gtfs.org/attributions.txt> .
 <http://gtfs.org/is_operator> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/is_operator> <http://gtfs.org/isType> <http://gtfs.org/IsOperatorEnum> .
 <http://gtfs.org/is_operator> <http://gtfs.org/additionalInfo> "Enum type field" .
@@ -1677,6 +1768,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/is_producer
 <http://gtfs.org/is_producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/is_producer> <http://gtfs.org/isFieldOf> <http://gtfs.org/attributions.txt> .
 <http://gtfs.org/is_producer> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/is_producer> <http://gtfs.org/isType> <http://gtfs.org/IsProducerEnum> .
 <http://gtfs.org/is_producer> <http://gtfs.org/additionalInfo> "Valid options are: 0 or empty - Organization doesn’t have this role. 1 - Organization does have this role." .
@@ -1700,6 +1792,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/language
 <http://gtfs.org/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/language> <http://gtfs.org/isFieldOf> <http://gtfs.org/translations.txt> .
 <http://gtfs.org/language> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/language> <http://gtfs.org/isType> <http://gtfs.org/LanguageCode> .
 <http://gtfs.org/language> <http://gtfs.org/additionalInfo> "If the language is the same as in `feed_info.feed_lang`, the original value of the field will be assumed to be the default value to use in languages without specific translations (if `default_lang` doesn't specify otherwise)." .
@@ -1708,6 +1801,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/leg_group_id
 <http://gtfs.org/leg_group_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/leg_group_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_leg_rules.txt> .
 <http://gtfs.org/leg_group_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/leg_group_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/leg_group_id> <http://gtfs.org/additionalInfo> "This field is an ID type that identifies a group of entries in fare_leg_rules.txt." .
@@ -1717,6 +1811,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/length
 <http://gtfs.org/length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/length> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
 <http://gtfs.org/length> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/length> <http://gtfs.org/isType> <http://gtfs.org/Float> .
 <http://gtfs.org/length> <http://gtfs.org/additionalInfo> "Non-negative float" .
@@ -1726,6 +1821,10 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/level_id
 <http://gtfs.org/level_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/level_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/level_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/levels.txt> .
+<http://gtfs.org/levels.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://gtfs.org/level_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
+<http://gtfs.org/stops.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/level_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/level_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/level_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
@@ -1738,6 +1837,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/level_index
 <http://gtfs.org/level_index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/level_index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/level_index> <http://gtfs.org/isFieldOf> <http://gtfs.org/levels.txt> .
 <http://gtfs.org/level_index> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/level_index> <http://gtfs.org/isType> <http://gtfs.org/Float> .
 <http://gtfs.org/level_index> <http://gtfs.org/additionalInfo> "The level index is a float value." .
@@ -1747,6 +1847,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/level_name
 <http://gtfs.org/level_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/level_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/level_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/levels.txt> .
 <http://gtfs.org/level_name> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/level_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/level_name> <http://gtfs.org/additionalInfo> "This field represents the name of the level within a building or station." .
@@ -1755,7 +1856,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/level_name> <http://www.w3.org/2000/01/rdf-schema#label> "level_name" .
 # 
 # http://gtfs.org/levels.txt
-<http://gtfs.org/levels.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/levels.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/levels.txt> <http://gtfs.org/hasField> <http://gtfs.org/level_id> .
 <http://gtfs.org/levels.txt> <http://gtfs.org/hasField> <http://gtfs.org/level_index> .
@@ -1768,6 +1868,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/location_type
 <http://gtfs.org/location_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/location_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/location_type> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/location_type> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/location_type> <http://gtfs.org/isType> <http://gtfs.org/LocationTypeEnum> .
 <http://gtfs.org/location_type> <http://gtfs.org/additionalInfo> "Valid options are: 0 (or blank) - Stop (or Platform), 1 - Station, 2 - Entrance/Exit, 3 - Generic Node, 4 - Boarding Area" .
@@ -1812,6 +1913,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/max_slope
 <http://gtfs.org/max_slope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/max_slope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/max_slope> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
 <http://gtfs.org/max_slope> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/max_slope> <http://gtfs.org/isType> <http://gtfs.org/Float> .
 <http://gtfs.org/max_slope> <http://gtfs.org/additionalInfo> "Valid options are: 0 or empty - No slope. Float - Slope ratio of the pathway, positive for upwards, negative for downwards. This field should only be used with walkways (pathway_mode=1) and moving sidewalks (pathway_mode=3). Example: In the US, 0.083 (also written 8.3%) is the maximum slope ratio for hand-propelled wheelchair, which means an increase of 0.083m (so 8.3cm) for each 1m." .
@@ -1821,6 +1923,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/min_transfer_time
 <http://gtfs.org/min_transfer_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/min_transfer_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/min_transfer_time> <http://gtfs.org/isFieldOf> <http://gtfs.org/transfers.txt> .
 <http://gtfs.org/min_transfer_time> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/min_transfer_time> <http://gtfs.org/isType> <http://gtfs.org/Integer> .
 <http://gtfs.org/min_transfer_time> <http://gtfs.org/additionalInfo> "Non-negative integer" .
@@ -1830,6 +1933,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/min_width
 <http://gtfs.org/min_width> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/min_width> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/min_width> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
 <http://gtfs.org/min_width> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/min_width> <http://gtfs.org/isType> <http://gtfs.org/Float> .
 <http://gtfs.org/min_width> <http://gtfs.org/additionalInfo> "This field is recommended if the minimum width is less than 1 meter." .
@@ -1838,6 +1942,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/monday
 <http://gtfs.org/monday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/monday> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar.txt> .
 <http://gtfs.org/monday> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/monday> <http://gtfs.org/isType> <http://gtfs.org/MondayEnum> .
 <http://gtfs.org/monday> <http://gtfs.org/additionalInfo> "Valid options are: 1 - Service is available for all Mondays in the date range. 0 - Service is not available for Mondays in the date range." .
@@ -1860,6 +1965,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/network_id
 <http://gtfs.org/network_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/network_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_leg_rules.txt> .
+<http://gtfs.org/network_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
 <http://gtfs.org/network_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/network_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/network_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing routes.network_id" .
@@ -1870,6 +1977,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/organization_name
 <http://gtfs.org/organization_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/organization_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/attributions.txt> .
 <http://gtfs.org/organization_name> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/organization_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/organization_name> <http://gtfs.org/additionalInfo> "This field stores the name of the organization associated with the dataset." .
@@ -1878,6 +1986,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/origin_id
 <http://gtfs.org/origin_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/origin_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_rules.txt> .
 <http://gtfs.org/origin_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/origin_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/origin_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing stops.zone_id" .
@@ -1887,6 +1996,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/parent_station
 <http://gtfs.org/parent_station> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/parent_station> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/parent_station> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/parent_station> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/parent_station> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/parent_station> <http://gtfs.org/additionalInfo> "Foreign ID referencing stops.stop_id" .
@@ -1897,6 +2007,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/pathway_id
 <http://gtfs.org/pathway_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/pathway_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/pathway_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
 <http://gtfs.org/pathway_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/pathway_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/pathway_id> <http://gtfs.org/additionalInfo> "Unique ID" .
@@ -1906,6 +2017,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/pathway_mode
 <http://gtfs.org/pathway_mode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/pathway_mode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/pathway_mode> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
 <http://gtfs.org/pathway_mode> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/pathway_mode> <http://gtfs.org/isType> <http://gtfs.org/PathwayModeEnum> .
 <http://gtfs.org/pathway_mode> <http://gtfs.org/additionalInfo> "Valid options are: 1 - Walkway, 2 - Stairs, 3 - Moving sidewalk/travelator, 4 - Escalator, 5 - Elevator, 6 - Fare gate, 7 - Exit gate" .
@@ -1962,7 +2074,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/pathway_mode_7> <http://www.w3.org/2000/01/rdf-schema#label> "pathway_mode:7" .
 # 
 # http://gtfs.org/pathways.txt
-<http://gtfs.org/pathways.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/pathways.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/pathways.txt> <http://gtfs.org/hasField> <http://gtfs.org/from_stop_id> .
 <http://gtfs.org/pathways.txt> <http://gtfs.org/hasField> <http://gtfs.org/is_bidirectional> .
@@ -1987,6 +2098,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/payment_method
 <http://gtfs.org/payment_method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/payment_method> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_attributes.txt> .
 <http://gtfs.org/payment_method> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/payment_method> <http://gtfs.org/isType> <http://gtfs.org/PaymentMethodEnum> .
 <http://gtfs.org/payment_method> <http://gtfs.org/additionalInfo> "Valid options are: 0 - Fare is paid on board. 1 - Fare must be paid before boarding." .
@@ -2010,6 +2122,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/pickup_type
 <http://gtfs.org/pickup_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/pickup_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/pickup_type> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
 <http://gtfs.org/pickup_type> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/pickup_type> <http://gtfs.org/isType> <http://gtfs.org/PickupTypeEnum> .
 <http://gtfs.org/pickup_type> <http://gtfs.org/additionalInfo> "Enum field with options 0, 1, 2, 3" .
@@ -2047,6 +2160,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/platform_code
 <http://gtfs.org/platform_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/platform_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/platform_code> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/platform_code> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/platform_code> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/platform_code> <http://gtfs.org/additionalInfo> "Platform identifier should be a text value without including words like “platform” or \"track\"" .
@@ -2055,6 +2169,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/price
 <http://gtfs.org/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/price> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_attributes.txt> .
 <http://gtfs.org/price> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/price> <http://gtfs.org/isType> <http://gtfs.org/Float> .
 <http://gtfs.org/price> <http://gtfs.org/additionalInfo> "Non-negative float" .
@@ -2064,6 +2179,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/record_id
 <http://gtfs.org/record_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/record_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/record_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/translations.txt> .
 <http://gtfs.org/record_id> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/record_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/record_id> <http://gtfs.org/additionalInfo> "Foreign ID" .
@@ -2074,6 +2190,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/record_sub_id
 <http://gtfs.org/record_sub_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/record_sub_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/record_sub_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/translations.txt> .
 <http://gtfs.org/record_sub_id> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/record_sub_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/record_sub_id> <http://gtfs.org/hasCondition> "Forbidden if `table_name` is `feed_info` or if `field_value` is defined. Required if `table_name=stop_times` and `record_id` is defined." .
@@ -2082,6 +2199,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/reversed_signposted_as
 <http://gtfs.org/reversed_signposted_as> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/reversed_signposted_as> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
 <http://gtfs.org/reversed_signposted_as> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/reversed_signposted_as> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/reversed_signposted_as> <http://gtfs.org/additionalInfo> "Text field to store the reversed signposted information." .
@@ -2091,6 +2209,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/route_color
 <http://gtfs.org/route_color> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/route_color> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/route_color> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
 <http://gtfs.org/route_color> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/route_color> <http://gtfs.org/isType> <http://gtfs.org/Color> .
 <http://gtfs.org/route_color> <http://gtfs.org/additionalInfo> "The color difference between `route_color` and `route_text_color` should provide sufficient contrast when viewed on a black and white screen." .
@@ -2100,6 +2219,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/route_desc
 <http://gtfs.org/route_desc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/route_desc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/route_desc> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
 <http://gtfs.org/route_desc> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/route_desc> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/route_desc> <http://gtfs.org/additionalInfo> "This field should contain detailed information about the route." .
@@ -2109,6 +2229,10 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/route_id
 <http://gtfs.org/route_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/route_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/attributions.txt> .
+<http://gtfs.org/route_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_rules.txt> .
+<http://gtfs.org/route_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
+<http://gtfs.org/route_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/trips.txt> .
 <http://gtfs.org/route_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/route_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/route_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
@@ -2124,6 +2248,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/route_long_name
 <http://gtfs.org/route_long_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/route_long_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/route_long_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
 <http://gtfs.org/route_long_name> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/route_long_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/route_long_name> <http://gtfs.org/additionalInfo> "The name is generally more descriptive than the route_short_name and often includes the route's destination or stop." .
@@ -2134,6 +2259,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/route_short_name
 <http://gtfs.org/route_short_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/route_short_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/route_short_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
 <http://gtfs.org/route_short_name> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/route_short_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/route_short_name> <http://gtfs.org/additionalInfo> "Both `route_short_name` and `route_long_name` may be defined." .
@@ -2144,6 +2270,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/route_sort_order
 <http://gtfs.org/route_sort_order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/route_sort_order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/route_sort_order> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
 <http://gtfs.org/route_sort_order> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/route_sort_order> <http://gtfs.org/isType> <http://gtfs.org/Integer> .
 <http://gtfs.org/route_sort_order> <http://gtfs.org/additionalInfo> "Non-negative integer" .
@@ -2153,6 +2280,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/route_text_color
 <http://gtfs.org/route_text_color> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/route_text_color> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/route_text_color> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
 <http://gtfs.org/route_text_color> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/route_text_color> <http://gtfs.org/isType> <http://gtfs.org/Color> .
 <http://gtfs.org/route_text_color> <http://gtfs.org/additionalInfo> "The color should provide sufficient contrast when viewed on a black and white screen." .
@@ -2162,6 +2290,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/route_type
 <http://gtfs.org/route_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/route_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/route_type> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
 <http://gtfs.org/route_type> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/route_type> <http://gtfs.org/isType> <http://gtfs.org/RouteTypeEnum> .
 <http://gtfs.org/route_type> <http://gtfs.org/additionalInfo> "Valid options are: 0 - Tram, Streetcar, Light rail. Any light rail or street level system within a metropolitan area. 1 - Subway, Metro. Any underground rail system within a metropolitan area. 2 - Rail. Used for intercity or long-distance travel. 3 - Bus. Used for short- and long-distance bus routes. 4 - Ferry. Used for short- and long-distance boat service. 5 - Cable tram. Used for street-level rail cars where the cable runs beneath the vehicle (e.g., cable car in San Francisco). 6 - Aerial lift, suspended cable car (e.g., gondola lift, aerial tramway). Cable transport where cabins, cars, gondolas or open chairs are suspended by means of one or more cables. 7 - Funicular. Any rail system designed for steep inclines. 11 - Trolleybus. Electric buses that draw power from overhead wires using poles. 12 - Monorail. Railway in which the track consists of a single rail or a beam." .
@@ -2241,6 +2370,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/route_url
 <http://gtfs.org/route_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/route_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/route_url> <http://gtfs.org/isFieldOf> <http://gtfs.org/routes.txt> .
 <http://gtfs.org/route_url> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/route_url> <http://gtfs.org/isType> <http://gtfs.org/URL> .
 <http://gtfs.org/route_url> <http://gtfs.org/additionalInfo> "URL of a web page about the particular route. Should be different from the `agency.agency_url` value." .
@@ -2248,7 +2378,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/route_url> <http://www.w3.org/2000/01/rdf-schema#label> "route_url" .
 # 
 # http://gtfs.org/routes.txt
-<http://gtfs.org/routes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/routes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/routes.txt> <http://gtfs.org/hasField> <http://gtfs.org/agency_id> .
 <http://gtfs.org/routes.txt> <http://gtfs.org/hasField> <http://gtfs.org/continuous_drop_off> .
@@ -2269,6 +2398,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/saturday
 <http://gtfs.org/saturday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/saturday> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar.txt> .
 <http://gtfs.org/saturday> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/saturday> <http://gtfs.org/isType> <http://gtfs.org/SaturdayEnum> .
 <http://gtfs.org/saturday> <http://gtfs.org/additionalInfo> "Enum type field" .
@@ -2284,6 +2414,10 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/service_id
 <http://gtfs.org/service_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/service_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar.txt> .
+<http://gtfs.org/service_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar_dates.txt> .
+<http://gtfs.org/service_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/timeframes.txt> .
+<http://gtfs.org/service_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/trips.txt> .
 <http://gtfs.org/service_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/service_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/service_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing `calendar.service_id` or `calendar_dates.service_id`" .
@@ -2298,6 +2432,9 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/shape_dist_traveled
 <http://gtfs.org/shape_dist_traveled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/shape_dist_traveled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/shape_dist_traveled> <http://gtfs.org/isFieldOf> <http://gtfs.org/shapes.txt> .
+<http://gtfs.org/shapes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://gtfs.org/shape_dist_traveled> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
 <http://gtfs.org/shape_dist_traveled> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/shape_dist_traveled> <http://gtfs.org/isType> <http://gtfs.org/Float> .
 <http://gtfs.org/shape_dist_traveled> <http://gtfs.org/additionalInfo> "Non-negative float. Must be in the same units as shapes.txt." .
@@ -2310,6 +2447,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/shape_id
 <http://gtfs.org/shape_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/shape_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/shape_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/shapes.txt> .
+<http://gtfs.org/shape_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/trips.txt> .
 <http://gtfs.org/shape_id> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/shape_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/shape_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
@@ -2323,6 +2462,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/shape_pt_lat
 <http://gtfs.org/shape_pt_lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/shape_pt_lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/shape_pt_lat> <http://gtfs.org/isFieldOf> <http://gtfs.org/shapes.txt> .
 <http://gtfs.org/shape_pt_lat> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/shape_pt_lat> <http://gtfs.org/isType> <http://gtfs.org/Latitude> .
 <http://gtfs.org/shape_pt_lat> <http://gtfs.org/additionalInfo> "Latitude" .
@@ -2332,6 +2472,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/shape_pt_lon
 <http://gtfs.org/shape_pt_lon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/shape_pt_lon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/shape_pt_lon> <http://gtfs.org/isFieldOf> <http://gtfs.org/shapes.txt> .
 <http://gtfs.org/shape_pt_lon> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/shape_pt_lon> <http://gtfs.org/isType> <http://gtfs.org/Longitude> .
 <http://gtfs.org/shape_pt_lon> <http://gtfs.org/additionalInfo> "This field represents the longitude of a shape point on a map." .
@@ -2341,6 +2482,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/shape_pt_sequence
 <http://gtfs.org/shape_pt_sequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/shape_pt_sequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/shape_pt_sequence> <http://gtfs.org/isFieldOf> <http://gtfs.org/shapes.txt> .
 <http://gtfs.org/shape_pt_sequence> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/shape_pt_sequence> <http://gtfs.org/isType> <http://gtfs.org/Integer> .
 <http://gtfs.org/shape_pt_sequence> <http://gtfs.org/additionalInfo> "Values must increase along the trip but do not need to be consecutive." .
@@ -2349,7 +2491,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/shape_pt_sequence> <http://www.w3.org/2000/01/rdf-schema#label> "shape_pt_sequence" .
 # 
 # http://gtfs.org/shapes.txt
-<http://gtfs.org/shapes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/shapes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/shapes.txt> <http://gtfs.org/hasField> <http://gtfs.org/shape_dist_traveled> .
 <http://gtfs.org/shapes.txt> <http://gtfs.org/hasField> <http://gtfs.org/shape_id> .
@@ -2362,6 +2503,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/signposted_as
 <http://gtfs.org/signposted_as> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/signposted_as> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
 <http://gtfs.org/signposted_as> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/signposted_as> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/signposted_as> <http://gtfs.org/additionalInfo> "May be used to provide text directions to riders, such as 'follow signs to '. The text in `singposted_as` should appear exactly how it is printed on the signs. When the physical signage is multilingual, this field may be populated and translated following the example of `stops.stop_name` in the field definition of `feed_info.feed_lang`." .
@@ -2370,6 +2512,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/stair_count
 <http://gtfs.org/stair_count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/stair_count> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
 <http://gtfs.org/stair_count> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/stair_count> <http://gtfs.org/isType> <http://gtfs.org/Integer> .
 <http://gtfs.org/stair_count> <http://gtfs.org/additionalInfo> "Non-null integer" .
@@ -2378,6 +2521,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/start_date
 <http://gtfs.org/start_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/start_date> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar.txt> .
 <http://gtfs.org/start_date> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/start_date> <http://gtfs.org/isType> <http://gtfs.org/Date> .
 <http://gtfs.org/start_date> <http://gtfs.org/additionalInfo> "The start service day for the service interval must be provided in the specified format." .
@@ -2386,6 +2530,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/start_time
 <http://gtfs.org/start_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/start_time> <http://gtfs.org/isFieldOf> <http://gtfs.org/frequencies.txt> .
+<http://gtfs.org/start_time> <http://gtfs.org/isFieldOf> <http://gtfs.org/timeframes.txt> .
 <http://gtfs.org/start_time> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/start_time> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/start_time> <http://gtfs.org/isType> <http://gtfs.org/Time> .
@@ -2396,7 +2542,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/start_time> <http://www.w3.org/2000/01/rdf-schema#label> "start_time" .
 # 
 # http://gtfs.org/stop_areas.txt
-<http://gtfs.org/stop_areas.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stop_areas.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/stop_areas.txt> <http://gtfs.org/hasField> <http://gtfs.org/area_id> .
 <http://gtfs.org/stop_areas.txt> <http://gtfs.org/hasField> <http://gtfs.org/stop_id> .
@@ -2408,6 +2553,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/stop_code
 <http://gtfs.org/stop_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stop_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/stop_code> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/stop_code> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/stop_code> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/stop_code> <http://gtfs.org/additionalInfo> "The `stop_code` field is used to identify locations for riders in transit systems." .
@@ -2417,6 +2563,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/stop_desc
 <http://gtfs.org/stop_desc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stop_desc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/stop_desc> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/stop_desc> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/stop_desc> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/stop_desc> <http://gtfs.org/additionalInfo> "Description of the location that provides useful, quality information. Should not be a duplicate of `stop_name`." .
@@ -2426,6 +2573,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/stop_headsign
 <http://gtfs.org/stop_headsign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stop_headsign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/stop_headsign> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
 <http://gtfs.org/stop_headsign> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/stop_headsign> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/stop_headsign> <http://www.w3.org/2000/01/rdf-schema#comment> "Text that appears on signage identifying the trip's destination to riders. This field overrides the default `trips.trip_headsign` when the headsign changes between stops. If the headsign is displayed for an entire trip, `trips.trip_headsign` should be used instead. A `stop_headsign` value specified for one `stop_time` does not apply to subsequent `stop_time`s in the same trip. If you want to override the `trip_headsign` for multiple `stop_time`s in the same trip, the `stop_headsign` value must be repeated in each `stop_time` row." .
@@ -2433,6 +2581,9 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/stop_id
 <http://gtfs.org/stop_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/stop_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_areas.txt> .
+<http://gtfs.org/stop_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
+<http://gtfs.org/stop_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/stop_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/stop_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/stop_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing stops.stop_id" .
@@ -2445,6 +2596,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/stop_lat
 <http://gtfs.org/stop_lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stop_lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/stop_lat> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/stop_lat> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/stop_lat> <http://gtfs.org/isType> <http://gtfs.org/Latitude> .
 <http://gtfs.org/stop_lat> <http://gtfs.org/additionalInfo> "Latitude" .
@@ -2455,6 +2607,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/stop_lon
 <http://gtfs.org/stop_lon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stop_lon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/stop_lon> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/stop_lon> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/stop_lon> <http://gtfs.org/isType> <http://gtfs.org/Longitude> .
 <http://gtfs.org/stop_lon> <http://gtfs.org/additionalInfo> "The coordinates must be provided for specific location types as mentioned in the description." .
@@ -2465,6 +2618,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/stop_name
 <http://gtfs.org/stop_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stop_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/stop_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/stop_name> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/stop_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/stop_name> <http://gtfs.org/additionalInfo> "The `stop_name` field is used to specify the name of the location in the GTFS data." .
@@ -2475,6 +2629,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/stop_sequence
 <http://gtfs.org/stop_sequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stop_sequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/stop_sequence> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
 <http://gtfs.org/stop_sequence> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/stop_sequence> <http://gtfs.org/isType> <http://gtfs.org/Integer> .
 <http://gtfs.org/stop_sequence> <http://gtfs.org/additionalInfo> "Non-negative integer" .
@@ -2483,7 +2638,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/stop_sequence> <http://www.w3.org/2000/01/rdf-schema#label> "stop_sequence" .
 # 
 # http://gtfs.org/stop_times.txt
-<http://gtfs.org/stop_times.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stop_times.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/stop_times.txt> <http://gtfs.org/hasField> <http://gtfs.org/arrival_time> .
 <http://gtfs.org/stop_times.txt> <http://gtfs.org/hasField> <http://gtfs.org/continuous_drop_off> .
@@ -2505,6 +2659,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/stop_timezone
 <http://gtfs.org/stop_timezone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stop_timezone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/stop_timezone> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/stop_timezone> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/stop_timezone> <http://gtfs.org/isType> <http://gtfs.org/TimeZone> .
 <http://gtfs.org/stop_timezone> <http://gtfs.org/additionalInfo> "Timezone of the location. If the location has a parent station, it inherits the parent station’s timezone instead of applying its own. Stations and parentless stops with empty stop_timezone inherit the timezone specified by agency.agency_timezone. If stop_timezone values are provided, the times in stop_times.txt should be entered as the time since midnight in the timezone specified by agency.agency_timezone. This ensures that the time values in a trip always increase over the course of a trip, regardless of which timezones the trip crosses." .
@@ -2514,6 +2669,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/stop_url
 <http://gtfs.org/stop_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stop_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/stop_url> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/stop_url> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/stop_url> <http://gtfs.org/isType> <http://gtfs.org/URL> .
 <http://gtfs.org/stop_url> <http://gtfs.org/additionalInfo> "URL should be different from `agency.agency_url` and `routes.route_url` field values." .
@@ -2521,7 +2677,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/stop_url> <http://www.w3.org/2000/01/rdf-schema#label> "stop_url" .
 # 
 # http://gtfs.org/stops.txt
-<http://gtfs.org/stops.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/stops.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/stops.txt> <http://gtfs.org/hasField> <http://gtfs.org/level_id> .
 <http://gtfs.org/stops.txt> <http://gtfs.org/hasField> <http://gtfs.org/location_type> .
@@ -2547,6 +2702,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/sunday
 <http://gtfs.org/sunday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/sunday> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar.txt> .
 <http://gtfs.org/sunday> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/sunday> <http://gtfs.org/isType> <http://gtfs.org/SundayEnum> .
 <http://gtfs.org/sunday> <http://gtfs.org/additionalInfo> "Enum type field that applies to Sundays." .
@@ -2563,6 +2719,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/table_name
 <http://gtfs.org/table_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/table_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/table_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/translations.txt> .
 <http://gtfs.org/table_name> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/table_name> <http://gtfs.org/isType> <http://gtfs.org/TableNameEnum> .
 <http://gtfs.org/table_name> <http://gtfs.org/additionalInfo> "Allowed values: agency, stops, routes, trips, stop_times, pathways, levels, feed_info, attributions" .
@@ -2634,6 +2791,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/thursday
 <http://gtfs.org/thursday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/thursday> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar.txt> .
 <http://gtfs.org/thursday> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/thursday> <http://gtfs.org/isType> <http://gtfs.org/ThursdayEnum> .
 <http://gtfs.org/thursday> <http://gtfs.org/additionalInfo> "Enum type field" .
@@ -2650,6 +2808,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/timeframe_group_id
 <http://gtfs.org/timeframe_group_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/timeframe_group_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/timeframe_group_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/timeframes.txt> .
 <http://gtfs.org/timeframe_group_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/timeframe_group_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/timeframe_group_id> <http://gtfs.org/additionalInfo> "Field Type: ID" .
@@ -2657,7 +2816,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/timeframe_group_id> <http://www.w3.org/2000/01/rdf-schema#label> "timeframe_group_id" .
 # 
 # http://gtfs.org/timeframes.txt
-<http://gtfs.org/timeframes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/timeframes.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/timeframes.txt> <http://gtfs.org/hasField> <http://gtfs.org/end_time> .
 <http://gtfs.org/timeframes.txt> <http://gtfs.org/hasField> <http://gtfs.org/service_id> .
@@ -2669,6 +2827,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/timepoint
 <http://gtfs.org/timepoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/timepoint> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
 <http://gtfs.org/timepoint> <http://gtfs.org/isPresence> <http://gtfs.org/Recommended> .
 <http://gtfs.org/timepoint> <http://gtfs.org/isType> <http://gtfs.org/TimepointEnum> .
 <http://gtfs.org/timepoint> <http://gtfs.org/additionalInfo> "Valid options are: 0 - Times are considered approximate. 1 or empty - Times are considered exact." .
@@ -2691,6 +2850,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/to_area_id
 <http://gtfs.org/to_area_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/to_area_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_leg_rules.txt> .
 <http://gtfs.org/to_area_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/to_area_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/to_area_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing areas.area_id" .
@@ -2699,6 +2859,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/to_leg_group_id
 <http://gtfs.org/to_leg_group_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/to_leg_group_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_transfer_rules.txt> .
 <http://gtfs.org/to_leg_group_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/to_leg_group_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/to_leg_group_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing fare_leg_rules.leg_group_id" .
@@ -2708,6 +2869,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/to_route_id
 <http://gtfs.org/to_route_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/to_route_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/to_route_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/transfers.txt> .
 <http://gtfs.org/to_route_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/to_route_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/to_route_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing `routes.route_id`" .
@@ -2716,6 +2878,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/to_stop_id
 <http://gtfs.org/to_stop_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/to_stop_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
+<http://gtfs.org/to_stop_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/transfers.txt> .
 <http://gtfs.org/to_stop_id> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/to_stop_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/to_stop_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
@@ -2728,6 +2892,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/to_timeframe_group_id
 <http://gtfs.org/to_timeframe_group_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/to_timeframe_group_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_leg_rules.txt> .
 <http://gtfs.org/to_timeframe_group_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/to_timeframe_group_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/to_timeframe_group_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing timeframes.timeframe_group_id" .
@@ -2737,6 +2902,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/to_trip_id
 <http://gtfs.org/to_trip_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/to_trip_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/to_trip_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/transfers.txt> .
 <http://gtfs.org/to_trip_id> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/to_trip_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/to_trip_id> <http://gtfs.org/additionalInfo> "Foreign ID referencing `trips.trip_id`" .
@@ -2746,6 +2912,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/transfer_count
 <http://gtfs.org/transfer_count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/transfer_count> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_transfer_rules.txt> .
 <http://gtfs.org/transfer_count> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyForbidden> .
 <http://gtfs.org/transfer_count> <http://gtfs.org/isType> <http://gtfs.org/Integer> .
 <http://gtfs.org/transfer_count> <http://gtfs.org/hasCondition> "Forbidden if fare_transfer_rules.from_leg_group_id does not equal fare_transfer_rules.to_leg_group_id. Required if fare_transfer_rules.from_leg_group_id equals fare_transfer_rules.to_leg_group_id." .
@@ -2754,6 +2921,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/transfer_duration
 <http://gtfs.org/transfer_duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/transfer_duration> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_attributes.txt> .
 <http://gtfs.org/transfer_duration> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/transfer_duration> <http://gtfs.org/isType> <http://gtfs.org/Integer> .
 <http://gtfs.org/transfer_duration> <http://gtfs.org/additionalInfo> "Non-negative integer" .
@@ -2763,6 +2931,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/transfer_type
 <http://gtfs.org/transfer_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/transfer_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/transfer_type> <http://gtfs.org/isFieldOf> <http://gtfs.org/transfers.txt> .
 <http://gtfs.org/transfer_type> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/transfer_type> <http://gtfs.org/isType> <http://gtfs.org/TransferTypeEnum> .
 <http://gtfs.org/transfer_type> <http://gtfs.org/additionalInfo> "Valid options are: 0 or empty - Recommended transfer point between routes. 1 - Timed transfer point between two routes. The departing vehicle is expected to wait for the arriving one and leave sufficient time for a rider to transfer between routes. 2 - Transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by min_transfer_time. 3 - Transfers are not possible between routes at the location. 4 - Passengers can transfer from one trip to another by staying onboard the same vehicle (an 'in-seat transfer'). 5 - In-seat transfers are not allowed between sequential trips. The passenger must alight from the vehicle and re-board." .
@@ -2813,6 +2982,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/transfers
 <http://gtfs.org/transfers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/transfers> <http://gtfs.org/isFieldOf> <http://gtfs.org/fare_attributes.txt> .
 <http://gtfs.org/transfers> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/transfers> <http://gtfs.org/isType> <http://gtfs.org/TransfersEnum> .
 <http://gtfs.org/transfers> <http://gtfs.org/additionalInfo> "Enum field with options: 0 - No transfers permitted, 1 - Riders may transfer once, 2 - Riders may transfer twice, empty - Unlimited transfers permitted." .
@@ -2820,7 +2990,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/transfers> <http://www.w3.org/2000/01/rdf-schema#label> "transfers" .
 # 
 # http://gtfs.org/transfers.txt
-<http://gtfs.org/transfers.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/transfers.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/transfers.txt> <http://gtfs.org/hasField> <http://gtfs.org/from_route_id> .
 <http://gtfs.org/transfers.txt> <http://gtfs.org/hasField> <http://gtfs.org/from_stop_id> .
@@ -2865,6 +3034,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/translation
 <http://gtfs.org/translation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/translation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/translation> <http://gtfs.org/isFieldOf> <http://gtfs.org/translations.txt> .
 <http://gtfs.org/translation> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/translation> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/translation> <http://gtfs.org/additionalInfo> "The field can store text, URL, email, or phone number data." .
@@ -2872,7 +3042,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/translation> <http://www.w3.org/2000/01/rdf-schema#label> "translation" .
 # 
 # http://gtfs.org/translations.txt
-<http://gtfs.org/translations.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/translations.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/translations.txt> <http://gtfs.org/hasField> <http://gtfs.org/field_name> .
 <http://gtfs.org/translations.txt> <http://gtfs.org/hasField> <http://gtfs.org/field_value> .
@@ -2887,6 +3056,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/traversal_time
 <http://gtfs.org/traversal_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/traversal_time> <http://gtfs.org/isFieldOf> <http://gtfs.org/pathways.txt> .
 <http://gtfs.org/traversal_time> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/traversal_time> <http://gtfs.org/isType> <http://gtfs.org/Integer> .
 <http://gtfs.org/traversal_time> <http://gtfs.org/additionalInfo> "Positive integer" .
@@ -2896,6 +3066,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/trip_headsign
 <http://gtfs.org/trip_headsign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/trip_headsign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/trip_headsign> <http://gtfs.org/isFieldOf> <http://gtfs.org/trips.txt> .
 <http://gtfs.org/trip_headsign> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/trip_headsign> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/trip_headsign> <http://gtfs.org/additionalInfo> "Text that appears on signage identifying the trip's destination to riders. Should be used to distinguish between different patterns of service on the same route. If the headsign changes during a trip, values for trip_headsign may be overridden by defining values in stop_times.stop_headsign for specific stop_times along the trip." .
@@ -2904,6 +3075,10 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/trip_id
 <http://gtfs.org/trip_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/trip_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/attributions.txt> .
+<http://gtfs.org/trip_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/frequencies.txt> .
+<http://gtfs.org/trip_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/stop_times.txt> .
+<http://gtfs.org/trip_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/trips.txt> .
 <http://gtfs.org/trip_id> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/trip_id> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/trip_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
@@ -2918,6 +3093,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://gtfs.org/trip_short_name
 <http://gtfs.org/trip_short_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/trip_short_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/trip_short_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/trips.txt> .
 <http://gtfs.org/trip_short_name> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/trip_short_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/trip_short_name> <http://gtfs.org/additionalInfo> "Public facing text used to identify the trip to riders." .
@@ -2925,7 +3101,6 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://gtfs.org/trip_short_name> <http://www.w3.org/2000/01/rdf-schema#label> "trip_short_name" .
 # 
 # http://gtfs.org/trips.txt
-<http://gtfs.org/trips.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://gtfs.org/trips.txt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/File> .
 <http://gtfs.org/trips.txt> <http://gtfs.org/hasField> <http://gtfs.org/bikes_allowed> .
 <http://gtfs.org/trips.txt> <http://gtfs.org/hasField> <http://gtfs.org/block_id> .
@@ -2944,6 +3119,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/tts_stop_name
 <http://gtfs.org/tts_stop_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/tts_stop_name> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/tts_stop_name> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/tts_stop_name> <http://gtfs.org/isType> <http://gtfs.org/Text> .
 <http://gtfs.org/tts_stop_name> <http://gtfs.org/additionalInfo> "This field provides a text representation of the stop name for text-to-speech purposes." .
@@ -2952,6 +3128,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/tuesday
 <http://gtfs.org/tuesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/tuesday> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar.txt> .
 <http://gtfs.org/tuesday> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/tuesday> <http://gtfs.org/isType> <http://gtfs.org/TuesdayEnum> .
 <http://gtfs.org/tuesday> <http://gtfs.org/additionalInfo> "Enum type field" .
@@ -2967,6 +3144,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/wednesday
 <http://gtfs.org/wednesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/wednesday> <http://gtfs.org/isFieldOf> <http://gtfs.org/calendar.txt> .
 <http://gtfs.org/wednesday> <http://gtfs.org/isPresence> <http://gtfs.org/Required> .
 <http://gtfs.org/wednesday> <http://gtfs.org/isType> <http://gtfs.org/WednesdayEnum> .
 <http://gtfs.org/wednesday> <http://gtfs.org/additionalInfo> "Enum type field" .
@@ -2982,6 +3160,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/wheelchair_accessible
 <http://gtfs.org/wheelchair_accessible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/wheelchair_accessible> <http://gtfs.org/isFieldOf> <http://gtfs.org/trips.txt> .
 <http://gtfs.org/wheelchair_accessible> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/wheelchair_accessible> <http://gtfs.org/isType> <http://gtfs.org/WheelchairAccessibleEnum> .
 <http://gtfs.org/wheelchair_accessible> <http://gtfs.org/additionalInfo> "Enum field with options 0, 1, 2" .
@@ -3011,6 +3190,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/wheelchair_boarding
 <http://gtfs.org/wheelchair_boarding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/wheelchair_boarding> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/wheelchair_boarding> <http://gtfs.org/isPresence> <http://gtfs.org/Optional> .
 <http://gtfs.org/wheelchair_boarding> <http://gtfs.org/isType> <http://gtfs.org/WheelchairBoardingEnum> .
 <http://gtfs.org/wheelchair_boarding> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether wheelchair boardings are possible from the location. Valid options are: For parentless stops: 0 or empty - No accessibility information for the stop. 1 - Some vehicles at this stop can be boarded by a rider in a wheelchair. 2 - Wheelchair boarding is not possible at this stop. For child stops: 0 or empty - Stop will inherit its wheelchair_boarding behavior from the parent station, if specified in the parent. 1 - There exists some accessible path from outside the station to the specific stop/platform. 2 - There exists no accessible path from outside the station to the specific stop/platform. For station entrances/exits: 0 or empty - Station entrance will inherit its wheelchair_boarding behavior from the parent station, if specified for the parent. 1 - Station entrance is wheelchair accessible. 2 - No accessible path from station entrance to stops/platforms." .
@@ -3039,6 +3219,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://gtfs.org/zone_id
 <http://gtfs.org/zone_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://gtfs.org/Field> .
+<http://gtfs.org/zone_id> <http://gtfs.org/isFieldOf> <http://gtfs.org/stops.txt> .
 <http://gtfs.org/zone_id> <http://gtfs.org/isPresence> <http://gtfs.org/ConditionallyRequired> .
 <http://gtfs.org/zone_id> <http://gtfs.org/isType> <http://gtfs.org/ID> .
 <http://gtfs.org/zone_id> <http://gtfs.org/additionalInfo> "If this record represents a station or station entrance, the `zone_id` is ignored." .

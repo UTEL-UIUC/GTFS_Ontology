@@ -141,6 +141,10 @@
     "Journey" : {
       "@id" : "http://gtfs.org/Journey"
     },
+    "isFieldOf" : {
+      "@id" : "http://gtfs.org/isFieldOf",
+      "@type" : "@id"
+    },
     "WheelchairAccessibleEnum" : {
       "@id" : "http://gtfs.org/WheelchairAccessibleEnum"
     },
